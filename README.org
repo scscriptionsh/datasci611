@@ -3,17 +3,21 @@
 
 The goals of this course:
 
-1. Familiarity with Data Science Tools
-   Emphasis on R, git
+1. Familiarity with Data Science Tools like R, Python, git, Make, Docker, etc
 2. Good Data Science Practices
 
 We will be covering the entire data science project lifetime, from
 data ingest, quality control, analysis and reporting. An emphasis will
 be placed on effectively communicating correct results (even when they
-are negative).
+are negative) and upon giving feedback to colleagues.
 
 To do these tasks effectively we will also focus heavily on using Git,
 Make and Docker.
+
+** About your Instructor
+
+I have both academic and "real world" experience as a scientist,
+software engineer, and data scientist.
 
 ** Portfolio
 
@@ -29,7 +33,13 @@ portfoliio including:
 
 Fall 2020 Classes are unfortunately weird because of Covid 19. Classes
 will be held Monday and Wed from 5:20 pm to 6:35 pm. Recitation/lab
-time will be Tuesdays from 3:00-4:00 pm. 
+time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
+work with me directly or virtually on material covered during lecture.
+
+** Slack 
+
+This year in particular it will be useful for our class to communicate
+online using our [[https://bios611.slack.com][Slack Channel]].
 
 *** Hyflex 
 

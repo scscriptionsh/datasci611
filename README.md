@@ -1,45 +1,54 @@
 
 # Table of Contents
 
-1.  [2020 BIOS 611 - Intro to Data Science](#org887ff0c)
-    1.  [Course Information](#org8c2e716)
-    2.  [Portfolio](#org6ed821f)
-    3.  [Course Schedule](#org2b84dbe)
-        1.  [Hyflex](#orgefca3d8)
-        2.  [Course Schedule](#org7ed1ed1)
-    4.  [Projects](#org9145651)
-        1.  [Feedback](#org5d6d300)
-        2.  [Project 1](#orgd6865c6)
-        3.  [Project 2](#orgf63b7cb)
-        4.  [Project 3](#orga9a58d4)
-        5.  [Project Grading](#orgab5942d)
+1.  [2020 BIOS 611 - Intro to Data Science](#orgc4befd0)
+    1.  [Course Information](#orgbff1e80)
+    2.  [About your Instructor](#org28e995d)
+    3.  [Portfolio](#org36fc9ea)
+    4.  [Course Schedule](#org1e4885e)
+    5.  [Slack](#org7caa611)
+        1.  [Hyflex](#org9a6f253)
+        2.  [Course Schedule](#org594a6bb)
+    6.  [Projects](#org5ed0945)
+        1.  [Feedback](#org6ffc6a0)
+        2.  [Project 1](#orge19aa09)
+        3.  [Project 2](#orgbd412c8)
+        4.  [Project 3](#orgfb7012e)
+        5.  [Project Grading](#org16f26d0)
 
 
-<a id="org887ff0c"></a>
+<a id="orgc4befd0"></a>
 
 # 2020 BIOS 611 - Intro to Data Science
 
 
-<a id="org8c2e716"></a>
+<a id="orgbff1e80"></a>
 
 ## Course Information
 
 The goals of this course:
 
-1.  Familiarity with Data Science Tools
-    Emphasis on R, git
+1.  Familiarity with Data Science Tools like R, Python, git, Make, Docker, etc
 2.  Good Data Science Practices
 
 We will be covering the entire data science project lifetime, from
 data ingest, quality control, analysis and reporting. An emphasis will
 be placed on effectively communicating correct results (even when they
-are negative).
+are negative) and upon giving feedback to colleagues.
 
 To do these tasks effectively we will also focus heavily on using Git,
 Make and Docker.
 
 
-<a id="org6ed821f"></a>
+<a id="org28e995d"></a>
+
+## About your Instructor
+
+I have both academic and "real world" experience as a scientist,
+software engineer, and data scientist.
+
+
+<a id="org36fc9ea"></a>
 
 ## Portfolio
 
@@ -52,16 +61,25 @@ portfoliio including:
 3.  A hybrid analysis using R, Python, Make and Docker (or Julia).
 
 
-<a id="org2b84dbe"></a>
+<a id="org1e4885e"></a>
 
 ## Course Schedule
 
 Fall 2020 Classes are unfortunately weird because of Covid 19. Classes
 will be held Monday and Wed from 5:20 pm to 6:35 pm. Recitation/lab
-time will be Tuesdays from 3:00-4:00 pm. 
+time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
+work with me directly or virtually on material covered during lecture.
 
 
-<a id="orgefca3d8"></a>
+<a id="org7caa611"></a>
+
+## Slack
+
+This year in particular it will be useful for our class to communicate
+online using our [Slack Channel](https://bios611.slack.com).
+
+
+<a id="org9a6f253"></a>
 
 ### Hyflex
 
@@ -73,7 +91,7 @@ tuning in over and still others watching the recorded lectures at a
 different time.
 
 
-<a id="org7ed1ed1"></a>
+<a id="org594a6bb"></a>
 
 ### Course Schedule
 
@@ -550,7 +568,7 @@ from this syllabus.
 </table>
 
 
-<a id="org9145651"></a>
+<a id="org5ed0945"></a>
 
 ## Projects
 
@@ -568,7 +586,7 @@ The grade will be based on the 1) quality of feedback provided to
 peers, 2) the grader’s review, and 3) the presentation.
 
 
-<a id="org5d6d300"></a>
+<a id="org6ffc6a0"></a>
 
 ### Feedback
 
@@ -590,28 +608,28 @@ presentation. If anything, communicating negative results is even more
 important, in practice, than communicating positive ones.
 
 
-<a id="orgd6865c6"></a>
+<a id="orge19aa09"></a>
 
 ### Project 1
 
 A “complete” analysis in R, demonstrating data wrangling, modeling, visualization and delivery using R markdown.
 
 
-<a id="orgf63b7cb"></a>
+<a id="orgbd412c8"></a>
 
 ### Project 2
 
 An interactive dashboard built with Shiny.
 
 
-<a id="orga9a58d4"></a>
+<a id="orgfb7012e"></a>
 
 ### Project 3
 
 A polyglot analysis using R, Python, Make and Docker.
 
 
-<a id="orgab5942d"></a>
+<a id="org16f26d0"></a>
 
 ### Project Grading
 
