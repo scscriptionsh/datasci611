@@ -22,7 +22,7 @@ software engineer, and data scientist.
 ** Portfolio
 
 By the end of the semester each student will have produced a
-portfoliio including:
+portfolio including:
 
 1. A complete analysis in R demonstrating data wrangling, modeling,
    visualization.
@@ -47,8 +47,8 @@ BIOS 611 will be [[https://keepteaching.unc.edu/modes-of-teaching/][Hyflex]] thi
 holding course in person but also broadcasting them live (presumably
 over Zoom). Maximum occupancy and social distancing requirements mean
 that only some students will attend any given class, with others
-tuning in over and still others watching the recorded lectures at a
-different time.
+tuning in over zoom and still others watching the recorded lectures at
+a different time.
 
 *** Course Schedule
 
@@ -98,8 +98,8 @@ from this syllabus.
 | Nov 04 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Regular Expressions                      |           |    |
 | Nov 09 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Data Science Ethics                      |           |    |
 | Nov 10 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Nov 11 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Presentations 1                          |           |    |
-| Nov 16 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Presentations 2                          |           |    |
+| Nov 11 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Virtual Panel w/ Datascientists          |           |    |
+| Nov 16 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Presentations                            |           |    |
 | Nov 17 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
 |-------------------------+--------------+----------------+------------------------------------------+-----------+----|
 
