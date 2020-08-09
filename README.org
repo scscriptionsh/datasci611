@@ -1,4 +1,9 @@
 * 2020 BIOS 611 - Intro to Data Science
+Lecture Zoom Link: https://uncsph.zoom.us/j/96603579699?pwd=Ny9RUHFrL2lNQUUxZEJ1UTNmVFQvdz09
+You will need the password to join - this is distributed via the Slack channel.
+You should have gotten an email invite to the slack before the course started.
+Email me if you need help: toups@email.unc.edu
+
 ** Course Information
 
 The goals of this course:
@@ -58,9 +63,9 @@ from this syllabus.
 | Day                     | Time         | Class Type     | Subject                                  | Materials | HW |
 |-------------------------+--------------+----------------+------------------------------------------+-----------+----|
 | Aug 10 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Intro and Demo                           |           |    |
-| Aug 11 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Aug 12 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Compute Resources                        |           |    |
-| Aug 17 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Programming Languages via R              |           |    |
+| Aug 11 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation | Compute Resources                        |           |    |
+| Aug 12 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Compute Resources & R 1                  |           |    |
+| Aug 17 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Programming Languages via R (R 2)        |           |    |
 | Aug 18 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
 | Aug 19 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Linux and Bash ...                       |           |    |
 | Aug 24 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Docker & Make & Party                    |           |    |

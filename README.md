@@ -1,28 +1,33 @@
 
 # Table of Contents
 
-1.  [2020 BIOS 611 - Intro to Data Science](#org5675736)
-    1.  [Course Information](#orgf588e2e)
-    2.  [About your Instructor](#orgb3a125c)
-    3.  [Portfolio](#org3b814b2)
-    4.  [Course Schedule](#orge9efac2)
-    5.  [Slack](#orgc7421dc)
-        1.  [Hyflex](#org415d3b4)
-        2.  [Course Schedule](#org0ef599f)
-    6.  [Projects](#org06cd324)
-        1.  [Feedback](#org2485b9b)
-        2.  [Project 1](#orga1a22ca)
-        3.  [Project 2](#org6410f3b)
-        4.  [Project 3](#org8226672)
-        5.  [Project Grading](#org98d9d00)
+1.  [2020 BIOS 611 - Intro to Data Science](#org3524cdd)
+    1.  [Course Information](#org9d16600)
+    2.  [About your Instructor](#orgab242cb)
+    3.  [Portfolio](#orga4d0285)
+    4.  [Course Schedule](#org4a63939)
+    5.  [Slack](#orga247da9)
+        1.  [Hyflex](#orga314da8)
+        2.  [Course Schedule](#org233c75d)
+    6.  [Projects](#org15016a5)
+        1.  [Feedback](#org8bb1624)
+        2.  [Project 1](#org55e25de)
+        3.  [Project 2](#org023b176)
+        4.  [Project 3](#orgf48f29c)
+        5.  [Project Grading](#org17c9fb4)
 
 
-<a id="org5675736"></a>
+<a id="org3524cdd"></a>
 
 # 2020 BIOS 611 - Intro to Data Science
 
+Lecture Zoom Link: <https://uncsph.zoom.us/j/96603579699?pwd=Ny9RUHFrL2lNQUUxZEJ1UTNmVFQvdz09>
+You will need the password to join - this is distributed via the Slack channel.
+You should have gotten an email invite to the slack before the course started.
+Email me if you need help: toups@email.unc.edu
 
-<a id="orgf588e2e"></a>
+
+<a id="org9d16600"></a>
 
 ## Course Information
 
@@ -40,7 +45,7 @@ To do these tasks effectively we will also focus heavily on using Git,
 Make and Docker.
 
 
-<a id="orgb3a125c"></a>
+<a id="orgab242cb"></a>
 
 ## About your Instructor
 
@@ -48,7 +53,7 @@ I have both academic and "real world" experience as a scientist,
 software engineer, and data scientist.
 
 
-<a id="org3b814b2"></a>
+<a id="orga4d0285"></a>
 
 ## Portfolio
 
@@ -61,7 +66,7 @@ portfolio including:
 3.  A hybrid analysis using R, Python, Make and Docker (or Julia).
 
 
-<a id="orge9efac2"></a>
+<a id="org4a63939"></a>
 
 ## Course Schedule
 
@@ -71,7 +76,7 @@ time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
 work with me directly or virtually on material covered during lecture.
 
 
-<a id="orgc7421dc"></a>
+<a id="orga247da9"></a>
 
 ## Slack
 
@@ -79,7 +84,7 @@ This year in particular it will be useful for our class to communicate
 online using our [Slack Channel](https://bios611.slack.com).
 
 
-<a id="org415d3b4"></a>
+<a id="orga314da8"></a>
 
 ### Hyflex
 
@@ -91,7 +96,7 @@ tuning in over zoom and still others watching the recorded lectures at
 a different time.
 
 
-<a id="org0ef599f"></a>
+<a id="org233c75d"></a>
 
 ### Course Schedule
 
@@ -140,7 +145,7 @@ from this syllabus.
 <td class="org-left">Aug 11 (Tuesday) 2020</td>
 <td class="org-left">3:00-4:00 pm</td>
 <td class="org-left">Lab/Recitation</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Compute Resources</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -150,7 +155,7 @@ from this syllabus.
 <td class="org-left">Aug 12 (Wednesday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">Compute Resources</td>
+<td class="org-left">Compute Resources & R 1</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -160,7 +165,7 @@ from this syllabus.
 <td class="org-left">Aug 17 (Monday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">Programming Languages via R</td>
+<td class="org-left">Programming Languages via R (R 2)</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -568,7 +573,7 @@ from this syllabus.
 </table>
 
 
-<a id="org06cd324"></a>
+<a id="org15016a5"></a>
 
 ## Projects
 
@@ -586,7 +591,7 @@ The grade will be based on the 1) quality of feedback provided to
 peers, 2) the grader’s review, and 3) the presentation.
 
 
-<a id="org2485b9b"></a>
+<a id="org8bb1624"></a>
 
 ### Feedback
 
@@ -608,28 +613,28 @@ presentation. If anything, communicating negative results is even more
 important, in practice, than communicating positive ones.
 
 
-<a id="orga1a22ca"></a>
+<a id="org55e25de"></a>
 
 ### Project 1
 
 A “complete” analysis in R, demonstrating data wrangling, modeling, visualization and delivery using R markdown.
 
 
-<a id="org6410f3b"></a>
+<a id="org023b176"></a>
 
 ### Project 2
 
 An interactive dashboard built with Shiny.
 
 
-<a id="org8226672"></a>
+<a id="orgf48f29c"></a>
 
 ### Project 3
 
 A polyglot analysis using R, Python, Make and Docker.
 
 
-<a id="org98d9d00"></a>
+<a id="org17c9fb4"></a>
 
 ### Project Grading
 
