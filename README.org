@@ -1,6 +1,7 @@
 * 2020 BIOS 611 - Intro to Data Science
 Lecture Zoom Link: https://uncsph.zoom.us/j/96603579699?pwd=Ny9RUHFrL2lNQUUxZEJ1UTNmVFQvdz09
-You will need the password to join - this is distributed via the Slack channel.
+Lab Zoom: https://uncsph.zoom.us/j/96708005184?pwd=SFNBQXpnVHNvNnZLMktxZjJsZkVsUT09
+You will need the passwords to join - this is distributed via the Slack channel.
 You should have gotten an email invite to the slack before the course started.
 Email me if you need help: toups@email.unc.edu
 

@@ -1,33 +1,34 @@
 
 # Table of Contents
 
-1.  [2020 BIOS 611 - Intro to Data Science](#org3524cdd)
-    1.  [Course Information](#org9d16600)
-    2.  [About your Instructor](#orgab242cb)
-    3.  [Portfolio](#orga4d0285)
-    4.  [Course Schedule](#org4a63939)
-    5.  [Slack](#orga247da9)
-        1.  [Hyflex](#orga314da8)
-        2.  [Course Schedule](#org233c75d)
-    6.  [Projects](#org15016a5)
-        1.  [Feedback](#org8bb1624)
-        2.  [Project 1](#org55e25de)
-        3.  [Project 2](#org023b176)
-        4.  [Project 3](#orgf48f29c)
-        5.  [Project Grading](#org17c9fb4)
+1.  [2020 BIOS 611 - Intro to Data Science](#orgd96f93c)
+    1.  [Course Information](#org4360466)
+    2.  [About your Instructor](#org38a2b36)
+    3.  [Portfolio](#org8165b08)
+    4.  [Course Schedule](#org9b9159c)
+    5.  [Slack](#org705e234)
+        1.  [Hyflex](#org2edd657)
+        2.  [Course Schedule](#org8ab86c2)
+    6.  [Projects](#orgfc04bd2)
+        1.  [Feedback](#org30f7385)
+        2.  [Project 1](#orgd2c5d5b)
+        3.  [Project 2](#org753cc88)
+        4.  [Project 3](#orgf8e258d)
+        5.  [Project Grading](#org2ac8398)
 
 
-<a id="org3524cdd"></a>
+<a id="orgd96f93c"></a>
 
 # 2020 BIOS 611 - Intro to Data Science
 
 Lecture Zoom Link: <https://uncsph.zoom.us/j/96603579699?pwd=Ny9RUHFrL2lNQUUxZEJ1UTNmVFQvdz09>
-You will need the password to join - this is distributed via the Slack channel.
+Lab Zoom: <https://uncsph.zoom.us/j/96708005184?pwd=SFNBQXpnVHNvNnZLMktxZjJsZkVsUT09>
+You will need the passwords to join - this is distributed via the Slack channel.
 You should have gotten an email invite to the slack before the course started.
 Email me if you need help: toups@email.unc.edu
 
 
-<a id="org9d16600"></a>
+<a id="org4360466"></a>
 
 ## Course Information
 
@@ -45,7 +46,7 @@ To do these tasks effectively we will also focus heavily on using Git,
 Make and Docker.
 
 
-<a id="orgab242cb"></a>
+<a id="org38a2b36"></a>
 
 ## About your Instructor
 
@@ -53,7 +54,7 @@ I have both academic and "real world" experience as a scientist,
 software engineer, and data scientist.
 
 
-<a id="orga4d0285"></a>
+<a id="org8165b08"></a>
 
 ## Portfolio
 
@@ -66,7 +67,7 @@ portfolio including:
 3.  A hybrid analysis using R, Python, Make and Docker (or Julia).
 
 
-<a id="org4a63939"></a>
+<a id="org9b9159c"></a>
 
 ## Course Schedule
 
@@ -76,7 +77,7 @@ time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
 work with me directly or virtually on material covered during lecture.
 
 
-<a id="orga247da9"></a>
+<a id="org705e234"></a>
 
 ## Slack
 
@@ -84,7 +85,7 @@ This year in particular it will be useful for our class to communicate
 online using our [Slack Channel](https://bios611.slack.com).
 
 
-<a id="orga314da8"></a>
+<a id="org2edd657"></a>
 
 ### Hyflex
 
@@ -96,7 +97,7 @@ tuning in over zoom and still others watching the recorded lectures at
 a different time.
 
 
-<a id="org233c75d"></a>
+<a id="org8ab86c2"></a>
 
 ### Course Schedule
 
@@ -573,7 +574,7 @@ from this syllabus.
 </table>
 
 
-<a id="org15016a5"></a>
+<a id="orgfc04bd2"></a>
 
 ## Projects
 
@@ -591,7 +592,7 @@ The grade will be based on the 1) quality of feedback provided to
 peers, 2) the grader’s review, and 3) the presentation.
 
 
-<a id="org8bb1624"></a>
+<a id="org30f7385"></a>
 
 ### Feedback
 
@@ -613,28 +614,28 @@ presentation. If anything, communicating negative results is even more
 important, in practice, than communicating positive ones.
 
 
-<a id="org55e25de"></a>
+<a id="orgd2c5d5b"></a>
 
 ### Project 1
 
 A “complete” analysis in R, demonstrating data wrangling, modeling, visualization and delivery using R markdown.
 
 
-<a id="org023b176"></a>
+<a id="org753cc88"></a>
 
 ### Project 2
 
 An interactive dashboard built with Shiny.
 
 
-<a id="orgf48f29c"></a>
+<a id="orgf8e258d"></a>
 
 ### Project 3
 
 A polyglot analysis using R, Python, Make and Docker.
 
 
-<a id="org17c9fb4"></a>
+<a id="org2ac8398"></a>
 
 ### Project Grading
 
