@@ -1,23 +1,22 @@
 
 # Table of Contents
 
-1.  [Compute Resources](#org9d029ed)
-    1.  [Using the VCL](#orgabed86c)
-    2.  [Linux](#org1371e33)
-    3.  [SSH](#org0a9f12a)
-    4.  [Storage](#org1157adf)
-    5.  [Docker and Rstudio](#orga96766c)
-    6.  [Connecting to RStudio](#org826b11a)
-    7.  [Github/Git](#org931d929)
-    8.  [Guide to RStudio from a Guy Who Doesn't Like It](#orgc3dbed1)
+1.  [Compute Resources](#orgfff5920)
+    1.  [Using the VCL](#org813379b)
+    2.  [Linux](#org0796195)
+    3.  [SSH](#orgdfc6761)
+    4.  [Storage](#org03430d7)
+    5.  [Docker and Rstudio](#orgfd0643e)
+    6.  [Connecting to RStudio](#org5ce99f2)
+    7.  [Github/Git](#org90cc125)
 
 
-<a id="org9d029ed"></a>
+<a id="orgfff5920"></a>
 
 # Compute Resources
 
 
-<a id="orgabed86c"></a>
+<a id="org813379b"></a>
 
 ## Using the VCL
 
@@ -28,7 +27,7 @@ point that you run RStudio or Jupyter, afterwhich point you can use
 your browser).
 
 
-<a id="org1371e33"></a>
+<a id="org0796195"></a>
 
 ## Linux
 
@@ -60,7 +59,7 @@ anywhere).
 Eg, \`which ls\` on my computer gives /bin/ls
 
 
-<a id="org0a9f12a"></a>
+<a id="orgdfc6761"></a>
 
 ## SSH
 
@@ -74,7 +73,7 @@ We'll demo both ways. You need the ip address, your onyen (in this
 case) and a password.
 
 
-<a id="org1157adf"></a>
+<a id="org03430d7"></a>
 
 ## Storage
 
@@ -88,7 +87,7 @@ mount you're Longleaf Storage:
     cd storage
 
 
-<a id="orga96766c"></a>
+<a id="orgfd0643e"></a>
 
 ## Docker and Rstudio
 
@@ -103,14 +102,14 @@ default rocker image will work for now.
     docker run -e PASSWORD="batmanisfascist" -p 8787:8787 -v `echo ~/storage`:/home/rstudio -t rocker/verse
 
 
-<a id="org826b11a"></a>
+<a id="org5ce99f2"></a>
 
 ## Connecting to RStudio
 
 Demo&#x2026;
 
 
-<a id="org931d929"></a>
+<a id="org90cc125"></a>
 
 ## Github/Git
 
@@ -146,9 +145,4 @@ Then:
     git push -u origin master
 
 And that is that!
-
-
-<a id="orgc3dbed1"></a>
-
-## Guide to RStudio from a Guy Who Doesn't Like It
 
