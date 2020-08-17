@@ -1,0 +1,139 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Programming Languages via R</title><meta charset="UTF-8"></meta><meta name="generator" content="Hovercraft! 1.0 http://regebro.github.com/hovercraft"></meta><link rel="stylesheet" href="css/hovercraft.css" media="all"></link><link rel="stylesheet" href="css/highlight.css" media="all"></link><link rel="stylesheet" href="custom.css" media="screen,projection"></link><script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: "none",
+        TeX : { extensions : ['color.js'] }
+      });
+    </script></head><body class="impress-not-supported"><div id="impress-help"></div><div id="impress"><div class="step step-level-1" step="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="0" data-y="0" data-z="0"><h1 id="programming-languages-via-r">Programming Languages via R</h1><div class="twocol"><div class="leftside"><p>Or: Talking to very Dumb Robots</p><ol><li>Ramon Llull</li><li>13th Century Polymath.</li><li>Built the first "thinking" machines.</li><li>Influenced Leibniz who fantasized about a totally formal system of philosophical investigation.</li><li>All this stuff basically exploded when the Incompleteness Theorem blew up Hilbert's Program to formally axiomatize Mathematics (1930,1931).</li><li>This put to rest or atomized a philosophical process going back at least to Aristotle, who invented variables, believe it or not.</li></ol></div><div class="rightside"><img src="images/ramon.jpg" width="300px"></img></div></div></div><div class="step step-level-1" step="1" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="1600" data-y="0" data-z="0"><h1 id="a-llull-machine">A Llull Machine</h1><p>(schematically)</p><img src="images/ramon-machine.png" width="400px" align="center"></img></div><div class="step step-level-1" step="2" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="3200" data-y="0" data-z="0"><h1 id="what-does-this-have-to-do-with-programming-languages">What does this have to do with programming languages?</h1><div class="twocol"><div class="leftside"><p>A program _denotes_ a sequence of steps interpreted by an
+interpter. Either a program denotes the steps you intended or it
+doesn't.</p></div><div class="rightside"><img src="images/mario.png"></img><p>Super Mario Bros Assembly
+(A Comprehensive Super Mario Bros. Disassembly)
+<a href="https://gist.github.com/1wErt3r/4048722">https://gist.github.com/1wErt3r/4048722</a></p></div></div></div><div class="step step-level-1" step="3" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="4800" data-y="0" data-z="0"><h1 id="a-mental-interpreter">A Mental Interpreter</h1><p>Compilers convert high level code to machine code.  Interpreters
+execute code in as they encounter it by calling previously created
+routines. We don't really need to understand the whole process but we
+do need to be able to do this:</p><div class="twocol"><div class="leftside"><img src="images/raw_source.png" width="300px"></img></div><div class="rightside"><img src="images/annotated_code.png" width="300px"></img></div></div><img src="images/code-legend.png" align="center"></img></div><div class="step step-level-1" step="4" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="6400" data-y="0" data-z="0"><h1 id="elements-of-r">Elements of R</h1><p>Warning: This material is hard and somewhat boring. I promise that if
+we power through, though, everything after this will make more
+sense. Please don't tune out.</p><ol><li>numbers</li><li>strings</li><li>booleans</li><li>lists</li><li>data frames</li></ol><h2 id="variables-and-scope">Variables and Scope</h2><ol><li>A variable represents a reference to a value.</li><li>In most situations, when R sees a variable, it looks up the value
+stored there.</li><li>Certain functions can modify the "environment" which maps variables
+to values.</li><li>R is for the most part and by default "lexically" scoped. However,
+unlike most languages the environment is user modifiable in
+relatively complex ways and sometimes lexical scope is violated.</li></ol></div><div class="step step-level-1" step="5" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="8000" data-y="0" data-z="0"><h1 id="lexical-scope">Lexical Scope</h1><p>Literally: the value of a variable is the value implied by the nearest
+"enclosing" binding expression.</p><p>Basics:</p><ol><li><tt>&lt;-</tt> introduces new bindings: <tt>x &lt;- 10</tt></li><li><tt>function</tt> introduces new scopes:<pre class="highlight ">x &lt;- 10;
+f &lt;- function(){
+  x &lt;- 11;
+  y &lt;- 12;
+  print(x);
+  print(y);
+}
+
+print(x); ## 10
+f(); ## 11
+     ## 12
+print(y); ## Error</pre></li><li>Note that the environment created by a function is usually
+temporary and doesn't exist until invoked.</li></ol></div><div class="step step-level-1" step="6" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="9600" data-y="0" data-z="0"><h1 id="more-on-functions">More on Functions</h1><p>Consider:</p><pre class="highlight ">f &lt;- function(){
+ 10
+}</pre><ol><li>Functions evaluate to something, called the "return value"</li><li>In R this is whatever value is in the "tail position" of the
+function. Above, 10.</li><li>There is a <tt>return</tt> function which returns a value
+immediately. Better to not use it.</li></ol></div><div class="step step-level-1" step="7" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="11200" data-y="0" data-z="0"><h1 id="more-on">More on <tt>&lt;-</tt></h1><ol><li>&lt;- always creates a new binding in the current environment unless
+one exists in that environment already.</li><li>If one already exists, it updates that binding.</li><li>If you want to change the binding in the enclosing scope, use
+&lt;&lt;-. This is handy in some circumstances.</li></ol></div><div class="step step-level-1" step="8" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="12800" data-y="0" data-z="0"><h1 id="functions-arguments">Functions: Arguments</h1><p>Functions can take arguments. These are generally speaking passed "as
+if" by value, rather than reference. The true story is complicated:</p><pre class="highlight ">f &lt;- function(a_list){
+ a_list[[1]] &lt;- 10;
+ a_list;
+}
+
+some_list &lt;- list(1,2,3);
+whats_this &lt;- f(some_list);
+print(some_list);
+print(whats_this);
+print(a_list); ## Error (hopefully obviously)</pre></div><div class="step step-level-1" step="9" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="14400" data-y="0" data-z="0"><h1 id="first-class-function">First Class Function</h1><p>Functions are just like any other value (if we don't use <tt>()</tt>) to
+call them:</p><pre class="highlight ">f &lt;- function(x){
+  y &lt;- 11;
+  function(z){
+   x + y + z;
+  }
+}
+
+g &lt;- f(100);
+
+g(3); ## 100 + 11 + 3 -&gt; 114</pre><p>Hard Question: <span class="question">When we call g where does R find the value of y?</span></p></div><div class="step step-level-1" step="10" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="16000" data-y="0" data-z="0"><h1 id="other-special-forms-if">Other Special Forms: if</h1><p><tt>if</tt> is the basic branching operation. Unlike in many languages (but
+like Lisp and Scheme) <tt>if</tt> evaluates to a value (it is an expression):</p><pre class="highlight ">y &lt;- round(runif(1)*1000);
+x &lt;- if (y &lt; 100) {
+  "smaller"
+} else {
+  "larger"
+}</pre><p>If an <tt>if</tt> is in a tail position in a function then the function
+returns whatever value the <tt>if</tt> returns.</p></div><div class="step step-level-1" step="11" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="17600" data-y="0" data-z="0"><h1 id="other-special-forms-if-2">Other Special Forms: if (2)</h1><p>Multiple branches:</p><pre class="highlight ">if(a){
+  1
+} else if (b) {
+  2
+} else if (c) {
+  3
+} else {
+  4
+}</pre></div><div class="step step-level-1" step="12" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="19200" data-y="0" data-z="0"><h1 id="other-special-forms-for">Other Special Forms: for</h1><p>Performs loops by iterating over things:</p><pre class="highlight ">for (i in c(1,2,3)) {
+  print(i);
+}</pre><p>Will print 1, 2, 3.</p></div><div class="step step-level-1" step="13" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="20800" data-y="0" data-z="0"><h1 id="other-special-forms-while">Other Special Forms: while</h1><p>Conditional looping:</p><pre class="highlight ">i &lt;- 0;
+max_i &lt;- 100;
+while (i &lt; max_i) {
+ print(i);
+}</pre></div><div class="step step-level-1" step="14" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="22400" data-y="0" data-z="0"><h1 id="pop-quiz"><span class="question">Pop Quiz</span></h1><p>What is the difference between:</p><pre class="highlight ">j &lt;- runif(1)*10;
+if(j &lt; 10){
+  for(i in c(1,2,3)){
+    print(i);
+    print(j);
+  }
+}</pre><p>and:</p><pre class="highlight ">for(i in c(1,2,3)){
+  j &lt;- runif(1)*10;
+  if(j &lt; 10){
+    print(i);
+    print(j);
+  }
+}</pre></div><div class="step step-level-1" step="15" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="24000" data-y="0" data-z="0"><h1 id="what-to-do-instead-of-looping">What to do instead of looping</h1><p>Loops are bad.</p><p><span class="question">Why do you think I make this outrageous statement?</span></p><p>Instead use <tt>Map</tt> or <tt>Reduce</tt> or the fact that R supports many
+vectorized operations.</p></div><div class="step step-level-1" step="16" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="25600" data-y="0" data-z="0"><h1 id="map">Map</h1><p><tt>Map</tt>:</p><pre class="highlight ">Map(function(x) x + 1, c(1,2,3)) %&gt;% unlist() ## c(2,3,4)</pre><p>or <tt>Reduce</tt>:</p><pre class="highlight ">Reduce(function(x,y) x + y, c(1,2,3)); ## 6</pre></div><div class="step step-level-1" step="17" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="27200" data-y="0" data-z="0"><h1 id="vectorized-code-1">Vectorized Code (1)</h1><p>R is a vector language, which means that many of its basic types are
+actually vectors</p><pre class="highlight ">x &lt;- 12</pre><p><tt>x</tt> is actually a numerical vector of length 1 with the value 12 in the
+first slot. And</p><pre class="highlight ">y &lt;- "hello"</pre><p>Is a vector of strings of length one whose first element is "hello".</p><p>Vectors are indexed using either <tt>[[]]</tt> or <tt>[]</tt> (of which more
+later). Indexes start at <tt>1</tt> and go up to the length of the vector.</p><p>eg:</p><pre class="highlight ">z &lt;- c("hello", "world", "of", "vectors");
+z[[1]] ## "hello"
+z[2:4] ## c("world","of","vectors");</pre><p><tt>[[]]` doesn't slice - it extracts a single element.
+``[]</tt> can slice a sequence of elements out.</p></div><div class="step step-level-1" step="18" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="28800" data-y="0" data-z="0"><h1 id="vectorized-code-2">Vectorized Code (2)</h1><p>Many operations work in a meaningful way on vectors:</p><pre class="highlight ">x &lt;- c(1,2,3);
+y &lt;- c(3,4,5);
+
+x + y ## c(4,6,8);
+
+sin(x); ## c(0.8414710, 0.9092974, 0.1411200);</pre></div><div class="step step-level-1" step="19" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="30400" data-y="0" data-z="0"><h1 id="matrices">Matrices</h1><p>R kinda protects us from using these a lot directly. But:</p><pre class="highlight ">m &lt;- matrix(1:9, nrow=3, ncol=3);</pre><p>We use <tt>[]</tt> to access elements. In this case it takes two arguments,
+rows and columsn to select:</p><pre class="highlight ">m[c(1,2),c(3)] ;; ## [1] 7 8</pre><p>Note that both row and column matrices are coerced back into vectors.</p></div><div class="step step-level-1" step="20" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="32000" data-y="0" data-z="0"><h1 id="homogeneity">Homogeneity</h1><p>(all the same type).</p><p>Vectors and Matrices are homogenous types. That is, a vector can
+contain numbers, booleans (TRUE, FALSE in R), or strings. That is:</p><p>Allowed:</p><pre class="highlight ">x &lt;- c(1,2,3);
+y &lt;- c("extremely", "good", "ice cream");</pre><p>Not allowed:</p><pre class="highlight ">x &lt;- c(1,"ice cream", 2, "many");</pre></div><div class="step step-level-1" step="21" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="33600" data-y="0" data-z="0"><h1 id="data-frames-and-tibbles">Data Frames (and Tibbles)</h1><p>Tables, Data Frames and Tibbles</p><figure><img src="images/tibbles.jpg"></img><figcaption>Tibbles, the cat who destroyed an entire species.</figcaption></figure><p>To deal w/ inhomogenous tabular data we typically use tables. R has a
+built in abstraction called a Data Frame but it is not
+modern. Typically, we use a tibble.</p><p>There is also a list type which is sequential and can hold elements of
+any type. It is less commonly used.</p></div><div class="step step-level-1" step="22" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="35200" data-y="0" data-z="0"><h1 id="reading-data-from-a-file">Reading Data from A File</h1><pre class="highlight ">library(tidyverse);
+data &lt;- read_csv("data/super_hero_powers.csv");
+
+names(data);</pre></div><div class="step step-level-1" step="23" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="36800" data-y="0" data-z="0"><h1 id="indexing-names-and-the-dollar-operator">Indexing, Names and the Dollar Operator</h1><p>Arrays, matrices and data frames can have named elements:</p><pre class="highlight ">a_point &lt;- c(x=3.5, y=6.4);
+a_point["x"] # 3.5</pre><p>Or a combination of both:</p><pre class="highlight ">something &lt;- c(1,2,some_element=3);
+something["some_element"]</pre></div><div class="step step-level-1" step="24" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="38400" data-y="0" data-z="0"><h1 id="a-confusion-of-indexing-options">A Confusion of Indexing Options</h1><p>R defines (at least) 3 ways to index into objects. (Indexing means
+selecting out elements either for assignment or to get values).</p><ol><li>[] is the slice indexer - you can pass in an array and get back
+an array of elements.</li><li>[[]] is the "extract one" indexer - it pulls out a single element
+from an object (list or vector) and thus may not return the same
+type as the [] must.</li><li>$ if the object is a list or a data frame and the element has a
+name this can extract just that element, like [[]].</li></ol></div><div class="step step-level-1" step="25" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="40000" data-y="0" data-z="0"><h1 id="intuitions">Intuitions</h1><ol><li>[] extract a subset</li><li>[[]] extract a single element, damn it</li><li>$ get a column from a data frame</li></ol></div><div class="step step-level-1" step="26" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="41600" data-y="0" data-z="0"><h1 id="laziness-thunks-and-irregular-evaluation">Laziness, Thunks and Irregular Evaluation</h1><div class="twocol"><div class="leftside"><p>This one weird R trick drives programmers crazy.  We're probably
+going to hurt your brain a little bit but no more than
+necessary, since the tidyverse is eventually going to hurt you
+anyway.</p></div><div class="rightside"><figure><img src="images/lazy.jpg"></img><figcaption>Illustration by Chloe Cushman/National Post</figcaption></figure></div></div></div><div class="step step-level-1" step="27" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="43200" data-y="0" data-z="0"><p>Consider this:</p><pre class="highlight ">f &lt;- function(x) F</pre><p>(NB - F is "FALSE" and T is "TRUE" - so called boolean values)</p><p>This function ignores its argument. Unlike in many programming
+languages, anything we pass to f remains unevaluated.</p><p>Evaluation is triggered by some operation performed inside the body of
+the function.</p><p>Eg:</p><pre class="highlight ">g &lt;- function(x) paste(x," is the output", collapse = "");</pre></div><div class="step step-level-1" step="28" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="44800" data-y="0" data-z="0"><h1 id="substitute">Substitute</h1><p>The function substitute allows us to capture the expression passed
+into a function without evaluating it.</p><p>Eg:</p><pre class="highlight ">g &lt;- function(x) substitute(x);
+g(print("Hello"))</pre><p>Once we have the expression we can evaluate it ourselves using eval:</p><pre class="highlight ">eval(g(print("Hello"))) ; # prints "Hello"</pre></div><div class="step step-level-1" step="29" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="46400" data-y="0" data-z="0"><h1 id="eval-and-eval-parent">eval and eval.parent</h1><p>(NB. <tt>.</tt> is a valid part of a variable name in R. In most other
+languages it means something similar to <tt>$</tt> in R)</p><p>We can use <tt>eval</tt> along with <tt>new.env</tt> to do all sorts of silly
+stuff with evaluation.</p><p>Mostly I do not suggest this - if you forget about it entirely, R
+works like almost any other programming language with lexical scope.</p><p>However, the tidyverse uses non-standard evaluation extensively,
+though usually in pretty straightforward ways. So its useful to know
+about it.</p></div><div class="step step-level-1" step="30" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="48000" data-y="0" data-z="0"><h1 id="a-harder-example">A harder example</h1><p>Consider:</p><pre class="highlight ">f &lt;- function(a) eval.parent(substitute(a));
+g &lt;- function(h) {
+  x &lt;- 10;
+  h(x);
+}
+x &lt;- 11;
+f(x);
+g(f);</pre></div></div><script type="text/javascript" src="js/impress.js"></script><script type="text/javascript" src="js/gotoSlide.js"></script><script type="text/javascript" src="js/hovercraft.js"></script></body></html>
