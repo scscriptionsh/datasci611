@@ -1,23 +1,23 @@
 
 # Table of Contents
 
-1.  [2020 BIOS 611 - Intro to Data Science](#orgd96f93c)
-    1.  [Course Information](#org4360466)
-    2.  [About your Instructor](#org38a2b36)
-    3.  [Portfolio](#org8165b08)
-    4.  [Course Schedule](#org9b9159c)
-    5.  [Slack](#org705e234)
-        1.  [Hyflex](#org2edd657)
-        2.  [Course Schedule](#org8ab86c2)
-    6.  [Projects](#orgfc04bd2)
-        1.  [Feedback](#org30f7385)
-        2.  [Project 1](#orgd2c5d5b)
-        3.  [Project 2](#org753cc88)
-        4.  [Project 3](#orgf8e258d)
-        5.  [Project Grading](#org2ac8398)
+1.  [2020 BIOS 611 - Intro to Data Science](#org00d4fa7)
+    1.  [Course Information](#orged995ab)
+    2.  [About your Instructor](#org5a52c90)
+    3.  [Portfolio](#org445b704)
+    4.  [Slack](#orgab5d01b)
+    5.  [Course Schedule](#orgfa03ede)
+        1.  [Hyflex](#org9ebe668)
+        2.  [Course Schedule](#orga78f6a6)
+    6.  [Projects](#orga6f3e4a)
+        1.  [Feedback](#org1e78314)
+        2.  [Project 1](#org02adeaa)
+        3.  [Project 2](#org911b8d3)
+        4.  [Project 3](#org4b5090d)
+        5.  [Project Grading](#org26d1435)
 
 
-<a id="orgd96f93c"></a>
+<a id="org00d4fa7"></a>
 
 # 2020 BIOS 611 - Intro to Data Science
 
@@ -28,7 +28,7 @@ You should have gotten an email invite to the slack before the course started.
 Email me if you need help: toups@email.unc.edu
 
 
-<a id="org4360466"></a>
+<a id="orged995ab"></a>
 
 ## Course Information
 
@@ -46,7 +46,7 @@ To do these tasks effectively we will also focus heavily on using Git,
 Make and Docker.
 
 
-<a id="org38a2b36"></a>
+<a id="org5a52c90"></a>
 
 ## About your Instructor
 
@@ -54,7 +54,7 @@ I have both academic and "real world" experience as a scientist,
 software engineer, and data scientist.
 
 
-<a id="org8165b08"></a>
+<a id="org445b704"></a>
 
 ## Portfolio
 
@@ -67,7 +67,15 @@ portfolio including:
 3.  A hybrid analysis using R, Python, Make and Docker (or Julia).
 
 
-<a id="org9b9159c"></a>
+<a id="orgab5d01b"></a>
+
+## Slack
+
+This year in particular it will be useful for our class to communicate
+online using our [Slack Channel](https://bios611.slack.com).
+
+
+<a id="orgfa03ede"></a>
 
 ## Course Schedule
 
@@ -77,15 +85,7 @@ time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
 work with me directly or virtually on material covered during lecture.
 
 
-<a id="org705e234"></a>
-
-## Slack
-
-This year in particular it will be useful for our class to communicate
-online using our [Slack Channel](https://bios611.slack.com).
-
-
-<a id="org2edd657"></a>
+<a id="org9ebe668"></a>
 
 ### Hyflex
 
@@ -97,7 +97,7 @@ tuning in over zoom and still others watching the recorded lectures at
 a different time.
 
 
-<a id="org8ab86c2"></a>
+<a id="orga78f6a6"></a>
 
 ### Course Schedule
 
@@ -166,8 +166,8 @@ from this syllabus.
 <td class="org-left">Aug 17 (Monday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">Programming Languages via R (R 2)</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Programming Languages via R (R 2) & Datasets</td>
+<td class="org-left"><https://learnxinyminutes.com/docs/r/> <http://adv-r.had.co.nz/Environments.html> <http://adv-r.had.co.nz/Functions.html></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
@@ -176,7 +176,7 @@ from this syllabus.
 <td class="org-left">Aug 18 (Tuesday) 2020</td>
 <td class="org-left">3:00-4:00 pm</td>
 <td class="org-left">Lab/Recitation</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Project 1 Setup</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -574,7 +574,7 @@ from this syllabus.
 </table>
 
 
-<a id="orgfc04bd2"></a>
+<a id="orga6f3e4a"></a>
 
 ## Projects
 
@@ -592,7 +592,7 @@ The grade will be based on the 1) quality of feedback provided to
 peers, 2) the grader’s review, and 3) the presentation.
 
 
-<a id="org30f7385"></a>
+<a id="org1e78314"></a>
 
 ### Feedback
 
@@ -614,28 +614,28 @@ presentation. If anything, communicating negative results is even more
 important, in practice, than communicating positive ones.
 
 
-<a id="orgd2c5d5b"></a>
+<a id="org02adeaa"></a>
 
 ### Project 1
 
 A “complete” analysis in R, demonstrating data wrangling, modeling, visualization and delivery using R markdown.
 
 
-<a id="org753cc88"></a>
+<a id="org911b8d3"></a>
 
 ### Project 2
 
 An interactive dashboard built with Shiny.
 
 
-<a id="orgf8e258d"></a>
+<a id="org4b5090d"></a>
 
 ### Project 3
 
 A polyglot analysis using R, Python, Make and Docker.
 
 
-<a id="org2ac8398"></a>
+<a id="org26d1435"></a>
 
 ### Project Grading
 
