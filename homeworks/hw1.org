@@ -1,0 +1,48 @@
+Try to think these problems through but don't be afraid to enter them
+into an R interpreter if you want to. You still need to explain why
+they produce the results that they do.
+
+Q1: Consider the function:
+
+#+begin_example
+f <- function(x){
+  if(x < 10){
+     f(x+1);
+  } else {
+     x
+  }
+}
+#+end_example
+
+What is the value of =f(0)=? Why?
+
+What about =f(100)=?
+
+Q2: Consider another function:
+
+#+begin_example
+g <- function(){
+  x <- 0;
+  function(){
+    x <<- x + 1;
+    x
+  }
+}
+#+end_example
+
+And consider:
+
+#+begin_example
+h1 <- g();
+h2 <- g();
+#+end_example
+
+What is the result of?
+
+#+begin_example
+c(h1(), h2(), h1(), h1(), h2());
+#+end_example
+
+And why?
+
+
