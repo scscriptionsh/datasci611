@@ -35,6 +35,12 @@ portfolio including:
 2. An interactive Shiny Dashboard
 3. A hybrid analysis using R, Python, Make and Docker (or Julia).
 
+** Slack 
+
+This year in particular it will be useful for our class to communicate
+online using our [[https://bios611.slack.com][Slack Channel]].
+
+
 ** Course Schedule
 
 Fall 2020 Classes are unfortunately weird because of Covid 19. Classes
@@ -42,10 +48,6 @@ will be held Monday and Wed from 5:20 pm to 6:35 pm. Recitation/lab
 time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
 work with me directly or virtually on material covered during lecture.
 
-** Slack 
-
-This year in particular it will be useful for our class to communicate
-online using our [[https://bios611.slack.com][Slack Channel]].
 
 *** Hyflex 
 
@@ -61,53 +63,53 @@ a different time.
 NB - this is the first time I've taught this course. We might deviate
 from this syllabus.
 
-| Day                     | Time         | Class Type     | Subject                                  | Materials | HW |
-|-------------------------+--------------+----------------+------------------------------------------+-----------+----|
-| Aug 10 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Intro and Demo                           |           |    |
-| Aug 11 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation | Compute Resources                        |           |    |
-| Aug 12 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Compute Resources & R 1                  |           |    |
-| Aug 17 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Programming Languages via R (R 2)        |           |    |
-| Aug 18 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Aug 19 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Linux and Bash ...                       |           |    |
-| Aug 24 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Docker & Make & Party                    |           |    |
-| Aug 25 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Aug 26 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Git Concepts and Practices               |           |    |
-| Aug 31 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Putting it all Together                  |           |    |
-| Sep 01 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Sep 02 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | ggplot                                   |           |    |
-| Sep 07 (Monday) 2020    | 5:20-6:35 pm | ~              | Labor Day                                |           |    |
-| Sep 08 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Sep 09 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Relational Data and Tidy Data            |           |    |
-| Sep 14 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Agile Data Science?                      |           |    |
-| Sep 15 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Sep 16 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Classification                           |           |    |
-| Sep 21 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Parameter Fitting and Optim              |           |    |
-| Sep 22 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Sep 23 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Model Val & Char                         |           |    |
-| Sep 28 (Monday) 2020    | 5:20-6:35 pm | Lecture        | The Dark Art of Clustering               |           |    |
-| Sep 29 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Sep 30 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Best in Show: Gradient Boosting Machines |           |    |
-| Oct 05 (Monday) 2020    | 5:20-6:35 pm | Lecture        | GBMs in Practice                         |           |    |
-| Oct 06 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Oct 07 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Project Presentations                    |           |    |
-| Oct 12 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Shiny Introduction                       |           |    |
-| Oct 13 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Oct 14 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Docker Recap and Shiny                   |           |    |
-| Oct 19 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Programming Languages and Python         |           |    |
-| Oct 20 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Oct 21 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Pandas, Dplyr, SQL 1                     |           |    |
-| Oct 26 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Pandas, Dplyr, SQL 2                     |           |    |
-| Oct 27 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Oct 28 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Scikit Learn                             |           |    |
-| Nov 02 (Monday) 2020    | 5:20-6:35 pm | Lecture        | A Taste of Neural Networks               |           |    |
-| Nov 03 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Nov 04 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Regular Expressions                      |           |    |
-| Nov 09 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Data Science Ethics                      |           |    |
-| Nov 10 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-| Nov 11 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Virtual Panel w/ Datascientists          |           |    |
-| Nov 16 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Presentations                            |           |    |
-| Nov 17 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                          |           |    |
-|-------------------------+--------------+----------------+------------------------------------------+-----------+----|
+| Day                     | Time         | Class Type     | Subject                                      | Materials                                                                                                           | HW |
+|-------------------------+--------------+----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------+----|
+| Aug 10 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Intro and Demo                               |                                                                                                                     |    |
+| Aug 11 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation | Compute Resources                            |                                                                                                                     |    |
+| Aug 12 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Compute Resources & R 1                      |                                                                                                                     |    |
+| Aug 17 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Programming Languages via R (R 2) & Datasets | https://learnxinyminutes.com/docs/r/ http://adv-r.had.co.nz/Environments.html http://adv-r.had.co.nz/Functions.html | [[https://github.com/Vincent-Toups/datasci611/blob/master/homeworks/hw1.md][HW1]] |
+| Aug 18 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation | Project 1 Setup                              |                                                                                                                     |    |
+| Aug 19 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Linux and Bash ...                           |                                                                                                                     |    |
+| Aug 24 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Docker & Make & Party                        |                                                                                                                     |    |
+| Aug 25 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Aug 26 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Git Concepts and Practices                   |                                                                                                                     |    |
+| Aug 31 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Putting it all Together                      |                                                                                                                     |    |
+| Sep 01 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Sep 02 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | ggplot                                       |                                                                                                                     |    |
+| Sep 07 (Monday) 2020    | 5:20-6:35 pm | ~              | Labor Day                                    |                                                                                                                     |    |
+| Sep 08 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Sep 09 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Relational Data and Tidy Data                |                                                                                                                     |    |
+| Sep 14 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Agile Data Science?                          |                                                                                                                     |    |
+| Sep 15 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Sep 16 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Classification                               |                                                                                                                     |    |
+| Sep 21 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Parameter Fitting and Optim                  |                                                                                                                     |    |
+| Sep 22 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Sep 23 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Model Val & Char                             |                                                                                                                     |    |
+| Sep 28 (Monday) 2020    | 5:20-6:35 pm | Lecture        | The Dark Art of Clustering                   |                                                                                                                     |    |
+| Sep 29 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Sep 30 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Best in Show: Gradient Boosting Machines     |                                                                                                                     |    |
+| Oct 05 (Monday) 2020    | 5:20-6:35 pm | Lecture        | GBMs in Practice                             |                                                                                                                     |    |
+| Oct 06 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Oct 07 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Project Presentations                        |                                                                                                                     |    |
+| Oct 12 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Shiny Introduction                           |                                                                                                                     |    |
+| Oct 13 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Oct 14 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Docker Recap and Shiny                       |                                                                                                                     |    |
+| Oct 19 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Programming Languages and Python             |                                                                                                                     |    |
+| Oct 20 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Oct 21 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Pandas, Dplyr, SQL 1                         |                                                                                                                     |    |
+| Oct 26 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Pandas, Dplyr, SQL 2                         |                                                                                                                     |    |
+| Oct 27 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Oct 28 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Scikit Learn                                 |                                                                                                                     |    |
+| Nov 02 (Monday) 2020    | 5:20-6:35 pm | Lecture        | A Taste of Neural Networks                   |                                                                                                                     |    |
+| Nov 03 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Nov 04 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Regular Expressions                          |                                                                                                                     |    |
+| Nov 09 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Data Science Ethics                          |                                                                                                                     |    |
+| Nov 10 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+| Nov 11 (Wednesday) 2020 | 5:20-6:35 pm | Lecture        | Virtual Panel w/ Datascientists              |                                                                                                                     |    |
+| Nov 16 (Monday) 2020    | 5:20-6:35 pm | Lecture        | Presentations                                |                                                                                                                     |    |
+| Nov 17 (Tuesday) 2020   | 3:00-4:00 pm | Lab/Recitation |                                              |                                                                                                                     |    |
+|-------------------------+--------------+----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------+----|
 
 ** Projects
 
