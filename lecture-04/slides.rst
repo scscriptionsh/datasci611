@@ -402,6 +402,8 @@ happens by default.
 
 For the rocker/verse container, it runs rstudio.
 
+----
+
 Docker Run Args you Need to Know
 ================================
 
@@ -413,3 +415,220 @@ Thus we can understand this line from the rocker documentation::
 
   sudo docker run -d -p 8787:8787 \
     -e PASSWORD=helloworld --name rstudio rocker/rstudio 
+
+----
+
+A Simple Docker File
+====================
+
+Let's install some additiona libraries in our tidyverse container::
+
+    FROM rocker/verse
+    MAINTAINER Vincent Toups <toups@email.unc.edu>
+    RUN R -e "install.packages('xlsx')"
+    RUN R -e "install.packages('gbm')"
+
+And::
+
+    docker build . -t ex1 
+    # run rstudio 
+    docker run -p 8787:8787 -v `pwd`:/home/rstudio -e PASSWORD=$RPW -t ex1
+
+NB: gbm is "An implementation of extensions to Freund and Schapire's
+AdaBoostalgorithm and Friedman's gradient boosting machine. Includes
+regressionmethods for least squares, absolute loss, t-distribution
+loss, quantileregression, logistic, multinomial logistic, Poisson, Cox
+proportional hazardspartial likelihood, AdaBoost exponential loss,
+Huberized hinge loss, andLearning to Rank measures
+(LambdaMart). Originally developed by Greg Ridgeway"
+
+----
+
+Docker's Cache
+==============
+
+Each line in your docker file creates a checkpoint (think of it as the
+container up to that point). This checkpoint is saved on your local
+disk.
+
+You might want to arrange your Dockerfile's to make rebuilding them
+efficient. Eg.
+
+Good::
+
+    FROM rocker/verse
+    MAINTAINER Vincent Toups <toups@email.unc.edu>
+    RUN R -e "install.packages('xlsx')"
+    RUN R -e "install.packages('gbm')"
+    ## NEW LINE
+    RUN R -e "install.pacakges('caret')" 
+
+Bad::
+
+    FROM rocker/verse
+    MAINTAINER Vincent Toups <toups@email.unc.edu>
+    ## NEW LINE
+    RUN R -e "install.pacakges('caret')" 
+    ## These will be re-built
+    RUN R -e "install.packages('xlsx')" 
+    RUN R -e "install.packages('gbm')" 
+
+----
+
+Using CMD
+=========
+
+Sometimes you want to do something else besides run RStudio.  You can
+override the CMD defined in the rocker Dockerfile by placing your own
+at the end of the file::
+
+    FROM rocker/verse
+    MAINTAINER Vincent Toups <toups@email.unc.edu>
+    RUN R -e "install.packages('xlsx')"
+    RUN R -e "install.packages('gbm')"
+    RUN R -e "install.pacakges('caret')" 
+    USER rstudio
+    WORKDIR /home/rstudio
+    CMD /bin/bash
+
+You can also override the CMD when you run the container (this is
+tricky with Rocker images, however)::
+
+    docker run -v `pwd`:/home/rstudio -e PASSWORD=somepassword\
+      -it ex1 sudo -H -u rstudio /bin/bash -c "cd ~/; R"
+
+:question:`Sure are a lot of command link switches here. How do we find out what they mean?`
+
+----
+
+Tidying Up your Requirements:
+=============================
+
+deps.R::
+    
+    install.packages('xlsx',
+       'gbm',
+       'caret');
+
+Dockerfile::
+
+     COPY deps.R
+     RUN Rscript deps.R
+
+:question:`What are the disadvantages of this approach?`
+
+
+----
+
+Managing Containers
+===================
+
+1. CTRL-C will usually kill a Docker container and any other shell process.
+2. CTRL-Z puts a process in the background and puts it to sleep 
+3. bg <n> starts that process up in the background
+4. docker ps - lists all your running docker instances
+5. docker kill - kills the running docker. Save your stuff first!
+
+----
+
+Interlude
+=========
+
+Check out Alvvays.
+
+A good album to start with is Antisocialites.
+
+----
+
+Make
+====
+
+Data science is a flow chart. Whether you like it or not.
+
+Make will let us transform this mess:
+
+.. figure :: images/flowchart-mess.png
+ :width: 600px
+
+ Some guy named Derek hands you this project after getting really into
+ Burning Man and quitting his postdoc.
+
+----
+
+Make
+====
+
+One way or another you need to turn it into this:
+
+.. figure :: images/flowchart-connected.png
+ :width: 600px
+
+ Might as well do it with make.
+
+NB. There are some alternatives. See the R package remake.
+
+----
+
+Reading a Makefile
+==================
+
+Makefile::
+
+    .PHONY clean
+
+    clean:
+        rm derived_data/*
+        rm figures/*
+        rm fragments/*
+
+    derived_data/tidy-powers.csv:\
+     source_data/super_hero_powers.csv\
+     source_data/heroes_information.csv\
+     tidy_powers.R
+        Rscript tidy_powers.R
+
+    derived_data/tidy-info.csv:\
+     source_data/heroes_information.csv\
+     tidy_info.R
+        Rscript tidy_info.R
+
+    fragments/data-summary-fragment.tex\
+     figures/powers.png:\
+     derived_data/tidy-powers.csv\
+     derived_data/tidy-info.csv\
+     powers-summary-figure.R
+        Rscript powers-summary-figure.R
+
+    fragments/info-summary.fragment.tex\
+     figures/info.png:\
+     derived_data/tidy-info.csv\
+     info-summary.R
+        Rscript info-summary.R
+
+    report.pdf:\
+     fragments/data-summary.fragment.tex\
+     fragments/info-summary.fragment.tex\
+     figures/info.png\
+     figures/powers.png
+        pdflatex report.tex
+
+----
+
+A Toy Example
+=============
+
+Lets create one with just bash commands.
+
+----
+
+The Promised Party
+==================
+
+We now have the ingredients to set up a project. In reality, we build
+these artifacts (Dockerfile, Makefile) organically, as we work on our
+project.
+
+Tomorrow at lab we'll build skeletons and handle the question of our
+data.
+
+

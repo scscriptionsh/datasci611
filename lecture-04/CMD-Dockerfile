@@ -1,0 +1,8 @@
+FROM rocker/verse
+MAINTAINER Vincent Toups <toups@email.unc.edu>
+RUN R -e "install.packages('xlsx')"
+RUN R -e "install.packages('gbm')"
+RUN R -e "install.packages('caret')" 
+USER rstudio
+WORKDIR /home/rstudio
+CMD /bin/bash
