@@ -287,7 +287,7 @@ Let's experiment with other geometries before looking at dplyr::
 ----
 
 Other Geoms (histogram)
-======================
+=======================
 
 Let's experiment with other geometries before looking at dplyr::
 
@@ -451,7 +451,7 @@ Plotting it all one one plot
       geom_point(aes(color=Type,shape=Gender));
     ggsave("images/everyone_one.png",plot=p);
 
-.. images :: images/everyone_one.png
+.. image :: images/everyone_one.png
  :width: 400 px
 
 1. This is kind of bad!
