@@ -385,7 +385,6 @@ Docker build
 ============
 
 1. docker build    .      -t     <a-name>
-   cmd    sub-cmd  where  tag
 
 This performs the build and tags the result. 
 
