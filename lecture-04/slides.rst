@@ -412,8 +412,15 @@ Docker Run Args you Need to Know
 
 Thus we can understand this line from the rocker documentation::
 
-  sudo docker run -d -p 8787:8787 \
-    -e PASSWORD=helloworld --name rstudio rocker/rstudio 
+  docker run -d -p 8787:8787 \
+    -e PASSWORD=helloworld --name rocker/rstudio
+
+NB: if we were running an image we tagged during a build, we'd say 
+
+  docker run -d -p 8787:8787 \
+    -e PASSWORD=helloworld -t <the-tag>
+
+Without the <>
 
 ----
 
