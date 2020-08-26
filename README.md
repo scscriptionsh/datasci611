@@ -1,23 +1,23 @@
 
 # Table of Contents
 
-1.  [2020 BIOS 611 - Intro to Data Science](#org00d4fa7)
-    1.  [Course Information](#orged995ab)
-    2.  [About your Instructor](#org5a52c90)
-    3.  [Portfolio](#org445b704)
-    4.  [Slack](#orgab5d01b)
-    5.  [Course Schedule](#orgfa03ede)
-        1.  [Hyflex](#org9ebe668)
-        2.  [Course Schedule](#orga78f6a6)
-    6.  [Projects](#orga6f3e4a)
-        1.  [Feedback](#org1e78314)
-        2.  [Project 1](#org02adeaa)
-        3.  [Project 2](#org911b8d3)
-        4.  [Project 3](#org4b5090d)
-        5.  [Project Grading](#org26d1435)
+1.  [2020 BIOS 611 - Intro to Data Science](#org182ef40)
+    1.  [Course Information](#org1f69132)
+    2.  [About your Instructor](#orgef59f69)
+    3.  [Portfolio](#org241b3d5)
+    4.  [Slack](#org4aba2c0)
+    5.  [Course Schedule](#org92120ba)
+        1.  [Hyflex](#orgfe94944)
+        2.  [Course Schedule](#org7c3732e)
+    6.  [Projects](#org3916f3e)
+        1.  [Feedback](#org51d1708)
+        2.  [Project 1](#org541fa32)
+        3.  [Project 2](#org3b76bd4)
+        4.  [Project 3](#org2ac1136)
+        5.  [Project Grading](#orgc4c69fd)
 
 
-<a id="org00d4fa7"></a>
+<a id="org182ef40"></a>
 
 # 2020 BIOS 611 - Intro to Data Science
 
@@ -28,7 +28,7 @@ You should have gotten an email invite to the slack before the course started.
 Email me if you need help: toups@email.unc.edu
 
 
-<a id="orged995ab"></a>
+<a id="org1f69132"></a>
 
 ## Course Information
 
@@ -46,7 +46,7 @@ To do these tasks effectively we will also focus heavily on using Git,
 Make and Docker.
 
 
-<a id="org5a52c90"></a>
+<a id="orgef59f69"></a>
 
 ## About your Instructor
 
@@ -54,7 +54,7 @@ I have both academic and "real world" experience as a scientist,
 software engineer, and data scientist.
 
 
-<a id="org445b704"></a>
+<a id="org241b3d5"></a>
 
 ## Portfolio
 
@@ -67,7 +67,7 @@ portfolio including:
 3.  A hybrid analysis using R, Python, Make and Docker (or Julia).
 
 
-<a id="orgab5d01b"></a>
+<a id="org4aba2c0"></a>
 
 ## Slack
 
@@ -75,7 +75,7 @@ This year in particular it will be useful for our class to communicate
 online using our [Slack Channel](https://bios611.slack.com).
 
 
-<a id="orgfa03ede"></a>
+<a id="org92120ba"></a>
 
 ## Course Schedule
 
@@ -85,7 +85,7 @@ time will be Tuesdays from 3:00-4:00 pm.  Labs will be a chance to
 work with me directly or virtually on material covered during lecture.
 
 
-<a id="org9ebe668"></a>
+<a id="orgfe94944"></a>
 
 ### Hyflex
 
@@ -97,7 +97,7 @@ tuning in over zoom and still others watching the recorded lectures at
 a different time.
 
 
-<a id="orga78f6a6"></a>
+<a id="org7c3732e"></a>
 
 ### Course Schedule
 
@@ -168,7 +168,7 @@ from this syllabus.
 <td class="org-left">Lecture</td>
 <td class="org-left">Programming Languages via R (R 2) & Datasets</td>
 <td class="org-left"><https://learnxinyminutes.com/docs/r/> <http://adv-r.had.co.nz/Environments.html> <http://adv-r.had.co.nz/Functions.html></td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">[HW1](https://github.com/Vincent-Toups/datasci611/blob/master/homeworks/hw1.md)</td>
 </tr>
 
 
@@ -206,7 +206,7 @@ from this syllabus.
 <td class="org-left">Aug 25 (Tuesday) 2020</td>
 <td class="org-left">3:00-4:00 pm</td>
 <td class="org-left">Lab/Recitation</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Setting up Our Project</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -216,7 +216,7 @@ from this syllabus.
 <td class="org-left">Aug 26 (Wednesday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">Git Concepts and Practices</td>
+<td class="org-left">Tidy Data & ggplot</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -226,7 +226,7 @@ from this syllabus.
 <td class="org-left">Aug 31 (Monday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">Putting it all Together</td>
+<td class="org-left">Tidy Data & ggplot 2</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -246,7 +246,7 @@ from this syllabus.
 <td class="org-left">Sep 02 (Wednesday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">ggplot</td>
+<td class="org-left">Git Concepts and Practices</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -276,7 +276,7 @@ from this syllabus.
 <td class="org-left">Sep 09 (Wednesday) 2020</td>
 <td class="org-left">5:20-6:35 pm</td>
 <td class="org-left">Lecture</td>
-<td class="org-left">Relational Data and Tidy Data</td>
+<td class="org-left">Relational Data Operations</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
@@ -574,7 +574,7 @@ from this syllabus.
 </table>
 
 
-<a id="orga6f3e4a"></a>
+<a id="org3916f3e"></a>
 
 ## Projects
 
@@ -592,7 +592,7 @@ The grade will be based on the 1) quality of feedback provided to
 peers, 2) the grader’s review, and 3) the presentation.
 
 
-<a id="org1e78314"></a>
+<a id="org51d1708"></a>
 
 ### Feedback
 
@@ -614,28 +614,28 @@ presentation. If anything, communicating negative results is even more
 important, in practice, than communicating positive ones.
 
 
-<a id="org02adeaa"></a>
+<a id="org541fa32"></a>
 
 ### Project 1
 
 A “complete” analysis in R, demonstrating data wrangling, modeling, visualization and delivery using R markdown.
 
 
-<a id="org911b8d3"></a>
+<a id="org3b76bd4"></a>
 
 ### Project 2
 
 An interactive dashboard built with Shiny.
 
 
-<a id="org4b5090d"></a>
+<a id="org2ac1136"></a>
 
 ### Project 3
 
 A polyglot analysis using R, Python, Make and Docker.
 
 
-<a id="org26d1435"></a>
+<a id="orgc4c69fd"></a>
 
 ### Project Grading
 
