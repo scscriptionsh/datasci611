@@ -530,6 +530,8 @@ It can be handy to save your figures as pdfs and edit them by hand
 with Illustrator or Inkscape for a final publication. But that is
 fraught with peril.
 
+----
+
 Notes On Organization
 =====================
 
@@ -540,6 +542,8 @@ Conceptually:
 
 1. cleanup and concatenate the datasets
 2. load figures
+
+----
 
 Make Targets
 ============
