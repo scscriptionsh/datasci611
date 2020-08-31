@@ -4,10 +4,10 @@
         messageStyle: "none",
         TeX : { extensions : ['color.js'] }
       });
-    </script></head><body class="impress-not-supported"><div id="impress-help"></div><div id="impress"><div class="step step-level-1" step="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="0" data-y="0" data-z="0"><h1 id="more-challenging-data-situations">More Challenging Data Situations</h1><p>Consider our now familiar data set of super hero powers.</p><pre class="highlight ">d &lt;- read_csv("source_data/super_hero_powers.csv");</pre><p>This is not tidy. One "observation" in this case is:</p><pre class="highlight ">hero, power-name, posseses</pre><p>But our data set is instead:</p><pre class="highlight ">hera, power-name1, power-name2, ...</pre><p>(NB we could remove the posseses column and just leave out
+    </script></head><body class="impress-not-supported"><div id="impress-help"></div><div id="impress"><div class="step step-level-1" step="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="0" data-y="0" data-z="0"><h1 id="more-challenging-data-situations">More Challenging Data Situations</h1><p>Consider our now familiar data set of super hero powers.</p><pre class="highlight ">library(tidyverse);
+d &lt;- read_csv("source_data/super_hero_powers.csv");</pre><p>This is not tidy. One "observation" in this case is:</p><pre class="highlight ">hero, power-name, posseses</pre><p>But our data set is instead:</p><pre class="highlight ">hera, power-name1, power-name2, ...</pre><p>(NB we could remove the posseses column and just leave out
 observations where it would be F).</p><p>To use dplyr and ggplot effectively (and to respect standards) we
-need to transform our data set.</p></div><div class="step step-level-1" step="1" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="1600" data-y="0" data-z="0"><h1 id="pivoting">Pivoting</h1><p>For our own sanity, let's focus on a smaller subset of columns. But
-first some other tidying tricks:</p><pre class="highlight ">names(d)
+need to transform our data set.</p></div><div class="step step-level-1" step="1" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="1600" data-y="0" data-z="0"><h1 id="nice-names">Nice Names</h1><p>Making the names nicer:</p><pre class="highlight ">names(d)
 
 names(d)
   [1] "hero_names"                   "Agility"
@@ -95,4 +95,146 @@ same we just filter the data differently.</p></div><div class="step step-level-1
      title="Female");
 
    p &lt;- grid.arrange(p_female, p_male,nrow=2);
-   ggsave("./images/hist_fm.png",plot=p);</pre><img src="images/hist_fm.png" width="400px"></img><p><span class="question">How else might we visualize this data?</span></p></div><div class="step step-level-1" step="11" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="17600" data-y="0" data-z="0"><h1 id="taxonomy-of-joins">Taxonomy of Joins</h1><img src="images/joins.png" width="500px"></img></div></div><script type="text/javascript" src="js/impress.js"></script><script type="text/javascript" src="js/gotoSlide.js"></script><script type="text/javascript" src="js/hovercraft.js"></script></body></html>
+   ggsave("./images/hist_fm.png",plot=p);</pre><img src="images/hist_fm.png" width="400px"></img><p><span class="question">How else might we visualize this data?</span></p><h1 id="rank-comparison-chart">Rank Comparison Chart:</h1><figure><img src="images/gender_power_comparison_single3.png" width="400px"></img><figcaption>Power distribution is similar in male and female coded super-heroes
+with a few notable exceptions.</figcaption></figure></div><div class="step step-level-1" step="11" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="17600" data-y="0" data-z="0"><h1 id="the-code">The Code</h1><figure><img src="images/gender_power_comparison_single3.png" width="100px"></img></figure><pre class="highlight ">normalized_counts &lt;- powers %&gt;%
+  group_by(power, gender) %&gt;%
+  summarize(n=sum(has)) %&gt;%
+  inner_join(gender_counts,by="gender") %&gt;%
+  mutate(p=n/total);
+
+normalized_counts &lt;- normalized_counts %&gt;%
+  group_by(gender) %&gt;% arrange(desc(p)) %&gt;%
+  mutate(rank = seq(length(p))) %&gt;%
+  ungroup();
+
+small_set &lt;- normalized_counts %&gt;%
+  filter(gender %in% c("Male", "Female") &amp; rank &lt;= 20);
+
+gender_to_position &lt;- function(g){
+  c(Female=-2,Male=2)[g]
+}
+
+gender_to_line_position &lt;- function(g){
+  c(Female=-1,Male=1)[g]
+}
+
+small_set$x_pos &lt;- gender_to_position(small_set$gender);
+small_set$line_x_pos &lt;- gender_to_line_position(small_set$gender);
+
+p &lt;- ggplot(small_set, aes(x_pos,
+                         rank)) +
+  scale_y_reverse() +
+  geom_tile(width=2.25,height=0.8,aes(fill=power)) +
+  geom_text(aes(label=power)) +
+  theme(legend.position="bottom") +
+  geom_line(aes(x=line_x_pos, color=power)) +
+  scale_x_continuous("Gender",c()) +
+  geom_text(data=tibble(x=c(-2,2),y=c(22,22),label=c("Female", "Male")),
+            aes(x=x,y=y,label=label));</pre></div><div class="step step-level-1" step="12" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="19200" data-y="0" data-z="0"><h1 id="taxonomy-of-joins">Taxonomy of Joins</h1><img src="images/joins.png" width="500px"></img></div><div class="step step-level-1" step="13" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="20800" data-y="0" data-z="0"><h1 id="inner-join">Inner Join</h1><p>Only data from both tables for which there is a match will appear in
+the result:</p><pre class="highlight ">powers &lt;- td %&gt;% filter(has==TRUE);
+small_gender_info &lt;- head(gender_info, 5);
+small_gender_info %&gt;% inner_join(powers, by="hero_names");
+
+# A tibble: 46 x 4
+hero_names Gender power               has
+&lt;chr&gt;      &lt;chr&gt;  &lt;fct&gt;               &lt;lgl&gt;
+1 A-Bomb     Male   accelerated_healing TRUE
+2 A-Bomb     Male   durability          TRUE
+3 A-Bomb     Male   longevity           TRUE
+4 A-Bomb     Male   super_strength      TRUE
+5 A-Bomb     Male   stamina             TRUE
+6 A-Bomb     Male   camouflage          TRUE
+7 A-Bomb     Male   self-sustenance     TRUE
+8 Abe Sapien Male   agility             TRUE
+9 Abe Sapien Male   accelerated_healing TRUE
+10 Abe Sapien Male   cold_resistance     TRUE
+# &#x2026; with 36 more rows</pre></div><div class="step step-level-1" step="14" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="22400" data-y="0" data-z="0"><h1 id="left-join">Left Join</h1><p>All rows from the left table occur, with NA filled for the right table
+columsn if they cannot be found.</p><pre class="highlight ">small_gender_info %&gt;%
+  left_join(powers %&gt;% head(10),by="hero_names")</pre><p>Note that we've chopped off some of the powers to make clear the
+behavior of left_join:</p><pre class="highlight "># A tibble: 10 x 4
+   hero_names  Gender power               has
+   &lt;chr&gt;       &lt;chr&gt;  &lt;fct&gt;               &lt;lgl&gt;
+ 1 A-Bomb      Male   accelerated_healing TRUE
+ 2 A-Bomb      Male   durability          TRUE
+ 3 A-Bomb      Male   longevity           TRUE
+ 4 A-Bomb      Male   super_strength      TRUE
+ 5 A-Bomb      Male   stamina             TRUE
+ 6 A-Bomb      Male   camouflage          TRUE
+ 7 Abe Sapien  Male   NA                  NA
+ 8 Abin Sur    Male   NA                  NA
+ 9 Abomination Male   NA                  NA
+10 Abraxas     Male   NA                  NA</pre></div><div class="step step-level-1" step="15" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="24000" data-y="0" data-z="0"><h1 id="right-join">Right Join</h1><p>Like left join, but for the right table:</p><pre class="highlight ">&gt; small_gender_info %&gt;% right_join(powers %&gt;% head(10),by="hero_names")
+small_gender_info %&gt;% right_join(powers %&gt;% head(10),by="hero_names")
+# A tibble: 10 x 4
+   hero_names Gender power               has
+   &lt;chr&gt;      &lt;chr&gt;  &lt;fct&gt;               &lt;lgl&gt;
+ 1 A-Bomb     Male   accelerated_healing TRUE
+ 2 A-Bomb     Male   durability          TRUE
+ 3 A-Bomb     Male   longevity           TRUE
+ 4 A-Bomb     Male   super_strength      TRUE
+ 5 A-Bomb     Male   stamina             TRUE
+ 6 A-Bomb     Male   camouflage          TRUE
+ 7 3-D Man    NA     agility             TRUE
+ 8 3-D Man    NA     super_strength      TRUE
+ 9 3-D Man    NA     stamina             TRUE
+10 3-D Man    NA     super_speed         TRUE</pre></div><div class="step step-level-1" step="16" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="25600" data-y="0" data-z="0"><h1 id="cross-join">Cross Join</h1><p>Not really explicitly supported in R/Tidyverse.</p><p>Usually you see the addition of a dummy column:</p><pre class="highlight ">small_gender_info %&gt;% mutate(dummy=1) %&gt;%
+ inner_join(powers %&gt;% head(10) %&gt;% mutate(dummy=1),
+            by="dummy") %&gt;%
+ select(-dummy);
+# A tibble: 50 x 5
+   hero_names.x Gender hero_names.y power               has
+   &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;        &lt;fct&gt;               &lt;lgl&gt;
+ 1 A-Bomb       Male   3-D Man      agility             TRUE
+ 2 A-Bomb       Male   3-D Man      super_strength      TRUE
+ 3 A-Bomb       Male   3-D Man      stamina             TRUE
+ 4 A-Bomb       Male   3-D Man      super_speed         TRUE
+ 5 A-Bomb       Male   A-Bomb       accelerated_healing TRUE
+ 6 A-Bomb       Male   A-Bomb       durability          TRUE
+ 7 A-Bomb       Male   A-Bomb       longevity           TRUE
+ 8 A-Bomb       Male   A-Bomb       super_strength      TRUE
+ 9 A-Bomb       Male   A-Bomb       stamina             TRUE
+10 A-Bomb       Male   A-Bomb       camouflage          TRUE
+# &#x2026; with 40 more rows
+&gt;</pre><p>(NB: the result is n * m rows long.)</p></div><div class="step step-level-1" step="17" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="27200" data-y="0" data-z="0"><h1 id="other-joins">Other Joins</h1><ol><li>semi_join: like inner join but only returns distinct rows from x
+where the condition is met.</li><li>anti_join: as above, but returns the compliment (those rows from x
+where the condition is not met.)</li><li>nest_join: sort of a technical join - matches from y are added via
+a list of data frames columns.</li></ol></div><div class="step step-level-1" step="18" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="28800" data-y="0" data-z="0"><h1 id="leads-lags-and-windows">Leads, Lags and Windows</h1><p>If you are working with time series data in particular you may want to
+window your data in various ways.</p><p>Dplyr supports this with lead/lag and window functions. These can be
+combined with groups in useful ways:</p><pre class="highlight ">d &lt;- tibble(x=seq(10)) %&gt;% mutate(lag_x=lag(x),lead_x=lead(x));
+  # A tibble: 10 x 3
+       x lag_x lead_x
+   &lt;int&gt; &lt;int&gt;  &lt;int&gt;
+ 1     1    NA      2
+ 2     2     1      3
+ 3     3     2      4
+ 4     4     3      5
+ 5     5     4      6
+ 6     6     5      7
+ 7     7     6      8
+ 8     8     7      9
+ 9     9     8     10
+10    10     9     NA</pre><p>You can combine these with grouping operations to work on datasets
+which may contain multiple time series in a tidy way.</p></div><div class="step step-level-1" step="19" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="30400" data-y="0" data-z="0"><h1 id="other-useful-libraries">Other Useful Libraries</h1><p>Consider the default plot method on a data frame:</p><pre class="highlight ">library(tidyverse);
+marvel_heroes &lt;- read_csv("source_data/datasets_38396_60978_charcters_stats.csv") %&gt;%
+ select(Intelligence, Strength, Speed, Durability, Power);
+png("images/plot-example.png")
+plot(marvel_heroes)
+dev.off();</pre><img src="images/plot-example.png" width="500px"></img></div><div class="step step-level-1" step="20" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="32000" data-y="0" data-z="0"><h1 id="plotly">Plotly</h1><p>A web based front end for interactive plots.</p><p>You can dump a ggplot plot directly to plotly.</p><p>From R:</p><pre class="highlight ">install.packages("plotly")</pre><p>Dockerfile:</p><pre class="highlight ">RUN R -e "install.packages('plotly')"</pre><p>R:</p><pre class="highlight ">save_plotly_in &lt;- function(dir_name, file_name, p){
+  withr::with_dir(dir_name, htmlwidgets::saveWidget(plotly::ggplotly(p), file_name));
+}
+
+library(tidyverse);
+library(plotly);
+
+marvel_heroes &lt;- read_csv("source_data/datasets_38396_60978_charcters_stats.csv") %&gt;%
+ select(Intelligence, Strength, Speed, Durability, Power);
+p &lt;- ggplot(marvel_heroes, aes(Strength, Intelligence)) + geom_point();
+save_plotly_in("images","plotly-example.html",p)</pre></div><div class="step step-level-1" step="21" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="33600" data-y="0" data-z="0"><h1 id="interactive-vs-non-interactive-visualization">Interactive vs Non-Interactive Visualization</h1><p>It is a lot easier to make interactive visualizations because you
+don't have to editorialize as much.</p><p>Non-interactive visualizations must tell a story, preferably one
+story. Arguably, the best visualizations need to work with a single
+color because many journals don't print color figures.</p><p>Interactive visualizations can convey much more meaning because they
+allow the user to drill down.</p><p>Rule of Thumb:</p><ol><li>Use plotly when designing your own visualizations.</li><li>Once you understand the narrative, build a custom plot for your
+static output.</li></ol></div><div class="step step-level-1" step="22" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="35200" data-y="0" data-z="0"><h1 id="project-1-a-data-expose">Project 1: A Data Expos&#xE9;</h1><p>You're homework for next Monday is to write a pitch for your first
+project in the form of a project proposal.</p><p>The proposal should have the following elements:</p><ol><li>A description of the data set.</li><li>Some very preliminary figures.</li><li>A description of a handful of questions you hope to be able to
+answer about the dataset.</li><li>A proposal to do some modeling or more advanced visualizations on
+the data set.</li><li>Some criteria for completion.</li></ol></div></div><script type="text/javascript" src="js/impress.js"></script><script type="text/javascript" src="js/gotoSlide.js"></script><script type="text/javascript" src="js/hovercraft.js"></script></body></html>
