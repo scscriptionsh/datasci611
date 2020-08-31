@@ -1,0 +1,98 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Tidy Data &amp; Plotting (dplyr and ggplot2) 2</title><meta charset="UTF-8"></meta><meta name="generator" content="Hovercraft! 1.0 http://regebro.github.com/hovercraft"></meta><link rel="stylesheet" href="css/hovercraft.css" media="all"></link><link rel="stylesheet" href="css/highlight.css" media="all"></link><link rel="stylesheet" href="custom.css" media="screen,projection"></link><script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: "none",
+        TeX : { extensions : ['color.js'] }
+      });
+    </script></head><body class="impress-not-supported"><div id="impress-help"></div><div id="impress"><div class="step step-level-1" step="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="0" data-y="0" data-z="0"><h1 id="more-challenging-data-situations">More Challenging Data Situations</h1><p>Consider our now familiar data set of super hero powers.</p><pre class="highlight ">d &lt;- read_csv("source_data/super_hero_powers.csv");</pre><p>This is not tidy. One "observation" in this case is:</p><pre class="highlight ">hero, power-name, posseses</pre><p>But our data set is instead:</p><pre class="highlight ">hera, power-name1, power-name2, ...</pre><p>(NB we could remove the posseses column and just leave out
+observations where it would be F).</p><p>To use dplyr and ggplot effectively (and to respect standards) we
+need to transform our data set.</p></div><div class="step step-level-1" step="1" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="1600" data-y="0" data-z="0"><h1 id="pivoting">Pivoting</h1><p>For our own sanity, let's focus on a smaller subset of columns. But
+first some other tidying tricks:</p><pre class="highlight ">names(d)
+
+names(d)
+  [1] "hero_names"                   "Agility"
+  [3] "Accelerated Healing"          "Lantern Power Ring"
+  [5] "Dimensional Awareness"        "Cold Resistance"
+  [7] "Durability"                   "Stealth"
+  [9] "Energy Absorption"            "Flight"
+ [11] "Danger Sense"                 "Underwater breathing"
+ [13] "Marksmanship"                 "Weapons Master"
+ [15] "Power Augmentation"           "Animal Attributes"
+ ...</pre><p>These names are bad. They got spaces and other things in them and we
+want to be able to use $. Let's clean them up a bit.</p></div><div class="step step-level-1" step="2" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="3200" data-y="0" data-z="0"><h1 id="getting-and-setting-names">Getting and Setting Names</h1><pre class="highlight ">library(stringr)
+names(d) &lt;- names(d) %&gt;%
+  tolower() %&gt;%
+  str_replace_all(" - ", " ") %&gt;%
+  str_replace_all(" ","_");
+names(d)
+
+  [1] "hero_names"                   "agility"
+  [3] "accelerated_healing"          "lantern_power_ring"
+  [5] "dimensional_awareness"        "cold_resistance"
+  [7] "durability"                   "stealth"
+  [9] "energy_absorption"            "flight"
+ [11] "danger_sense"                 "underwater_breathing"
+ [13] "marksmanship"                 "weapons_master"
+ [15] "power_augmentation"           "animal_attributes"</pre><p>Much better!</p></div><div class="step step-level-1" step="3" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="4800" data-y="0" data-z="0"><h1 id="pivot-longer">pivot_longer</h1><p>A tidbit:</p><pre class="highlight ">`%without%` &lt;- function(strs, remove_these){
+   strs[!(strs %in% remove_these)];
+ }</pre><p>Now:</p><pre class="highlight ">td &lt;- pivot_longer(d, names(d) %without% c("hero_names"), names_to="power", values_to="has");
+
+# A tibble: 111,389 x 3
+   hero_names power                 has
+   &lt;chr&gt;      &lt;chr&gt;                 &lt;lgl&gt;
+ 1 3-D Man    agility               TRUE
+ 2 3-D Man    accelerated_healing   FALSE
+ 3 3-D Man    lantern_power_ring    FALSE
+ 4 3-D Man    dimensional_awareness FALSE
+ 5 3-D Man    cold_resistance       FALSE
+ 6 3-D Man    durability            FALSE
+ 7 3-D Man    stealth               FALSE
+ 8 3-D Man    energy_absorption     FALSE
+ 9 3-D Man    flight                FALSE
+10 3-D Man    danger_sense          FALSE</pre></div><div class="step step-level-1" step="4" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="6400" data-y="0" data-z="0"><h1 id="factors-rank-and-order">Factors, Rank and Order.</h1><p>Let's try to make a plot of how common these powers are:</p><pre class="highlight ">library(tidyverse); ## strictly superfluous
+p &lt;- ggplot(td %&gt;% filter(has==TRUE), aes(power)) +
+       geom_histogram(stat="count");
+ggsave("images/powers-histo1.png",plot=p);</pre><img src="images/powers-histo1.png" width="400px"></img><p>This is almost useless.</p><p>Deseridata:</p><ol><li>Order by count</li><li>Limit to top 20 or so?</li><li>Make the Powers Readable.</li></ol></div><div class="step step-level-1" step="5" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="8000" data-y="0" data-z="0"><h1 id="factor-variables">Factor Variables</h1><p>We often wish to make explicit the implicit fixed character of a set
+of discrete data values.</p><p>In our case our super powers are drawn from a fixed unordered
+set. They happen to be represented as strings but that doesn't really
+capture their true character.</p><p>A random string which happens to equal "healing factor" isn't really a
+"healing factor" entry in our dataset.</p><p>Factors make this explicit.</p></div><div class="step step-level-1" step="6" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="9600" data-y="0" data-z="0"><h1 id="with-ggplot">With GGPlot</h1><p>We can use ordered Factors to make ggplot show things in a certain
+order:</p><pre class="highlight ">power_counts &lt;- td %&gt;%
+ group_by(power) %&gt;%
+ summarize(count=sum(has)) %&gt;%
+ arrange(desc(count));
+
+td$power &lt;- factor(td$power, levels=power_counts$power);
+p &lt;- ggplot(td %&gt;% filter(has==TRUE), aes(power)) +
+       geom_histogram(stat="count");
+ggsave("images/powers-histo2.png",plot=p);</pre><img src="images/powers-histo2.png" width="400px"></img><p>Still bad!</p></div><div class="step step-level-1" step="7" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="11200" data-y="0" data-z="0"><p>Top twenty:</p><pre class="highlight ">tdtt &lt;- td %&gt;% filter(td$power %in% head(power_counts,20)$power);
+p &lt;- ggplot(tdtt %&gt;% filter(has==TRUE), aes(power)) +
+       geom_histogram(stat="count");
+ggsave("images/powers-histo3.png",plot=p);</pre><img src="images/powers-histo3.png" width="400px"></img><p>Ok, now about those tick marks.</p></div><div class="step step-level-1" step="8" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="12800" data-y="0" data-z="0"><pre class="highlight ">p &lt;- ggplot(tdtt %&gt;% filter(has==TRUE), aes(power)) +
+       geom_histogram(stat="count") +
+       theme(axis.text.x = element_text(angle = 90, hjust = 1));
+ggsave("images/powers-histo4.png",plot=p);</pre><img src="images/powers-histo4.png" width="400px"></img></div><div class="step step-level-1" step="9" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="14400" data-y="0" data-z="0"><h1 id="preliminary-abstractions">Preliminary Abstractions</h1><p>We should abstract our plot, so we can re-use it easily:</p><pre class="highlight ">plot_counts &lt;- function(d,title){
+  power_counts &lt;- d %&gt;% group_by(power) %&gt;%
+    summarize(count=sum(has)) %&gt;%
+    arrange(desc(count));
+  d$power &lt;- factor(d$power,levels=power_counts$power);
+  d &lt;- d %&gt;% filter(power %in% head(power_counts,20)$power);
+  ggplot(d %&gt;% filter(has==TRUE), aes(power)) +
+       geom_histogram(stat="count") +
+       theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+       labs(title=title);
+
+}</pre><p>This is an example of abstraction: the steps to build a plot are the
+same we just filter the data differently.</p></div><div class="step step-level-1" step="10" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="16000" data-y="0" data-z="0"><h1 id="joining-to-gender">Joining to Gender</h1><p>An example of a join:</p><pre class="highlight ">..
+   library(gridExtra);
+   gender_info &lt;- read_csv("source_data/heroes_information.csv") %&gt;%
+     select(name, Gender) %&gt;% distinct() %&gt;% rename(hero_names=name);
+   power_gender &lt;- td %&gt;%  inner_join(gender_info, by="hero_names");
+
+   p_male &lt;- plot_counts(power_gender %&gt;% filter(Gender=="Male"),
+     title="Male");
+   p_female &lt;- plot_counts(power_gender %&gt;% filter(Gender=="Female"),
+     title="Female");
+
+   p &lt;- grid.arrange(p_female, p_male,nrow=2);
+   ggsave("./images/hist_fm.png",plot=p);</pre><img src="images/hist_fm.png" width="400px"></img><p><span class="question">How else might we visualize this data?</span></p></div><div class="step step-level-1" step="11" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1" data-x="17600" data-y="0" data-z="0"><h1 id="taxonomy-of-joins">Taxonomy of Joins</h1><img src="images/joins.png" width="500px"></img></div></div><script type="text/javascript" src="js/impress.js"></script><script type="text/javascript" src="js/gotoSlide.js"></script><script type="text/javascript" src="js/hovercraft.js"></script></body></html>
