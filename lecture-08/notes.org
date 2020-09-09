@@ -1,0 +1,686 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style.css"/>
+#+TITLE: Interactive Staging, Markdown and Latex
+
+* Interactive Staging
+
+Key ideas:
+
+1. History
+2. Staging Area
+3. Working Copy
+
+We use =git add= to move changes from the Working Copy into the
+staging area.
+
+From worst to best:
+
+1. =git add -A :/= Add everything to the staging area
+2. =git add <filename>= Add all the changes to a single file
+3. =git add -i= Review the changes in the working copy adding only
+   those which are appropriate for a given idea.
+
+** Preparing for =git add -i=
+
+Consider this repo state:
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git log -1
+commit 66e51c91b26140e14177fff87ad8d5e7643fea9c (HEAD -> interactive-staging-example)
+Author: Vincent <Vincent Toups>
+Date:   Sun Sep 6 13:57:39 2020 -0400
+
+    **REVISE-ME**
+#+end_src
+
+What I've done here is rolled up a few days worth of work into a
+single commit with the suggestive message =**REVISE-ME**=.
+
+You can also just leave your working copy messy, but rolling up
+commits like this lets you push them to a remote periodically to back
+up your code.
+
+Always do this on a branch! You'll have to =git push --force= each
+time. This is one of the few times you'll need to use the =--force=
+argument.
+
+Anyway, we can undo this intentionally monolithic commit like this:
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git reset --soft HEAD~
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   Dockerfile
+	modified:   Makefile
+	new file:   predict-gender-gbm.R
+	new file:   predict-gender-hw.R
+	modified:   utils.R
+#+end_src
+
+Note that if you ==git log== here you will find that the
+=**REVISE-ME**= commit is gone. We've moved the HEAD of this branch
+back one.
+
+When we pop a commit like this everything is in the staging area. We
+need to unstage it all by executing commands like:
+
+#+begin_src 
+git reset HEAD Dockerfile 
+git reset HEAD Makefile
+git reset HEAD ...
+#+end_src
+
+You can do this in one fell swoop with a bash invocation like this:
+
+#+begin_src 
+for f in `git status | grep : | grep -v committed | cut -d':' -f2`; do git reset HEAD $f; done 
+...
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Dockerfile
+	modified:   Makefile
+	modified:   utils.R
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	predict-gender-gbm.R
+	predict-gender-hw.R
+
+no changes added to commit (use "git add" and/or "git commit -a")
+#+end_src
+
+Now we have a dirty working copy and an empty stagin area and we can
+use interactive staging.
+
+** reviewing our diffs
+
+First of all, we have two totally new files. =predict-gender-gbm.R= is
+an attempt to predict the gender of a comic book character by using
+their super powers with a gradient boosting machine.
+
+After that failed to work well, I wanted something to contrast the
+approach with (useful for expository purposes) so I did a similar
+analysis using height and weight in =predict-gender-hw.R=. 
+
+If we say:
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git diff Makefile 
+diff --git a/Makefile b/Makefile
+index a4c01f2..da1ca90 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,6 +8,10 @@ clean:
+ 	rm -f fragments/*.tex
+ 	rm -f report.pdf
+ 
++figures/some-other-figure.png:\
++ figure-code.R
++	Rscript figure-code.R
++
+ figures/gender_power_comparison.png\
+  figures/gender_power_comparison_single.png\
+  figures/gender_power_comparison_single2.png\
+@@ -33,8 +37,22 @@ fragments/real_comics_weight_height.tex\
+  height_weight_vs_real_people.R
+ 	Rscript height_weight_vs_real_people.R
+ 
++fragments/gbm.fragment.tex:\
++ predict-gender-gbm.R\
++ derived_data/information.csv\
++ derived_data/powers.csv
++	Rscript predict-gender-gbm.R
++
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++	Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_and_weights.png
+ 	cp figures/comparison_of_heights_and_weights.png assets/comparison_of_heights_and_weights.png
+ 
+ assets/gender_power_comparison_single3.png: figures/gender_power_comparison_single3.png
+ 	cp figures/gender_power_comparison_single3.png assets/gender_power_comparison_single3.png
++
+#+end_src
+
+We can see that we have targets associated with each of these scripts
+in our Makefile.
+
+We also have a dangling target =figures/some-other-figure.png= which
+appears to be something I planned but haven't implemented.
+
+There is also a miscellaneous newline at the end of the file. We
+probably don't want to ever stage that patch.
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git diff --stat
+ Dockerfile |  2 ++
+ Makefile   | 18 ++++++++++++++++++
+ utils.R    |  9 ++++++++-
+ 3 files changed, 28 insertions(+), 1 deletion(-)
+#+end_src
+
+A summary of the whole diff for the project indicates I extended the
+Dockerfile and the utilities.
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git diff Dockerfile 
+diff --git a/Dockerfile b/Dockerfile
+index bf1f6f8..01bcbc4 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -1,3 +1,5 @@
+ FROM rocker/verse
+ MAINTAINER Vincent Toups <toups@email.unc.edu>
+ RUN R -e "install.packages('gridExtra')"
++RUN R -e "install.packages('gbm')"
++RUN apt update && apt-get install emacs
+toups@rs:~/work/bios611-project1$ 
+#+end_src
+
+Looks like I added a few things to the Dockerfile. This is safe to
+commit first since it won't break anything in the history.
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git commit -m "Added gbm library (and emacs) to docker image."
+[interactive-staging-example f971580] Added gbm library (and emacs) to docker image.
+ 1 file changed, 2 insertions(+)
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Makefile
+	modified:   utils.R
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	predict-gender-gbm.R
+	predict-gender-hw.R
+
+no changes added to commit (use "git add" and/or "git commit -a")
+toups@rs:~/work/bios611-project1$ 
+#+end_src
+
+The utilities have also been extended only. Adding them won't break
+the current repo.  
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git diff utils.R
+diff --git a/utils.R b/utils.R
+index 9fe832b..7d8a5c1 100644
+--- a/utils.R
++++ b/utils.R
+@@ -1,9 +1,12 @@
++library(stringr);
+ 
+ tidy_up_names <- function(dataset){
+     names(dataset) <- names(dataset) %>%
+         tolower() %>%
+         str_replace_all(" - ", " ") %>%
+-        str_replace_all(" ", "_");
++        str_replace_all(" ", "_") %>%
++        str_replace_all("-","_") %>%
++        str_replace_all("/","_or_");
+     dataset
+ }
+ 
+@@ -11,3 +14,7 @@ tidy_up_names <- function(dataset){
+     a[!(a %in% b)];
+ }
+ 
++write_wrapped <- function(s, file, append=FALSE){
++  s <- strwrap(s);
++  write(s,file,append=append);
++}
+toups@rs:~/work/bios611-project1$ 
+#+end_src
+
+It looks like the utils diff is made of two hunks. The first is
+important - it modifies the way that we clean up column names. We'd
+like to make that its own commit.
+
+** git add -i (part 1)
+
+When we invoke git add -i we get an interactive menu.
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git add -i utils.R
+           staged     unstaged path
+  1:    unchanged        +8/-1 utils.R
+
+**** Commands ***
+  1: [s]tatus	  2: [u]pdate	  3: [r]evert	  4: [a]dd untracked
+  5: [p]atch	  6: [d]iff	  7: [q]uit	  8: [h]elp
+What now> 
+#+end_src
+
+We select what we want to do with either a number or a letter. We want
+to =[p]atch= so lets enter 5.
+
+#+begin_src 
+What now> 5
+           staged     unstaged path
+  1:    unchanged        +8/-1 [u]tils.R
+Patch update>> 
+#+end_src
+
+This presents us with a list of files we want to work with. Because we
+invoked =git add -i= with a specific file, we only have 1 choice
+here. We list all the files we want to look at by listing the numbers
+separated by commas.
+
+#+begin_src 
+Patch update>> 1
+           staged     unstaged path
+** 1:    unchanged        +8/-1 [u]tils.R
+Patch update>> <CTRL-D>
+#+end_src
+
+We select file =1= and the press <CTRL>-D to quit this selection process.
+
+Git will now show us each hunk in turn.
+
+#+begin_src 
+Patch update>> 
+diff --git a/utils.R b/utils.R
+index 9fe832b..7d8a5c1 100644
+--- a/utils.R
++++ b/utils.R
+@@ -1,9 +1,12 @@
++library(stringr);
+ 
+ tidy_up_names <- function(dataset){
+     names(dataset) <- names(dataset) %>%
+         tolower() %>%
+         str_replace_all(" - ", " ") %>%
+-        str_replace_all(" ", "_");
++        str_replace_all(" ", "_") %>%
++        str_replace_all("-","_") %>%
++        str_replace_all("/","_or_");
+     dataset
+ }
+ 
+Stage this hunk [y,n,q,a,d,j,J,g,/,s,e,?]? 
+#+end_src
+
+We say "y" to stage the hunk. 
+
+#+begin_src 
+Stage this hunk [y,n,q,a,d,j,J,g,/,s,e,?]? y 
+@@ -11,3 +14,7 @@ tidy_up_names <- function(dataset){
+     a[!(a %in% b)];
+ }
+ 
++write_wrapped <- function(s, file, append=FALSE){
++  s <- strwrap(s);
++  write(s,file,append=append);
++}
+Stage this hunk [y,n,q,a,d,K,g,/,e,?]? n
+#+end_src
+
+Now we say "n" to skip this second patch.
+
+We press CTRL-D to exit again. Now we can make a commit of the first
+hunk only.
+
+Note that if we say git status now we will see that the file utils.R
+is both staged and not staged, a reflection of the fact that only part
+of the changes in that file are going to be put into the next commit.
+
+I won't include these steps here but we're going to add utils.R to the
+next commit.
+
+** Manually Editing Hunks
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Makefile
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	predict-gender-gbm.R
+	predict-gender-hw.R
+
+no changes added to commit (use "git add" and/or "git commit -a")
+toups@rs:~/work/bios611-project1$ 
+#+end_src
+
+We have two untracked files. We want to create two commits now. One
+associated with our original model and the next associated with our
+height and weight model.
+
+Let's start by adding part of the changes to the Makefile.
+
+NOTE! If we want to use the nice editor for editing our patch in this
+next step we need to say:
+
+#+begin_src 
+EDITOR=ne git add -i
+#+end_src
+
+
+#+begin_src 
+# (we have said git add -i Makefile, 
+# selected patch (5), and selected this file (1), 
+# CTRL-D)
+Patch update>> 
+diff --git a/Makefile b/Makefile
+index a4c01f2..da1ca90 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,6 +8,10 @@ clean:
+ 	rm -f fragments/*.tex
+ 	rm -f report.pdf
+ 
++figures/some-other-figure.png:\
++ figure-code.R
++	Rscript figure-code.R
++
+ figures/gender_power_comparison.png\
+  figures/gender_power_comparison_single.png\
+  figures/gender_power_comparison_single2.png\
+Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? 
+#+end_src
+
+We don't want this patch. So we say no.
+
+#+begin_src 
+Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? n
+@@ -33,8 +37,22 @@ fragments/real_comics_weight_height.tex\
+  height_weight_vs_real_people.R
+ 	Rscript height_weight_vs_real_people.R
+ 
++fragments/gbm.fragment.tex:\
++ predict-gender-gbm.R\
++ derived_data/information.csv\
++ derived_data/powers.csv
++	Rscript predict-gender-gbm.R
++
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++	Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_and_weights.png
+ 	cp figures/comparison_of_heights_and_weights.png assets/comparison_of_heights_and_weights.png
+ 
+ assets/gender_power_comparison_single3.png: figures/gender_power_comparison_single3.png
+ 	cp figures/gender_power_comparison_single3.png assets/gender_power_comparison_single3.png
++
+#+end_src
+
+This is tricky. We want _just_ the first part of this patch (the first
+target). Its one continuous set of new lines though, so we need to
+edit this patch by hand. We do this by typing `e`.
+
+#+begin_src 
+# Manual hunk edit mode -- see bottom for a quick guide.
+@@ -33,8 +37,22 @@ fragments/real_comics_weight_height.tex\
+  height_weight_vs_real_people.R
+        Rscript height_weight_vs_real_people.R
+ 
++fragments/gbm.fragment.tex:\
++ predict-gender-gbm.R\
++ derived_data/information.csv\
++ derived_data/powers.csv
++       Rscript predict-gender-gbm.R
++
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++       Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_an
+        cp figures/comparison_of_heights_and_weights.png assets/comparison_of_h
+ 
+ assets/gender_power_comparison_single3.png: figures/gender_power_comparison_si
+        cp figures/gender_power_comparison_single3.png assets/gender_power_comp
++
+# ---
+# To remove '-' lines, make them ' ' lines (context).
+# To remove '+' lines, delete them.
+# Lines starting with # will be removed.
+# 
+# If the patch applies cleanly, the edited hunk will immediately be
+# marked for staging.
+# If it does not apply cleanly, you will be given an opportunity to
+# edit again.  If all lines of the hunk are removed, then the edit is
+# aborted and the hunk is left unchanged.
+#+end_src
+
+We follow the instructions in the file. And remove the lines for the
+second target and save and exit.
+
+Then we say no to the last patch and quit.
+
+If we say git diff now we'll see just the code wanted to leave out of
+the commit.
+
+Now we can add the needed R file =predict-gender-gbm.R= and have a
+nice tidy commit.
+
+** Leaving out Trash
+
+Finally we repeat this process for our final change, the height and
+weight model. We use interactive staging to add our Makefile, but skip
+the first patch:
+
+#+begin_src 
+Patch update>> 
+diff --git a/Makefile b/Makefile
+index 8ea3ecb..da1ca90 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,6 +8,10 @@ clean:
+ 	rm -f fragments/*.tex
+ 	rm -f report.pdf
+ 
++figures/some-other-figure.png:\
++ figure-code.R
++	Rscript figure-code.R
++
+ figures/gender_power_comparison.png\
+  figures/gender_power_comparison_single.png\
+  figures/gender_power_comparison_single2.png\
+Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? n
+#+end_src
+
+And now we see our second patch:
+
+#+begin_src 
+@@ -39,6 +43,13 @@ fragments/gbm.fragment.tex:\
+  derived_data/powers.csv
+ 	Rscript predict-gender-gbm.R
+ 
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++	Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_and_weights.png
+ 	cp figures/comparison_of_heights_and_weights.png assets/comparison_of_heights_and_weights.png
+ 
+Stage this hunk [y,n,q,a,d,K,g,/,e,?]? y
+#+end_src
+
+We say yes. The final patch is an empty line. No reason to commit it
+at all. We add our R file and commit (not shown).
+
+Now if we say `git status` we can see:
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Makefile
+
+no changes added to commit (use "git add" and/or "git commit -a")
+toups@rs:~/work/bios611-project1$ 
+#+end_src
+
+This is just garbage we don't actually ever want. Not worth commiting.
+
+#+begin_src 
+toups@rs:~/work/bios611-project1$ git stash && git status
+Saved working directory and index state WIP on interactive-staging-example: 1ae1b57 Added comparison application of gbm to predicting gender from height and weight.
+On branch interactive-staging-example
+nothing to commit, working tree clean
+toups@rs:~/work/bios611-project1$ 
+#+end_src
+
+Git stash puts it all somewhere we can recover it if we _really_ need
+to (though it might be a hassle).
+
+** What have we done?
+
+We've taken a big mess and turned it into a nice, clean, set of
+commits. We've also avoided adding garbage (false starts, bad newlines
+at ends of files) to our project. We have forged order out of chaos.
+
+* Integrating RMarkdown into your Make build process
+
+I was going to cover Latex in this lecture but I'm afraid we won't
+have time. See my project for examples (eventually). Instead, I expect
+most of you will use RMarkdown to write your final reports.
+
+** What is RMarkdown
+
+RMarkdown lets you interleave text and R code to form a report. This
+seems like a cool idea and it is useful if you want to do exploratory
+data analysis.
+
+The primary innovation of RMarkdown is that source blocks are extended
+like this
+
+#+begin_src 
+``` {r some_name, messages=FALSE}
+library(tidyverse);
+ggplot(tibble(x=runif(10),y=runif(10))) + geom_point();
+```
+#+end_src
+
+This block will execute during the build process and insert the
+generated figure.
+
+In this way you can interleave R code and text.
+
+** Why Not To Use RMarkdown
+
+RMarkdown encourages you to depend on an ever growing global
+state. You put your data prep at the top of the file and then
+throuhout you clean, calculate summary statistics, modify, and plot.
+
+This makes it very hard to know if your work is correct. It is also
+hard for someone to understand coming in. We typically don't want to
+read the entire project code to understand what happens in
+Figure 7. But using RMarkdown we have to. 
+
+I also find that its hard to get it to produce really clean output. 
+
+Finally, the steps of an analysis are not the best way to present
+results. RMarkdown encourages you to present in the order you
+developed your results. This is wrong. Presentation is narrative and
+it should flow differently.
+
+** Markdown in 5 minutes
+
+[[https://daringfireball.net/projects/markdown/basics][Markdown]] is quite simple. Let's consult the documentation.
+
+** RMarkdown 
+
+The main innovation of RMarkdown is that code blocks, denoted via
+
+#+begin_src 
+```
+
+```
+#+end_src
+
+May contain R code which is executed. The code and the results (in any
+combination) can be placed into the generated document.  Thus:
+
+#+begin_src 
+```{r <block args>}
+```
+#+end_src
+
+The most common args are:
+
+#+begin_src 
+Chunk output can be customized with knitr options ⧉, arguments set in the {} of a chunk header. Above, we use five arguments:
+
+    include = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.
+    echo = FALSE prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.
+    message = FALSE prevents messages that are generated by code from appearing in the finished file.
+    warning = FALSE prevents warnings that are generated by code from appearing in the finished.
+    fig.cap = "..." adds a caption to graphical results.
+
+See the R Markdown Reference Guide ⧉ for a complete list of knitr chunk options.
+#+end_src
+
+** How you Use RMarkdown if you have to
+
+1. Generate all your figures ahead of time and include them using
+   Markdown syntax:
+#+begin_src 
+![Some alt text](figures/abc.png)
+#+end_src
+
+2. Generate Fragmentary Markdown code and include it in one parent
+   =report.Rmd= document:
+#+begin_src 
+```{r child = 'chapter1.Rmd'}
+```
+#+end_src
+
+3. Use a make entry like this:
+
+#+begin_src 
+report.pdf:\
+ report.Rmd\
+ figures/comparison_of_heights_and_weights.png
+	Rscript -e "rmarkdown::render('report.Rmd',output_format='pdf_document')"
+#+end_src
+
+** The Benefits
+
+This way of building the report makes the dependencies between parts
+of your report and the data science explicit without forcing you
+couple them together like a traditional RMarkdown file.
+
+* Other Tricks
+
+Copy each report to a special directory which contains tagged reports
+with git commit IDS. This wouldn't be managed by the git repo, but is
+a handy way for you to reference old versions of your report and their
+git commit IDs. I'd distribute early drafts with commit IDs so you can
+reference your repo easily.
+

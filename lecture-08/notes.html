@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-09-09 Wed 16:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interactive Staging, Markdown and Latex</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./style.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Interactive Staging, Markdown and Latex</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org981f2fb">1. Interactive Staging</a>
+<ul>
+<li><a href="#orge5106b5">1.1. Preparing for <code>git add -i</code></a></li>
+<li><a href="#org453768b">1.2. reviewing our diffs</a></li>
+<li><a href="#org204ea29">1.3. git add -i (part 1)</a></li>
+<li><a href="#org9470a9d">1.4. 1:    unchanged        +8/-1 [u]tils.R</a></li>
+<li><a href="#org14712af">1.5. Manually Editing Hunks</a></li>
+<li><a href="#orgaf794a8">1.6. Leaving out Trash</a></li>
+<li><a href="#orgd736543">1.7. What have we done?</a></li>
+</ul>
+</li>
+<li><a href="#org4ba9dd4">2. Integrating RMarkdown into your Make build process</a>
+<ul>
+<li><a href="#org2566370">2.1. What is RMarkdown</a></li>
+<li><a href="#orgf6a310f">2.2. Why Not To Use RMarkdown</a></li>
+<li><a href="#org36bbf69">2.3. Markdown in 5 minutes</a></li>
+<li><a href="#org5e24e89">2.4. RMarkdown</a></li>
+<li><a href="#orgea49cfd">2.5. How you Use RMarkdown if you have to</a></li>
+<li><a href="#orge542e7e">2.6. The Benefits</a></li>
+</ul>
+</li>
+<li><a href="#orgdfb551f">3. Other Tricks</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org981f2fb" class="outline-2">
+<h2 id="org981f2fb"><span class="section-number-2">1</span> Interactive Staging</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Key ideas:
+</p>
+
+<ol class="org-ol">
+<li>History</li>
+<li>Staging Area</li>
+<li>Working Copy</li>
+</ol>
+
+<p>
+We use <code>git add</code> to move changes from the Working Copy into the
+staging area.
+</p>
+
+<p>
+From worst to best:
+</p>
+
+<ol class="org-ol">
+<li><code>git add -A :/</code> Add everything to the staging area</li>
+<li><code>git add &lt;filename&gt;</code> Add all the changes to a single file</li>
+<li><code>git add -i</code> Review the changes in the working copy adding only
+those which are appropriate for a given idea.</li>
+</ol>
+</div>
+
+<div id="outline-container-orge5106b5" class="outline-3">
+<h3 id="orge5106b5"><span class="section-number-3">1.1</span> Preparing for <code>git add -i</code></h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Consider this repo state:
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git log -1
+commit 66e51c91b26140e14177fff87ad8d5e7643fea9c (HEAD -&gt; interactive-staging-example)
+Author: Vincent &lt;Vincent Toups&gt;
+Date:   Sun Sep 6 13:57:39 2020 -0400
+
+    **REVISE-ME**
+</pre>
+
+<p>
+What I've done here is rolled up a few days worth of work into a
+single commit with the suggestive message <code>**REVISE-ME**</code>.
+</p>
+
+<p>
+You can also just leave your working copy messy, but rolling up
+commits like this lets you push them to a remote periodically to back
+up your code.
+</p>
+
+<p>
+Always do this on a branch! You'll have to <code>git push --force</code> each
+time. This is one of the few times you'll need to use the <code>--force</code>
+argument.
+</p>
+
+<p>
+Anyway, we can undo this intentionally monolithic commit like this:
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git reset --soft HEAD~
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+        modified:   Dockerfile
+        modified:   Makefile
+        new file:   predict-gender-gbm.R
+        new file:   predict-gender-hw.R
+        modified:   utils.R
+</pre>
+
+<p>
+Note that if you <code>=git log=</code> here you will find that the
+<code>**REVISE-ME**</code> commit is gone. We've moved the HEAD of this branch
+back one.
+</p>
+
+<p>
+When we pop a commit like this everything is in the staging area. We
+need to unstage it all by executing commands like:
+</p>
+
+<pre class="example">
+git reset HEAD Dockerfile 
+git reset HEAD Makefile
+git reset HEAD ...
+</pre>
+
+<p>
+You can do this in one fell swoop with a bash invocation like this:
+</p>
+
+<pre class="example">
+for f in `git status | grep : | grep -v committed | cut -d':' -f2`; do git reset HEAD $f; done 
+...
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   Dockerfile
+        modified:   Makefile
+        modified:   utils.R
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        predict-gender-gbm.R
+        predict-gender-hw.R
+
+no changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+
+<p>
+Now we have a dirty working copy and an empty stagin area and we can
+use interactive staging.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org453768b" class="outline-3">
+<h3 id="org453768b"><span class="section-number-3">1.2</span> reviewing our diffs</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+First of all, we have two totally new files. <code>predict-gender-gbm.R</code> is
+an attempt to predict the gender of a comic book character by using
+their super powers with a gradient boosting machine.
+</p>
+
+<p>
+After that failed to work well, I wanted something to contrast the
+approach with (useful for expository purposes) so I did a similar
+analysis using height and weight in <code>predict-gender-hw.R</code>. 
+</p>
+
+<p>
+If we say:
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git diff Makefile 
+diff --git a/Makefile b/Makefile
+index a4c01f2..da1ca90 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,6 +8,10 @@ clean:
+        rm -f fragments/*.tex
+        rm -f report.pdf
+
++figures/some-other-figure.png:\
++ figure-code.R
++	Rscript figure-code.R
++
+ figures/gender_power_comparison.png\
+  figures/gender_power_comparison_single.png\
+  figures/gender_power_comparison_single2.png\
+@@ -33,8 +37,22 @@ fragments/real_comics_weight_height.tex\
+  height_weight_vs_real_people.R
+        Rscript height_weight_vs_real_people.R
+
++fragments/gbm.fragment.tex:\
++ predict-gender-gbm.R\
++ derived_data/information.csv\
++ derived_data/powers.csv
++	Rscript predict-gender-gbm.R
++
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++	Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_and_weights.png
+        cp figures/comparison_of_heights_and_weights.png assets/comparison_of_heights_and_weights.png
+
+ assets/gender_power_comparison_single3.png: figures/gender_power_comparison_single3.png
+        cp figures/gender_power_comparison_single3.png assets/gender_power_comparison_single3.png
++
+</pre>
+
+<p>
+We can see that we have targets associated with each of these scripts
+in our Makefile.
+</p>
+
+<p>
+We also have a dangling target <code>figures/some-other-figure.png</code> which
+appears to be something I planned but haven't implemented.
+</p>
+
+<p>
+There is also a miscellaneous newline at the end of the file. We
+probably don't want to ever stage that patch.
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git diff --stat
+ Dockerfile |  2 ++
+ Makefile   | 18 ++++++++++++++++++
+ utils.R    |  9 ++++++++-
+ 3 files changed, 28 insertions(+), 1 deletion(-)
+</pre>
+
+<p>
+A summary of the whole diff for the project indicates I extended the
+Dockerfile and the utilities.
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git diff Dockerfile 
+diff --git a/Dockerfile b/Dockerfile
+index bf1f6f8..01bcbc4 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -1,3 +1,5 @@
+ FROM rocker/verse
+ MAINTAINER Vincent Toups &lt;toups@email.unc.edu&gt;
+ RUN R -e "install.packages('gridExtra')"
++RUN R -e "install.packages('gbm')"
++RUN apt update &amp;&amp; apt-get install emacs
+toups@rs:~/work/bios611-project1$ 
+</pre>
+
+<p>
+Looks like I added a few things to the Dockerfile. This is safe to
+commit first since it won't break anything in the history.
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git commit -m "Added gbm library (and emacs) to docker image."
+[interactive-staging-example f971580] Added gbm library (and emacs) to docker image.
+ 1 file changed, 2 insertions(+)
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   Makefile
+        modified:   utils.R
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        predict-gender-gbm.R
+        predict-gender-hw.R
+
+no changes added to commit (use "git add" and/or "git commit -a")
+toups@rs:~/work/bios611-project1$ 
+</pre>
+
+<p>
+The utilities have also been extended only. Adding them won't break
+the current repo.  
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git diff utils.R
+diff --git a/utils.R b/utils.R
+index 9fe832b..7d8a5c1 100644
+--- a/utils.R
++++ b/utils.R
+@@ -1,9 +1,12 @@
++library(stringr);
+
+ tidy_up_names &lt;- function(dataset){
+     names(dataset) &lt;- names(dataset) %&gt;%
+         tolower() %&gt;%
+         str_replace_all(" - ", " ") %&gt;%
+-        str_replace_all(" ", "_");
++        str_replace_all(" ", "_") %&gt;%
++        str_replace_all("-","_") %&gt;%
++        str_replace_all("/","_or_");
+     dataset
+ }
+
+@@ -11,3 +14,7 @@ tidy_up_names &lt;- function(dataset){
+     a[!(a %in% b)];
+ }
+
++write_wrapped &lt;- function(s, file, append=FALSE){
++  s &lt;- strwrap(s);
++  write(s,file,append=append);
++}
+toups@rs:~/work/bios611-project1$ 
+</pre>
+
+<p>
+It looks like the utils diff is made of two hunks. The first is
+important - it modifies the way that we clean up column names. We'd
+like to make that its own commit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org204ea29" class="outline-3">
+<h3 id="org204ea29"><span class="section-number-3">1.3</span> git add -i (part 1)</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+When we invoke git add -i we get an interactive menu.
+</p>
+
+<p>
+#+begin<sub>src</sub> 
+toups@rs:~/work/bios611-project1$ git add -i utils.R
+           staged     unstaged path
+  1:    unchanged        +8/-1 utils.R
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org0639834"></a>Commands <b>*</b><br />
+<div class="outline-text-5" id="text-1-3-0-1">
+<p>
+  1: [s]tatus	  2: [u]pdate	  3: [r]evert	  4: [a]dd untracked
+  5: [p]atch	  6: [d]iff	  7: [q]uit	  8: [h]elp
+What now&gt; 
+#+end<sub>src</sub>
+</p>
+
+<p>
+We select what we want to do with either a number or a letter. We want
+to <code>[p]atch</code> so lets enter 5.
+</p>
+
+<pre class="example">
+What now&gt; 5
+           staged     unstaged path
+  1:    unchanged        +8/-1 [u]tils.R
+Patch update&gt;&gt; 
+</pre>
+
+<p>
+This presents us with a list of files we want to work with. Because we
+invoked <code>git add -i</code> with a specific file, we only have 1 choice
+here. We list all the files we want to look at by listing the numbers
+separated by commas.
+</p>
+
+<p>
+#+begin<sub>src</sub> 
+Patch update&gt;&gt; 1
+           staged     unstaged path
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9470a9d" class="outline-3">
+<h3 id="org9470a9d"><span class="section-number-3">1.4</span> 1:    unchanged        +8/-1 [u]tils.R</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Patch update&gt;&gt; &lt;CTRL-D&gt;
+#+end<sub>src</sub>
+</p>
+
+<p>
+We select file <code>1</code> and the press &lt;CTRL&gt;-D to quit this selection process.
+</p>
+
+<p>
+Git will now show us each hunk in turn.
+</p>
+
+<pre class="example">
+Patch update&gt;&gt; 
+diff --git a/utils.R b/utils.R
+index 9fe832b..7d8a5c1 100644
+--- a/utils.R
++++ b/utils.R
+@@ -1,9 +1,12 @@
++library(stringr);
+
+ tidy_up_names &lt;- function(dataset){
+     names(dataset) &lt;- names(dataset) %&gt;%
+         tolower() %&gt;%
+         str_replace_all(" - ", " ") %&gt;%
+-        str_replace_all(" ", "_");
++        str_replace_all(" ", "_") %&gt;%
++        str_replace_all("-","_") %&gt;%
++        str_replace_all("/","_or_");
+     dataset
+ }
+
+Stage this hunk [y,n,q,a,d,j,J,g,/,s,e,?]? 
+</pre>
+
+<p>
+We say "y" to stage the hunk. 
+</p>
+
+<pre class="example">
+Stage this hunk [y,n,q,a,d,j,J,g,/,s,e,?]? y 
+@@ -11,3 +14,7 @@ tidy_up_names &lt;- function(dataset){
+     a[!(a %in% b)];
+ }
+
++write_wrapped &lt;- function(s, file, append=FALSE){
++  s &lt;- strwrap(s);
++  write(s,file,append=append);
++}
+Stage this hunk [y,n,q,a,d,K,g,/,e,?]? n
+</pre>
+
+<p>
+Now we say "n" to skip this second patch.
+</p>
+
+<p>
+We press CTRL-D to exit again. Now we can make a commit of the first
+hunk only.
+</p>
+
+<p>
+Note that if we say git status now we will see that the file utils.R
+is both staged and not staged, a reflection of the fact that only part
+of the changes in that file are going to be put into the next commit.
+</p>
+
+<p>
+I won't include these steps here but we're going to add utils.R to the
+next commit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14712af" class="outline-3">
+<h3 id="org14712af"><span class="section-number-3">1.5</span> Manually Editing Hunks</h3>
+<div class="outline-text-3" id="text-1-5">
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   Makefile
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        predict-gender-gbm.R
+        predict-gender-hw.R
+
+no changes added to commit (use "git add" and/or "git commit -a")
+toups@rs:~/work/bios611-project1$ 
+</pre>
+
+<p>
+We have two untracked files. We want to create two commits now. One
+associated with our original model and the next associated with our
+height and weight model.
+</p>
+
+<p>
+Let's start by adding part of the changes to the Makefile.
+</p>
+
+<p>
+NOTE! If we want to use the nice editor for editing our patch in this
+next step we need to say:
+</p>
+
+<pre class="example">
+EDITOR=ne git add -i
+</pre>
+
+
+<pre class="example">
+# (we have said git add -i Makefile, 
+# selected patch (5), and selected this file (1), 
+# CTRL-D)
+Patch update&gt;&gt; 
+diff --git a/Makefile b/Makefile
+index a4c01f2..da1ca90 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,6 +8,10 @@ clean:
+        rm -f fragments/*.tex
+        rm -f report.pdf
+
++figures/some-other-figure.png:\
++ figure-code.R
++	Rscript figure-code.R
++
+ figures/gender_power_comparison.png\
+  figures/gender_power_comparison_single.png\
+  figures/gender_power_comparison_single2.png\
+Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? 
+</pre>
+
+<p>
+We don't want this patch. So we say no.
+</p>
+
+<pre class="example">
+Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? n
+@@ -33,8 +37,22 @@ fragments/real_comics_weight_height.tex\
+  height_weight_vs_real_people.R
+        Rscript height_weight_vs_real_people.R
+
++fragments/gbm.fragment.tex:\
++ predict-gender-gbm.R\
++ derived_data/information.csv\
++ derived_data/powers.csv
++	Rscript predict-gender-gbm.R
++
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++	Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_and_weights.png
+        cp figures/comparison_of_heights_and_weights.png assets/comparison_of_heights_and_weights.png
+
+ assets/gender_power_comparison_single3.png: figures/gender_power_comparison_single3.png
+        cp figures/gender_power_comparison_single3.png assets/gender_power_comparison_single3.png
++
+</pre>
+
+<p>
+This is tricky. We want <span class="underline">just</span> the first part of this patch (the first
+target). Its one continuous set of new lines though, so we need to
+edit this patch by hand. We do this by typing `e`.
+</p>
+
+<pre class="example">
+# Manual hunk edit mode -- see bottom for a quick guide.
+@@ -33,8 +37,22 @@ fragments/real_comics_weight_height.tex\
+  height_weight_vs_real_people.R
+        Rscript height_weight_vs_real_people.R
+
++fragments/gbm.fragment.tex:\
++ predict-gender-gbm.R\
++ derived_data/information.csv\
++ derived_data/powers.csv
++       Rscript predict-gender-gbm.R
++
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++       Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_an
+        cp figures/comparison_of_heights_and_weights.png assets/comparison_of_h
+
+ assets/gender_power_comparison_single3.png: figures/gender_power_comparison_si
+        cp figures/gender_power_comparison_single3.png assets/gender_power_comp
++
+# ---
+# To remove '-' lines, make them ' ' lines (context).
+# To remove '+' lines, delete them.
+# Lines starting with # will be removed.
+# 
+# If the patch applies cleanly, the edited hunk will immediately be
+# marked for staging.
+# If it does not apply cleanly, you will be given an opportunity to
+# edit again.  If all lines of the hunk are removed, then the edit is
+# aborted and the hunk is left unchanged.
+</pre>
+
+<p>
+We follow the instructions in the file. And remove the lines for the
+second target and save and exit.
+</p>
+
+<p>
+Then we say no to the last patch and quit.
+</p>
+
+<p>
+If we say git diff now we'll see just the code wanted to leave out of
+the commit.
+</p>
+
+<p>
+Now we can add the needed R file <code>predict-gender-gbm.R</code> and have a
+nice tidy commit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf794a8" class="outline-3">
+<h3 id="orgaf794a8"><span class="section-number-3">1.6</span> Leaving out Trash</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Finally we repeat this process for our final change, the height and
+weight model. We use interactive staging to add our Makefile, but skip
+the first patch:
+</p>
+
+<pre class="example">
+Patch update&gt;&gt; 
+diff --git a/Makefile b/Makefile
+index 8ea3ecb..da1ca90 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,6 +8,10 @@ clean:
+        rm -f fragments/*.tex
+        rm -f report.pdf
+
++figures/some-other-figure.png:\
++ figure-code.R
++	Rscript figure-code.R
++
+ figures/gender_power_comparison.png\
+  figures/gender_power_comparison_single.png\
+  figures/gender_power_comparison_single2.png\
+Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? n
+</pre>
+
+<p>
+And now we see our second patch:
+</p>
+
+<pre class="example">
+@@ -39,6 +43,13 @@ fragments/gbm.fragment.tex:\
+  derived_data/powers.csv
+        Rscript predict-gender-gbm.R
+
++fragments/gender-hw-gbm.fragment.tex\
++fragments/real-gender-hw-gbm.fragment.tex:\
++ predict-gender-hw.R\
++ derived_data/information.csv\
++ derived_data/real_height_weights.csv
++	Rscript predict-gender-hw.R
++
+ assets/comparison_of_heights_and_weights.png: figures/comparison_of_heights_and_weights.png
+        cp figures/comparison_of_heights_and_weights.png assets/comparison_of_heights_and_weights.png
+
+Stage this hunk [y,n,q,a,d,K,g,/,e,?]? y
+</pre>
+
+<p>
+We say yes. The final patch is an empty line. No reason to commit it
+at all. We add our R file and commit (not shown).
+</p>
+
+<p>
+Now if we say `git status` we can see:
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git status
+On branch interactive-staging-example
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   Makefile
+
+no changes added to commit (use "git add" and/or "git commit -a")
+toups@rs:~/work/bios611-project1$ 
+</pre>
+
+<p>
+This is just garbage we don't actually ever want. Not worth commiting.
+</p>
+
+<pre class="example">
+toups@rs:~/work/bios611-project1$ git stash &amp;&amp; git status
+Saved working directory and index state WIP on interactive-staging-example: 1ae1b57 Added comparison application of gbm to predicting gender from height and weight.
+On branch interactive-staging-example
+nothing to commit, working tree clean
+toups@rs:~/work/bios611-project1$ 
+</pre>
+
+<p>
+Git stash puts it all somewhere we can recover it if we <span class="underline">really</span> need
+to (though it might be a hassle).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd736543" class="outline-3">
+<h3 id="orgd736543"><span class="section-number-3">1.7</span> What have we done?</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+We've taken a big mess and turned it into a nice, clean, set of
+commits. We've also avoided adding garbage (false starts, bad newlines
+at ends of files) to our project. We have forged order out of chaos.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4ba9dd4" class="outline-2">
+<h2 id="org4ba9dd4"><span class="section-number-2">2</span> Integrating RMarkdown into your Make build process</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I was going to cover Latex in this lecture but I'm afraid we won't
+have time. See my project for examples (eventually). Instead, I expect
+most of you will use RMarkdown to write your final reports.
+</p>
+</div>
+
+<div id="outline-container-org2566370" class="outline-3">
+<h3 id="org2566370"><span class="section-number-3">2.1</span> What is RMarkdown</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+RMarkdown lets you interleave text and R code to form a report. This
+seems like a cool idea and it is useful if you want to do exploratory
+data analysis.
+</p>
+
+<p>
+The primary innovation of RMarkdown is that source blocks are extended
+like this
+</p>
+
+<pre class="example">
+``` {r some_name, messages=FALSE}
+library(tidyverse);
+ggplot(tibble(x=runif(10),y=runif(10))) + geom_point();
+```
+</pre>
+
+<p>
+This block will execute during the build process and insert the
+generated figure.
+</p>
+
+<p>
+In this way you can interleave R code and text.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6a310f" class="outline-3">
+<h3 id="orgf6a310f"><span class="section-number-3">2.2</span> Why Not To Use RMarkdown</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+RMarkdown encourages you to depend on an ever growing global
+state. You put your data prep at the top of the file and then
+throuhout you clean, calculate summary statistics, modify, and plot.
+</p>
+
+<p>
+This makes it very hard to know if your work is correct. It is also
+hard for someone to understand coming in. We typically don't want to
+read the entire project code to understand what happens in
+Figure 7. But using RMarkdown we have to. 
+</p>
+
+<p>
+I also find that its hard to get it to produce really clean output. 
+</p>
+
+<p>
+Finally, the steps of an analysis are not the best way to present
+results. RMarkdown encourages you to present in the order you
+developed your results. This is wrong. Presentation is narrative and
+it should flow differently.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36bbf69" class="outline-3">
+<h3 id="org36bbf69"><span class="section-number-3">2.3</span> Markdown in 5 minutes</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+<a href="https://daringfireball.net/projects/markdown/basics">Markdown</a> is quite simple. Let's consult the documentation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e24e89" class="outline-3">
+<h3 id="org5e24e89"><span class="section-number-3">2.4</span> RMarkdown</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+The main innovation of RMarkdown is that code blocks, denoted via
+</p>
+
+<pre class="example">
+```
+
+```
+</pre>
+
+<p>
+May contain R code which is executed. The code and the results (in any
+combination) can be placed into the generated document.  Thus:
+</p>
+
+<pre class="example">
+```{r &lt;block args&gt;}
+```
+</pre>
+
+<p>
+The most common args are:
+</p>
+
+<pre class="example">
+Chunk output can be customized with knitr options ⧉, arguments set in the {} of a chunk header. Above, we use five arguments:
+
+    include = FALSE prevents code and results from appearing in the finished file. R Markdown still runs the code in the chunk, and the results can be used by other chunks.
+    echo = FALSE prevents code, but not the results from appearing in the finished file. This is a useful way to embed figures.
+    message = FALSE prevents messages that are generated by code from appearing in the finished file.
+    warning = FALSE prevents warnings that are generated by code from appearing in the finished.
+    fig.cap = "..." adds a caption to graphical results.
+
+See the R Markdown Reference Guide ⧉ for a complete list of knitr chunk options.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgea49cfd" class="outline-3">
+<h3 id="orgea49cfd"><span class="section-number-3">2.5</span> How you Use RMarkdown if you have to</h3>
+<div class="outline-text-3" id="text-2-5">
+<ol class="org-ol">
+<li>Generate all your figures ahead of time and include them using
+Markdown syntax:</li>
+</ol>
+<pre class="example">
+![Some alt text](figures/abc.png)
+</pre>
+
+<ol class="org-ol">
+<li>Generate Fragmentary Markdown code and include it in one parent
+<code>report.Rmd</code> document:</li>
+</ol>
+<pre class="example">
+```{r child = 'chapter1.Rmd'}
+```
+</pre>
+
+<ol class="org-ol">
+<li>Use a make entry like this:</li>
+</ol>
+
+<pre class="example">
+report.pdf:\
+ report.Rmd\
+ figures/comparison_of_heights_and_weights.png
+        Rscript -e "rmarkdown::render('report.Rmd',output_format='pdf_document')"
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orge542e7e" class="outline-3">
+<h3 id="orge542e7e"><span class="section-number-3">2.6</span> The Benefits</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+This way of building the report makes the dependencies between parts
+of your report and the data science explicit without forcing you
+couple them together like a traditional RMarkdown file.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdfb551f" class="outline-2">
+<h2 id="orgdfb551f"><span class="section-number-2">3</span> Other Tricks</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Copy each report to a special directory which contains tagged reports
+with git commit IDS. This wouldn't be managed by the git repo, but is
+a handy way for you to reference old versions of your report and their
+git commit IDs. I'd distribute early drafts with commit IDs so you can
+reference your repo easily.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent</p>
+<p class="date">Created: 2020-09-09 Wed 16:22</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
