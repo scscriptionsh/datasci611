@@ -1,0 +1,18 @@
+1599836578283:# Chunk 1
+1599836578292:summary(cars)
+1599836578299:# Chunk 2
+1599836578300:plot(cars)
+1599837057261:rnorm
+1599837530526:d
+1599837546164:d
+1599837552522:library(tidyverse);
+1599837554042:d <- tibble(id=seq(1000),
+1599837554042:x=c(rnorm(500,-4,2),
+1599837554043:rnorm(500,4,2)), classification=c(rep(1,500),
+1599837554043:rep(2,500)));
+1599837554048:ggplot(d) + geom_point(aes(x,y=runif(1000),color=classification));
+1599840213394:library(ggplotly)
+1599840219778:library(plotly)
+1600098110074:install.packages('MLmetrics')
+1600112838379:install.packages('gbm')
+1600114149352:install.packages('pdp')
