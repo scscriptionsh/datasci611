@@ -8,5 +8,5 @@ RUN adduser rstudio sudo
 COPY deps.R /
 RUN R -e "install.packages('plotly')"
 RUN R -e "install.packages('MLmetrics')"
-RUN R -e "install.packages(c('gbm','pdp')"
+RUN R -e "install.packages(c('gbm','pdp'))"
  
