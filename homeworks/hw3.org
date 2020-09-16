@@ -1,0 +1,65 @@
+A catch up!
+
+* Question 1
+
+What are the two ways that commands in a unix-y shell can accept input
+(other than reading from a file on disk)?
+
+* Question 2 
+
+What about output?
+
+* Question 3
+
+Create a Dockerfile which includes the standard R environment we've
+been using but also includes the "kernlab" R package.
+
+* Question 4
+
+Extend that Dockerfile to include the Nice Editor. (Hint: the
+rocker/verse machine is based on Ubuntu and thus you install packages
+with the apt package manager).
+
+* Question 5
+
+What does the following script print on the standard output?
+
+#+begin_src 
+A_VARIABLE=hello
+B_VARIABLE=world
+echo $A_VARIABLE B_VARIABLE > some-file
+cat some-file
+#+end_src
+
+Why?
+
+* Question 6
+
+What is an IP address (informally)?
+What about a port number (informally)?
+
+* Question 7
+
+Describe left, inner, and right joins. 
+
+* Question 8 
+
+R features several built in data sets. One is about flowers and can be
+accessed via `iris`.
+
+What tidyvers/dplyr code shows the average sepal length for each
+species? Provide the R code here.
+
+* Question 9 
+
+Create a scatter plot of sepel length against petal width. Color code
+the points by species. Provide the R code which creates the figure.
+
+* Question 10
+
+Which Species has the smallest sepel length? Recreate the plot in 9
+without that species in the data set. Provide R code which filters the
+data set and produces the figure.
+
+g
+
