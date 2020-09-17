@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-02 Wed 15:44 -->
+<!-- 2020-09-02 Wed 17:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Git Zero to Hero</title>
@@ -248,33 +248,34 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org79f379c">1. About These Notes</a></li>
-<li><a href="#org8629ace">2. Git</a></li>
-<li><a href="#orgc91c73b">3. Git Concepts</a>
+<li><a href="#org767f143">1. About These Notes</a></li>
+<li><a href="#org4f3b54a">2. Git</a></li>
+<li><a href="#org02a8bd1">3. Git Concepts</a>
 <ul>
-<li><a href="#org28c1f29">3.1. diff and patch</a></li>
+<li><a href="#org8916ad0">3.1. diff and patch</a></li>
 </ul>
 </li>
-<li><a href="#org0febcef">4. The Big Idea</a></li>
-<li><a href="#org1c90318">5. `git status` and Three Things in your Head</a></li>
-<li><a href="#org316e4e8">6. Let's make some commits.</a></li>
-<li><a href="#orgc6e4deb">7. git diff</a></li>
-<li><a href="#orgb20ab4f">8. Branches, Merges and Rebases</a></li>
-<li><a href="#orgffcbe45">9. Merge</a></li>
-<li><a href="#org6d9ec24">10. Conflicts and Rebase</a></li>
-<li><a href="#orgcd6a3dc">11. Detached Head State and Commit Ids</a></li>
-<li><a href="#orgf052d55">12. Resolving Conflicts</a></li>
-<li><a href="#org2211868">13. git commit ammend</a></li>
-<li><a href="#org979a8dd">14. Remotes</a></li>
-<li><a href="#orgafa4e02">15. Remotes and Branches</a></li>
-<li><a href="#orgc733b1f">16. Don't pull</a></li>
-<li><a href="#orgdfbf89d">17. the fetch/rebase pattern</a></li>
-<li><a href="#org6b32db8">18. Forks and Pull Requests</a></li>
+<li><a href="#orgf174579">4. The Big Idea</a></li>
+<li><a href="#orgbacf822">5. `git status` and Three Things in your Head</a></li>
+<li><a href="#org544b38a">6. Let's make some commits.</a></li>
+<li><a href="#orga300d98">7. git diff</a></li>
+<li><a href="#orgcbd2966">8. Branches, Merges and Rebases</a></li>
+<li><a href="#org40a58be">9. Merge</a></li>
+<li><a href="#org179b133">10. Conflicts and Rebase</a></li>
+<li><a href="#orgb3447ef">11. Detached Head State and Commit Ids</a></li>
+<li><a href="#org071b0a1">12. Resolving Conflicts</a></li>
+<li><a href="#orgf1a8a0f">13. git commit ammend</a></li>
+<li><a href="#org9d6becb">14. Remotes</a></li>
+<li><a href="#orga1ea52b">15. Remotes and Branches</a></li>
+<li><a href="#orgd30f927">16. Don't pull</a></li>
+<li><a href="#org797fbee">17. the fetch/rebase pattern</a></li>
+<li><a href="#org88feb15">18. Interactive Staging And Small Commits</a></li>
+<li><a href="#orgc34c196">19. Forks and Pull Requests</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org79f379c" class="outline-2">
-<h2 id="org79f379c"><span class="section-number-2">1</span> About These Notes</h2>
+<div id="outline-container-org767f143" class="outline-2">
+<h2 id="org767f143"><span class="section-number-2">1</span> About These Notes</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Today's lecture really is a continuous narrative, so we're going to
@@ -283,8 +284,8 @@ follow along with my notes rather than use a slide deck.
 </div>
 </div>
 
-<div id="outline-container-org8629ace" class="outline-2">
-<h2 id="org8629ace"><span class="section-number-2">2</span> Git</h2>
+<div id="outline-container-org4f3b54a" class="outline-2">
+<h2 id="org4f3b54a"><span class="section-number-2">2</span> Git</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>The most commonly used version control system in the world.</li>
@@ -309,12 +310,12 @@ history and versions for you.
 </div>
 </div>
 
-<div id="outline-container-orgc91c73b" class="outline-2">
-<h2 id="orgc91c73b"><span class="section-number-2">3</span> Git Concepts</h2>
+<div id="outline-container-org02a8bd1" class="outline-2">
+<h2 id="org02a8bd1"><span class="section-number-2">3</span> Git Concepts</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org28c1f29" class="outline-3">
-<h3 id="org28c1f29"><span class="section-number-3">3.1</span> diff and patch</h3>
+<div id="outline-container-org8916ad0" class="outline-3">
+<h3 id="org8916ad0"><span class="section-number-3">3.1</span> diff and patch</h3>
 <div class="outline-text-3" id="text-3-1">
 
 <div class="figure">
@@ -368,8 +369,8 @@ diff -u filev1.txt filev2.txt | cat
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">--- filev1.txt  2020-09-02 15:44:32.587073923 -0400
-+++ filev2.txt  2020-09-02 15:44:32.591073924 -0400
+<pre class="src src-sh">--- filev1.txt  2020-09-02 17:18:02.804355934 -0400
++++ filev2.txt  2020-09-02 17:18:02.804355934 -0400
 @@ -1,6 +1,7 @@
 -This is a file I<span style="color: #8b2252;">'m using as</span>
 <span style="color: #8b2252;">+This is a file we are using as</span>
@@ -430,8 +431,8 @@ the empty diff.
 </div>
 </div>
 
-<div id="outline-container-org0febcef" class="outline-2">
-<h2 id="org0febcef"><span class="section-number-2">4</span> The Big Idea</h2>
+<div id="outline-container-orgf174579" class="outline-2">
+<h2 id="orgf174579"><span class="section-number-2">4</span> The Big Idea</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Your project is a chain of patches:
@@ -439,8 +440,8 @@ Your project is a chain of patches:
 </div>
 </div>
 
-<div id="outline-container-org1c90318" class="outline-2">
-<h2 id="org1c90318"><span class="section-number-2">5</span> `git status` and Three Things in your Head</h2>
+<div id="outline-container-orgbacf822" class="outline-2">
+<h2 id="orgbacf822"><span class="section-number-2">5</span> `git status` and Three Things in your Head</h2>
 <div class="outline-text-2" id="text-5">
 
 <div class="figure">
@@ -473,8 +474,8 @@ nothing to commit (create/copy files and use <span style="color: #8b2252;">"git 
 </div>
 </div>
 
-<div id="outline-container-org316e4e8" class="outline-2">
-<h2 id="org316e4e8"><span class="section-number-2">6</span> Let's make some commits.</h2>
+<div id="outline-container-org544b38a" class="outline-2">
+<h2 id="org544b38a"><span class="section-number-2">6</span> Let's make some commits.</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <pre class="src src-sh">
@@ -517,7 +518,7 @@ git commit -m <span style="color: #8b2252;">"Initial commit."</span>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[master (root-commit) 51efd07] Initial commit.
+<pre class="src src-sh">[master (root-commit) a0586eb] Initial commit.
  1 file changed, 5 insertions(+)
  create mode 100644 README.md
 </pre>
@@ -526,8 +527,8 @@ git commit -m <span style="color: #8b2252;">"Initial commit."</span>
 </div>
 
 
-<div id="outline-container-orgc6e4deb" class="outline-2">
-<h2 id="orgc6e4deb"><span class="section-number-2">7</span> git diff</h2>
+<div id="outline-container-orga300d98" class="outline-2">
+<h2 id="orga300d98"><span class="section-number-2">7</span> git diff</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Let's add some changes. (Note that we can append to a file with `&gt;&gt;`).
@@ -623,8 +624,8 @@ A readable description.
 </div>
 </div>
 
-<div id="outline-container-orgb20ab4f" class="outline-2">
-<h2 id="orgb20ab4f"><span class="section-number-2">8</span> Branches, Merges and Rebases</h2>
+<div id="outline-container-orgcbd2966" class="outline-2">
+<h2 id="orgcbd2966"><span class="section-number-2">8</span> Branches, Merges and Rebases</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Branches have a HEAD. That is <b>almost</b> all a branch is, in the final
@@ -741,8 +742,8 @@ Note that we can switch branches even if the working copy has changes.
 </div>
 </div>
 
-<div id="outline-container-orgffcbe45" class="outline-2">
-<h2 id="orgffcbe45"><span class="section-number-2">9</span> Merge</h2>
+<div id="outline-container-org40a58be" class="outline-2">
+<h2 id="org40a58be"><span class="section-number-2">9</span> Merge</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Let's make a commit. 
@@ -755,7 +756,7 @@ git commit -m <span style="color: #8b2252;">"Extended README."</span>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[experiment2 cafbae7] Extended README.
+<pre class="src src-sh">[experiment2 3b43760] Extended README.
  1 file changed, 5 insertions(+)
 </pre>
 </div>
@@ -772,19 +773,19 @@ git log -2 | cat
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">Updating 51efd07..cafbae7
+<pre class="src src-sh">Updating a0586eb..3b43760
 Fast-forward
  README.md | 5 +++++
  1 file changed, 5 insertions(+)
-commit cafbae7484ec357e4ccc32bc6f15c38e12423d73
+commit 3b4376063a77895afa584032bfbd4b479b09253a
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Extended README.
 
-commit 51efd07b4b321b3e7650243b9e0d685b6320a598
+commit a0586eb9b62d02fb2d04d6f53f747e2934328d26
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:02 2020 -0400
 
     Initial commit.
 </pre>
@@ -805,8 +806,8 @@ operation.
 </div>
 </div>
 
-<div id="outline-container-org6d9ec24" class="outline-2">
-<h2 id="org6d9ec24"><span class="section-number-2">10</span> Conflicts and Rebase</h2>
+<div id="outline-container-org179b133" class="outline-2">
+<h2 id="org179b133"><span class="section-number-2">10</span> Conflicts and Rebase</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Ther power of git is how it enables distributed development: two
@@ -868,7 +869,7 @@ git commit -m <span style="color: #8b2252;">"Added hello.md"</span>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[experiment3 72660e2] Added hello.md
+<pre class="src src-sh">[experiment3 6c4b556] Added hello.md
  1 file changed, 1 insertion(+)
  create mode 100644 hello.md
 </pre>
@@ -890,7 +891,7 @@ git commit -m <span style="color: #8b2252;">"Added goodbye."</span>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[master 6f6553e] Added goodbye.
+<pre class="src src-sh">[master 12adad0] Added goodbye.
  1 file changed, 1 insertion(+)
  create mode 100644 goodbye.md
 </pre>
@@ -921,22 +922,22 @@ git merge master
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">commit b05d41b75ca34995b7af73a14886d233e02b441b
-Merge: 72660e2 6f6553e
+<pre class="src src-sh">commit 7e3f224edb054c5e3a2649ed4e08f1b5b24e54a4
+Merge: 6c4b556 12adad0
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:33 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Merge branch <span style="color: #8b2252;">'master'</span> into experiment3-merge
 
-commit 72660e2b291fe2ee3727d5e510ff57188cb5c55c
+commit 6c4b556377541629dbdf864455cb9ee6230068e6
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added hello.md
 
-commit 6f6553ebecf73d36b0ffe8dc9a9ba203dd13f152
+commit 12adad0b15b235a2362317c222e45d083bc42c29
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added goodbye.
 </pre>
@@ -958,21 +959,21 @@ git log -3
 <div class="org-src-container">
 <pre class="src src-sh">First, rewinding head to replay your work on top of it...
 Applying: Added hello.md
-commit 028c3ac47c0350c3d15996bdb3bd3c69013010a7
+commit 2c7626caa606b24663a7b3438f2531d0335b7608
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added hello.md
 
-commit 6f6553ebecf73d36b0ffe8dc9a9ba203dd13f152
+commit 12adad0b15b235a2362317c222e45d083bc42c29
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added goodbye.
 
-commit cafbae7484ec357e4ccc32bc6f15c38e12423d73
+commit 3b4376063a77895afa584032bfbd4b479b09253a
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Extended README.
 </pre>
@@ -1001,26 +1002,26 @@ git log -3
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">Updating 6f6553e..028c3ac
+<pre class="src src-sh">Updating 12adad0..2c7626c
 Fast-forward
  hello.md | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 hello.md
-commit 028c3ac47c0350c3d15996bdb3bd3c69013010a7
+commit 2c7626caa606b24663a7b3438f2531d0335b7608
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added hello.md
 
-commit 6f6553ebecf73d36b0ffe8dc9a9ba203dd13f152
+commit 12adad0b15b235a2362317c222e45d083bc42c29
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added goodbye.
 
-commit cafbae7484ec357e4ccc32bc6f15c38e12423d73
+commit 3b4376063a77895afa584032bfbd4b479b09253a
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Extended README.
 </pre>
@@ -1037,8 +1038,8 @@ A "fast forward" merge doesn't create a merge commit.
 </div>
 </div>
 
-<div id="outline-container-orgcd6a3dc" class="outline-2">
-<h2 id="orgcd6a3dc"><span class="section-number-2">11</span> Detached Head State and Commit Ids</h2>
+<div id="outline-container-orgb3447ef" class="outline-2">
+<h2 id="orgb3447ef"><span class="section-number-2">11</span> Detached Head State and Commit Ids</h2>
 <div class="outline-text-2" id="text-11">
 
 <div class="figure">
@@ -1052,27 +1053,27 @@ A "fast forward" merge doesn't create a merge commit.
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">commit 028c3ac47c0350c3d15996bdb3bd3c69013010a7
+<pre class="src src-sh">commit 2c7626caa606b24663a7b3438f2531d0335b7608
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added hello.md
 
-commit 6f6553ebecf73d36b0ffe8dc9a9ba203dd13f152
+commit 12adad0b15b235a2362317c222e45d083bc42c29
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added goodbye.
 
-commit cafbae7484ec357e4ccc32bc6f15c38e12423d73
+commit 3b4376063a77895afa584032bfbd4b479b09253a
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Extended README.
 
-commit 51efd07b4b321b3e7650243b9e0d685b6320a598
+commit a0586eb9b62d02fb2d04d6f53f747e2934328d26
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:02 2020 -0400
 
     Initial commit.
 </pre>
@@ -1088,10 +1089,10 @@ Each commit has an id.
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">028c3ac47c0350c3d15996bdb3bd3c69013010a7
-6f6553ebecf73d36b0ffe8dc9a9ba203dd13f152
-cafbae7484ec357e4ccc32bc6f15c38e12423d73
-51efd07b4b321b3e7650243b9e0d685b6320a598
+<pre class="src src-sh">2c7626caa606b24663a7b3438f2531d0335b7608
+12adad0b15b235a2362317c222e45d083bc42c29
+3b4376063a77895afa584032bfbd4b479b09253a
+a0586eb9b62d02fb2d04d6f53f747e2934328d26
 
 </pre>
 </div>
@@ -1108,7 +1109,7 @@ git status
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">HEAD detached at cafbae7
+<pre class="src src-sh">HEAD detached at 3b43760
 nothing to commit, working tree clean
 </pre>
 </div>
@@ -1128,15 +1129,15 @@ git log
 <div class="org-src-container">
 <pre class="src src-sh">On branch new-head
 nothing to commit, working tree clean
-commit cafbae7484ec357e4ccc32bc6f15c38e12423d73
+commit 3b4376063a77895afa584032bfbd4b479b09253a
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Extended README.
 
-commit 51efd07b4b321b3e7650243b9e0d685b6320a598
+commit a0586eb9b62d02fb2d04d6f53f747e2934328d26
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:02 2020 -0400
 
     Initial commit.
 </pre>
@@ -1144,8 +1145,8 @@ Date:   Wed Sep 2 15:44:32 2020 -0400
 </div>
 </div>
 
-<div id="outline-container-orgf052d55" class="outline-2">
-<h2 id="orgf052d55"><span class="section-number-2">12</span> Resolving Conflicts</h2>
+<div id="outline-container-org071b0a1" class="outline-2">
+<h2 id="org071b0a1"><span class="section-number-2">12</span> Resolving Conflicts</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 Conflicts occur when two commits touch the same line of code. Git can
@@ -1170,7 +1171,7 @@ git commit -m <span style="color: #8b2252;">"Added a new file."</span>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[conflicts 313f788] Added a new file.
+<pre class="src src-sh">[conflicts a5f3062] Added a new file.
  1 file changed, 5 insertions(+)
  create mode 100644 conflicts-here.md
 </pre>
@@ -1196,7 +1197,7 @@ git commit -m <span style="color: #8b2252;">"Added a conflict file."</span>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[master 4cf7409] Added a conflict file.
+<pre class="src src-sh">[master 033ab9a] Added a conflict file.
  1 file changed, 5 insertions(+)
  create mode 100644 conflicts-here.md
 </pre>
@@ -1299,21 +1300,21 @@ And that should finish the merge:
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">commit 82f6404fd8253e037e901fe9db326a73938702d1
+<pre class="src src-sh">commit 715ec33134b238d5a7b31cc9c68767a339dd538a
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:33 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added a new file.
 
-commit 4cf7409730aa6a5a1e03c1a0e9b546e585b247da
+commit 033ab9ac6db4f748bcca498c3121e05a0c9be139
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:33 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added a conflict file.
 
-commit 028c3ac47c0350c3d15996bdb3bd3c69013010a7
+commit 2c7626caa606b24663a7b3438f2531d0335b7608
 Author: Vincent &lt;Vincent Toups&gt;
-Date:   Wed Sep 2 15:44:32 2020 -0400
+Date:   Wed Sep 2 17:18:03 2020 -0400
 
     Added hello.md
 </pre>
@@ -1321,8 +1322,8 @@ Date:   Wed Sep 2 15:44:32 2020 -0400
 </div>
 </div>
 
-<div id="outline-container-org2211868" class="outline-2">
-<h2 id="org2211868"><span class="section-number-2">13</span> git commit ammend</h2>
+<div id="outline-container-orgf1a8a0f" class="outline-2">
+<h2 id="orgf1a8a0f"><span class="section-number-2">13</span> git commit ammend</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 Sometimes we want to modify the last commit. This is ok as long as we
@@ -1340,8 +1341,8 @@ say we modified the file introduced by master.
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">[conflicts b1014c0] Modified the conflicting file.
- Date: Wed Sep 2 15:44:33 2020 -0400
+<pre class="src src-sh">[conflicts c0e904b] Modified the conflicting file.
+ Date: Wed Sep 2 17:18:03 2020 -0400
  1 file changed, 2 insertions(+), 3 deletions(-)
 </pre>
 </div>
@@ -1357,7 +1358,7 @@ git merge conflicts
 </div>
 
 <div class="org-src-container">
-<pre class="src src-sh">Updating 4cf7409..b1014c0
+<pre class="src src-sh">Updating 033ab9a..c0e904b
 Fast-forward
  conflicts-here.md | 5 ++---
  1 file changed, 2 insertions(+), 3 deletions(-)
@@ -1366,8 +1367,8 @@ Fast-forward
 </div>
 </div>
 
-<div id="outline-container-org979a8dd" class="outline-2">
-<h2 id="org979a8dd"><span class="section-number-2">14</span> Remotes</h2>
+<div id="outline-container-org9d6becb" class="outline-2">
+<h2 id="org9d6becb"><span class="section-number-2">14</span> Remotes</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 Git is distributed version control. Everyone who has a git repository
@@ -1460,8 +1461,8 @@ You can generally ignore this business of `fetch` and `push` remotes.
 </div>
 </div>
 
-<div id="outline-container-orgafa4e02" class="outline-2">
-<h2 id="orgafa4e02"><span class="section-number-2">15</span> Remotes and Branches</h2>
+<div id="outline-container-orga1ea52b" class="outline-2">
+<h2 id="orga1ea52b"><span class="section-number-2">15</span> Remotes and Branches</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 Usually you are trying to keep synchronized with a remote branch that
@@ -1481,8 +1482,8 @@ branch to look for on the remote.
 </div>
 </div>
 
-<div id="outline-container-orgc733b1f" class="outline-2">
-<h2 id="orgc733b1f"><span class="section-number-2">16</span> Don't pull</h2>
+<div id="outline-container-orgd30f927" class="outline-2">
+<h2 id="orgd30f927"><span class="section-number-2">16</span> Don't pull</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 You should understand `git pull` as meaning strictly "I am behind the
@@ -1496,8 +1497,8 @@ In any other situation you want to do the following:
 </div>
 </div>
 
-<div id="outline-container-orgdfbf89d" class="outline-2">
-<h2 id="orgdfbf89d"><span class="section-number-2">17</span> the fetch/rebase pattern</h2>
+<div id="outline-container-org797fbee" class="outline-2">
+<h2 id="org797fbee"><span class="section-number-2">17</span> the fetch/rebase pattern</h2>
 <div class="outline-text-2" id="text-17">
 <div class="org-src-container">
 <pre class="src src-sh">git fetch <span style="color: #b22222;"># </span><span style="color: #b22222;">grab the remote commits but don't change local branches</span>
@@ -1512,9 +1513,30 @@ git rebase origin/master <span style="color: #b22222;"># </span><span style="col
 </div>
 </div>
 
-<div id="outline-container-org6b32db8" class="outline-2">
-<h2 id="org6b32db8"><span class="section-number-2">18</span> Forks and Pull Requests</h2>
+<div id="outline-container-org88feb15" class="outline-2">
+<h2 id="org88feb15"><span class="section-number-2">18</span> Interactive Staging And Small Commits</h2>
 <div class="outline-text-2" id="text-18">
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #b22222;"># </span><span style="color: #b22222;">git add -i # I have to demo this</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">
+</pre>
+</div>
+
+<p>
+The idea is to add <span class="underline">pieces</span> of files to the staging area. This allows
+very granular commits even if you let the working copy get pretty
+messy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc34c196" class="outline-2">
+<h2 id="orgc34c196"><span class="section-number-2">19</span> Forks and Pull Requests</h2>
+<div class="outline-text-2" id="text-19">
 <p>
 You are unlikely to need to do this in this class, but you are likely
 to have to do it at some point.
@@ -1605,7 +1627,7 @@ And then I'd make a pull request.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Vincent</p>
-<p class="date">Created: 2020-09-02 Wed 15:44</p>
+<p class="date">Created: 2020-09-02 Wed 17:18</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

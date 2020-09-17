@@ -548,7 +548,7 @@ Consider::
   f <- function(a) eval.parent(substitute(a));
   g <- function(h) {
     x <- 10;
-    h(x);
+    f(x);
   }
   x <- 11;
   f(x);

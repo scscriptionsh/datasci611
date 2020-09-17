@@ -30,10 +30,26 @@ save_plotly_in("images","pend3d.html",pp);
 data <- pos %>% rename(t=time) %>% select(t,x,y,z);
 write_csv(data,"source_data/pendulum.csv");
 
+## Generate some High D Data
 
+library(tidyverse);
+random_cloud <- function(d,n,label){
+    cc <- runif(d)*100
+    ss <- runif(d)*25;
+    tbl <- tibble(label=rep(label,n));
+    for(i in seq(d)){
+        tbl[[sprintf("x%d",i)]] <- rnorm(n,cc[[i]],ss[[i]]);
+    }
+    tbl;
+}
 
+ncs <- 5;
 
+dataset <- do.call(rbind, Map(function(c){
+    random_cloud(6,200,sprintf("c%d",c));
+}, seq(ncs)));
 
+write.csv(dataset,"source_data/six-dimensions.csv",row.names=FALSE);
 
 
 

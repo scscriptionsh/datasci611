@@ -44,6 +44,11 @@ aen <- keras_model(aen_input, aen_output);
 aen %>% compile(optimizer="rmsprop", loss="mean_squared_error");
 aen %>% fit(train_mat, train_mat, epochs=50000, batch_size=250);
 
+projection <- encoder %>% predict(train_mat) %>% as.data.frame() %>% as_tibble() %>%
+    mutate(label=data$label);
+
+p <- ggplot(projection,aes(V1,V2)) + geom_point(aes(color=label));
+ggsave("images/keras-example.png",plot=p);
 
 
 

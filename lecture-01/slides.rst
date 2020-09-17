@@ -174,10 +174,19 @@ about branching out.
 (3) Software Engineering
 ------------------------
 
-0. What programs and programming languages actually are
-1. How to design reliable programs
-2. How to use Git like a software engineer
-3. How to package, distribute, document, programs
+.. container:: twocol
+
+  .. container:: leftside
+
+    0. What programs and programming languages actually are
+    1. How to design reliable programs
+    2. How to use Git like a software engineer
+    3. How to package, distribute, document, programs
+
+.. container:: rightside
+
+   .. image :: images/galaxy-brain.png
+     :width: 400px
 
 ----
    

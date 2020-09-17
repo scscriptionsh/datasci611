@@ -1,0 +1,66 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r echo=FALSE}
+library(tidyverse);
+library(ggplot2);
+library(lubridate);
+
+dogs_untidy <- read_csv("source_data/NYC_Dog_Licensing_Dataset.csv") %>% 
+  mutate(LicenseIssuedDate=mdy(LicenseIssuedDate));
+dogs <- dogs_untidy %>%
+  filter(AnimalBirthMonth==year(LicenseIssuedDate));
+
+```
+
+```{r}
+
+```
+
+```{r}
+dogs %>% group_by(AnimalName) %>% tally() %>% arrange(desc(n))
+```
+
+How much of this data set is Unknown or Name Not Provided?
+
+
+
+
+```{r}
+
+name_bad <- function(name){
+  name == "UNKNOWN" | name == "NAME NOT PROVIDED" | is.na(name);
+}
+
+dogs %>% group_by(name_bad(AnimalName)) %>% tally();
+name_missing <- dogs %>% filter(name_bad(AnimalName));
+named_animals <- dogs %>% filter(!name_bad(AnimalName));
+named_animals
+```
+
+Is the gender distribution different for named and unnamed animals?
+
+```{r}
+
+name_gender_counts <- dogs %>% filter(!is.na(AnimalGender)) %>% 
+  group_by(no_name=name_bad(AnimalName),AnimalGender) %>% 
+  tally() %>% 
+  arrange(no_name);
+
+name_counts <- name_gender_counts %>% 
+  group_by(no_name) %>% 
+  summarize(total=sum(n)) %>% ungroup();
+
+name_data <- name_gender_counts %>% left_join(name_counts,by="no_name") %>% 
+  mutate(proportion=n/total) %>%
+  mutate(name_provided=!no_name) %>% select(-no_name) %>%
+  mutate(name_provided=if(name_provided) "Name Provided" else "Name Not Provided");
+
+
+ggplot(name_data, aes(AnimalGender,proportion)) +
+  geom_col(aes(fill=name_provided),position="dodge")
+
+
+```

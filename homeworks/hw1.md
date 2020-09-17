@@ -42,3 +42,16 @@ What is the result of?
 
 And why?
 
+gg <- function(){
+    list(list(x=0), function(faux_env){
+        faux_env$x <- faux_env$x + 1;
+        list(faux_env$x, faux_env);
+    })
+}
+
+i <- 1;
+Map(function(name) { 
+ out <- list(name, i); 
+ i <<- i + 1; 
+ out 
+ }, names)

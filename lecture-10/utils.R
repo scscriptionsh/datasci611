@@ -14,3 +14,4 @@ tidy_up_names <- function(dataset){
 `%without%` <- function(a, b){
     a[!(a %in% b)];
 }
+

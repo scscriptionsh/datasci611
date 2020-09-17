@@ -1,0 +1,12 @@
+* Programming Languages via R
+
+Programming languages are profoundly dumb and decades of experience
+has suggested that its better when they are.
+
+The reason is that no matter how smart you try to make a programming
+language it is still going to much dumber than any human
+interlocutor. Thus, any smart language is going to be full of false
+promises and out right lies.
+
+Its actually bad that we call them "languages" at all because it
+encourages sloppy thinking. Banish the thought.

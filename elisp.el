@@ -35,11 +35,20 @@
 
 
 
+
 (with-current-buffer (get-buffer "README.org") 
   (let-stuff ((st (point))
-              (one-day (time-subtract (encode-time 0 0 0 11 8 2020)
+              (next-monday (from)
+                           (match-let ((d from))
+                             (cond ((string= "Monday" (format-time-string "%A" d))
+                                    d)
+                                   (:else
+                                    (recur (time-add d 
+                                                     (time-subtract (encode-time 0 0 4 10 8 2020)
+                                                                    (encode-time 0 0 0 10 8 2020))))))))
+              (one-day (time-subtract (encode-time 0 1 0 11 8 2020)
                                       (encode-time 0 0 0 10 8 2020)))
-              (one-week (time-subtract (encode-time 0 0 0 17 8 2020)
+              (one-week (time-subtract (encode-time 0 1 0 17 8 2020)
                                        (encode-time 0 0 0 10 8 2020)))
               (join-strings (strings delim)
                             (cl-reduce (lambda (a b)
@@ -85,11 +94,10 @@
                                      (car (cdr topics))
                                      ""
                                      "")
-                      (recur (add-week week-date)
+                      (recur (next-monday (add-week week-date))
                              (+ weeks 1)
                              (cdr (cdr topics))))))
              (org-cycle)))
-
 
 
 

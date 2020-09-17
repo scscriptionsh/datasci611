@@ -1,0 +1,2 @@
+/home/rstudio/.local/share/r-miniconda
+/home/rstudio/.local/share/r-miniconda/envs/r-reticulate

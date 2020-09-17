@@ -244,6 +244,8 @@ An example of a join::
 
 :question:`How else might we visualize this data?`
 
+----
+
 Rank Comparison Chart:
 ======================
 

@@ -6,7 +6,6 @@ width:1400
 height:800
 css:style.css
 
-
 ```{r echo=FALSE, include=FALSE}
 library(tidyverse);
 library(gridExtra);

@@ -931,6 +931,16 @@ git fetch # grab the remote commits but don't change local branches
 git rebase origin/master # rebase master on origin master
 #+end_src
 
+* Interactive Staging And Small Commits
+
+#+begin_src sh :results code :exports both :dir /tmp/example
+# git add -i # I have to demo this
+#+end_src
+
+The idea is to add _pieces_ of files to the staging area. This allows
+very granular commits even if you let the working copy get pretty
+messy.
+
 * Forks and Pull Requests
 
 You are unlikely to need to do this in this class, but you are likely
@@ -983,3 +993,4 @@ git push # up to my CSCC account.
 #+end_src
 
 And then I'd make a pull request.
+
