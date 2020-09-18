@@ -1,7 +1,7 @@
 # handy aliases for working with the docker file
 # and doing other stuff
 
-source secret.sh
+source secrets.sh
 
 alias bu='docker build . --build-arg linux_user_pwd=$RPW -t l1'
 alias dr='docker run -v `pwd`:/home/rstudio -e PASSWORD=$RPW -it l1'
