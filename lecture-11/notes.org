@@ -1,0 +1,300 @@
+* What to do with medium-sized Data
+
+You might find yourself with a dataset that is too big to fit in
+RAM. Even if you can squeeze the entire thing into RAM you might have
+trouble doing joins or other manipulation.
+
+What now?
+
+1. Get on AWS and set up a machine with a lot of RAM. (Luckily you've
+   got your project dockerized so you don't have to waste any time
+   setting up the machine apart from getting Docker running).
+2. Create a local sqlite3 database and do your initial analysis steps
+   via SQL.
+
+* SQL & SQLite
+
+SQLite is ancient technology but digital standards - it almost exactly 20
+years old.
+
+SQL itself is 46 years old!
+
+There is an enormous strength and solidity to technology this old. It
+wouldn't still be around if it wasn't at least a very solid local
+maximum.
+
+There are many SQL databases and there are minor differences in the
+dialects of SQL they provide.
+
+* Why SQLite
+
+SQLite is absolutely simple to set up and maintain. It is a single
+program and databases are represented as a single, regular,
+file. Despite this, it provides an almost full, modern, SQL
+experience. For data scientists, for whom many properties of SQL are
+unimportant, its a perfect back up plan for maniplating large-ish
+data.
+
+* SQL Basics
+
+1. You know the ideas already: tables, selection, filtration, joins.
+2. The main difference is that EVERYTHING in SQL is a table
+3. All you do is run expressions which, in one way or another, give
+   you a table.
+
+We'll do some examples after we set up our database.
+
+* Creating a Databases
+
+1. Understand the Scheme of the Data
+2. Strip the headers from the files
+3. Declare the Tables 
+4. Import the headerless csv files into the tables
+
+* Our Headers
+
+#+begin_src sh :results code :exports both 
+for f in `find source_data -iname "*.csv" -type f`; do 
+  echo $f columns:
+  head -n1 $f 
+  echo 
+done
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+source_data/superheroes_power_matrix.csv columns:
+Name,Agility,Accelerated Healing,Lantern Power Ring,Dimensional Awareness,Cold Resistance,Durability,Stealth,Energy Absorption,Flight,Danger Sense,Underwater breathing,Marksmanship,Weapons Master,Power Augmentation,Animal Attributes,Longevity,Intelligence,Super Strength,Cryokinesis,Telepathy,Energy Armor,Energy Blasts,Duplication,Size Changing,Density Control,Stamina,Astral Travel,Audio Control,Dexterity,Omnitrix,Super Speed,Possession,Animal Oriented Powers,Weapon-based Powers,Electrokinesis,Darkforce Manipulation,Death Touch,Teleportation,Enhanced Senses,Telekinesis,Energy Beams,Magic,Hyperkinesis,Jump,Clairvoyance,Dimensional Travel,Power Sense,Shapeshifting,Peak Human Condition,Immortality,Camouflage,Element Control,Phasing,Astral Projection,Electrical Transport,Fire Control,Projection,Summoning,Enhanced Memory,Reflexes,Invulnerability,Energy Constructs,Force Fields,Self-Sustenance,Anti-Gravity,Empathy,Power Nullifier,Radiation Control,Psionic Powers,Elasticity,Substance Secretion,Elemental Transmogrification,Technopath/Cyberpath,Photographic Reflexes,Seismic Power,Animation,Precognition,Mind Control,Fire Resistance,Power Absorption,Enhanced Hearing,Nova Force,Insanity,Hypnokinesis,Animal Control,Natural Armor,Intangibility,Enhanced Sight,Molecular Manipulation,Heat Generation,Adaptation,Gliding,Power Suit,Mind Blast,Probability Manipulation,Gravity Control,Regeneration,Light Control,Echolocation,Levitation,Toxin and Disease Control,Banish,Energy Manipulation,Heat Resistance,Natural Weapons,Time Travel,Enhanced Smell,Illusions,Thirstokinesis,Hair Manipulation,Illumination,Omnipotent,Cloaking,Changing Armor,Power Cosmic,Biokinesis,Water Control,Radiation Immunity,Vision - Telescopic,Toxin and Disease Resistance,Spatial Awareness,Energy Resistance,Telepathy Resistance,Molecular Combustion,Omnilingualism,Portal Creation,Magnetism,Mind Control Resistance,Plant Control,Sonar,Sonic Scream,Time Manipulation,Enhanced Touch,Magic Resistance,Invisibility,Sub-Mariner,Radiation Absorption,Intuitive aptitude,Vision - Microscopic,Melting,Wind Control,Super Breath,Wallcrawling,Vision - Night,Vision - Infrared,Grim Reaping,Matter Absorption,The Force,Resurrection,Terrakinesis,Vision - Heat,Vitakinesis,Radar Sense,Qwardian Power Ring,Weather Control,Vision - X-Ray,Vision - Thermal,Web Creation,Reality Warping,Odin Force,Symbiote Costume,Speed Force,Phoenix Force,Molecular Dissipation,Vision - Cryo,Omnipresent,Omniscient
+
+source_data/comics.csv columns:
+comicID,title,issueNumber,description
+
+source_data/charcters_stats.csv columns:
+Name,Alignment,Intelligence,Strength,Speed,Durability,Power,Combat,Total
+
+source_data/characters.csv columns:
+characterID,name
+
+source_data/marvel_characters_info.csv columns:
+ID,Name,Alignment,Gender,EyeColor,Race,HairColor,Publisher,SkinColor,Height,Weight
+
+source_data/marvel_dc_characters.csv columns:
+ID,Name,Identity,Alignment,EyeColor,HairColor,Gender,Status,Appearances,FirstAppearance,Year,Universe
+
+source_data/charactersToComics.csv columns:
+comicID,characterID
+
+#+end_src
+
+Now we need to strip the headers from each file. We can do this with
+the bash `tail` command.
+
+#+begin_src sh
+for f in `find source_data -iname "*.csv" -type f`; do 
+  export target_file=$(echo $f | rev | cut -d'.' -f2- | rev).headless.csv
+  tail +2 $f > tmp
+  mv tmp $target_file
+done
+#+end_src
+
+#+RESULTS:
+
+Create a file called `import.lite.sql`.
+
+#+begin_src sh :results code :exports both 
+cat <<EOF > import.lite.sql
+drop table if exists characters;
+
+create table characters (
+character_id integer, 
+name text
+);
+
+.mode csv
+.import source_data/characters.headless.csv characters
+EOF
+#+end_src
+
+Of course there is much more to the real import - let's take a look at
+real-import.lite.sql
+
+#+RESULTS:
+#+begin_src sh
+#+end_src
+
+And now run it:
+
+#+begin_src sh :results code :exports both 
+sqlite3 db.lite.sql < real-import.lite.sql
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+#+end_src
+
+* Basic SQL
+
+We can run sqlite interactively by calling the command with our
+database file.
+
+What can we do?
+
+First of all:
+
+1. we can run SQL proper CREATE TABLE, SELECT, etc
+2. we can configure sqlite (.mode, .header, etc)
+
+So first of all
+
+* SELECT
+
+#+begin_src sh :results code :exports both 
+sqlite3 db.lite.sql <<EOF
+.mode columns
+.header on
+select 
+ count(1) as number_created, 
+ universe as universe,
+ year as year
+ from marvel_dc_characters 
+group by universe, year
+having year > 1979
+order by year asc
+limit 10
+EOF
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+number_created  universe    year      
+--------------  ----------  ----------
+293             DC          1980      
+257             Marvel      1980      
+346             DC          1981      
+227             Marvel      1981      
+327             DC          1982      
+216             Marvel      1982      
+354             DC          1983      
+193             Marvel      1983      
+365             DC          1984      
+224             Marvel      1984      
+#+end_src
+
+This isn't a super easy to read version of this data, so let's play
+around a little more.
+
+#+begin_src sh :results code :exports both 
+sqlite3 db.lite.sql <<EOF
+.mode columns
+.header on
+select 
+ sum(universe='DC') as dc_created, 
+ sum(universe='Marvel') as marvel_created,
+ case 
+  when sum(universe='DC') > sum(universe='Marvel') then 'DC'
+  when sum(universe='Marvel') > sum(universe='DC') then 'Marvel'
+  else 'tie'
+ end as 'more_productive',
+ year as year
+ from marvel_dc_characters 
+group by year
+having year > 1979
+order by year asc
+EOF
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+dc_created  marvel_created  more_productive  year      
+----------  --------------  ---------------  ----------
+293         257             DC               1980      
+346         227             DC               1981      
+327         216             DC               1982      
+354         193             DC               1983      
+365         224             DC               1984      
+369         254             DC               1985      
+379         247             DC               1986      
+436         182             DC               1987      
+590         304             DC               1988      
+587         321             DC               1989      
+532         357             DC               1990      
+505         360             DC               1991      
+633         455             DC               1992      
+763         554             DC               1993      
+715         485             DC               1994      
+473         301             DC               1995      
+494         306             DC               1996      
+523         334             DC               1997      
+417         274             DC               1998      
+410         231             DC               1999      
+474         322             DC               2000      
+327         228             DC               2001      
+426         311             DC               2002      
+360         257             DC               2003      
+384         282             DC               2004      
+495         336             DC               2005      
+684         381             DC               2006      
+495         307             DC               2007      
+571         360             DC               2008      
+528         302             DC               2009      
+603         324             DC               2010      
+504         349             DC               2011      
+206         201             DC               2012      
+168         167             DC               2013      
+884         815             DC                         
+#+end_src
+
+Dumping this table to a file:
+
+#+begin_src sh :results code :exports both 
+mkdir -p derived_data
+sqlite3 db.lite.sql <<EOF
+.headers on
+.mode csv
+.once derived_data/company_productivity.csv
+select 
+ sum(universe='DC') as dc_created, 
+ sum(universe='Marvel') as marvel_created,
+ case 
+  when sum(universe='DC') > sum(universe='Marvel') then 'DC'
+  when sum(universe='Marvel') > sum(universe='DC') then 'Marvel'
+  else 'tie'
+ end as 'more_productive',
+ year as year
+ from marvel_dc_characters 
+group by year
+order by year asc
+EOF
+head derived_data/company_productivity.csv
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+dc_created,marvel_created,more_productive,year
+1,0,DC,1935
+9,0,DC,1936
+4,0,DC,1937
+10,0,DC,1938
+87,69,DC,1939
+285,221,DC,1940
+268,207,DC,1941
+296,244,DC,1942
+212,198,DC,1943
+#+end_src
+
+* Accessing SQLite from R 
+
+1. This is easy
+2. Often much more convenient than working with SQLite directly.
+
+* Docker
+
+#+begin_src 
+RUN apt update -y && apt-get install -y sqlite3
+RUN R -e "install.packages('RSQLite');"
+#+end_src
+
+* In R
+
+Let's switch to an Rpres.
+

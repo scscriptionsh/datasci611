@@ -1,0 +1,289 @@
+RSQLite and SQL Basics
+======================
+author: Vincent Toups
+date: 11 Sept 2020
+width:1400
+height:800
+css:style.css
+
+RSQLite
+=======
+
+A library to allow you to access SQLite databases directly from R.
+
+We already set up our database in the notes. So
+
+```{r}
+library(RSQLite);
+library(DBI);
+library(tidyverse);
+connection <- dbConnect(SQLite(),"db.lite.sql");
+dbGetQuery(connection, "select * from marvel_dc_characters") %>% as_tibble();
+```
+
+The output is a data frame, which we convert immediately into a tibble.
+
+Convenience
+===========
+
+Frequently you're working with one database so the following utility is handy:
+
+```{r}
+q <- function(...){
+    connection <- dbConnect(SQLite(),"db.lite.sql");
+    result <- NULL;
+    error <- NULL;
+    tryCatch({
+        result <- dbGetQuery(connection, sprintf(...));
+    },error=function(the_error){
+        dbDisconnect(connection);
+        NULL
+    });
+    dbDisconnect(connection);
+    if(!is.null(error)){
+        stop(error);
+    }
+    result %>% as_tibble();
+}
+```
+We use tryCatch to ensure that we release our database connection if something goes wrong.
+
+Using It
+========
+
+```{r}
+tbl <- q("select * from marvel_dc_characters limit %d", 10);
+tbl
+```
+
+SELECT
+======
+
+SELECT is how we pull out a subset of columns or calculate values from
+a table.
+
+```{r}
+q("select name, substr(year, 3) from marvel_dc_characters limit 10");
+```
+
+We can calculate all sorts of things in the clauses of a SELECT statement. 
+
+```{r}
+q("select name, cast(substr(year, 3) as integer) from marvel_dc_characters limit 10");
+```
+
+SELECT as
+=========
+
+Unless we select just a column we usually want to use an `as` after
+our expression to give the column a name in the results:
+
+```{r}
+q("select
+    name,
+    cast(substr(year, 3) as integer) as short_year
+   from marvel_dc_characters limit 10");
+```
+
+Filtering with WHERE
+====================
+
+```{r}
+q("select
+    name,
+    cast(substr(year, 3) as integer) as short_year,
+    year as year
+   from marvel_dc_characters
+   where year > 1940 and year < 2000");
+```
+
+Where clauses can contain any expression. In SQLite 0 is false and
+everything else is true.
+
+Ordering the Results
+====================
+
+we use "ORDER BY" to order the results:
+
+```{r}
+q("select
+    name,
+    cast(substr(year, 3) as integer) as short_year,
+    year as year
+   from marvel_dc_characters
+   where year > 1940 and year < 2000
+   order by year asc;")
+```
+
+GROUP BY
+========
+
+In the tidyverse when we "group by" we generally summarize but we can
+actually ungroup as well. In SQL "GROUP BY" must reduce any returned
+values using an "aggregation function" (that is the phrase to google).
+
+Eg:
+```{r}
+q("select
+    year as year,
+    count() as count
+    from marvel_dc_characters
+    group by year
+    order by count desc")
+```
+
+Common Table Expressions
+========================
+
+It is often handy to create intermediate, temporary tables to make
+code cleaner. These are much like variables in other languages except
+they must always hold tables:
+
+```{r}
+q("with tmp as (
+ select cast(year as integer) as year,
+        universe
+ from marvel_dc_characters
+)
+ select
+        year,
+        sum(universe = 'Marvel') as marvel_count,
+        sum(universe = 'DC') as dc_count,
+        count() as total
+ from tmp
+ where year is not null
+ group by year
+ order by total desc")
+```
+
+Note that we can include year in the above without an aggregation
+function: it is in the "GROUP BY" clause.
+
+Common Table Expressions
+========================
+
+We can have as many CTEs as we want. Each must have a name.
+
+They vanish when the query is over.
+
+HAVING
+======
+
+"WHERE" restricts the results _before_ grouping. "HAVING" restricts
+them after:
+
+```{r}
+q("with tmp as (
+ select cast(year as integer) as year,
+        universe
+ from marvel_dc_characters
+)
+ select
+        year,
+        sum(universe = 'Marvel') as marvel_count,
+        sum(universe = 'DC') as dc_count,
+        count() as total
+ from tmp
+ where year is not null
+ group by year
+ having year > 1945
+ order by total desc")
+```
+
+JOINs
+=====
+
+Joins have the same semantics as tidyverse: inner, left, right, full.
+
+Like most things in SQL, they are more verbose.
+
+Let's select the stats from the powers table but only for characters
+which have super strength.
+
+```{r}
+q("select s.*, p.power as explicit_power
+from character_stats s
+join hero_powers p
+  on p.name = s.name where p.power = 'super_strength'
+ and p.has = 'TRUE'");
+```
+
+UNION (rbind)
+=============
+
+Or maybe we want to compare both `super_speed` and `super_strength`
+characers.
+
+```{r}
+q("select s.*, p.power as explicit_power
+from character_stats s
+join hero_powers p
+  on p.name = s.name where p.power = 'super_speed'
+ and p.has = 'TRUE'
+union select s.*, p.power as explicit_power
+from character_stats s
+join hero_powers p
+  on p.name = s.name where p.power = 'super_speed'
+ and p.has = 'TRUE'");
+```
+
+LEFT JOIN 
+=========
+
+(RIGHT join not supported in SQLite)
+
+1. you want to count the number of pieces of missing data
+2. you want to replace missing data with some other value via
+   COALESCE.
+   
+Eg: (contrived)
+===============
+
+```{r}
+q("with characters as (select distinct name from character_stats),
+        clear_stats as (select * from character_stats where total > 5),
+        missings as (select c.name,
+                            s.* from characters c
+                     left join clear_stats s on c.name = s.name where s.intelligence is null)
+ select count(*) from missings");
+```
+
+Eg: (contrived): COALESCE
+=========================
+
+```{r}
+q("with characters as (select distinct name from character_stats),
+        clear_stats as (select * from character_stats where total > 5),
+        avgs as (select sum(intelligence)/count() as intelligence,
+sum(strength)/count() as strength,
+sum(speed)/count() as speed,
+sum(durability)/count() as durability,
+sum(power)/count() as power,
+sum(combat)/count() as combat from clear_stats
+),
+        missings as (select c.name,
+                             coalesce(s.intelligence, a.intelligence) as intelligence,
+coalesce(s.strength, a.strength) as strength,
+coalesce(s.speed, a.speed) as speed,
+coalesce(s.durability, a.durability) as durability,
+coalesce(s.power, a.power) as power,
+coalesce(s.combat, a.combat) as combat
+from characters c
+                     left join clear_stats s on c.name = s.name 
+                     inner join avgs a on 1)
+ select * from missings limit 10");
+```
+
+Recap
+=====
+
+1. You may find a data set too big to fit in R's memory
+2. But don't want to go to the trouble of getting an AWS account and
+   buying a VM with 128 GB of RAM.
+3. SQLite is an SQL database that works with single files
+4. It can do most operations in much less RAM than dplyr
+5. You can import CSV data into SQL fairly easily
+6. And then pre-process the data there, pulling the (smaller) results
+   directly into R via RSQlite.
+   
+   
