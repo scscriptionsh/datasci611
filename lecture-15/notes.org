@@ -1,0 +1,480 @@
+* More Python & Library Construction
+
+1. Object Oriented Programming and Classes
+2. Clarification on the Idea of Environments and Classes
+3. How to Arrange A Python Project
+4. How to Arrange an R library w/ Devtools
+5. Test Driven Development 
+6. Challenges w/ Statistical Frameworks and Tests
+
+* More Python 
+
+** Python Version Notes
+
+1. There are two major versions of Python out there.
+2. They are not source compatible.
+3. Python 2.7 is still out there but not as common as it was
+4. Python 3 is now pretty much standard.
+
+** Major Differences
+
+See [[https://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html][this]]. Briefly:
+
+1. print is a statement in python2 but a function in python3.
+2. (statements are things that don't return a value and are not first class)
+3. Differences in coercion when using mixed integer/float numbers
+4. no xrange in python 3 - range is equivalent
+5. for loop variables are private in python3
+
+The main thing is be away that there are differences. Generally
+speaking a Python 2 codebase will not run in Python 3. 
+
+** Object Orientation and a Thematic Note
+
+1. We will get to OO in Python in a Minute
+2. But what is the _idea_ behind OO?
+
+It is [[https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)][Encapsulation]]. 
+
+** A brief aside about statistical mechanics
+
+1. The second law says entropy always increases.
+2. What is the intuition behind this rule? We expect that if we cannot
+   make a precise measurement of a system then the degrees of freedom
+   we can't measure are randomly distributed over their state space
+   consistent with what we can measure.
+3. Roughly speaking, the randomness of these unmeasured degrees of
+   freedom correspond to the entropy of the system.
+4. When you put two systems together in an unconstrained way the
+   number of degrees of freedom goes like the product of the numbers
+   for each individual system.
+5. Thus the entropy has to increase.
+6. The best case scenario is that you combine your systems in a
+   delicate way that forbids most of the product states.
+
+** Programs are Systems
+
+1. They have states we can observe and states we cant 
+2. When you put two programs together (eg, define two algorithms in
+   the same program, for instance) then, naively, the number of states
+   goes multiplicatively.
+3. Encapsulation is an attempt to put sub-programs together in such a
+   way as to limit the interaction between unrelated pieces of state
+   and to therefore limit the entropy of the program.
+
+** Environments
+
+1. Environments are one way to limit cross talk
+2. Functions in R are the usual way of limiting things
+3. The big benefit is that the variables introduced in functions are
+   typically _temporary_ to the body of the function.
+4. Python has these kinds of environments as well.
+
+** Object Oriented Programming
+
+But what if we want _persistent_ state?
+
+Objects to the rescue: objects are persistent environments which
+typically represent individual entities of some kind.
+
+** A (contrived) example
+
+#+begin_src python 
+x = [0,0,0]
+y = [0,0,0]
+xv = [0.1,0.1,0.3]
+yv = [0.1,0.3,0.1]
+
+dt = 0.25;
+i = 1;
+
+x[i] = x[i] + dt*xv[i];
+# Imagine some complicated stuff happening
+# maybe a while loop that accidentally uses i as
+# an index the result of which is:
+i = 2;
+y[i] = y[i] + dt*yv[i];
+#+end_src
+
+The above result is totally inconsistent - we've mixed up velocities
+between points 1 and 2. Our program is in an inconsistent state. 
+
+** Now consider
+
+#+begin_src python
+class Point:
+    x = 0.0
+    y = 0.0
+    vx = 0.0;
+    vy = 0.0;
+
+    def __init__(self, x, y, vx, vy):
+        self.x = x;
+        self.y = y;
+        self.vx = vx;
+        self.vy = vy;
+
+    def update(self, dt):
+        self.x = self.x + dt*self.vx;
+        self.y = self.y + dt*self.vy;
+        return self;
+
+    def set_v(self, x, y):
+        self.vx = x;
+        self.vy = y;
+        return self;
+
+points = [Point(0.0,0.0,0.1,0.1),
+          Point(0.0,0.0,0.1,0.3),
+          Point(0.0,0.0,0.3,0.1)];
+
+i = 1;
+dt = 0.25;
+pt = points[i];
+# same complicated stuff that messes up i
+pt.update(dt);
+
+#+end_src
+
+#+RESULTS:
+: None
+
+The encapsulation of the state of the point has prevented an error by forcing us to 
+
+1. Address the point as a single thing rather than a disconnected set of things
+2. Interact with the point via an _interface_ of _methods_.
+
+** Vocabulary
+
+1. A "class" is a factory for "instances"
+2. We create an "instance" by using the class name like a function.
+3. The functions we define inside the class are "methods"
+4. The variables inside the class are "properties"
+5. It is ok to think of each "instance" having a copy of the "methods" and "properties".
+
+** How do we do this in R?
+
+R is less explicitly object oriented than Python and uses a very
+different kind of object system. However, we might write:
+
+#+begin_src R 
+update <- function(object,dt) UseMethod("update");
+setClass("Point",slots=list(x="numeric",
+                            y="numeric",
+                            xv="numeric",
+                            yv="numeric"));
+Point <- function(x,y,xv,yv){
+    new("Point",x=x,y=y,xv=xv,yv=yv);
+}
+setMethod("update",c(object="Point",dt="numeric"),
+          function(object, dt){
+              object@x <- object@x + dt*object@xv;
+              object@y <- object@y + dt*object$yv;
+              object;
+});
+#+end_src
+
+** Warning:
+
+The objects in your program may not correspond to the objects in the
+world.
+
+Objects in a program typically disentangle elements of the program
+rather than elements of reality.
+
+This is probably obscure sounding and luckily you won't really need to
+worry about it in data science unless you get into writing complicated
+libraries.
+
+ggplot is, however, a great example. A naive user might build a plot
+library around plot types (scatter plots, box plots, line plots, etc)
+but ggplot is designed around geometries, dimensions and aesthetics. 
+
+** Inheritance
+
+Inheritance is an important concept in OO programming. It operates in
+both R and Python but you're much more likely to encounter it in
+Python.
+
+Inheritance is an "is a" relationship which can obtain between two
+objects.
+
+The prototypical example is that _everything_ in Python "is an"
+object.
+
+** But there is more
+
+The `.` operator 
+
+1. recall: `x.y` means "look up the item named y in the instance x"
+2. recall: `x.y(a,b,c)` means "look up the method named y in the
+   instance x and call it with the object x and the arguments a, b and
+   c"
+
+** Inheritance and "looking up"
+
+Consider:
+
+#+begin_src python :results output
+class Person:
+    name = "";
+    def __init__(self, nm):
+        self.name = nm;
+
+    def __str__(self):
+        return "Person: {0}".format(self.name);
+
+    def get_name(self):
+        return self.name;
+
+    def greet_another(self, person):
+        print("Hello {0}, my name is {1}".format(person.get_name(), self.get_name()));
+        
+class Employee(Person):
+    company = "";
+    def __init__(self,name,cmp):
+        super().__init__(name);
+        self.company = cmp;
+    
+    def __str__(self):
+        return super().__str__() + (", Employed at: {0}".format(self.company));
+
+p1 = Person("Ted Leo");
+p2 = Person("Buffy Summers");
+e = Employee("Marcia Brady", "Sensus");
+print(p)
+print(e)
+p1.greet_another(p2);
+p2.greet_another(e);
+e.greet_another(p1);
+#+end_src
+
+#+RESULTS:
+: Person: Ted Leo
+: Person: Marcia Brady, Employed at: Sensus
+
+** Concepts
+
+1. Polymorphism: by providing an implementation of =__str__= to each
+   class we allow the "print" function to do different things for
+   different objects.
+2. =super= classes - the "Person" class is a "super" class of
+   "Employee".
+3. We "override" the =__str__= method in both Person and Employee.
+4. Note that we "inherit" the method ==greet_another== from Person in
+   the Employee class.
+5. And note that "Employees" "are" "People" - they can do everything a
+   person does and more.
+
+** Multiple Inheritance and Composition
+
+In Python, but not in many programming languages, Classes can only
+have a single parent class.
+
+As you might imagine this restricts the expressiveness of classes. 
+
+A classic example:
+
+Car and Boat are both subclasses of "Vehicle". But there are things
+which can move on land and in water. Are these descended from "Car" or
+"Boat?"
+
+Perhaps its better to merely have a "Vehicle" class and another class
+for "Capabilities" and have the Vehicle keep a list of "Capabilities"
+like "CanFly", "CanFloat", "CanDrive", etc.
+
+This is, by the way, a good example of the objects you need not
+mapping directly onto the objects in the real world.
+
+* Libraries
+
+1. A library is a collection of objects, methods, functions which are
+   meant to be used by other people to develop applications or data
+   analyses.
+2. Most of the time data scientists are writing scripts - small,
+   isolated tasks orchestrated by a make file with the final end being
+   a report.
+3. Sometimes data scientists write _applications_ as we might do with
+   Shiny.
+4. But sometimes we might want or need to write a _library_.
+
+** In Python
+
+1. The basic unit of code organization in python is a module.
+2. In contrast to R, where we used files and "sourced" them, in python
+   any file at all is a module which we can import
+
+eg: if we put the above class definitions into "people.py" and then:
+
+#+begin_src python :results output
+import people
+
+p1 = people.Person("Abe Lincoln");
+p1.greet_another(p1);
+
+#+end_src
+
+#+RESULTS:
+: Hello Abe Lincoln, my name is Abe Lincoln
+
+Any variables or functions we define will be accessible on the object
+which "import" creates.
+
+People do not ordinarily "source" python files.
+
+But you can say:
+
+#+begin_src python :results output
+from people import *
+p1 = Person("Martin Van Buren");
+p2 = Person("Frasier Crane");
+p1.greet_another(p2);
+#+end_src
+
+#+RESULTS:
+: Hello Frasier Crane, my name is Martin Van Buren
+
+Sometimes its nice to import a library without polluting the whole
+global namespace in your file but with a shorter name.
+
+#+begin_src python :results output
+import people as ppl
+p1 = ppl.Person("Batman");
+p2 = ppl.Person("Stanislaw Lem");
+p2.greet_another(p1)
+#+end_src
+
+#+RESULTS:
+: Hello Batman, my name is Stanislaw Lem
+
+** Developing A Package
+
+At a minimum a package is a directory with an __init__.py script.
+
+See expkg/__init__.py
+
+#+begin_src python :results output
+import expkg
+
+c = expkg.Carrot("winter",3);
+print(c.get_bite_sound())
+
+#+end_src
+
+#+RESULTS:
+: crunch
+
+We can put other python files in the directory with the init file and
+import them like this:
+
+#+begin_src python :results output
+from expkg import advanced_vegetables
+
+r = advanced_vegetables.Eggplant("summer",2);
+print(r.get_bite_sound())
+
+#+end_src
+
+#+RESULTS:
+: soft crunch
+
+** Concepts
+
+1. We can import from the local __init__.py by saying "import . as
+   lcl" or "from . import".
+2. This allows us to organize our code into sub-files and modules in
+   an overarching package.
+
+** The Package Ecosystem
+
+Before we get into the details of how to organize a Python package we
+should discuss Anaconda and Pip.
+
+1. pip is more or less the direct analog of R's "install.packages". It
+   installs Python packages for the associated Python
+   environment. Sometimes you see operating systems with pip and pip3
+   where pip3 installs for the python3 on the system.
+2. Anaconda is a broader system that can install binary packages for
+   and including Python and other languages. Anaconda also manages
+   environments.
+3. Anaconda is widely used among data scientists. I use Docker and Pip
+   instead, usually. Anaconda has a complicated SAT-Solver based
+   dependency management system which is non-deterministic and has
+   given me a lot of trouble.
+4. Environments should be handled with Docker anyway.
+
+** A full Python Package
+
+An example is [[https://packaging.python.org/tutorials/packaging-projects/][here]].
+
+There are some tools (less than standard) for generating a project
+template. 
+
+#+begin_src 
+pip3 install cookiecutter
+# The following is interactive
+# toups@rs:~/work/bios-611/lecture-15$ python3 -m cookiecutter gh:TezRomacH/python-package-template
+# You've downloaded /home/toups/.cookiecutters/python-package-template before. Is it okay to delete and re-download it? [yes]: yes
+# project_name [python-project]: expkg2
+# project_description [Awesome `expkg2` is a Python cli/package created with https://github.com/TezRomacH/python-package-template]: An example package.
+# organization [expkg2]: 
+# Select license:
+# 1 - MIT
+# 2 - BSD-3
+# 3 - GNU GPL v3.0
+# 4 - Apache Software License 2.0
+# Choose from 1, 2, 3, 4 [1]: 1
+# version [0.1.0]: 
+# github_name [expkg2]: 
+# email [hello@expkg2.com]: 
+# sh: 1: lice: not found
+# 32512
+# 
+# Your project expkg2 is created.
+# 
+# 1) Now you can start working on it:
+# 
+#     $ cd expkg2 && git init
+# 
+# 2) If you don't have Poetry installed run:
+# 
+#     $ make download-poetry
+# 
+# 3) Initialize poetry and install pre-commit hooks:
+# 
+#     $ make install
+# 
+# 4) Run codestyle:
+# 
+#     $ git add . && make install
+# 
+# 5) Upload initial code to GitHub (ensure you've run `make install` to use `pre-commit`):
+# 
+#     $ git add .
+#     $ git commit -m ":tada: Initial commit"
+#     $ git remote add origin https://github.com/expkg2/expkg2.git
+#     $ git push -u origin master
+
+#+end_src
+
+** What about R?
+
+Creating a library in R is arguably more important than in Python
+because there really isn't any intermediate abstraction like a module.
+
+Luckily for us, R makes it easier to do that Python does, thanks to
+the Tidyverse.
+
+** usethis
+
+1. Can automatically generate a package
+2. I recommend putting the package itself in a sub-directory for use
+   with Docker
+
+#+begin_src R
+library(usethis);
+#create_package("rpkgex")
+#+end_src
+
+Let's explore.
+

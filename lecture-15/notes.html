@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-05 Mon 17:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf7647d4">1. More Python &amp; Library Construction</a></li>
+<li><a href="#orgabf6c28">2. More Python</a>
+<ul>
+<li><a href="#org8e9fba7">2.1. Python Version Notes</a></li>
+<li><a href="#org4681fe0">2.2. Major Differences</a></li>
+<li><a href="#orgea4b6d8">2.3. Object Orientation and a Thematic Note</a></li>
+<li><a href="#org8875099">2.4. A brief aside about statistical mechanics</a></li>
+<li><a href="#org073b7ad">2.5. Programs are Systems</a></li>
+<li><a href="#org3eddf21">2.6. Environments</a></li>
+<li><a href="#org2daf50e">2.7. Object Oriented Programming</a></li>
+<li><a href="#orgab72b68">2.8. A (contrived) example</a></li>
+<li><a href="#org2237959">2.9. Now consider</a></li>
+<li><a href="#orgd8f6795">2.10. Vocabulary</a></li>
+<li><a href="#org7e944d9">2.11. How do we do this in R?</a></li>
+<li><a href="#org537d8b0">2.12. Warning:</a></li>
+<li><a href="#org74f76ed">2.13. Inheritance</a></li>
+<li><a href="#org4b93c5b">2.14. But there is more</a></li>
+<li><a href="#org07de000">2.15. Inheritance and "looking up"</a></li>
+<li><a href="#org5131b2b">2.16. Concepts</a></li>
+<li><a href="#org856593b">2.17. Multiple Inheritance and Composition</a></li>
+</ul>
+</li>
+<li><a href="#org566261f">3. Libraries</a>
+<ul>
+<li><a href="#org2ffa077">3.1. In Python</a></li>
+<li><a href="#org1436cf7">3.2. Developing A Package</a></li>
+<li><a href="#orgb6cf11b">3.3. Concepts</a></li>
+<li><a href="#orgbe58fe2">3.4. The Package Ecosystem</a></li>
+<li><a href="#orgd579e20">3.5. A full Python Package</a></li>
+<li><a href="#orgf6e167f">3.6. What about R?</a></li>
+<li><a href="#orgf256539">3.7. usethis</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf7647d4" class="outline-2">
+<h2 id="orgf7647d4"><span class="section-number-2">1</span> More Python &amp; Library Construction</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Object Oriented Programming and Classes</li>
+<li>Clarification on the Idea of Environments and Classes</li>
+<li>How to Arrange A Python Project</li>
+<li>How to Arrange an R library w/ Devtools</li>
+<li>Test Driven Development</li>
+<li>Challenges w/ Statistical Frameworks and Tests</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgabf6c28" class="outline-2">
+<h2 id="orgabf6c28"><span class="section-number-2">2</span> More Python</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8e9fba7" class="outline-3">
+<h3 id="org8e9fba7"><span class="section-number-3">2.1</span> Python Version Notes</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>There are two major versions of Python out there.</li>
+<li>They are not source compatible.</li>
+<li>Python 2.7 is still out there but not as common as it was</li>
+<li>Python 3 is now pretty much standard.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4681fe0" class="outline-3">
+<h3 id="org4681fe0"><span class="section-number-3">2.2</span> Major Differences</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+See <a href="https://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html">this</a>. Briefly:
+</p>
+
+<ol class="org-ol">
+<li>print is a statement in python2 but a function in python3.</li>
+<li>(statements are things that don't return a value and are not first class)</li>
+<li>Differences in coercion when using mixed integer/float numbers</li>
+<li>no xrange in python 3 - range is equivalent</li>
+<li>for loop variables are private in python3</li>
+</ol>
+
+<p>
+The main thing is be away that there are differences. Generally
+speaking a Python 2 codebase will not run in Python 3. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea4b6d8" class="outline-3">
+<h3 id="orgea4b6d8"><span class="section-number-3">2.3</span> Object Orientation and a Thematic Note</h3>
+<div class="outline-text-3" id="text-2-3">
+<ol class="org-ol">
+<li>We will get to OO in Python in a Minute</li>
+<li>But what is the <span class="underline">idea</span> behind OO?</li>
+</ol>
+
+<p>
+It is <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)">Encapsulation</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8875099" class="outline-3">
+<h3 id="org8875099"><span class="section-number-3">2.4</span> A brief aside about statistical mechanics</h3>
+<div class="outline-text-3" id="text-2-4">
+<ol class="org-ol">
+<li>The second law says entropy always increases.</li>
+<li>What is the intuition behind this rule? We expect that if we cannot
+make a precise measurement of a system then the degrees of freedom
+we can't measure are randomly distributed over their state space
+consistent with what we can measure.</li>
+<li>Roughly speaking, the randomness of these unmeasured degrees of
+freedom correspond to the entropy of the system.</li>
+<li>When you put two systems together in an unconstrained way the
+number of degrees of freedom goes like the product of the numbers
+for each individual system.</li>
+<li>Thus the entropy has to increase.</li>
+<li>The best case scenario is that you combine your systems in a
+delicate way that forbids most of the product states.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org073b7ad" class="outline-3">
+<h3 id="org073b7ad"><span class="section-number-3">2.5</span> Programs are Systems</h3>
+<div class="outline-text-3" id="text-2-5">
+<ol class="org-ol">
+<li>They have states we can observe and states we cant</li>
+<li>When you put two programs together (eg, define two algorithms in
+the same program, for instance) then, naively, the number of states
+goes multiplicatively.</li>
+<li>Encapsulation is an attempt to put sub-programs together in such a
+way as to limit the interaction between unrelated pieces of state
+and to therefore limit the entropy of the program.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3eddf21" class="outline-3">
+<h3 id="org3eddf21"><span class="section-number-3">2.6</span> Environments</h3>
+<div class="outline-text-3" id="text-2-6">
+<ol class="org-ol">
+<li>Environments are one way to limit cross talk</li>
+<li>Functions in R are the usual way of limiting things</li>
+<li>The big benefit is that the variables introduced in functions are
+typically <span class="underline">temporary</span> to the body of the function.</li>
+<li>Python has these kinds of environments as well.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2daf50e" class="outline-3">
+<h3 id="org2daf50e"><span class="section-number-3">2.7</span> Object Oriented Programming</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+But what if we want <span class="underline">persistent</span> state?
+</p>
+
+<p>
+Objects to the rescue: objects are persistent environments which
+typically represent individual entities of some kind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgab72b68" class="outline-3">
+<h3 id="orgab72b68"><span class="section-number-3">2.8</span> A (contrived) example</h3>
+<div class="outline-text-3" id="text-2-8">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a0522d;">x</span> = [0,0,0]
+<span style="color: #a0522d;">y</span> = [0,0,0]
+<span style="color: #a0522d;">xv</span> = [0.1,0.1,0.3]
+<span style="color: #a0522d;">yv</span> = [0.1,0.3,0.1]
+
+<span style="color: #a0522d;">dt</span> = 0.25;
+<span style="color: #a0522d;">i</span> = 1;
+
+<span style="color: #a0522d;">x</span>[i] = x[i] + dt*xv[i];
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Imagine some complicated stuff happening</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">maybe a while loop that accidentally uses i as</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">an index the result of which is:</span>
+<span style="color: #a0522d;">i</span> = 2;
+<span style="color: #a0522d;">y</span>[i] = y[i] + dt*yv[i];
+</pre>
+</div>
+
+<p>
+The above result is totally inconsistent - we've mixed up velocities
+between points 1 and 2. Our program is in an inconsistent state. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2237959" class="outline-3">
+<h3 id="org2237959"><span class="section-number-3">2.9</span> Now consider</h3>
+<div class="outline-text-3" id="text-2-9">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">class</span> <span style="color: #228b22;">Point</span>:
+    <span style="color: #a0522d;">x</span> = 0.0
+    <span style="color: #a0522d;">y</span> = 0.0
+    <span style="color: #a0522d;">vx</span> = 0.0;
+    <span style="color: #a0522d;">vy</span> = 0.0;
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">__init__</span>(<span style="color: #a020f0;">self</span>, x, y, vx, vy):
+        <span style="color: #a020f0;">self</span>.x = x;
+        <span style="color: #a020f0;">self</span>.y = y;
+        <span style="color: #a020f0;">self</span>.vx = vx;
+        <span style="color: #a020f0;">self</span>.vy = vy;
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">update</span>(<span style="color: #a020f0;">self</span>, dt):
+        <span style="color: #a020f0;">self</span>.x = <span style="color: #a020f0;">self</span>.x + dt*<span style="color: #a020f0;">self</span>.vx;
+        <span style="color: #a020f0;">self</span>.y = <span style="color: #a020f0;">self</span>.y + dt*<span style="color: #a020f0;">self</span>.vy;
+        <span style="color: #a020f0;">return</span> <span style="color: #a020f0;">self</span>;
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">set_v</span>(<span style="color: #a020f0;">self</span>, x, y):
+        <span style="color: #a020f0;">self</span>.vx = x;
+        <span style="color: #a020f0;">self</span>.vy = y;
+        <span style="color: #a020f0;">return</span> <span style="color: #a020f0;">self</span>;
+
+<span style="color: #a0522d;">points</span> = [Point(0.0,0.0,0.1,0.1),
+          Point(0.0,0.0,0.1,0.3),
+          Point(0.0,0.0,0.3,0.1)];
+
+<span style="color: #a0522d;">i</span> = 1;
+<span style="color: #a0522d;">dt</span> = 0.25;
+<span style="color: #a0522d;">pt</span> = points[i];
+<span style="color: #b22222;"># </span><span style="color: #b22222;">same complicated stuff that messes up i</span>
+pt.update(dt);
+
+</pre>
+</div>
+
+<p>
+The encapsulation of the state of the point has prevented an error by forcing us to 
+</p>
+
+<ol class="org-ol">
+<li>Address the point as a single thing rather than a disconnected set of things</li>
+<li>Interact with the point via an <span class="underline">interface</span> of <span class="underline">methods</span>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd8f6795" class="outline-3">
+<h3 id="orgd8f6795"><span class="section-number-3">2.10</span> Vocabulary</h3>
+<div class="outline-text-3" id="text-2-10">
+<ol class="org-ol">
+<li>A "class" is a factory for "instances"</li>
+<li>We create an "instance" by using the class name like a function.</li>
+<li>The functions we define inside the class are "methods"</li>
+<li>The variables inside the class are "properties"</li>
+<li>It is ok to think of each "instance" having a copy of the "methods" and "properties".</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7e944d9" class="outline-3">
+<h3 id="org7e944d9"><span class="section-number-3">2.11</span> How do we do this in R?</h3>
+<div class="outline-text-3" id="text-2-11">
+<p>
+R is less explicitly object oriented than Python and uses a very
+different kind of object system. However, we might write:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #0000ff;">update</span> <span style="color: #008b8b;">&lt;-</span> <span style="color: #a020f0;">function</span>(object,dt) UseMethod(<span style="color: #8b2252;">"update"</span>);
+setClass(<span style="color: #8b2252;">"Point"</span>,slots=list(x=<span style="color: #8b2252;">"numeric"</span>,
+                            y=<span style="color: #8b2252;">"numeric"</span>,
+                            xv=<span style="color: #8b2252;">"numeric"</span>,
+                            yv=<span style="color: #8b2252;">"numeric"</span>));
+<span style="color: #0000ff;">Point</span> <span style="color: #008b8b;">&lt;-</span> <span style="color: #a020f0;">function</span>(x,y,xv,yv){
+    new(<span style="color: #8b2252;">"Point"</span>,x=x,y=y,xv=xv,yv=yv);
+}
+setMethod(<span style="color: #8b2252;">"update"</span>,c(object=<span style="color: #8b2252;">"Point"</span>,dt=<span style="color: #8b2252;">"numeric"</span>),
+          <span style="color: #a020f0;">function</span>(object, dt){
+              object@x <span style="color: #008b8b;">&lt;-</span> object@x + dt*object@xv;
+              object@y <span style="color: #008b8b;">&lt;-</span> object@y + dt*object$yv;
+              object;
+});
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org537d8b0" class="outline-3">
+<h3 id="org537d8b0"><span class="section-number-3">2.12</span> Warning:</h3>
+<div class="outline-text-3" id="text-2-12">
+<p>
+The objects in your program may not correspond to the objects in the
+world.
+</p>
+
+<p>
+Objects in a program typically disentangle elements of the program
+rather than elements of reality.
+</p>
+
+<p>
+This is probably obscure sounding and luckily you won't really need to
+worry about it in data science unless you get into writing complicated
+libraries.
+</p>
+
+<p>
+ggplot is, however, a great example. A naive user might build a plot
+library around plot types (scatter plots, box plots, line plots, etc)
+but ggplot is designed around geometries, dimensions and aesthetics. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74f76ed" class="outline-3">
+<h3 id="org74f76ed"><span class="section-number-3">2.13</span> Inheritance</h3>
+<div class="outline-text-3" id="text-2-13">
+<p>
+Inheritance is an important concept in OO programming. It operates in
+both R and Python but you're much more likely to encounter it in
+Python.
+</p>
+
+<p>
+Inheritance is an "is a" relationship which can obtain between two
+objects.
+</p>
+
+<p>
+The prototypical example is that <span class="underline">everything</span> in Python "is an"
+object.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4b93c5b" class="outline-3">
+<h3 id="org4b93c5b"><span class="section-number-3">2.14</span> But there is more</h3>
+<div class="outline-text-3" id="text-2-14">
+<p>
+The `.` operator 
+</p>
+
+<ol class="org-ol">
+<li>recall: `x.y` means "look up the item named y in the instance x"</li>
+<li>recall: `x.y(a,b,c)` means "look up the method named y in the
+instance x and call it with the object x and the arguments a, b and
+c"</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org07de000" class="outline-3">
+<h3 id="org07de000"><span class="section-number-3">2.15</span> Inheritance and "looking up"</h3>
+<div class="outline-text-3" id="text-2-15">
+<p>
+Consider:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">class</span> <span style="color: #228b22;">Person</span>:
+    <span style="color: #a0522d;">name</span> = <span style="color: #8b2252;">""</span>;
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">__init__</span>(<span style="color: #a020f0;">self</span>, nm):
+        <span style="color: #a020f0;">self</span>.name = nm;
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">__str__</span>(<span style="color: #a020f0;">self</span>):
+        <span style="color: #a020f0;">return</span> <span style="color: #8b2252;">"Person: {0}"</span>.<span style="color: #483d8b;">format</span>(<span style="color: #a020f0;">self</span>.name);
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">get_name</span>(<span style="color: #a020f0;">self</span>):
+        <span style="color: #a020f0;">return</span> <span style="color: #a020f0;">self</span>.name;
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">greet_another</span>(<span style="color: #a020f0;">self</span>, person):
+        <span style="color: #a020f0;">print</span>(<span style="color: #8b2252;">"Hello {0}, my name is {1}"</span>.<span style="color: #483d8b;">format</span>(person.get_name(), <span style="color: #a020f0;">self</span>.get_name()));
+
+<span style="color: #a020f0;">class</span> <span style="color: #228b22;">Employee</span>(Person):
+    <span style="color: #a0522d;">company</span> = <span style="color: #8b2252;">""</span>;
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">__init__</span>(<span style="color: #a020f0;">self</span>,name,<span style="color: #483d8b;">cmp</span>):
+        <span style="color: #483d8b;">super</span>().__init__(name);
+        <span style="color: #a020f0;">self</span>.company = <span style="color: #483d8b;">cmp</span>;
+
+    <span style="color: #a020f0;">def</span> <span style="color: #0000ff;">__str__</span>(<span style="color: #a020f0;">self</span>):
+        <span style="color: #a020f0;">return</span> <span style="color: #483d8b;">super</span>().__str__() + (<span style="color: #8b2252;">", Employed at: {0}"</span>.<span style="color: #483d8b;">format</span>(<span style="color: #a020f0;">self</span>.company));
+
+<span style="color: #a0522d;">p1</span> = Person(<span style="color: #8b2252;">"Ted Leo"</span>);
+<span style="color: #a0522d;">p2</span> = Person(<span style="color: #8b2252;">"Buffy Summers"</span>);
+<span style="color: #a0522d;">e</span> = Employee(<span style="color: #8b2252;">"Marcia Brady"</span>, <span style="color: #8b2252;">"Sensus"</span>);
+<span style="color: #a020f0;">print</span>(p)
+<span style="color: #a020f0;">print</span>(e)
+p1.greet_another(p2);
+p2.greet_another(e);
+e.greet_another(p1);
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5131b2b" class="outline-3">
+<h3 id="org5131b2b"><span class="section-number-3">2.16</span> Concepts</h3>
+<div class="outline-text-3" id="text-2-16">
+<ol class="org-ol">
+<li>Polymorphism: by providing an implementation of <code>__str__</code> to each
+class we allow the "print" function to do different things for
+different objects.</li>
+<li><code>super</code> classes - the "Person" class is a "super" class of
+"Employee".</li>
+<li>We "override" the <code>__str__</code> method in both Person and Employee.</li>
+<li>Note that we "inherit" the method <code>=greet_another=</code> from Person in
+the Employee class.</li>
+<li>And note that "Employees" "are" "People" - they can do everything a
+person does and more.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org856593b" class="outline-3">
+<h3 id="org856593b"><span class="section-number-3">2.17</span> Multiple Inheritance and Composition</h3>
+<div class="outline-text-3" id="text-2-17">
+<p>
+In Python, but not in many programming languages, Classes can only
+have a single parent class.
+</p>
+
+<p>
+As you might imagine this restricts the expressiveness of classes. 
+</p>
+
+<p>
+A classic example:
+</p>
+
+<p>
+Car and Boat are both subclasses of "Vehicle". But there are things
+which can move on land and in water. Are these descended from "Car" or
+"Boat?"
+</p>
+
+<p>
+Perhaps its better to merely have a "Vehicle" class and another class
+for "Capabilities" and have the Vehicle keep a list of "Capabilities"
+like "CanFly", "CanFloat", "CanDrive", etc.
+</p>
+
+<p>
+This is, by the way, a good example of the objects you need not
+mapping directly onto the objects in the real world.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org566261f" class="outline-2">
+<h2 id="org566261f"><span class="section-number-2">3</span> Libraries</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>A library is a collection of objects, methods, functions which are
+meant to be used by other people to develop applications or data
+analyses.</li>
+<li>Most of the time data scientists are writing scripts - small,
+isolated tasks orchestrated by a make file with the final end being
+a report.</li>
+<li>Sometimes data scientists write <span class="underline">applications</span> as we might do with
+Shiny.</li>
+<li>But sometimes we might want or need to write a <span class="underline">library</span>.</li>
+</ol>
+</div>
+
+<div id="outline-container-org2ffa077" class="outline-3">
+<h3 id="org2ffa077"><span class="section-number-3">3.1</span> In Python</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>The basic unit of code organization in python is a module.</li>
+<li>In contrast to R, where we used files and "sourced" them, in python
+any file at all is a module which we can import</li>
+</ol>
+
+<p>
+eg: if we put the above class definitions into "people.py" and then:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">import</span> people
+
+<span style="color: #a0522d;">p1</span> = people.Person(<span style="color: #8b2252;">"Abe Lincoln"</span>);
+p1.greet_another(p1);
+
+</pre>
+</div>
+
+<p>
+Any variables or functions we define will be accessible on the object
+which "import" creates.
+</p>
+
+<p>
+People do not ordinarily "source" python files.
+</p>
+
+<p>
+But you can say:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">from</span> people <span style="color: #a020f0;">import</span> *
+<span style="color: #a0522d;">p1</span> = Person(<span style="color: #8b2252;">"Martin Van Buren"</span>);
+<span style="color: #a0522d;">p2</span> = Person(<span style="color: #8b2252;">"Frasier Crane"</span>);
+p1.greet_another(p2);
+</pre>
+</div>
+
+<p>
+Sometimes its nice to import a library without polluting the whole
+global namespace in your file but with a shorter name.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">import</span> people <span style="color: #a020f0;">as</span> ppl
+<span style="color: #a0522d;">p1</span> = ppl.Person(<span style="color: #8b2252;">"Batman"</span>);
+<span style="color: #a0522d;">p2</span> = ppl.Person(<span style="color: #8b2252;">"Stanislaw Lem"</span>);
+p2.greet_another(p1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1436cf7" class="outline-3">
+<h3 id="org1436cf7"><span class="section-number-3">3.2</span> Developing A Package</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+At a minimum a package is a directory with an <span class="underline"><span class="underline">init</span></span>.py script.
+</p>
+
+<p>
+See expkg/_<sub>init</sub>_<sub>.py</sub>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">import</span> expkg
+
+<span style="color: #a0522d;">c</span> = expkg.Carrot(<span style="color: #8b2252;">"winter"</span>,3);
+<span style="color: #a020f0;">print</span>(c.get_bite_sound())
+
+</pre>
+</div>
+
+<p>
+We can put other python files in the directory with the init file and
+import them like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #a020f0;">from</span> expkg <span style="color: #a020f0;">import</span> advanced_vegetables
+
+<span style="color: #a0522d;">r</span> = advanced_vegetables.Eggplant(<span style="color: #8b2252;">"summer"</span>,2);
+<span style="color: #a020f0;">print</span>(r.get_bite_sound())
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb6cf11b" class="outline-3">
+<h3 id="orgb6cf11b"><span class="section-number-3">3.3</span> Concepts</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>We can import from the local <span class="underline"><span class="underline">init</span></span>.py by saying "import . as
+lcl" or "from . import".</li>
+<li>This allows us to organize our code into sub-files and modules in
+an overarching package.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbe58fe2" class="outline-3">
+<h3 id="orgbe58fe2"><span class="section-number-3">3.4</span> The Package Ecosystem</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Before we get into the details of how to organize a Python package we
+should discuss Anaconda and Pip.
+</p>
+
+<ol class="org-ol">
+<li>pip is more or less the direct analog of R's "install.packages". It
+installs Python packages for the associated Python
+environment. Sometimes you see operating systems with pip and pip3
+where pip3 installs for the python3 on the system.</li>
+<li>Anaconda is a broader system that can install binary packages for
+and including Python and other languages. Anaconda also manages
+environments.</li>
+<li>Anaconda is widely used among data scientists. I use Docker and Pip
+instead, usually. Anaconda has a complicated SAT-Solver based
+dependency management system which is non-deterministic and has
+given me a lot of trouble.</li>
+<li>Environments should be handled with Docker anyway.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd579e20" class="outline-3">
+<h3 id="orgd579e20"><span class="section-number-3">3.5</span> A full Python Package</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+An example is <a href="https://packaging.python.org/tutorials/packaging-projects/">here</a>.
+</p>
+
+<p>
+There are some tools (less than standard) for generating a project
+template. 
+</p>
+
+<pre class="example">
+pip3 install cookiecutter
+# The following is interactive
+# toups@rs:~/work/bios-611/lecture-15$ python3 -m cookiecutter gh:TezRomacH/python-package-template
+# You've downloaded /home/toups/.cookiecutters/python-package-template before. Is it okay to delete and re-download it? [yes]: yes
+# project_name [python-project]: expkg2
+# project_description [Awesome `expkg2` is a Python cli/package created with https://github.com/TezRomacH/python-package-template]: An example package.
+# organization [expkg2]: 
+# Select license:
+# 1 - MIT
+# 2 - BSD-3
+# 3 - GNU GPL v3.0
+# 4 - Apache Software License 2.0
+# Choose from 1, 2, 3, 4 [1]: 1
+# version [0.1.0]: 
+# github_name [expkg2]: 
+# email [hello@expkg2.com]: 
+# sh: 1: lice: not found
+# 32512
+# 
+# Your project expkg2 is created.
+# 
+# 1) Now you can start working on it:
+# 
+#     $ cd expkg2 &amp;&amp; git init
+# 
+# 2) If you don't have Poetry installed run:
+# 
+#     $ make download-poetry
+# 
+# 3) Initialize poetry and install pre-commit hooks:
+# 
+#     $ make install
+# 
+# 4) Run codestyle:
+# 
+#     $ git add . &amp;&amp; make install
+# 
+# 5) Upload initial code to GitHub (ensure you've run `make install` to use `pre-commit`):
+# 
+#     $ git add .
+#     $ git commit -m ":tada: Initial commit"
+#     $ git remote add origin https://github.com/expkg2/expkg2.git
+#     $ git push -u origin master
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgf6e167f" class="outline-3">
+<h3 id="orgf6e167f"><span class="section-number-3">3.6</span> What about R?</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Creating a library in R is arguably more important than in Python
+because there really isn't any intermediate abstraction like a module.
+</p>
+
+<p>
+Luckily for us, R makes it easier to do that Python does, thanks to
+the Tidyverse.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf256539" class="outline-3">
+<h3 id="orgf256539"><span class="section-number-3">3.7</span> usethis</h3>
+<div class="outline-text-3" id="text-3-7">
+<ol class="org-ol">
+<li>Can automatically generate a package</li>
+<li>I recommend putting the package itself in a sub-directory for use
+with Docker</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #008b8b;">library</span>(usethis);
+<span style="color: #b22222;">#</span><span style="color: #b22222;">create_package("rpkgex")</span>
+</pre>
+</div>
+
+<p>
+Let's explore.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent</p>
+<p class="date">Created: 2020-10-05 Mon 17:00</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

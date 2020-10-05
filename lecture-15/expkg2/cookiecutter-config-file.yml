@@ -1,0 +1,10 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "expkg2"
+  project_description: "An example package."
+  organization: "expkg2"
+  license: "MIT"
+  version: "0.1.0"
+  github_name: "expkg2"
+  email: "hello@expkg2.com"
