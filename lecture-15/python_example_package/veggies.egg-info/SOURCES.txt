@@ -1,0 +1,7 @@
+README.md
+setup.py
+veggies/__init__.py
+veggies.egg-info/PKG-INFO
+veggies.egg-info/SOURCES.txt
+veggies.egg-info/dependency_links.txt
+veggies.egg-info/top_level.txt

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-10-05 Mon 17:00 -->
+<!-- 2020-10-07 Wed 17:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -246,44 +246,60 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf7647d4">1. More Python &amp; Library Construction</a></li>
-<li><a href="#orgabf6c28">2. More Python</a>
+<li><a href="#org0281e50">1. More Python &amp; Library Construction</a></li>
+<li><a href="#orgefd6510">2. More Python</a>
 <ul>
-<li><a href="#org8e9fba7">2.1. Python Version Notes</a></li>
-<li><a href="#org4681fe0">2.2. Major Differences</a></li>
-<li><a href="#orgea4b6d8">2.3. Object Orientation and a Thematic Note</a></li>
-<li><a href="#org8875099">2.4. A brief aside about statistical mechanics</a></li>
-<li><a href="#org073b7ad">2.5. Programs are Systems</a></li>
-<li><a href="#org3eddf21">2.6. Environments</a></li>
-<li><a href="#org2daf50e">2.7. Object Oriented Programming</a></li>
-<li><a href="#orgab72b68">2.8. A (contrived) example</a></li>
-<li><a href="#org2237959">2.9. Now consider</a></li>
-<li><a href="#orgd8f6795">2.10. Vocabulary</a></li>
-<li><a href="#org7e944d9">2.11. How do we do this in R?</a></li>
-<li><a href="#org537d8b0">2.12. Warning:</a></li>
-<li><a href="#org74f76ed">2.13. Inheritance</a></li>
-<li><a href="#org4b93c5b">2.14. But there is more</a></li>
-<li><a href="#org07de000">2.15. Inheritance and "looking up"</a></li>
-<li><a href="#org5131b2b">2.16. Concepts</a></li>
-<li><a href="#org856593b">2.17. Multiple Inheritance and Composition</a></li>
+<li><a href="#org500175d">2.1. Python Version Notes</a></li>
+<li><a href="#orgf25f466">2.2. Major Differences</a></li>
+<li><a href="#orge9bc3b1">2.3. Object Orientation and a Thematic Note</a></li>
+<li><a href="#orgdbc0999">2.4. A brief aside about statistical mechanics</a></li>
+<li><a href="#orgfdb05c8">2.5. Programs are Systems</a></li>
+<li><a href="#org30ed7e7">2.6. Environments</a></li>
+<li><a href="#orge1c7831">2.7. Object Oriented Programming</a></li>
+<li><a href="#org00ca508">2.8. A (contrived) example</a></li>
+<li><a href="#orgefeb842">2.9. Now consider</a></li>
+<li><a href="#orgb08f451">2.10. Vocabulary</a></li>
+<li><a href="#org6fc562c">2.11. How do we do this in R?</a></li>
+<li><a href="#org7a63e67">2.12. Warning:</a></li>
+<li><a href="#org9bfbe7c">2.13. Inheritance</a></li>
+<li><a href="#orgd01e87f">2.14. But there is more</a></li>
+<li><a href="#org28df432">2.15. Inheritance and "looking up"</a></li>
+<li><a href="#orgbc88104">2.16. Concepts</a></li>
+<li><a href="#org2362b47">2.17. Multiple Inheritance and Composition</a></li>
 </ul>
 </li>
-<li><a href="#org566261f">3. Libraries</a>
+<li><a href="#org29f153a">3. Libraries</a>
 <ul>
-<li><a href="#org2ffa077">3.1. In Python</a></li>
-<li><a href="#org1436cf7">3.2. Developing A Package</a></li>
-<li><a href="#orgb6cf11b">3.3. Concepts</a></li>
-<li><a href="#orgbe58fe2">3.4. The Package Ecosystem</a></li>
-<li><a href="#orgd579e20">3.5. A full Python Package</a></li>
-<li><a href="#orgf6e167f">3.6. What about R?</a></li>
-<li><a href="#orgf256539">3.7. usethis</a></li>
+<li><a href="#org99c918e">3.1. In Python</a></li>
+<li><a href="#org6a7881f">3.2. Developing A Package</a></li>
+<li><a href="#org45ac27c">3.3. Concepts</a></li>
+<li><a href="#org121ce3a">3.4. The Package Ecosystem</a></li>
+<li><a href="#org3ea02ed">3.5. A full Python Package</a></li>
+<li><a href="#org0e3e871">3.6. What about R?</a></li>
+<li><a href="#org92607b8">3.7. usethis</a></li>
+</ul>
+</li>
+<li><a href="#org24249d8">4. Test Driven Development and a Digression About Types</a>
+<ul>
+<li><a href="#org1a99a18">4.1. Therac 25</a></li>
+<li><a href="#orgf832809">4.2. An Aside</a></li>
+<li><a href="#org614118a">4.3. The Surprising Thing</a></li>
+<li><a href="#org88e885b">4.4. What are Tests?</a></li>
+<li><a href="#org69de740">4.5. Tests are Critical to Collaboration</a></li>
+<li><a href="#org80fec32">4.6. Continuous Integration</a></li>
+<li><a href="#orgb447e95">4.7. Challenges of Testing Data Science</a></li>
+<li><a href="#orgcf975f3">4.8. Potential Solutions</a></li>
+<li><a href="#org3a4edb9">4.9. The Good News</a></li>
+<li><a href="#orgc32a97b">4.10. Types of Tests</a></li>
+<li><a href="#org9f7b226">4.11. Writing Tests in Python</a></li>
+<li><a href="#org313ff70">4.12. Writing Tests in R</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf7647d4" class="outline-2">
-<h2 id="orgf7647d4"><span class="section-number-2">1</span> More Python &amp; Library Construction</h2>
+<div id="outline-container-org0281e50" class="outline-2">
+<h2 id="org0281e50"><span class="section-number-2">1</span> More Python &amp; Library Construction</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>Object Oriented Programming and Classes</li>
@@ -296,12 +312,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgabf6c28" class="outline-2">
-<h2 id="orgabf6c28"><span class="section-number-2">2</span> More Python</h2>
+<div id="outline-container-orgefd6510" class="outline-2">
+<h2 id="orgefd6510"><span class="section-number-2">2</span> More Python</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org8e9fba7" class="outline-3">
-<h3 id="org8e9fba7"><span class="section-number-3">2.1</span> Python Version Notes</h3>
+<div id="outline-container-org500175d" class="outline-3">
+<h3 id="org500175d"><span class="section-number-3">2.1</span> Python Version Notes</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>There are two major versions of Python out there.</li>
@@ -312,8 +328,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org4681fe0" class="outline-3">
-<h3 id="org4681fe0"><span class="section-number-3">2.2</span> Major Differences</h3>
+<div id="outline-container-orgf25f466" class="outline-3">
+<h3 id="orgf25f466"><span class="section-number-3">2.2</span> Major Differences</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 See <a href="https://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html">this</a>. Briefly:
@@ -334,8 +350,8 @@ speaking a Python 2 codebase will not run in Python 3.
 </div>
 </div>
 
-<div id="outline-container-orgea4b6d8" class="outline-3">
-<h3 id="orgea4b6d8"><span class="section-number-3">2.3</span> Object Orientation and a Thematic Note</h3>
+<div id="outline-container-orge9bc3b1" class="outline-3">
+<h3 id="orge9bc3b1"><span class="section-number-3">2.3</span> Object Orientation and a Thematic Note</h3>
 <div class="outline-text-3" id="text-2-3">
 <ol class="org-ol">
 <li>We will get to OO in Python in a Minute</li>
@@ -348,8 +364,8 @@ It is <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming
 </div>
 </div>
 
-<div id="outline-container-org8875099" class="outline-3">
-<h3 id="org8875099"><span class="section-number-3">2.4</span> A brief aside about statistical mechanics</h3>
+<div id="outline-container-orgdbc0999" class="outline-3">
+<h3 id="orgdbc0999"><span class="section-number-3">2.4</span> A brief aside about statistical mechanics</h3>
 <div class="outline-text-3" id="text-2-4">
 <ol class="org-ol">
 <li>The second law says entropy always increases.</li>
@@ -369,8 +385,8 @@ delicate way that forbids most of the product states.</li>
 </div>
 </div>
 
-<div id="outline-container-org073b7ad" class="outline-3">
-<h3 id="org073b7ad"><span class="section-number-3">2.5</span> Programs are Systems</h3>
+<div id="outline-container-orgfdb05c8" class="outline-3">
+<h3 id="orgfdb05c8"><span class="section-number-3">2.5</span> Programs are Systems</h3>
 <div class="outline-text-3" id="text-2-5">
 <ol class="org-ol">
 <li>They have states we can observe and states we cant</li>
@@ -384,8 +400,8 @@ and to therefore limit the entropy of the program.</li>
 </div>
 </div>
 
-<div id="outline-container-org3eddf21" class="outline-3">
-<h3 id="org3eddf21"><span class="section-number-3">2.6</span> Environments</h3>
+<div id="outline-container-org30ed7e7" class="outline-3">
+<h3 id="org30ed7e7"><span class="section-number-3">2.6</span> Environments</h3>
 <div class="outline-text-3" id="text-2-6">
 <ol class="org-ol">
 <li>Environments are one way to limit cross talk</li>
@@ -397,8 +413,8 @@ typically <span class="underline">temporary</span> to the body of the function.<
 </div>
 </div>
 
-<div id="outline-container-org2daf50e" class="outline-3">
-<h3 id="org2daf50e"><span class="section-number-3">2.7</span> Object Oriented Programming</h3>
+<div id="outline-container-orge1c7831" class="outline-3">
+<h3 id="orge1c7831"><span class="section-number-3">2.7</span> Object Oriented Programming</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 But what if we want <span class="underline">persistent</span> state?
@@ -411,8 +427,8 @@ typically represent individual entities of some kind.
 </div>
 </div>
 
-<div id="outline-container-orgab72b68" class="outline-3">
-<h3 id="orgab72b68"><span class="section-number-3">2.8</span> A (contrived) example</h3>
+<div id="outline-container-org00ca508" class="outline-3">
+<h3 id="org00ca508"><span class="section-number-3">2.8</span> A (contrived) example</h3>
 <div class="outline-text-3" id="text-2-8">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #a0522d;">x</span> = [0,0,0]
@@ -439,8 +455,8 @@ between points 1 and 2. Our program is in an inconsistent state.
 </div>
 </div>
 
-<div id="outline-container-org2237959" class="outline-3">
-<h3 id="org2237959"><span class="section-number-3">2.9</span> Now consider</h3>
+<div id="outline-container-orgefeb842" class="outline-3">
+<h3 id="orgefeb842"><span class="section-number-3">2.9</span> Now consider</h3>
 <div class="outline-text-3" id="text-2-9">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #a020f0;">class</span> <span style="color: #228b22;">Point</span>:
@@ -489,8 +505,8 @@ The encapsulation of the state of the point has prevented an error by forcing us
 </div>
 </div>
 
-<div id="outline-container-orgd8f6795" class="outline-3">
-<h3 id="orgd8f6795"><span class="section-number-3">2.10</span> Vocabulary</h3>
+<div id="outline-container-orgb08f451" class="outline-3">
+<h3 id="orgb08f451"><span class="section-number-3">2.10</span> Vocabulary</h3>
 <div class="outline-text-3" id="text-2-10">
 <ol class="org-ol">
 <li>A "class" is a factory for "instances"</li>
@@ -502,8 +518,8 @@ The encapsulation of the state of the point has prevented an error by forcing us
 </div>
 </div>
 
-<div id="outline-container-org7e944d9" class="outline-3">
-<h3 id="org7e944d9"><span class="section-number-3">2.11</span> How do we do this in R?</h3>
+<div id="outline-container-org6fc562c" class="outline-3">
+<h3 id="org6fc562c"><span class="section-number-3">2.11</span> How do we do this in R?</h3>
 <div class="outline-text-3" id="text-2-11">
 <p>
 R is less explicitly object oriented than Python and uses a very
@@ -522,7 +538,7 @@ setClass(<span style="color: #8b2252;">"Point"</span>,slots=list(x=<span style="
 setMethod(<span style="color: #8b2252;">"update"</span>,c(object=<span style="color: #8b2252;">"Point"</span>,dt=<span style="color: #8b2252;">"numeric"</span>),
           <span style="color: #a020f0;">function</span>(object, dt){
               object@x <span style="color: #008b8b;">&lt;-</span> object@x + dt*object@xv;
-              object@y <span style="color: #008b8b;">&lt;-</span> object@y + dt*object$yv;
+              object@y <span style="color: #008b8b;">&lt;-</span> object@y + dt*object@yv;
               object;
 });
 </pre>
@@ -530,8 +546,8 @@ setMethod(<span style="color: #8b2252;">"update"</span>,c(object=<span style="co
 </div>
 </div>
 
-<div id="outline-container-org537d8b0" class="outline-3">
-<h3 id="org537d8b0"><span class="section-number-3">2.12</span> Warning:</h3>
+<div id="outline-container-org7a63e67" class="outline-3">
+<h3 id="org7a63e67"><span class="section-number-3">2.12</span> Warning:</h3>
 <div class="outline-text-3" id="text-2-12">
 <p>
 The objects in your program may not correspond to the objects in the
@@ -557,8 +573,8 @@ but ggplot is designed around geometries, dimensions and aesthetics.
 </div>
 </div>
 
-<div id="outline-container-org74f76ed" class="outline-3">
-<h3 id="org74f76ed"><span class="section-number-3">2.13</span> Inheritance</h3>
+<div id="outline-container-org9bfbe7c" class="outline-3">
+<h3 id="org9bfbe7c"><span class="section-number-3">2.13</span> Inheritance</h3>
 <div class="outline-text-3" id="text-2-13">
 <p>
 Inheritance is an important concept in OO programming. It operates in
@@ -578,8 +594,8 @@ object.
 </div>
 </div>
 
-<div id="outline-container-org4b93c5b" class="outline-3">
-<h3 id="org4b93c5b"><span class="section-number-3">2.14</span> But there is more</h3>
+<div id="outline-container-orgd01e87f" class="outline-3">
+<h3 id="orgd01e87f"><span class="section-number-3">2.14</span> But there is more</h3>
 <div class="outline-text-3" id="text-2-14">
 <p>
 The `.` operator 
@@ -594,8 +610,8 @@ c"</li>
 </div>
 </div>
 
-<div id="outline-container-org07de000" class="outline-3">
-<h3 id="org07de000"><span class="section-number-3">2.15</span> Inheritance and "looking up"</h3>
+<div id="outline-container-org28df432" class="outline-3">
+<h3 id="org28df432"><span class="section-number-3">2.15</span> Inheritance and "looking up"</h3>
 <div class="outline-text-3" id="text-2-15">
 <p>
 Consider:
@@ -628,7 +644,7 @@ Consider:
 <span style="color: #a0522d;">p1</span> = Person(<span style="color: #8b2252;">"Ted Leo"</span>);
 <span style="color: #a0522d;">p2</span> = Person(<span style="color: #8b2252;">"Buffy Summers"</span>);
 <span style="color: #a0522d;">e</span> = Employee(<span style="color: #8b2252;">"Marcia Brady"</span>, <span style="color: #8b2252;">"Sensus"</span>);
-<span style="color: #a020f0;">print</span>(p)
+<span style="color: #a020f0;">print</span>(p1)
 <span style="color: #a020f0;">print</span>(e)
 p1.greet_another(p2);
 p2.greet_another(e);
@@ -638,8 +654,8 @@ e.greet_another(p1);
 </div>
 </div>
 
-<div id="outline-container-org5131b2b" class="outline-3">
-<h3 id="org5131b2b"><span class="section-number-3">2.16</span> Concepts</h3>
+<div id="outline-container-orgbc88104" class="outline-3">
+<h3 id="orgbc88104"><span class="section-number-3">2.16</span> Concepts</h3>
 <div class="outline-text-3" id="text-2-16">
 <ol class="org-ol">
 <li>Polymorphism: by providing an implementation of <code>__str__</code> to each
@@ -656,8 +672,8 @@ person does and more.</li>
 </div>
 </div>
 
-<div id="outline-container-org856593b" class="outline-3">
-<h3 id="org856593b"><span class="section-number-3">2.17</span> Multiple Inheritance and Composition</h3>
+<div id="outline-container-org2362b47" class="outline-3">
+<h3 id="org2362b47"><span class="section-number-3">2.17</span> Multiple Inheritance and Composition</h3>
 <div class="outline-text-3" id="text-2-17">
 <p>
 In Python, but not in many programming languages, Classes can only
@@ -692,8 +708,8 @@ mapping directly onto the objects in the real world.
 </div>
 </div>
 
-<div id="outline-container-org566261f" class="outline-2">
-<h2 id="org566261f"><span class="section-number-2">3</span> Libraries</h2>
+<div id="outline-container-org29f153a" class="outline-2">
+<h2 id="org29f153a"><span class="section-number-2">3</span> Libraries</h2>
 <div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>A library is a collection of objects, methods, functions which are
@@ -708,8 +724,8 @@ Shiny.</li>
 </ol>
 </div>
 
-<div id="outline-container-org2ffa077" class="outline-3">
-<h3 id="org2ffa077"><span class="section-number-3">3.1</span> In Python</h3>
+<div id="outline-container-org99c918e" class="outline-3">
+<h3 id="org99c918e"><span class="section-number-3">3.1</span> In Python</h3>
 <div class="outline-text-3" id="text-3-1">
 <ol class="org-ol">
 <li>The basic unit of code organization in python is a module.</li>
@@ -766,8 +782,8 @@ p2.greet_another(p1)
 </div>
 </div>
 
-<div id="outline-container-org1436cf7" class="outline-3">
-<h3 id="org1436cf7"><span class="section-number-3">3.2</span> Developing A Package</h3>
+<div id="outline-container-org6a7881f" class="outline-3">
+<h3 id="org6a7881f"><span class="section-number-3">3.2</span> Developing A Package</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 At a minimum a package is a directory with an <span class="underline"><span class="underline">init</span></span>.py script.
@@ -802,8 +818,8 @@ import them like this:
 </div>
 </div>
 
-<div id="outline-container-orgb6cf11b" class="outline-3">
-<h3 id="orgb6cf11b"><span class="section-number-3">3.3</span> Concepts</h3>
+<div id="outline-container-org45ac27c" class="outline-3">
+<h3 id="org45ac27c"><span class="section-number-3">3.3</span> Concepts</h3>
 <div class="outline-text-3" id="text-3-3">
 <ol class="org-ol">
 <li>We can import from the local <span class="underline"><span class="underline">init</span></span>.py by saying "import . as
@@ -814,8 +830,8 @@ an overarching package.</li>
 </div>
 </div>
 
-<div id="outline-container-orgbe58fe2" class="outline-3">
-<h3 id="orgbe58fe2"><span class="section-number-3">3.4</span> The Package Ecosystem</h3>
+<div id="outline-container-org121ce3a" class="outline-3">
+<h3 id="org121ce3a"><span class="section-number-3">3.4</span> The Package Ecosystem</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Before we get into the details of how to organize a Python package we
@@ -839,8 +855,8 @@ given me a lot of trouble.</li>
 </div>
 </div>
 
-<div id="outline-container-orgd579e20" class="outline-3">
-<h3 id="orgd579e20"><span class="section-number-3">3.5</span> A full Python Package</h3>
+<div id="outline-container-org3ea02ed" class="outline-3">
+<h3 id="org3ea02ed"><span class="section-number-3">3.5</span> A full Python Package</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 An example is <a href="https://packaging.python.org/tutorials/packaging-projects/">here</a>.
@@ -848,60 +864,31 @@ An example is <a href="https://packaging.python.org/tutorials/packaging-projects
 
 <p>
 There are some tools (less than standard) for generating a project
-template. 
+template. We won't cover that here, instead opting for the simplest
+<a href="https://packaging.python.org/tutorials/packaging-projects/">possible example</a>:
 </p>
 
-<pre class="example">
-pip3 install cookiecutter
-# The following is interactive
-# toups@rs:~/work/bios-611/lecture-15$ python3 -m cookiecutter gh:TezRomacH/python-package-template
-# You've downloaded /home/toups/.cookiecutters/python-package-template before. Is it okay to delete and re-download it? [yes]: yes
-# project_name [python-project]: expkg2
-# project_description [Awesome `expkg2` is a Python cli/package created with https://github.com/TezRomacH/python-package-template]: An example package.
-# organization [expkg2]: 
-# Select license:
-# 1 - MIT
-# 2 - BSD-3
-# 3 - GNU GPL v3.0
-# 4 - Apache Software License 2.0
-# Choose from 1, 2, 3, 4 [1]: 1
-# version [0.1.0]: 
-# github_name [expkg2]: 
-# email [hello@expkg2.com]: 
-# sh: 1: lice: not found
-# 32512
-# 
-# Your project expkg2 is created.
-# 
-# 1) Now you can start working on it:
-# 
-#     $ cd expkg2 &amp;&amp; git init
-# 
-# 2) If you don't have Poetry installed run:
-# 
-#     $ make download-poetry
-# 
-# 3) Initialize poetry and install pre-commit hooks:
-# 
-#     $ make install
-# 
-# 4) Run codestyle:
-# 
-#     $ git add . &amp;&amp; make install
-# 
-# 5) Upload initial code to GitHub (ensure you've run `make install` to use `pre-commit`):
-# 
-#     $ git add .
-#     $ git commit -m ":tada: Initial commit"
-#     $ git remote add origin https://github.com/expkg2/expkg2.git
-#     $ git push -u origin master
+<p>
+Check it out in the directory <code>=python_package_example=</code>
+</p>
 
+<p>
+We can build the package by saying in the appropriate directory:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">python3 setup.py sdist bdist_wheel
 </pre>
 </div>
+
+<p>
+(Demo it in the Docker container).
+</p>
+</div>
 </div>
 
-<div id="outline-container-orgf6e167f" class="outline-3">
-<h3 id="orgf6e167f"><span class="section-number-3">3.6</span> What about R?</h3>
+<div id="outline-container-org0e3e871" class="outline-3">
+<h3 id="org0e3e871"><span class="section-number-3">3.6</span> What about R?</h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 Creating a library in R is arguably more important than in Python
@@ -915,31 +902,233 @@ the Tidyverse.
 </div>
 </div>
 
-<div id="outline-container-orgf256539" class="outline-3">
-<h3 id="orgf256539"><span class="section-number-3">3.7</span> usethis</h3>
+<div id="outline-container-org92607b8" class="outline-3">
+<h3 id="org92607b8"><span class="section-number-3">3.7</span> usethis</h3>
 <div class="outline-text-3" id="text-3-7">
 <ol class="org-ol">
 <li>Can automatically generate a package</li>
 <li>I recommend putting the package itself in a sub-directory for use
-with Docker</li>
+with Docker. This is because typically devtools will build the
+package and store it in the parent directory.</li>
 </ol>
 
 <div class="org-src-container">
 <pre class="src src-R"><span style="color: #008b8b;">library</span>(usethis);
-<span style="color: #b22222;">#</span><span style="color: #b22222;">create_package("rpkgex")</span>
+create_package(<span style="color: #8b2252;">"rpackageexample"</span>)
 </pre>
 </div>
 
 <p>
 Let's explore.
 </p>
+
+<p>
+We can build the package in a few ways. The most clear is visiting the
+directory of the package and saying, in Bash:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">R CMD build rpackageexample
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org24249d8" class="outline-2">
+<h2 id="org24249d8"><span class="section-number-2">4</span> Test Driven Development and a Digression About Types</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org1a99a18" class="outline-3">
+<h3 id="org1a99a18"><span class="section-number-3">4.1</span> Therac 25</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+The <a href="https://en.wikipedia.org/wiki/Therac-25">Therac 25</a> was a medical device that killed at least 5 people by
+adminstering too much radiation to them during radiation theray. This
+was related to a software bug.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf832809" class="outline-3">
+<h3 id="orgf832809"><span class="section-number-3">4.2</span> An Aside</h3>
+<div class="outline-text-3" id="text-4-2">
+<ol class="org-ol">
+<li>Interesting Factoid: It is a rather elementary mathematical fact
+that you can't write a program to tell you if another program will
+terminate (in general).</li>
+<li>This begs the question: what "static" properties of a program can
+you verify?</li>
+<li>It is big business in computer science to design useful programming
+languages which allow you to assert certain properties about your
+program and have the language prove them for you.</li>
+<li>These are called strongly or statically typed systems. In these
+languages every variable must have a declared type which cannot change
+over time.</li>
+<li>Strongly typed languages often allow the user to define new types
+of varying complexities as a way of proving ever more powerful
+properties about their programs.</li>
+<li>Neither Python nor R support strong types.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org614118a" class="outline-3">
+<h3 id="org614118a"><span class="section-number-3">4.3</span> The Surprising Thing</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Most software is written in languages without any static type system
+whatsoever (<a href="https://existentialtype.wordpress.com/2011/03/19/dynamic-languages-are-static-languages/">counterpoint</a>) so how come the world isn't littered with the dead?
+</p>
+
+<ol class="org-ol">
+<li>Software still doesn't usualy make life or death decisions.</li>
+<li>In fact, most software barely has to work.</li>
+<li>Also: testing.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org88e885b" class="outline-3">
+<h3 id="org88e885b"><span class="section-number-3">4.4</span> What are Tests?</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Software tests are suites of simple programs that test <span class="underline">properties</span> of
+an associated piece of software.
+</p>
+
+<p>
+The idea is that as you extend, modify, or fix a piece of software you
+repeatedly run the tests. This helps protect you from introducing new
+bugs. Software tests are also great documentation - they provide a
+large set of examples of how your software should work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69de740" class="outline-3">
+<h3 id="org69de740"><span class="section-number-3">4.5</span> Tests are Critical to Collaboration</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+People feel more comfortable contributing to projects with tests
+because they know that if they break something, they will have a way
+to find out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80fec32" class="outline-3">
+<h3 id="org80fec32"><span class="section-number-3">4.6</span> Continuous Integration</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+Tests are often run as part of a development process. Eg:
+</p>
+
+<ol class="org-ol">
+<li>Alice gets a request for a feature.</li>
+<li>She assigns it to Bob.</li>
+<li>Bob creates a branch in git which implements the feature.</li>
+<li>He makes a pull request. This automatically merges his code and
+runs the tests. If <span class="underline">any</span> tests fail then the merge is rejected.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb447e95" class="outline-3">
+<h3 id="orgb447e95"><span class="section-number-3">4.7</span> Challenges of Testing Data Science</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+Most data science algorithms are not deterministic. Even regressions
+may not converge on the same numerical values from run to run. It
+might also be the case that training a model takes a non-trivial
+amount of time, which makes integration of model training into
+continuous integration problematic.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf975f3" class="outline-3">
+<h3 id="orgcf975f3"><span class="section-number-3">4.8</span> Potential Solutions</h3>
+<div class="outline-text-3" id="text-4-8">
+<ol class="org-ol">
+<li>fix random numbers and test for deterministic results</li>
+<li>use very small data sets</li>
+<li>Use statistical methods to define tests that should fail so
+infrequently that they will not be a major impediment to CI.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3a4edb9" class="outline-3">
+<h3 id="org3a4edb9"><span class="section-number-3">4.9</span> The Good News</h3>
+<div class="outline-text-3" id="text-4-9">
+<p>
+Many libraries, even in the world of data science, are piles of
+utilities. Thus ordinary testing sufficices. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc32a97b" class="outline-3">
+<h3 id="orgc32a97b"><span class="section-number-3">4.10</span> Types of Tests</h3>
+<div class="outline-text-3" id="text-4-10">
+<ol class="org-ol">
+<li>unit tests - test a small component.</li>
+<li>integration tests - tests a vertical slice.</li>
+</ol>
+
+<p>
+Examples:
+</p>
+
+<ol class="org-ol">
+<li>unit test: tests that <code>=sum(sort(sort(x)) equals sort(x)) equals length(sort)=</code></li>
+<li>integration test: "clicking on the sort button in a shiny app results in a sorted table."</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9f7b226" class="outline-3">
+<h3 id="org9f7b226"><span class="section-number-3">4.11</span> Writing Tests in Python</h3>
+<div class="outline-text-3" id="text-4-11">
+<p>
+The standard python distribution comes with a module called unittest.
+</p>
+
+<p>
+We usually make a directory called "tests" and put files like
+"test<sub>*</sub>*.py" in it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">ls python_example_package/tests/
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org313ff70" class="outline-3">
+<h3 id="org313ff70"><span class="section-number-3">4.12</span> Writing Tests in R</h3>
+<div class="outline-text-3" id="text-4-12">
+<p>
+The tidyverse "usethis" package has us covered here as well.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">
+usethis::use_r(<span style="color: #8b2252;">"veggies"</span>);
+usethis::use_testthat();
+usethis::use_test(<span style="color: #8b2252;">"veggies"</span>);
+
+</pre>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Vincent</p>
-<p class="date">Created: 2020-10-05 Mon 17:00</p>
+<p class="date">Created: 2020-10-07 Wed 17:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

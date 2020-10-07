@@ -14,3 +14,4 @@ RUN R -e "install.packages('MLmetrics');"
 RUN R -e "install.packages('glmnet');"
 RUN apt update -y && apt install -y python3-pip
 RUN pip3 install jupyter jupyterlab
+RUN python3 -m pip install --user --upgrade setuptools wheel

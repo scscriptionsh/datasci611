@@ -169,7 +169,7 @@ Point <- function(x,y,xv,yv){
 setMethod("update",c(object="Point",dt="numeric"),
           function(object, dt){
               object@x <- object@x + dt*object@xv;
-              object@y <- object@y + dt*object$yv;
+              object@y <- object@y + dt*object@yv;
               object;
 });
 #+end_src
@@ -242,7 +242,7 @@ class Employee(Person):
 p1 = Person("Ted Leo");
 p2 = Person("Buffy Summers");
 e = Employee("Marcia Brady", "Sensus");
-print(p)
+print(p1)
 print(e)
 p1.greet_another(p2);
 p2.greet_another(e);
@@ -252,6 +252,9 @@ e.greet_another(p1);
 #+RESULTS:
 : Person: Ted Leo
 : Person: Marcia Brady, Employed at: Sensus
+: Hello Buffy Summers, my name is Ted Leo
+: Hello Marcia Brady, my name is Buffy Summers
+: Hello Ted Leo, my name is Marcia Brady
 
 ** Concepts
 
@@ -408,54 +411,18 @@ should discuss Anaconda and Pip.
 An example is [[https://packaging.python.org/tutorials/packaging-projects/][here]].
 
 There are some tools (less than standard) for generating a project
-template. 
+template. We won't cover that here, instead opting for the simplest
+[[https://packaging.python.org/tutorials/packaging-projects/][possible example]]:
 
-#+begin_src 
-pip3 install cookiecutter
-# The following is interactive
-# toups@rs:~/work/bios-611/lecture-15$ python3 -m cookiecutter gh:TezRomacH/python-package-template
-# You've downloaded /home/toups/.cookiecutters/python-package-template before. Is it okay to delete and re-download it? [yes]: yes
-# project_name [python-project]: expkg2
-# project_description [Awesome `expkg2` is a Python cli/package created with https://github.com/TezRomacH/python-package-template]: An example package.
-# organization [expkg2]: 
-# Select license:
-# 1 - MIT
-# 2 - BSD-3
-# 3 - GNU GPL v3.0
-# 4 - Apache Software License 2.0
-# Choose from 1, 2, 3, 4 [1]: 1
-# version [0.1.0]: 
-# github_name [expkg2]: 
-# email [hello@expkg2.com]: 
-# sh: 1: lice: not found
-# 32512
-# 
-# Your project expkg2 is created.
-# 
-# 1) Now you can start working on it:
-# 
-#     $ cd expkg2 && git init
-# 
-# 2) If you don't have Poetry installed run:
-# 
-#     $ make download-poetry
-# 
-# 3) Initialize poetry and install pre-commit hooks:
-# 
-#     $ make install
-# 
-# 4) Run codestyle:
-# 
-#     $ git add . && make install
-# 
-# 5) Upload initial code to GitHub (ensure you've run `make install` to use `pre-commit`):
-# 
-#     $ git add .
-#     $ git commit -m ":tada: Initial commit"
-#     $ git remote add origin https://github.com/expkg2/expkg2.git
-#     $ git push -u origin master
+Check it out in the directory ==python_package_example==
 
+We can build the package by saying in the appropriate directory:
+
+#+begin_src sh
+python3 setup.py sdist bdist_wheel
 #+end_src
+
+(Demo it in the Docker container).
 
 ** What about R?
 
@@ -469,12 +436,134 @@ the Tidyverse.
 
 1. Can automatically generate a package
 2. I recommend putting the package itself in a sub-directory for use
-   with Docker
+   with Docker. This is because typically devtools will build the
+   package and store it in the parent directory.
 
 #+begin_src R
 library(usethis);
-#create_package("rpkgex")
+create_package("rpackageexample")
 #+end_src
 
 Let's explore.
+
+We can build the package in a few ways. The most clear is visiting the
+directory of the package and saying, in Bash:
+
+#+begin_src sh
+R CMD build rpackageexample
+#+end_src
+
+* Test Driven Development and a Digression About Types
+** Therac 25
+
+The [[https://en.wikipedia.org/wiki/Therac-25][Therac 25]] was a medical device that killed at least 5 people by
+adminstering too much radiation to them during radiation theray. This
+was related to a software bug.
+
+** An Aside
+
+1. Interesting Factoid: It is a rather elementary mathematical fact
+   that you can't write a program to tell you if another program will
+   terminate (in general).
+2. This begs the question: what "static" properties of a program can
+   you verify?
+3. It is big business in computer science to design useful programming
+   languages which allow you to assert certain properties about your
+   program and have the language prove them for you.
+4. These are called strongly or statically typed systems. In these
+   languages every variable must have a declared type which cannot change
+   over time.
+5. Strongly typed languages often allow the user to define new types
+   of varying complexities as a way of proving ever more powerful
+   properties about their programs.
+6. Neither Python nor R support strong types.
+
+** The Surprising Thing
+
+Most software is written in languages without any static type system
+whatsoever ([[https://existentialtype.wordpress.com/2011/03/19/dynamic-languages-are-static-languages/][counterpoint]]) so how come the world isn't littered with the dead?
+
+1. Software still doesn't usualy make life or death decisions.
+2. In fact, most software barely has to work.
+3. Also: testing.
+
+** What are Tests?
+
+Software tests are suites of simple programs that test _properties_ of
+an associated piece of software.
+
+The idea is that as you extend, modify, or fix a piece of software you
+repeatedly run the tests. This helps protect you from introducing new
+bugs. Software tests are also great documentation - they provide a
+large set of examples of how your software should work.
+
+** Tests are Critical to Collaboration
+
+People feel more comfortable contributing to projects with tests
+because they know that if they break something, they will have a way
+to find out.
+
+** Continuous Integration
+
+Tests are often run as part of a development process. Eg:
+
+1. Alice gets a request for a feature.
+2. She assigns it to Bob.
+3. Bob creates a branch in git which implements the feature.
+4. He makes a pull request. This automatically merges his code and
+   runs the tests. If _any_ tests fail then the merge is rejected.
+
+** Challenges of Testing Data Science
+
+Most data science algorithms are not deterministic. Even regressions
+may not converge on the same numerical values from run to run. It
+might also be the case that training a model takes a non-trivial
+amount of time, which makes integration of model training into
+continuous integration problematic.
+
+** Potential Solutions
+
+1. fix random numbers and test for deterministic results
+2. use very small data sets
+3. Use statistical methods to define tests that should fail so
+   infrequently that they will not be a major impediment to CI.
+
+** The Good News
+
+Many libraries, even in the world of data science, are piles of
+utilities. Thus ordinary testing sufficices. 
+
+** Types of Tests
+
+1. unit tests - test a small component. 
+2. integration tests - tests a vertical slice.
+
+Examples:
+
+1. unit test: tests that ==sum(sort(sort(x)) equals sort(x)) equals length(sort)==
+2. integration test: "clicking on the sort button in a shiny app results in a sorted table."
+
+** Writing Tests in Python
+
+The standard python distribution comes with a module called unittest.
+
+We usually make a directory called "tests" and put files like
+"test_**.py" in it.
+
+#+begin_src sh :results output
+ls python_example_package/tests/
+#+end_src
+
+** Writing Tests in R
+
+The tidyverse "usethis" package has us covered here as well.
+
+#+begin_src R
+
+  usethis::use_r("veggies");
+  usethis::use_testthat();
+  usethis::use_test("veggies");
+  
+#+end_src
+
 
