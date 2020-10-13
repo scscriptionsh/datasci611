@@ -24,7 +24,7 @@ What is the accuracy of the model?
 
 * Problem 3
 
-Filter the data set so that it contains only 50 Male examples. Create
+Filter the data set so that it contains only 50 Male examples but all of the female examples. Create
 a new model for this data set. What is the F1 Score of the model? 
 
 * Problem 4
