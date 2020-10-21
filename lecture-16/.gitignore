@@ -1,0 +1,7 @@
+secrets.sh
+db.lite.sqlite
+db.lite.sql
+.bash_history
+.sqlite_history
+.TinyTeX/*
+.TinyTeX

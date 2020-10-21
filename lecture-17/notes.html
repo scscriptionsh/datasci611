@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-21 Wed 16:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6721ab2">1. RShiny</a></li>
+<li><a href="#orgfde48cf">2. RShiny Project Rubric</a></li>
+<li><a href="#orgda54072">3. Docker, RShiny, Make</a></li>
+<li><a href="#orged607d1">4. Port Numbers and Shell Scripts</a></li>
+<li><a href="#org73ad6fb">5. Let's look at my Makefile first</a></li>
+<li><a href="#orgb6b2493">6. Recall:</a></li>
+<li><a href="#orgc54e58f">7. Let's look at our R code again,</a></li>
+<li><a href="#org5e16e20">8. Advanced Docker Invocation Magic</a></li>
+<li><a href="#orgf611e7f">9. What about Windows Folks</a></li>
+<li><a href="#orge9ed3e4">10. What Makes A Good Interactive Visualization?</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6721ab2" class="outline-2">
+<h2 id="org6721ab2"><span class="section-number-2">1</span> RShiny</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The next step in the construction of the class portfolio is adding an
+interactive visualization of some kind to Project 1.
+</p>
+
+<p>
+We'll use R-Shiny to do this. You can refresh yourselves on RShiny by
+consulting <a href="https://github.com/Vincent-Toups/datasci611/tree/master/lecture-13">Lecture 13</a>. 
+</p>
+
+<p>
+Very briefly:
+</p>
+
+<ol class="org-ol">
+<li>RShiny is a system for building interactive applications using just
+R code. We write R code and R generates all of the HTML and
+Javascript and Server Side code to generate our app. It also sets
+up a server so that we can interact with the application.</li>
+<li>In order to use Rshiny we need to be able to launch a Docker
+container.</li>
+<li>One or more RShiny applications can be intergrate into our make
+based build - our make target should just start the Shiny
+application.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfde48cf" class="outline-2">
+<h2 id="orgfde48cf"><span class="section-number-2">2</span> RShiny Project Rubric</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li><p>
+20 pts: Does the Shiny project run from the Makefile and make appropriate
+use of other artifacts in the repository?
+</p>
+
+<p>
+That is to say: if there is data pre-processing that has to happen
+before we run the app, is it expressed as a dependency in the Makefile?
+</p></li>
+<li>20 pts: Are there instructions in the README that tell a user how to start
+the Shiny application?</li>
+<li>20 pts: Does the RShiny app allow the user to understand something that
+would be hard to understand with a static visualization? Are the
+visualizations well chosen?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgda54072" class="outline-2">
+<h2 id="orgda54072"><span class="section-number-2">3</span> Docker, RShiny, Make</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Here is a Shiny app that might appear in my own Project, in a file
+called "power<sub>explorer.R</sub>".
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #008b8b;">library</span>(shiny)
+<span style="color: #008b8b;">library</span>(tidyverse)
+<span style="color: #008b8b;">library</span>(plotly)
+<span style="color: #008b8b;">source</span>(<span style="color: #8b2252;">"utils.R"</span>);
+
+args <span style="color: #008b8b;">&lt;-</span> commandArgs(trailingOnly=T);
+
+port <span style="color: #008b8b;">&lt;-</span> as.numeric(args[[1]]);
+
+data <span style="color: #008b8b;">&lt;-</span> read_csv(<span style="color: #8b2252;">"source_data/datasets_38396_60978_charcters_stats.csv"</span>) <span style="color: #008b8b;">%&gt;%</span>
+    nice_names() <span style="color: #008b8b;">%&gt;%</span>
+    filter(total &gt; 6) <span style="color: #008b8b;">%&gt;%</span>
+    filter(alignment <span style="color: #008b8b;">%in%</span> c(<span style="color: #8b2252;">"good"</span>,<span style="color: #8b2252;">"bad"</span>));
+
+stats <span style="color: #008b8b;">&lt;-</span> data <span style="color: #008b8b;">%&gt;%</span> select(-name, -alignment) <span style="color: #008b8b;">%&gt;%</span> names();
+
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Define UI for app that draws a histogram ----</span>
+ui <span style="color: #008b8b;">&lt;-</span> fluidPage(
+
+  <span style="color: #b22222;"># </span><span style="color: #b22222;">App title ----</span>
+  titlePanel(<span style="color: #8b2252;">"Superhero Powers and Alignment"</span>),
+
+  <span style="color: #b22222;"># </span><span style="color: #b22222;">Sidebar layout with input and output definitions ----</span>
+  sidebarLayout(
+
+    <span style="color: #b22222;"># </span><span style="color: #b22222;">Sidebar panel for inputs ----</span>
+    sidebarPanel(
+        div(<span style="color: #8b2252;">"How do super hero powers depend on their moral alignment?"</span>),
+
+      <span style="color: #b22222;"># </span><span style="color: #b22222;">Input: Slider for the number of bins ----</span>
+      sliderInput(inputId = <span style="color: #8b2252;">"bins"</span>,
+                  label = <span style="color: #8b2252;">"Number of bins:"</span>,
+                  min = 1,
+                  max = 50,
+                  value = 30),
+
+      selectInput(inputId = <span style="color: #8b2252;">"stat"</span>,
+                  label=<span style="color: #8b2252;">"Select Stat"</span>,
+                  choices=stats),
+
+      selectInput(inputId = <span style="color: #8b2252;">"plotType"</span>,
+                  label = <span style="color: #8b2252;">"Plot Type"</span>,
+                  choices=c(<span style="color: #8b2252;">"histogram"</span>,<span style="color: #8b2252;">"density plot"</span>))
+
+    ),
+
+    <span style="color: #b22222;"># </span><span style="color: #b22222;">Main panel for displaying outputs ----</span>
+    mainPanel(
+
+      <span style="color: #b22222;"># </span><span style="color: #b22222;">Output: Histogram ----</span>
+      plotlyOutput(outputId = <span style="color: #8b2252;">"distPlot"</span>)
+
+    )
+  )
+)
+
+<span style="color: #0000ff;">server</span> <span style="color: #008b8b;">&lt;-</span> <span style="color: #a020f0;">function</span>(input, output) {
+
+  output$distPlot <span style="color: #008b8b;">&lt;-</span> renderPlotly({
+
+      stat <span style="color: #008b8b;">&lt;-</span> input$stat;
+      bins <span style="color: #008b8b;">&lt;-</span> input$bins;
+
+      <span style="color: #a020f0;">if</span>(input$plotType==<span style="color: #8b2252;">"histogram"</span>){
+          ggplotly(ggplot(data, aes_string(stat))+geom_histogram(aes(fill=alignment),
+                                                             position=<span style="color: #8b2252;">"dodge"</span>,
+                                                             bins=bins));
+      } <span style="color: #a020f0;">else</span> {
+          d <span style="color: #008b8b;">&lt;-</span> data[[stat]];
+          mn <span style="color: #008b8b;">&lt;-</span> min(d);
+          mx <span style="color: #008b8b;">&lt;-</span> max(d);
+          bw <span style="color: #008b8b;">&lt;-</span> (mx-mn)/bins;
+          ggplotly(ggplot(data, aes_string(stat))+geom_density(aes(fill=alignment),
+                                                               alpha=0.3,
+                                                               bw=bw));
+
+      }
+
+    })
+
+}
+
+print(sprintf(<span style="color: #8b2252;">"Starting shiny on port %d"</span>, port));
+shinyApp(ui = ui, server = server, options = list(port=port, host=<span style="color: #8b2252;">"0.0.0.0"</span>));
+</pre>
+</div>
+
+<p>
+To integrate such an application into our project we need to do a few things.
+</p>
+
+<ol class="org-ol">
+<li>Ensure the Dockerfile has a line like <code>=RUN R -e
+   "install.packages('shiny')"=</code> (Note I'm also using Plotly)</li>
+<li>Have a make (dummy) Target that invokes the App correctly.</li>
+<li>Make sure our dependencies are expressed in the Makefile.</li>
+<li>Write a shell script or Document how we'd like to invoke the shiny app.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orged607d1" class="outline-2">
+<h2 id="orged607d1"><span class="section-number-2">4</span> Port Numbers and Shell Scripts</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The primary challenge here is that we might want to have multiple
+shiny applications running at once (if we have more than one
+visualization we want to develop).
+</p>
+
+<p>
+We could combine them into a single shiny App with tabs but its
+simpler conceptually to separate them, unless they are tightly
+related.
+</p>
+
+<p>
+The method I will describe will give us a chance to develop some more
+experience with shell scripting and environment variables.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73ad6fb" class="outline-2">
+<h2 id="org73ad6fb"><span class="section-number-2">5</span> Let's look at my Makefile first</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<pre class="src src-Makefile">.PHONY: power_explorer
+
+power_explorer: derived_data/clean_stats.csv
+        Rscript power_explorer.R ${PORT}
+
+derived_data/clean_stats.csv: tidy_data.R\
+ ./source_data/datasets_38396_60978_charcters_stats.csv
+        Rscript tidy_data.R 
+
+</pre>
+</div>
+
+<p>
+Note that we've got a .PHONY target for our app. That is because
+running the app doesn't really produce any artifact except for the
+running application.
+</p>
+
+<p>
+Further note that the power<sub>explorer</sub> target lists is dependencies in
+the ordinary way and those are constructed in the ordinary way.
+</p>
+
+<p>
+Finally note that we refer to an environment variable in the job. We
+are "passing the variable to" R via the command args.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6b2493" class="outline-2">
+<h2 id="orgb6b2493"><span class="section-number-2">6</span> Recall:</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+We can pass data into a bash process in two ways
+</p>
+
+<ol class="org-ol">
+<li>via the command line we use to invoke it</li>
+<li>via the standard input.</li>
+</ol>
+
+<p>
+We are using method #1.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc54e58f" class="outline-2">
+<h2 id="orgc54e58f"><span class="section-number-2">7</span> Let's look at our R code again,</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+specifically these lines
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #008b8b;">library</span>(shiny)
+<span style="color: #008b8b;">library</span>(tidyverse)
+<span style="color: #008b8b;">library</span>(plotly)
+<span style="color: #008b8b;">source</span>(<span style="color: #8b2252;">"utils.R"</span>);
+
+args <span style="color: #008b8b;">&lt;-</span> commandArgs(trailingOnly=T);
+
+port <span style="color: #008b8b;">&lt;-</span> as.numeric(args[[1]]);
+
+<span style="color: #b22222;">### </span><span style="color: #b22222;">Other stuff follows ...</span>
+<span style="color: #b22222;">### </span><span style="color: #b22222;">...</span>
+
+</pre>
+</div>
+
+<p>
+The <code>=commandArgs=</code> function allows us to see what additional
+arguments were passed on the command line when someone runs Rscript.
+</p>
+
+<p>
+<code>=trailingOnly=</code> means "just those arguments after the boring stuff
+like Rscript and the filename."
+</p>
+
+<p>
+We take the first argument to be the port and convert it to a number.
+</p>
+
+<p>
+At the end of the script we say:
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-R">
+<span style="color: #b22222;">### </span><span style="color: #b22222;">...</span>
+<span style="color: #b22222;">### </span><span style="color: #b22222;">stuff above</span>
+
+print(sprintf(<span style="color: #8b2252;">"Starting shiny on port %d"</span>, port));
+shinyApp(ui = ui, server = server, options = list(port=port, host=<span style="color: #8b2252;">"0.0.0.0"</span>));
+
+</pre>
+</div>
+
+<p>
+We instruct Shiny to start on the appropriate port.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e16e20" class="outline-2">
+<h2 id="org5e16e20"><span class="section-number-2">8</span> Advanced Docker Invocation Magic</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Using Docker here presents a minor difficulty: we have to explicitly
+tell Docker which ports to open up into the container when we start
+it. So we want to provide some instructions (at the very least) to the
+confused user. Ideally, we'd give them a shell alias of some kind.
+</p>
+
+<p>
+Consider this bit of bash from my aliases.sh
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #0000ff;">start_shiny</span>(){
+    docker run -p $<span style="color: #a0522d;">2</span>:$<span style="color: #a0522d;">2</span> <span style="color: #8b2252;">\</span>
+ -v <span style="color: #ff00ff;">`pwd`</span>:/home/rstudio <span style="color: #8b2252;">\</span>
+ -e <span style="color: #a0522d;">PASSWORD</span>=$<span style="color: #a0522d;">SECRET_PWD</span> <span style="color: #8b2252;">\</span>
+ -it l17 sudo -H -u rstudio /bin/bash -c <span style="color: #8b2252;">"cd ~/; PORT=$2 make $1"</span>
+}
+
+</pre>
+</div>
+
+<p>
+Bash supports functions (of a sort). Here we write a function which
+takes a target name and a port which invokes the appropriate make
+target.
+</p>
+
+<p>
+We use it like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #483d8b;">source</span> aliases.sh
+start_shiny 8788 power_explorer
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf611e7f" class="outline-2">
+<h2 id="orgf611e7f"><span class="section-number-2">9</span> What about Windows Folks</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+(For OSX people the above should work)
+</p>
+
+<p>
+For windows you might have trouble testing this and maybe you don't
+want to assume a linux audience.
+</p>
+
+<p>
+Your options are:
+</p>
+
+<ol class="org-ol">
+<li>Describe how to invoke the make target manually.</li>
+<li>Document how to launch the app from Rstudio.</li>
+</ol>
+
+<p>
+Either option is ok for class. If you do the former you just need
+something like this in your README:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-Markdown">
+To run the interactive part of this project just execute the following:
+
+    docker run -p 8788:8788 \
+     -v `pwd`:/home/rstudio \
+     -e PASSWORD=$SECRET_PWD \
+     -it l17 sudo -H -u rstudio /bin/bash -c "cd ~/; PORT=8788 make power_explorer"
+
+</pre>
+</div>
+
+<p>
+In the second case you need to explicity modify the instructions for
+launching RStudio to expose another port and then tell them to run 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">make &lt;that port&gt; power_explorer
+</pre>
+</div>
+
+<p>
+From inside the Rstudio terminal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge9ed3e4" class="outline-2">
+<h2 id="orge9ed3e4"><span class="section-number-2">10</span> What Makes A Good Interactive Visualization?</h2>
+<div class="outline-text-2" id="text-10">
+<ol class="org-ol">
+<li>It exposes some qualitative aspect of the analysis: examples:
+number of principal components we select, number of clusters we choose,
+number of bins in a histogram.</li>
+<li>It plots data which has many different scales of interest.</li>
+<li>It generalizes some big combination of plots</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent</p>
+<p class="date">Created: 2020-10-21 Wed 16:58</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
