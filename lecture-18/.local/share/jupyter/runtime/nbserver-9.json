@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "notebook_dir": "/home/rstudio",
+  "password": false,
+  "pid": 9,
+  "port": 8765,
+  "secure": false,
+  "sock": "",
+  "token": "16086a9afa09be89f26d37df1c5a637ce366da3ceb4159b2",
+  "url": "http://0.0.0.0:8765/"
+}
