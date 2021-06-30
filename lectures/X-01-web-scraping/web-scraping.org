@@ -1,0 +1,85 @@
+* What is Web Scraping
+
+Scraping the web is just the process of writing a program to extract
+data from publically facing web pages, potentially by crawling
+links. Sometimes a web scraping program (a scraper from now on) has to
+do the dirty job of parsing web pages itself. Other times a scraper
+can use less user facing representations of data that might be
+available via a so-called "API." In any case, the goal of a scraper is
+to traverse a series of web pages or resources available over HTTP and
+to gather some information into a data set.
+
+* Why Scrape
+
+You can't do data science without data. Sometimes that data isn't
+readily available. And while its true that in many situations,
+particularly in science, nothing short of a formally gathered data set
+will suffice, in some situations any data is better than no data at
+all. A useful analogy here is the notion of case reports in
+Medicine. Often, before any official medical study can be conducted,
+new phenomena surface as collections of case studies. These may form
+the seeds of future formal studies.
+
+In the private sector, where rigor may be less important than the
+final result being reasonable (eg, a recommendation engine) a scraped
+data set may be a perfectly adequate starting point for a project.
+
+* Scraping Etiquette
+
+Web scraping, while entirely legal (at least for publicly facing web
+pages), is a bit of a contentious issue. A naive scraper can issue
+thousands of requests to a server. For small servers this may be
+enough to crash their website or make it unavailable to other users
+(effectively creating a "Denial of Service" attack). For large
+servers, such unrestrained activity might be detected as an attack and
+result in your IP address being banned. 
+
+Thus, when we write a scraper we should follow some basic etiquette:
+
+- Scrape only public pages.
+- Limit the number of requests your scraper makes to fewer than one
+  per second.
+
+* How to Scrape
+
+** Background Concepts
+
+*** HTTP/s 
+
+Web scrapers often pretend to be web browsers. It is thus useful to
+understand the basic ideas that underlie how web browsers work. A web
+browser is a "client" for a web "server". A server sits around waiting
+for clients to make requests and then it responds to them. In order
+for clients and servers to communicate with one another they have to
+agree on a protocol. This protocol is called "HTTP." It is more and
+more common for HTTP to be exchanged over encrypted connections. The
+addition of encryption is indicated by "HTTPs" but for the purposes of
+web scraping we don't usually need to worry about it.
+
+HTTP defines what requests and responses look like. The specification
+for HTTP is pretty long and boring, but luckily we only need to have a
+few of the basic ideas in our head.
+
+Let's start with the client:
+
+Clients issue requests. You can think of a request as a document
+containing a few standard pieces:
+
+- a HEADER which contains meta data about the request
+- and a BODY which contains arbitrary data. Often the body is empty
+  for requests.
+
+The header contains a few important values
+
+** Reconissance
+
+The first step to any web scraping project is to identify the pages
+which contain the data you want. You do this just be searching for
+what you want. Imagine we want to collect some raw text data on
+Superhero powers and abilities. A great place to start is the
+Wikipedia:
+
+#+CAPTION: A simple wikipedia search.
+#+NAME:   fig:search
+[[./images/wikipedia-search.png]]
+

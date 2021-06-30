@@ -1,0 +1,95 @@
+* Why Learn Docker?
+
+Docker is a "containerization engine." The idea here is to allow the
+user to specify, in a simple text format, what a computer needs to do
+a certain job. Docker then reads that specification, builds the
+computer, and allows you, the user, to run it.
+
+This was originally designed for use cases in Software Engineering. In
+particular, Docker let's you create "reproducible deployments." It
+used to be the case that software projects and the machines on which
+they run were configured and maintained seperately. But since how
+software runs often depends (in tricky ways) on the machine which runs
+them, such two pronged maintenance was often complicated.
+
+Docker allows engineers to develop software _and_ a specification for
+the machine on which that software should run. Docker provides a huge
+suite of related capabilities for this use case.
+
+So why should a datascientist care about Docker? Because data science
+pipelines and programs also run in a context and you want that context
+to be as reproducible as any other part of your work.
+
+* The Big Idea
+
+A good data science project should come with its own Docker file with
+instructions for running the code in the specified container. That
+way, anyone who gets their hands on your code and who also can run
+Docker will be almost guaranteed to be able to run it.
+
+Even if a user doesn't have access to a machine where they can build
+and run Docker containers, the Dockerfile (as we shall see) is a
+compact description of most of what they will need to run the code.
+
+* Using Docker
+
+Once you have installed Docker according to the provided instructions
+for your operating system, the first thing to do is test that it is
+working.
+
+#+CAPTION: Testing docker.
+#+NAME: ex_docker1
+#+begin_src bash :results org replace :exports both
+docker run hello-world
+#+end_src
+
+#+RESULTS: ex_docker1
+#+begin_src org
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+#+end_src
+
+This will "pull" a specified Docker image and run its default command,
+which just prints out a message.
+
+Almost all the Docker containers used in this book will be based on
+~rocker/verse~. We can test that we have access to this image like so:
+
+#+CAPTION: Invoking bash on the rocker/verse image.
+#+NAME: ex_rocker1
+#+begin_src bash
+docker run -it rocker/verse /bin/bash
+#+end_src
+
+We should then expect to see a prompt like this one:
+
+#+RESULTS: ex_rocker1_faux
+#+begin_src org
+root@dff56ba76b90: 
+
+#+end_src
+
+What we are seeing here is a shell running inside of a sort of virtual
+computer. How this machine is set up depends entirely on a
+specification provided by the Docker container repository for
+rocker/verse. 

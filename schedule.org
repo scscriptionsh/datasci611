@@ -1,0 +1,31 @@
+Intro and Demo
+Compute Resources & R 1
+Programming Languages via R (R 2) & Datasets
+Project 1 Setup
+Linux and Bash ...
+Docker & Make & Party
+Setting up Our Project
+Tidy Data & ggplot
+Tidy Data & ggplot 2
+Git Concepts and Practices
+Labor Day
+Interactive Staging and RMarkdown/Make
+Classification
+Dimensionality Reduction
+Parameter Fitting and Optim
+Model Validation
+The Dark Art of Clustering
+Best in Show: Gradient Boosting Machines
+GBMs in Practice
+Project Presentations
+Shiny Introduction
+Docker Recap and Shiny
+Programming Languages and Python
+Pandas, Dplyr, SQL 1
+Pandas, Dplyr, SQL 2
+Scikit Learn
+A Taste of Neural Networks
+Regular Expressions
+Data Science Ethics
+Virtual Panel w/ Datascientists
+Presentations

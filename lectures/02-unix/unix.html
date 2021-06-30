@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-06-17 Thu 20:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent Toups" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org55ed0fb">1. Why Learn Unix</a></li>
+<li><a href="#orge1a2c31">2. Introduction to Computers</a></li>
+<li><a href="#org9340d13">3. Introduction to Unix Shells</a>
+<ul>
+<li><a href="#org281e8a8">3.1. Control</a></li>
+<li><a href="#orgf26cc5e">3.2. Reproducibility</a></li>
+</ul>
+</li>
+<li><a href="#orgde76ac1">4. Shell Concepts</a>
+<ul>
+<li><a href="#org40d70bd">4.1. Many Shells</a></li>
+<li><a href="#orgd9f3405">4.2. REPL</a></li>
+<li><a href="#org43ae255">4.3. Evaluation</a>
+<ul>
+<li><a href="#org8cea364">4.3.1. Eg 1</a></li>
+<li><a href="#org43bb5c8">4.3.2. Eg 2</a></li>
+</ul>
+</li>
+<li><a href="#org980ccf9">4.4. The PATH and other environment variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org55ed0fb" class="outline-2">
+<h2 id="org55ed0fb"><span class="section-number-2">1</span> Why Learn Unix</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Unix, generally in the form of Linux, but also commonly encountered as
+the underlying idiom of OSX and other important systems, powers the
+world.
+</p>
+
+<table id="orgd2f656e" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Source</th>
+<th scope="col" class="org-left">Month</th>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-right">Unix</th>
+<th scope="col" class="org-right">Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">W3Techs</td>
+<td class="org-left">May</td>
+<td class="org-right">2021</td>
+<td class="org-right">75.3</td>
+<td class="org-right">24.8</td>
+</tr>
+
+<tr>
+<td class="org-left">W3Techs</td>
+<td class="org-left">Jan</td>
+<td class="org-right">2020</td>
+<td class="org-right">71.0</td>
+<td class="org-right">29.0</td>
+</tr>
+
+<tr>
+<td class="org-left">W3Techs</td>
+<td class="org-left">Jan</td>
+<td class="org-right">2018</td>
+<td class="org-right">66.8</td>
+<td class="org-right">33.2</td>
+</tr>
+
+<tr>
+<td class="org-left">W3Techs</td>
+<td class="org-left">Jan</td>
+<td class="org-right">2016</td>
+<td class="org-right">67.7</td>
+<td class="org-right">32.3</td>
+</tr>
+
+<tr>
+<td class="org-left">W3Techs</td>
+<td class="org-left">Jan</td>
+<td class="org-right">2014</td>
+<td class="org-right">66.8</td>
+<td class="org-right">33.2</td>
+</tr>
+
+<tr>
+<td class="org-left">W3Techs</td>
+<td class="org-left">Jan</td>
+<td class="org-right">2012</td>
+<td class="org-right">63.5</td>
+<td class="org-right">36.5</td>
+</tr>
+</tbody>
+</table>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #6e8b3d;">library</span>(tidyverse);
+print(ggplot(servers, aes(Year, Unix)) + geom_line());
+</pre>
+</div>
+
+<p>
+And the result: 
+</p>
+
+
+<div id="org2b995cd" class="figure">
+<p><img src="./z.png" alt="z.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Percentage of servers running unix like operating systems over time.</p>
+</div>
+
+<p>
+Some very popular data science software (RStudio Server, Jupyter/Labs)
+runs on Linux (even if you access them via a web browser on any
+platform).
+</p>
+
+<p>
+This means that if you become a working data scientist or want to
+support yourself working with many data scientific tools as a
+researcher, some knowledge of Unix will be useful to you.
+</p>
+
+<p>
+If that weren't enough, the true key to portable data science is
+Docker. It is true that you can run Docker in Windows but the
+configuration of docker containers requires a good working knowledge
+of the Unix idiom, since most containers are Linux based.
+</p>
+
+<p>
+For this book, Linux based Docker Containers will be the norm. For
+Windows users I highly recommend using the instructions located <a href="https://docs.docker.com/docker-for-windows/wsl/">here</a>:
+</p>
+
+<pre class="example">
+https://docs.docker.com/docker-for-windows/wsl/
+</pre>
+
+<p>
+to set up both Windows Subsystem for Linux (which will allow you to
+run a Linux environment natively on Windows) and setting up the
+appropriate Docker install on top of it. 
+</p>
+
+<p>
+Mac users can use the standard Docker install. Linux users will
+typically know what they want to do, but the short version is install
+Docker via the instructions appropriate to your distribution and make
+sure you are in the docker group. 
+</p>
+
+<p>
+Will will discuss Docker in greater detail in later chapters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1a2c31" class="outline-2">
+<h2 id="orge1a2c31"><span class="section-number-2">2</span> Introduction to Computers</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+If you were born after 1990 or so there is a good chance you've never
+seen a text-based shell. Modern computers of the most common variety
+(smartphones) do an even more aggressive (or successful, depending on
+your attitude and needs) job of protecting you from the underlying
+operating system. Thus it is worth a brief conceptual review:
+</p>
+
+<p>
+A computer, even a smartphone, is a machine with a processor, which
+performs mathematical operations on data, memory, which is volatile
+storage (it will be erased in the event that the computer is turned
+off) which forms the short term memory of the machine, and
+non-volatile storage (disks, solid state memory, even, sometimes
+still, spinning rust) which is persistant data store which survives
+even when the machine is off.
+</p>
+
+<p>
+At the most basic level, a computer reads data from a disk into local
+memory and its processor reads a program out of that memory, executing
+instructions which modify the data in memory and/or write it back to
+long term storage.
+</p>
+
+<p>
+In the early days of computing this was the conceptual world the
+compute programmer inhabited as well: interacting with a computer was
+the process of telling it, in great detail, which memory to access,
+what to do with it, and how to store or output the results.
+</p>
+
+<p>
+Since those days the trend has been towards even greater levels of
+abstraction.  Now, a typical smartphone "protects" the user from most
+of these details: you never think explicitly, about the distinctions
+between storage and memory or about the details of how programs work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9340d13" class="outline-2">
+<h2 id="org9340d13"><span class="section-number-2">3</span> Introduction to Unix Shells</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+We will now dive much deeper into the computer than you may have
+before. What may be surprising about this jump is just how much more
+water there is beneath us still: Unix Shells, while providing what
+must seem like shockingly low level access to the workings of a
+machine compared to modern graphical user interfaces, still afford us
+an almost entirely abstract representation of our computer, albiet one
+which has traded implicitness for explicitness to a great degree.
+</p>
+
+<p>
+A shell (in this context) is a textual interface between you and the
+services provided by your operating system. From the shell we can do
+all the things we ordinarily do from a graphical user interface:
+inspect files, launch programs, organize data, poke and peek at
+various system resources and settings. We do these things by executing
+commands.
+</p>
+
+<p>
+Before we dive into the details you might ask yourself: why would we
+<span class="underline">want</span> to have such low level access? It is true, these text-mode
+shells impose a substantial cognitive burden on the user, particularly
+at first. What do we purchase with that additional cognitive energy?
+</p>
+
+<ol class="org-ol">
+<li>control - the shell gives us enormous, fine grained, control over
+the resources the computer gives us.</li>
+<li>reproducibility - because all the actions we might undertake with
+the shell are represented as text, we can easily copy and paste
+them into a file and re-run them.</li>
+</ol>
+</div>
+
+<div id="outline-container-org281e8a8" class="outline-3">
+<h3 id="org281e8a8"><span class="section-number-3">3.1</span> Control</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The unix Shell is loosely organized under the banner of "The Unix
+Philosophy". Whereas graphical user interfaces tend to become
+monoliths from which it is difficult to escape, the Unix Philosophy
+suggests that tools (programs) should:
+</p>
+
+<ol class="org-ol">
+<li>do one thing</li>
+<li>do it well</li>
+</ol>
+
+<p>
+This philosophy is enabled by a very simple organizational principal:
+almost everything in Unix is represented as a file. All programs
+operate on files, typically by reading an input file and producing an
+output file. More complex outcomes are acheived by stringing many
+small programs together, each operating on the output of the previous
+until a desired result occurs. Text based files are very commonly the
+inputs and outputs of these processes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf26cc5e" class="outline-3">
+<h3 id="orgf26cc5e"><span class="section-number-3">3.2</span> Reproducibility</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Unix Shells are text based interfaces. While it can seem onerous,
+initially, to have to laborously type out each desired command to the
+shell, doing so is very traceable. After we understand what we want to
+do by interacting with a shell directly, we can copy and paste the
+commands we've concocted into a "shell script" and re-execute
+them. Repeatative tasks can be trialed a few times and then run over
+and over again and gradually refined. 
+</p>
+
+<p>
+When you combine this fact with tools like git, which make it easy to
+record the history of a file over time, you have system for ensuring
+that what you do is recorded for posterity and reproducible. 
+</p>
+
+<p>
+Graphical User Interfaces, in contrast, introduce many non-meaningful
+degrees of freedom (for instance, the precise x, y coordinate of a
+folder on your desktop) which make it difficult to automate workflows
+for them, even when such tools exist. 
+</p>
+
+<p>
+Learning to use the Shell will teach you a powerful way of simple and
+easily orchestrating work your computer does.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde76ac1" class="outline-2">
+<h2 id="orgde76ac1"><span class="section-number-2">4</span> Shell Concepts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org40d70bd" class="outline-3">
+<h3 id="org40d70bd"><span class="section-number-3">4.1</span> Many Shells</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Unix supports <span class="underline">many</span> different shells which behave
+similarly. Throughout this course I will be assuming <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> because it
+is the most common. I'll be trying to write bash code which will run
+in most other shells (most notably zsh, which is recently the default
+OSX shell) for simplicity. But if you run into an issue, make sure you
+are running bash by simply typing:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>how to start bash</label><pre class="src src-bash">bash
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd9f3405" class="outline-3">
+<h3 id="orgd9f3405"><span class="section-number-3">4.2</span> REPL</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+The shell is one example of a "read, eval, print" loop. It 
+</p>
+
+<ol class="org-ol">
+<li>reads an input (typically a line of text)</li>
+<li>evaluates it (turning it into an action or side effect or value of
+some sort)</li>
+<li>and then prints the result (or nothing, if a side effect)</li>
+</ol>
+
+<p>
+At its most superficial level this is how we interact with a shell:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>ls "lists" files</label><pre class="src src-bash">ls
+</pre>
+</div>
+
+<p>
+Reading is trivial - the input you type is just a list of
+characters. Evaluation is where things get tricky:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43ae255" class="outline-3">
+<h3 id="org43ae255"><span class="section-number-3">4.3</span> Evaluation</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+A theme of this course is that <span class="underline">all programming languages</span> do more or
+less the same thing: they translate text into actions. If you develop
+a good mental model of that process then you <span class="underline">understand</span> the
+language.
+</p>
+
+<p>
+Given the ubiquity of Bash, its evaluation model is surprisingly
+complicated. Luckily for us, we will be concerned with its simplest
+aspects.
+</p>
+
+<p>
+Superficially and in the simplest case, bash does the following when
+you type a command:
+</p>
+
+<ol class="org-ol">
+<li>the text is split into tokens on the spaces</li>
+<li>the first token is assumed to be a command you want to
+execute. Bash tries to find a file which implements this command by
+looking it up on the "PATH" (of which more later).</li>
+<li>the subsequent tokens are passed to the command as
+"arguments". Arguments are additional pieces of information the
+command may want or need to change the way it executes.</li>
+</ol>
+
+<p>
+So when we typed "ls" above, bash read this as us wanting to run the
+command "ls" which it found on our hard drive. Then it saw that we
+passed no arguments to the command, so it executed it without any.
+</p>
+</div>
+
+<div id="outline-container-org8cea364" class="outline-4">
+<h4 id="org8cea364"><span class="section-number-4">4.3.1</span> Eg 1</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>ls with arguments</label><pre class="src src-bash">ls -t -l
+</pre>
+</div>
+
+<p>
+In the above example, the shell reads "ls -t -l", splits it apart on
+the spaces like this: <code>[ls, -t, -l]</code> finds the <code>ls</code> command, and
+passes the <code>-t</code> and <code>-l</code> arguments to it. Note that these arguments
+are just passed as strings to the <code>ls</code> command. It is up to <code>ls</code> to
+decide what, if anything, they mean. In this case, they mean "sort the
+file list by modification time" (<code>-t</code>) and "print out more information
+about the files" (<code>-l</code>)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43bb5c8" class="outline-4">
+<h4 id="org43bb5c8"><span class="section-number-4">4.3.2</span> Eg 2</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #7f7f7f;">#</span><span style="color: #7f7f7f;">something_silly a b c</span>
+</pre>
+</div>
+
+<p>
+The above will generate an error like this:
+</p>
+
+<pre class="example">
+bash: line 1: something_silly: command not found
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org980ccf9" class="outline-3">
+<h3 id="org980ccf9"><span class="section-number-3">4.4</span> The PATH and other environment variables</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+When a string is evaluated the shell must find what command we want to
+run. How does it do so? 
+</p>
+
+<p>
+Some background: apart from a few built in commands (the so-called
+<a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html">builtins</a>) commands in shell scripts are just executable files stored
+somewhere on the hard drive.  The command <code>which</code> tells us where such
+commands qua files are located:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>the location of the which command</label><pre class="src src-bash">which which
+</pre>
+</div>
+
+<p>
+A good piece of jargon to have in your head here is that <code>which</code>
+"resolves" to <code>/usr/bin/which</code>.
+</p>
+
+<p>
+If you haven't seen unix style file locations, note:
+</p>
+
+<ol class="org-ol">
+<li>on a unix system <span class="underline">every file</span> lives beneath the so-called "root" of
+the file system, called <code>/</code>.</li>
+<li>anything between two <code>/</code> (called <span class="underline">path separators</span>) is a
+_directory.</li>
+<li>the last term may be a directory or a file. In this case, it is the
+executable file which implements the <code>which</code> commands.</li>
+</ol>
+
+<p>
+<code>which</code> resolves in the same way that Bash resolves, but how does that
+work?
+</p>
+
+<p>
+They look  in something called an environment variable called
+PATH. You can see what an environment variable holds like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #cd6600;">echo</span> $<span style="color: #2e8b57;">PATH</span>
+</pre>
+</div>
+
+<p>
+Apparently, <code>PATH</code> contains a series of locations on the filesystem
+separated by ":" characters. Bash searches this list in order to find
+executables during command evaluation.
+</p>
+
+<p>
+So in the case of <code>which</code> it looks in 
+</p>
+
+<ol class="org-ol">
+<li><code>/home/toups/.local/bin</code> (no hit)</li>
+<li><code>/usr/local/local/sbin</code> (no hit)</li>
+<li><code>/usr/bin</code> (hit!)</li>
+</ol>
+
+<p>
+By modifying this environment variable we can modify the way bash
+looks up commands. But how would we create our own command to test out
+this ability?
+</p>
+
+<p>
+Let's create a directory
+</p>
+
+<p>
+And then let's create a directory:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>creating a directory</label><pre class="src src-bash">mkdir my-commands
+readlink -f my-commands
+</pre>
+</div>
+
+<p>
+.
+</p>
+
+<pre class="example">
+/home/toups/work/courses/bios611/lectures/02-unix/my-commands
+</pre>
+
+
+<p>
+(your file will obviously be somewhere else on your personal computer).
+</p>
+
+<p>
+And now lets create the file
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 6: </span>my-commands/hello.sh</label><pre class="src src-bash"><span style="color: #7f7f7f;">#</span><span style="color: #7f7f7f;">!/bin/</span><span style="color: #1c86ee;">bash</span>
+
+<span style="color: #cd6600;">echo</span> hello world
+
+</pre>
+</div>
+
+<p>
+First we need to tell our Unix that we want to give the file
+"hello.sh" permission to act as an executable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">chmod u+x my-commands/hello.sh
+</pre>
+</div>
+
+<p>
+And then we can 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #2e8b57;">PATH</span>=<span style="color: #8b7355;">"$(</span><span style="color: #ff00ff;">readlink</span><span style="color: #8b7355;"> -f my-commands):$PATH"</span>
+hello.sh
+</pre>
+</div>
+
+<p>
+.
+</p>
+
+<pre class="example">
+hello world
+</pre>
+
+
+<p>
+If some of the above steps are a little confusing to you, that is ok -
+we're not going for a full understanding of working on the command
+line: we want just enough to get around.
+</p>
+
+<p>
+We will develop more as we go.
+</p>
+
+<p>
+The PATH isn't the only environment variable. What variables are
+defined will vary a lot by system and situation, but you can see a
+list of all of them by saying:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 7: </span>the environment</label><pre class="src src-bash" id="org1071bd7">env | head
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">SHELL=/bin/bash
+SESSION_MANAGER=local/cscc-laptop:@/tmp/.ICE-unix/2031,unix/cscc-laptop:/tmp/.ICE-unix/2031
+QT_ACCESSIBILITY=1
+SNAP_REVISION=1161
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu-wayland:/etc/xdg
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+SNAP_REAL_HOME=/home/toups
+SNAP_USER_COMMON=/home/toups/snap/emacs/common
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent Toups</p>
+<p class="date">Created: 2021-06-17 Thu 20:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

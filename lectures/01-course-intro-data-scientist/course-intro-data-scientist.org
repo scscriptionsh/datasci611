@@ -1,0 +1,233 @@
+* What is a Data Scientist
+
+ To paraphrase the loathsome protagonist of 1997's "As Good as it
+Gets", Melvin Udall: to get a data scientist, "Take a statistician and
+remove reason and accountability."
+
+Wherefor this baleful condition? The Data Scientist is often a mongrel
+creature, shaped by many disciplines and frequently a master of none
+of them. 
+
+So, poesy aside, what is a Data Scientist? A Data Scientist is
+practically any professional who uses computers to work with
+data. Many people find themselves in this position today:
+
+- scientists analyzing their own data or working with large externally
+  collected data sets
+- people hired explicitly to exploit data sources
+- private sector programmers working to make sense of large databases
+- web developers examining traffic and usage patterns
+- artists working with generative models
+
+Even more concretely, a data scientist is a person who takes data,
+writes a program to operate on it, and generates some summary of that
+data in the form of figures, interactive visualizations, models,
+publications or reports.
+
+Doing this well requires many skills, some of which are Academic. A
+really good data scientist should be a good statistician or, at the
+very least, be able to understand at some level the statistical tools
+they employ and avoid common pitfalls in their application. But
+academic knowledge is not enough. A good data scientist needs to have
+a command of many technical tools which allow them to work in an
+organized, traceable way.
+
+But the majority of the tools required to do this job well are
+practical and technical. Unlike academic knowledge, many of these
+tools can't be approached or understood systematically. While one does
+eventually develop a kind of intuition for using technical tools like
+Git and Docker, for the most part, learning them is just committing to
+muscle memory a lot of tiny rules. Or, in the 21st Century, its about
+learning what things to search the internet for when you have a
+problem.
+
+* By Way of Example
+
+Iactura and Victoria Ratio are twin sisters and scientists. Iactura
+has been working on a research project for three years and has solid
+preliminary results which she presents in the form of a lightning talk
+at a Conference. During this talk she presents a figure which shows a
+statistical model generated from here data set and reports a p value
+of 0.0007, which relatively strongly excludes the null hypothesis.
+
+A year later, when her paper finally is accepted for submission and is
+published, she gets an email from a colleague inquiring as to why the
+same p-value reported in the final published paper is only 0.004 and
+why some of the data show in the accompanying figure are different
+than those presented at the Conference.
+
+Iactura's data analysis is contained in a handful of R files on a hard
+drive somewhere and she doesn't really use version control (maybe she
+commits every few months). She doesn't have any way of reconstructing
+her analysis pipeline as it was when she presented her earlier
+results.  
+
+She does know that she made some changes to her outlier elimination
+code sometime in the past but further complicated matters is the fact
+that she has corrected an issue with her data export that changed some
+of the values in the source data set. None of these changes are easily
+reversible. Its possible she has the original data set in a back up
+location but getting exactly the same combination of code and data
+together and find the important differences will be an enormous
+challenge, if it is even possible.
+
+Victoria also gave a short talk at the same conference and published
+her results a few years later. In her lightning talk a p-value of 0.2
+was reported but subsequent modifications to her data analysis and
+source data eventually produced a significant p value of 0.004. When a
+collaborator emails her after publication to inquire about the
+difference she:
+
+- Finds the slide deck she used at the conference. In it is a git
+  commit ID associated with a snapshot of the project just as it was
+  when she produced her figures.
+- She clones her project git repository and checks out that specific
+  commit. Because her data is managed by a small bash script which
+  uses hashes of the data sets to reference specific versions of her
+  data, she can then extract exactly the data set used at that point
+  in her git history.
+- Because she used Make to automate her build she can generate exactly
+  the slide deck she used at the conference, and confirm that she gets
+  the same results.
+- Using a `git diff` between the commit tagged as the one she used for
+  final publication and the git commit she used for the conference,
+  she can see each line of code which changed between those two
+  dates. She also knows when she updated her data set. Each commit is
+  associated with an informative message, contextualizing the change.
+
+She is, in the end, able to identify exactly those datum and changes
+in her pipeline which changed her result. Futhermore, her collaborator
+can verify these results themselves by checking out her repository and
+exploring its history.
+
+* Exploring Data
+
+In addition to accurately and expertly reporting on results, a data
+scientist has to know how to get them. Its less common in science for
+reasons having to do with p-hacking, but in the private sector you're
+often going to be asked to "see what is in there" with respect to a
+data set. How do you do this?
+
+Understanding a large, complex, data set is a non-trivial task but in
+a sense it all comes down to making different kinds of summaries of
+the data set. Just about everything you do in data science is a
+summary of one kind or another:
+
+1. Visualization - projects a data set to a 2 dimensional image.
+2. Modeling - takes the raw data and summarizes it with a model -
+   something meant to capture the variability in that set with fewer
+   degrees of freedom.
+
+Thus this course will cover the most commonly used methods of
+summarizing data. 
+
+** Visualization
+
+Visualization could be its own course. The essence of visualization
+assigning variation in your data set to different aesthetics. This
+isn't necessarily obvious - and there are many libraries which support
+visualization that don't work this way. But luckily, we'll start our
+journey into visualization with ggplot which is based on exactly this
+idea.
+
+As we will learn, a good visualization exploits your visual system's
+natural capabilities to communicate information effectively. 
+
+** Modeling
+
+Another form of summary we'll experiment with is _modeling_. In the
+modeling process we reduce our data down to a simpler description. In
+clustering, we find, without any prior input, a small set of
+"prototypical" examples which hopefully describe well the important
+features of a data set. 
+
+It is often the case that we know some clusters a priori, in which
+case a different sort of summary model is a "classifier" which maps
+elements in our raw data set into one of a fixed number of types. In
+this case, the classifier itself may tell us important things about
+the relationship between our raw data and the known categories.
+
+To do either of these tasks effectively or to improve the
+interpretability of our models, it is sometimes useful to perform
+"dimensionality reduction." Dimensionality reduction maps our data set
+into a hopefully nearly equally descriptive smaller set of variables.
+
+
+* Tools 
+
+We are going to spend a lot of time in this course becoming familiar
+with a host of venerable and often frustrating tools. A Data Scientist
+is, despite any other responsibilities they may have, a software
+engineer. While they may not have to have all the skills of
+specialized software developer, they need to be familiar enough with a
+large stack of tools to work effectively. 
+
+Some of you may be lucky enough to find yourself working in an
+environment where you have a team of engineers supporting your
+work. But in many situations, and in particular when you are working
+as a solo scientist or part of a small lab, you will have to do that
+job as well.
+
+Thus a data scientist is someone who is comfortable with: Linux,
+Docker, Networking, Version Control, Shell Scripting, Software
+Packaging Systems, Python, R and maybe even Javascript and Java! This
+course is going to attempt to expose you to most of these tools until
+you are at least familiar enough with them to search the web for
+answers to common probems.
+
+* Course Schedule
+
+** Course
+
+| Number | Expected Data | Subject                                         |   |
+|--------+---------------+-------------------------------------------------+---|
+|     01 |               | Introduction to Data Science                    |   |
+|     02 |               | Accessing on Campus Compute Resources           |   |
+|     03 |               | Docker & Using Docker with R                    |   |
+|        |               | Mental Models of Code: R                        |   |
+|        |               | Mental Models of Code: Bash                     |   |
+|        |               | Git - Concepts & Practices                      |   |
+|        |               | Make - Concepts & Practices                     |   |
+|        |               | The Tidyverse                                   |   |
+|        |               | GGPlot                                          |   |
+|        |               | RMarkdown                                       |   |
+|        |               | Putting it all together                         |   |
+|        |               | Dimensionality Reduction                        |   |
+|        |               | Clustering                                      |   |
+|        |               | Classification                                  |   |
+|        |               | Gradient Boosting Machines in Theory & Practice |   |
+|        |               | Shiny                                           |   |
+|        |               | Mental Models of Code : Python                  |   |
+|        |               | Pandas                                          |   |
+|        |               | SQL via SQLite                                  |   |
+|        |               | sklearn                                         |   |
+|        |               | A taste of neural networks                      |   |
+|        |               | Ethics and Data Science                         |   |
+|        |               | Presentations                                   |   |
+|        |               | Presentations                                   |   |
+|        |               | Data Scientists                                 |   |
+
+** Lab
+
+Lab will typically follow along with the course but provide
+unstructured time to work on your projects and ask me questions.
+
+* Where you will be at the end of the course
+
+You'll be at least a little comfortable on a linux command
+line. You'll understand how to organize a data science project so that
+a new user can understand everything that happens inside of it. You'll
+have a basic familiarity with clustering, classification and
+dimensionality reduction and you'll have played around a little bit
+with neural networks.
+
+You'll have chosen a data set, performed some exploratory analysis and
+visualization, and produced an example git repository with a
+Dockerfile that will allow anyone to easily reproduce your work and
+explore its history.
+
+The real intent of the course is to get you through the technical
+barriers separating you from the tools and systems that will make you
+a good scientist and data scientist.
+
+* Questions
