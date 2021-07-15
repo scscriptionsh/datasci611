@@ -75,11 +75,35 @@ The header contains a few important values
 
 The first step to any web scraping project is to identify the pages
 which contain the data you want. You do this just be searching for
-what you want. Imagine we want to collect some raw text data on
-Superhero powers and abilities. A great place to start is the
-Wikipedia:
+what you want. Let's try to collect a data set associating characters
+with their super-powers. As far as I know there is no curated data set
+of high quality.
 
-#+CAPTION: A simple wikipedia search.
-#+NAME:   fig:search
-[[./images/wikipedia-search.png]]
+Let's begin with the DC Universe. The first step is to identify a
+likely place for your data to come from. The following page, which
+lists all the powers and abilities contained in the wiki is a good
+place to start. 
+
+#+CAPTION: Powers and abilities, crowdsourced.
+#+NAME: fig:pow_and_ab
+[[./powers-and-abilities.png]]
+
+The key to scraping is to just imagine collecting the data you want
+manually. In this case, we'd click each power:
+
+#+CAPTION: The characters with the power.
+#+NAME: fig:char_list
+[[./character-list.png]]
+
+And then go down to the place where all the characters who have this
+ability are listed. Apparently this wikipedia separates characters by
+sub-universe, so if we were building a table, we might want to
+separate out the character name from the universe they live in.
+
+To summarize: we want to visit ever "power" and then collect a triple
+of information for each character:
+
+#+begin_src 
+power, character, universe
+#+end_src
 
