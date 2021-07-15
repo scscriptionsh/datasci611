@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-07-09 Fri 09:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent Toups" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9ce0a9e">1. Why Learn Docker?</a>
+<ul>
+<li><a href="#org5bac650">1.1. The Big Idea</a></li>
+<li><a href="#org3e5fd12">1.2. Using Docker</a></li>
+<li><a href="#org66da5b2">1.3. Ports, Arguments, etc</a></li>
+<li><a href="#orgee0370c">1.4. Adding the Local Filesystem</a></li>
+</ul>
+</li>
+<li><a href="#org62de629">2. Taking R for a Spin</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ce0a9e" class="outline-2">
+<h2 id="org9ce0a9e"><span class="section-number-2">1</span> Why Learn Docker?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Docker is a "containerization engine." The idea here is to allow the
+user to specify, in a simple text format, what a computer needs to do
+a certain job. Docker then reads that specification, builds the
+computer, and allows you, the user, to run it.
+</p>
+
+<p>
+This was originally designed for use cases in Software Engineering. In
+particular, Docker let's you create "reproducible deployments." It
+used to be the case that software projects and the machines on which
+they run were configured and maintained seperately. But since how
+software runs often depends (in tricky ways) on the machine which runs
+them, such two pronged maintenance was often complicated.
+</p>
+
+<p>
+Docker allows engineers to develop software <span class="underline">and</span> a specification for
+the machine on which that software should run. Docker provides a huge
+suite of related capabilities for this use case.
+</p>
+
+<p>
+So why should a datascientist care about Docker? Because data science
+pipelines and programs also run in a context and you want that context
+to be as reproducible as any other part of your work.
+</p>
+</div>
+
+<div id="outline-container-org5bac650" class="outline-3">
+<h3 id="org5bac650"><span class="section-number-3">1.1</span> The Big Idea</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A good data science project should come with its own Docker file with
+instructions for running the code in the specified container. That
+way, anyone who gets their hands on your code and who also can run
+Docker will be almost guaranteed to be able to run it.
+</p>
+
+<p>
+Even if a user doesn't have access to a machine where they can build
+and run Docker containers, the Dockerfile (as we shall see) is a
+compact description of most of what they will need to run the code.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e5fd12" class="outline-3">
+<h3 id="org3e5fd12"><span class="section-number-3">1.2</span> Using Docker</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Once you have installed Docker according to the provided instructions
+for your operating system, the first thing to do is test that it is
+working.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Testing docker.</label><pre class="src src-bash" id="orgbc90017">docker run hello-world
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ <span style="color: #00ffff; text-decoration: underline;"><a href="https://hub.docker.com/">https://hub.docker.com/</a></span>
+
+For more examples and ideas, visit:
+ <span style="color: #00ffff; text-decoration: underline;"><a href="https://docs.docker.com/get-started/">https://docs.docker.com/get-started/</a></span>
+
+</pre>
+</div>
+
+<p>
+This will "pull" a specified Docker image and run its default command,
+which just prints out a message.
+</p>
+
+<p>
+Almost all the Docker containers used in this book will be based on
+<code>rocker/verse</code>. We can test that we have access to this image like so:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Invoking bash on the rocker/verse image.</label><pre class="src src-bash" id="org71debe5">docker run -it rocker/verse /bin/bash
+</pre>
+</div>
+
+<p>
+We should then expect to see a prompt like this one:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org">root@dff56ba76b90: 
+
+</pre>
+</div>
+
+<p>
+What we are seeing here is a shell running inside of a sort of virtual
+computer. How this machine is set up depends entirely on a
+specification provided by the Docker container repository for
+rocker/verse. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66da5b2" class="outline-3">
+<h3 id="org66da5b2"><span class="section-number-3">1.3</span> Ports, Arguments, etc</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The major benefit of the Rocker family of images is that they
+contain an R Studio server instance pre-configured. This will allow
+us to have a uniform development environment anywhere we (or anyone
+else) can set up a Docker container.
+</p>
+
+<p>
+The instructions associated with Rocker tell us to start our Docker
+container like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">docker run -e <span style="color: #9acd32;">PASSWORD</span>=yourpassword --rm -p 8787:8787 rocker/verse
+</pre>
+</div>
+
+<p>
+Given what we learned in the unix and shell scripting chapter, we
+should be able to at least read this command line.
+</p>
+
+<p>
+At its most basic level we are invoking the command "docker" with 7
+arguments:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">run
+-e
+<span style="color: #9acd32;">PASSWORD</span>=yourpassword
+--rm
+-p
+8787:8787
+rocker/verse
+</pre>
+</div>
+
+<p>
+It is up to the docker command to interpret these command line
+arguments. Let's group them up by the conventions we learned in
+Chapter 2.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">run <span style="color: #cd853f;"># </span><span style="color: #cd853f;">this is the sub-command</span>
+-e <span style="color: #9acd32;">PASSWORD</span>=yourpassword <span style="color: #cd853f;">## </span><span style="color: #cd853f;">-e lets us set an environment variable</span>
+                         <span style="color: #cd853f;">## </span><span style="color: #cd853f;">in the container</span>
+--rm <span style="color: #cd853f;"># </span><span style="color: #cd853f;">delete the container when we are done</span>
+-p 8787:8787 <span style="color: #cd853f;">## </span><span style="color: #cd853f;">expose port 8787 in the container</span>
+             <span style="color: #cd853f;">## </span><span style="color: #cd853f;">as port 8787 on localhost</span>
+rocker/verse <span style="color: #cd853f;">## </span><span style="color: #cd853f;">the name of the docker image to run</span>
+</pre>
+</div>
+
+<p>
+Networking is definitely outside of the scope of this course but we
+do need to know a few things about it. Rstudio is a server - it
+waits around for HTTP requests made by a web browser. Servers
+listen on a "port" which we can use on a single computer to
+distinguish many web servers.
+</p>
+
+<p>
+The access a port on your local machine you type "localhost" into
+your address bar and then <code>:port-number</code>. So if we start rocker as
+above and visit <code>localhost:8787</code> we should see our rocker instance
+running.
+</p>
+
+<p>
+All that remains is to log in with "rstudio" and the password we
+provided.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee0370c" class="outline-3">
+<h3 id="orgee0370c"><span class="section-number-3">1.4</span> Adding the Local Filesystem</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+In production scenarios Docker containers typically are
+self-contained &#x2013; in our case that means that the code they are
+meant to run will be built into the image and executed by the
+Docker container's default command.
+</p>
+
+<p>
+But most of what we will do here is <i>development</i> work, and for
+that we want our container to be able to access our actual
+filesystem, where we will be creating and editing files and
+figures. To accomplish this, let's modify our command line for
+launching the container like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">docker 
+run <span style="color: #cd853f;"># </span><span style="color: #cd853f;">this is the sub-command</span>
+-e <span style="color: #9acd32;">PASSWORD</span>=yourpassword <span style="color: #cd853f;">## </span><span style="color: #cd853f;">-e lets us set an environment variable</span>
+<span style="color: #cd853f;">## </span><span style="color: #cd853f;">in the container</span>
+--rm <span style="color: #cd853f;"># </span><span style="color: #cd853f;">delete the container when we are done</span>
+-p 8787:8787 <span style="color: #cd853f;">## </span><span style="color: #cd853f;">expose port 8787 in the container</span>
+<span style="color: #cd853f;">## </span><span style="color: #cd853f;">as port 8787 on localhost</span>
+-v $(<span style="color: #fa8072;">pwd</span>):/home/rstudio/project <span style="color: #cd853f;">## </span><span style="color: #cd853f;">place the current working directory</span>
+<span style="color: #cd853f;">## </span><span style="color: #cd853f;">at /home/rstudio/project inside the container     </span>
+rocker/verse <span style="color: #cd853f;">## </span><span style="color: #cd853f;">the name of the docker image to run</span>
+</pre>
+</div>
+
+<p>
+Now we just need to restart the Docker container. How do we do
+that?
+</p>
+
+<p>
+One possibility is pressing <code>CTRL-C</code> at the terminal where we
+started the container. This sends the "kill" signal to the
+container. But you may also want or need to kill a specific
+container that is running. In fact, it is possible to launch a
+container in the background. Docker provides its own process
+management system:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>docker ps</label><pre class="src src-bash" id="org8a5ec72">docker ps
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">CONTAINER ID   IMAGE          COMMAND   CREATED        STATUS        PORTS                                       NAMES
+b18239add6ae   rocker/verse   "/init"   19 hours ago   Up 19 hours   0.0.0.0:8787-&gt;8787/tcp, :::8787-&gt;8787/tcp   youthful_stonebraker
+</pre>
+</div>
+
+<p>
+In the above example we see a single container running. We can kill it
+by saying
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 4: </span>killing a process</label><pre class="src src-bash" id="org378f2ee">docker kill b7ec
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">
+</pre>
+</div>
+
+<p>
+Note that we only need to include enough of the container ID to identify
+it uniquely.
+</p>
+
+<p>
+Now we can launch our machine:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">docker run -e <span style="color: #9acd32;">PASSWORD</span>=yourpassword --rm -p 8787:8787 -v $(<span style="color: #fa8072;">pwd</span>):/home/rstudio/project rocker/verse
+</pre>
+</div>
+
+
+<div id="org88b6248" class="figure">
+<p><img src="./logged-in.png" alt="logged-in.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>R studio, without the mess.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org62de629" class="outline-2">
+<h2 id="org62de629"><span class="section-number-2">2</span> Taking R for a Spin</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+We still need to learn to modify our Docker container but rather than
+let our brains leak out of ears from boredome, let's do a little fake
+data science.
+</p>
+
+<p>
+(Note, for the examples in this book, I'm mounting the entire BIOS 611
+repository under project.)
+</p>
+
+<p>
+Our data set is scraped (see the scraping appendix) from the DC Fandom
+Wiki and contains (among other things) meta-data about DC Comics
+Characters as well as what Superhuman powers they may have.
+</p>
+
+<p>
+Let's make a figure that compares power distribution against
+"alignment."
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(tidyverse)
+
+d <span style="color: #1e90ff;">&lt;-</span> read_csv(<span style="color: #ffa07a;">"lectures/X-01-web-scraping/powers.csv"</span>) <span style="color: #1e90ff;">%&gt;%</span> 
+  filter(universe==<span style="color: #ffa07a;">"New Earth"</span>) <span style="color: #1e90ff;">%&gt;%</span> select(-universe, -url); 
+alignment <span style="color: #1e90ff;">&lt;-</span> read_csv(<span style="color: #ffa07a;">"lectures/X-01-web-scraping/character-data.csv"</span>) <span style="color: #1e90ff;">%&gt;%</span>
+  filter(universe==<span style="color: #ffa07a;">"New Earth"</span> &amp; property_name == <span style="color: #ffa07a;">"Alignment"</span>) <span style="color: #1e90ff;">%&gt;%</span>
+  select(-universe, -property_name) <span style="color: #1e90ff;">%&gt;%</span>
+  rename(alignment=value);
+
+alignment <span style="color: #1e90ff;">&lt;-</span> rbind(alignment <span style="color: #1e90ff;">%&gt;%</span> filter(alignment==<span style="color: #ffa07a;">"Good"</span>) <span style="color: #1e90ff;">%&gt;%</span> sample_n(1000),
+                   alignment <span style="color: #1e90ff;">%&gt;%</span> filter(alignment==<span style="color: #ffa07a;">"Bad"</span>) <span style="color: #1e90ff;">%&gt;%</span> sample_n(1000),
+                   alignment <span style="color: #1e90ff;">%&gt;%</span> filter(alignment==<span style="color: #ffa07a;">"Neutral"</span>) <span style="color: #1e90ff;">%&gt;%</span> sample_n(1000));
+
+power_tally <span style="color: #1e90ff;">&lt;-</span> d <span style="color: #1e90ff;">%&gt;%</span> group_by(power) <span style="color: #1e90ff;">%&gt;%</span> tally() <span style="color: #1e90ff;">%&gt;%</span> arrange(desc(n));
+
+
+common_powers <span style="color: #1e90ff;">&lt;-</span> d <span style="color: #1e90ff;">%&gt;%</span> filter(power <span style="color: #1e90ff;">%in%</span> head(power_tally,10)[[<span style="color: #ffa07a;">"power"</span>]]) <span style="color: #1e90ff;">%&gt;%</span>
+  left_join(alignment, by=<span style="color: #ffa07a;">"character"</span>) <span style="color: #1e90ff;">%&gt;%</span>
+  mutate(power=factor(power, power_tally[[<span style="color: #ffa07a;">"power"</span>]])) <span style="color: #1e90ff;">%&gt;%</span> 
+  filter(alignment <span style="color: #1e90ff;">%in%</span> c(<span style="color: #ffa07a;">"Good"</span>,<span style="color: #ffa07a;">"Bad"</span>,<span style="color: #ffa07a;">"Neutral"</span>));
+
+p <span style="color: #1e90ff;">&lt;-</span> ggplot(common_powers, aes(power)) + 
+  geom_histogram(stat=<span style="color: #ffa07a;">"count"</span>,position=<span style="color: #ffa07a;">"dodge2"</span>,aes(fill=alignment)) + 
+  theme(axis.text.x = element_text(angle = 90))
+print(p)
+</pre>
+</div>
+
+
+<div id="org09c343c" class="figure">
+<p><img src="./power-histogram.png" alt="power-histogram.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Are powers distributed differently to evil characters?</p>
+</div>
+
+<p>
+One way to answer this question is to create a boolean vector of
+powers for each character and try to use that input as a model that
+classifies a character as "good" or "evil". If we use a powerful
+enough model, its failure can be taken as indicating that there isn't
+so easy to assign an alignment based on a power distribution.
+</p>
+
+<p>
+A good candidate is <a href="https://en.wikipedia.org/wiki/AdaBoost">AdaBoost</a>, which Wikipedia calls the "best out of
+the box classifier." But before we get there we have to convert our
+character data, which is a table like this:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> a subset of our power data.</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">power</th>
+<th scope="col" class="org-left">character</th>
+<th scope="col" class="org-left">universe</th>
+<th scope="col" class="org-left">url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Abraham Dusk</td>
+<td class="org-left">Wildstorm Universe</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Abraham_Dusk_(Wildstorm_Universe)">https://dc.fandom.com/wiki/Abraham_Dusk_(Wildstorm_Universe)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Accelerated Man</td>
+<td class="org-left">Earth 19</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Accelerated_Man_(Earth_19)">https://dc.fandom.com/wiki/Accelerated_Man_(Earth_19)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Ahn Kwang-Jo</td>
+<td class="org-left">Prime Earth</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Ahn_Kwang-Jo_(Prime_Earth)">https://dc.fandom.com/wiki/Ahn_Kwang-Jo_(Prime_Earth)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Alec Holland</td>
+<td class="org-left">Lego Batman</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Alec_Holland_(Lego_Batman)">https://dc.fandom.com/wiki/Alec_Holland_(Lego_Batman)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Alec Holland</td>
+<td class="org-left">Prime Earth</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Alec_Holland_(Prime_Earth)">https://dc.fandom.com/wiki/Alec_Holland_(Prime_Earth)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Alexander Fairchild</td>
+<td class="org-left">Wildstorm Universe</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Alexander_Fairchild_(Wildstorm_Universe)">https://dc.fandom.com/wiki/Alexander_Fairchild_(Wildstorm_Universe)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Alexander Luthor</td>
+<td class="org-left">Smallville</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Alexander_Luthor_(Smallville)">https://dc.fandom.com/wiki/Alexander_Luthor_(Smallville)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Alexander Staunton</td>
+<td class="org-left">Prime Earth</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Alexander_Staunton_(Prime_Earth)">https://dc.fandom.com/wiki/Alexander_Staunton_(Prime_Earth)</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Accelerated Healing</td>
+<td class="org-left">Alexander Trent</td>
+<td class="org-left">New Earth</td>
+<td class="org-left"><a href="https://dc.fandom.com/wiki/Alexander_Trent_(New_Earth)">https://dc.fandom.com/wiki/Alexander_Trent_(New_Earth)</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+(one row per character power combination) into a set of vectors (one
+vector per character, as many dimensions as there are unique powers).
+</p>
+
+<p>
+This is accomplished easily enough with what we have in our container:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">pivot_wider(d <span style="color: #1e90ff;">%&gt;%</span> mutate(dummy=T),
+            character,names_from = power, values_from = dummy, values_fill = F);
+</pre>
+</div>
+
+<p>
+(don't worry if this is obscure - we will devote entire chapters to
+this kind of manipulation) but if we want to plot these vectors in a
+meaningful way, we need the "matlab" library, which provides an
+implementation of "imagesc". We could just install a library as
+we would ordinarily do in R:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">install.packages(<span style="color: #ffa07a;">"matlab"</span>);
+</pre>
+</div>
+
+<p>
+But instead lets <i>add the library to our Docker container</i>. That way
+anyone who gets our project will automatically have the library
+installed.
+</p>
+
+<p>
+We create a file called: "Dockerfile" and put this inside.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-Dockerfile">FROM rocker/verse 
+RUN R -e "install.packages(\"matlab\")"
+</pre>
+</div>
+
+<p>
+A Dockerfile is a description of a container which we then ask Docker
+to build. The first line above tells Docker that we want to base our
+container on the pre-constructed container "rocker/verse". The "RUN"
+line says that we want to execute a bit of code during the build
+process. In this case, we are invoking R (as if we were on a Unix
+terminal) and telling it (via its <code>-e</code> command line switch) to execute
+a fragment of code. The way <code>rocker/verse</code> is set up R will
+automatically select a mirror for this step.
+</p>
+
+<p>
+Once we've saved our Dockerfile we can <i>build</i> our own Docker
+container like this:
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listing 5: </span>Building a docker container</label><pre class="src src-bash" id="orgfb0406d">docker build . -t 611-example
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">Sending build context to Docker daemon  209.4kB
+Step 1/2 : FROM rocker/verse
+ ---&gt; 9914bb59e96a
+Step 2/2 : RUN R -e "install.packages(\"matlab\")"
+ ---&gt; Using cache
+ ---&gt; ad2915350df6
+Successfully built ad2915350df6
+Successfully tagged 611-example:latest
+</pre>
+</div>
+
+<p>
+The <code>-t</code> argument tells docker we want to "tag" or "name" this
+container "611-example." We'll use that name later to launch this new
+container.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent Toups</p>
+<p class="date">Created: 2021-07-09 Fri 09:45</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

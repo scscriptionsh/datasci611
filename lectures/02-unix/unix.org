@@ -552,6 +552,91 @@ The output of ~ls~ goes to ~head~ and the output of ~head~ goes to
 pipes. Learning to program this way is very enlightening and we'll see
 a similar "chain of operations" approach in R and Python.
 
+** Conventions to bear in mind
+
+   The shell itself doesn't enforce any convention whatsoever on the
+   arguments passed to a command. Each space separated collection of
+   characters counts as an argument and a command may interpret them
+   in any way it wishes.
+
+   However, there are some conventions that you'll typically see.
+
+*** The sub-command pattern
+
+    Many of the tools we'll use in this course will use the
+    sub-command pattern. In this pattern a command will implement a
+    set of sub-commands. These are typically invoked by mentioning the
+    command and then the sub-command without any prefixes. For
+    example:
+
+    #+begin_src bash
+      git status
+    #+end_src
+
+    Invokes the ~status~ sub-command of the command
+    ~git~. Sub-commands can and often do take additional arguments
+    which are treated just like any other shell argument.
+
+    #+begin_src bash
+      git diff --stat
+    #+end_src
+
+    In this case the ~--stat~ is a command line switch, something
+    which we recognize as modifying the behavior of the command.
+
+*** short and long options
+
+    Command line arguments are also given in the form of short and
+    long options.
+
+    A short option is written as ~-<single-letter>~ and a long option
+    is written ~--<option-name>~. It is often the case (but not
+    always) that a short option has a long option which represents the
+    same thing and vice versa. For example
+
+    #+begin_src bash
+      ls -a
+    #+end_src
+
+    and
+
+    #+begin_src bash
+      ls --all 
+    #+end_src
+
+    mean the same thing. Options can take inputs, which just means one
+    or more tokens after the option without ~-~ or ~--~ in front of
+    them.
+
+    For instance:
+
+    #+begin_src bash
+      head -n 10 hello.txt
+    #+end_src
+
+    In the above example "10" is an argument to the ~-n~ option. In
+    this case it tells ~head~ that we want to print the first 10 lines
+    of the file ~hello.txt~.
+
+    It is often the case that any arguments at the end of the argument
+    list not preceeded by options that take arguments are files that
+    the command operates on or otherwise creates or modifies.
+
+    #+begin_src bash
+      ln -s hello.txt link-to-hello.txt
+    #+end_src
+
+    Here ~-s~ is a switch which takes no arguments and the last two
+    arguments to the command are interpreted as the source and target
+    of the ~ln~ command itself.
+
+*** Warning
+
+    Not every shell command will follow these conventions. In
+    particular, ~find~ lets you specify /long/ arguments with a single
+    ~-~ in front of them. But keeping these conventions in mind will
+    help you understand what is happening on the shell.
+    
 ** Important Commands
 
 *** man
@@ -695,6 +780,66 @@ search the filenames for the function ~read_csv~. We don't want that -
 we want to search ~each~ file with grep. Using ~xargs~ in this way
 allows us to first find a set of files and then search for them.
 
+* Foreground and Background Processes
+
+  It is possible to launch a command in "the background". Let's look
+  at a silly example.
+
+  The command "sleep" just waits for a specified number of seconds
+  before completing:
+
+  #+begin_src bash
+    sleep 10 # sleep for ten seconds
+  #+end_src
+
+  If you want to access the console again you have two choices: if you
+  press CTRL-c (the control key and "c" at the same time) you will
+  send the process the "kill" signal. Sometimes this will fail
+  however, if the process has gone really rogue.
+
+  Another possibility is to press CTRL-z, which /stops/ the process
+  and gives you control. The process isn't dead, though, just
+  frozen. When you stop a process like this the terminal prints out an
+  id:
+
+  #+begin_src bash
+  > sleep 10 # sleep for ten seconds
+  CTRL-z
+  [1]+  Stopped                 sleep 100
+  > 
+  #+end_src
+
+  You can now either re-foreground the process via
+
+  #+begin_src bash
+  > fg 1
+  #+end_src
+
+  OR you can "background" the process:
+
+  #+begin_src bash
+  > bg 1
+  #+end_src
+
+  Note that backgrounding a process won't stop it from printing to
+  your terminal, which can be very disruptive.  These process
+  management functions were designed for the old days when you'd
+  interface with a mainframe via a single "dumb" terminal (imagine a
+  green glowing screen).
+
+  Nowawadays you can start as many terminals as you want and, indeed,
+  most terminal programs allow you to keep many tabs open. Don't be
+  afraid to use them.
+
+** Process IDs and Killing Processes
+
+   Sometimes a process goes wrong and needs to be terminated. The
+   details of this process depend on the unix, but typically you use
+   the command ~ps~ to list the processes which are running and then
+   use ~kill~ to terminate the process usings its process id. If your
+   terminal is blocked you may need to background the process
+   first.
+
 * Linux Distributions
 
 The most popular Unix-like operating systems are Linux and OSX. That
@@ -713,9 +858,8 @@ conventions are layered on top to form a "distribution" of Linux.
 There are hundreds of actively developed Linux distributions although
 the number left over after you eliminate those distributions which are
 largely similar, based on the same set of tools, would be smaller. As
-of the time of this writing, the most popular distributions are:
-
-1. 
+of the time of this writing some of the more popular linux
+distributions are Arch, Ubuntu, Mint and Centos/Rocky Linux.
 
 * Linux Variants and Package Managers
 
@@ -730,7 +874,13 @@ projects. Sometimes we might want to extend that container with other
 tools like Python and Jupyter. Adding software to a Linux system is
 the job of a package manager.
 
-Complicating this discussion is the fact there
+Complicating this discussion is the fact there are a variety of
+package managers for a variety of linux variations.
+
+Here, we will almost always be using `apt` to install packages (unless
+we use a programming language specific package manager, of which more
+later). But be aware that at some point in the future you might have
+to look up how to use another system's package manager.
 
 * Concluding Notes
 
