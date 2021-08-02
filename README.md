@@ -33,11 +33,11 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 
 | Date           | Course Title                       | Material                         |
 | ---            | ---                                | ---                              |
-|                |                                    | [1][m1],[2][m2]                  |
-| Mon 08/23/2021 | Introduction                       | [1][m3],[2][m4],[3][m5]          |
-| Wed 08/25/2021 | Compute Resources                  | [1][m8],[2][m6],[3][m7]          |
-| Mon 08/30/2021 | Unix                               | [1][m9],[2][m4],[3][m5],[4][m10] |
-| Wed 09/01/2021 | Docker                             |                                  |
+|                |                                    |                                  |
+| Mon 08/23/2021 | Introduction                       | [1][m1],[2][m2]                  |
+| Wed 08/25/2021 | Compute Resources                  | [1][m3],[2][m4],[3][m5]          |
+| Mon 08/30/2021 | Unix                               | [1][m8],[2][m6],[3][m7]          |
+| Wed 09/01/2021 | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] |
 | Mon 09/06/2020 | Labor Day 🍞🌹                     |                                  |
 | Wed 09/08/2021 | git basics & github basics         |                                  |
 | Mon 09/13/2021 | How to Think about Programming & R |                                  |
@@ -64,6 +64,9 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Wed 11/24/2021 | Thanksgiving 🦃                    |                                  |
 | Mon 11/29/2021 | Feedback Day                       |                                  |
 | Wed 12/01/2021 | Class Presentations                |                                  |
+| ---            | ---                                | ---                              |
+
+
 There is also a lab held every Tuesday. This will be generally
 unstructured time where you will be able to work on projects and ask
 me questions. Sometimes we will use this time to cover material.
