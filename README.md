@@ -31,40 +31,40 @@ Class is held in: McGavran-Greenberg PH-Rm 2308
 Lab is held in: McGavran-Greenberg PH-Rm 2308
 
 
-| Date           | Course Title                       | Material                         |
-| ---            | ---                                | ---                              |
-|                |                                    |                                  |
-| Mon 08/23/2021 | Introduction                       | [1][m1],[2][m2]                  |
-| Wed 08/25/2021 | Compute Resources                  | [1][m3],[2][m4],[3][m5]          |
-| Mon 08/30/2021 | Unix                               | [1][m8],[2][m6],[3][m7]          |
-| Wed 09/01/2021 | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] |
-| Mon 09/06/2020 | Labor Day 🍞🌹                     |                                  |
-| Wed 09/08/2021 | git basics & github basics         |                                  |
-| Mon 09/13/2021 | How to Think about Programming & R |                                  |
-| Wed 09/15/2021 | More R                             |                                  |
-| Mon 09/20/2021 | Tidy Data & GGPlot                 |                                  |
-| Wed 09/22/2021 | Make and Makefiles                 |                                  |
-| Mon 09/27/2021 | git concepts and practices         |                                  |
-| Wed 09/29/2021 | Project Organization               |                                  |
-| Mon 10/04/2021 | Dimensionality Reduction           |                                  |
-| Wed 10/06/2021 | Clustering                         |                                  |
-| Mon 10/11/2021 | Classification                     |                                  |
-| Wed 10/13/2021 | Model Validation and Selection     |                                  |
-| Mon 10/18/2021 | Publishing Results                 |                                  |
-| Wed 10/20/2021 | Shiny                              |                                  |
-| Mon 10/25/2021 | Docker Recap and Shiny             |                                  |
-| Wed 10/27/2021 | Introduction to Scientific Python  | [1][m11]                         |
-| Mon 11/01/2021 | SQL (and pandas, dplyr)            |                                  |
-| Wed 11/03/2021 | SKLearn Introduction               |                                  |
-| Mon 11/08/2021 | Training Neural Networks           |                                  |
-| Wed 11/10/2021 | Bokeh                              |                                  |
-| Mon 11/15/2021 | Browser Based Visualization w/ d3  |                                  |
-| Wed 11/17/2021 | Data Science Ethics                |                                  |
-| Mon 11/22/2021 | Panel Discussion                   |                                  |
-| Wed 11/24/2021 | Thanksgiving 🦃                    |                                  |
-| Mon 11/29/2021 | Feedback Day                       |                                  |
-| Wed 12/01/2021 | Class Presentations                |                                  |
-| ---            | ---                                | ---                              |
+| Date            | Course Title                       | Material                         |
+| ---             | ---                                | ---                              |
+| Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                  |
+| Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]          |
+| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]          |
+| Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] |
+| Wed 09/01/2021  | Labor Day 🍞🌹                     | [1][m12]                         |
+| Mon 09/06/2020  | git basics & github basics         | [1][m13]                         |
+| Wed 09/08/2021  | How to Think about Programming & R |                                  |
+| Mon 09/13/2021  | More R                             |                                  |
+| Wed 09/15/2021  | Tidy Data & GGPlot                 |                                  |
+| Mon 09/20/2021  | Make and Makefiles                 |                                  |
+| Wed 09/22/2021  | git concepts and practices         |                                  |
+| Mon 09/27/2021  | Project Organization               |                                  |
+| Wed 09/29/2021  | Dimensionality Reduction           |                                  |
+| Mon 10/04/2021  | Clustering                         |                                  |
+| Wed 10/06/2021  | Classification                     |                                  |
+| Mon 10/11/2021  | Model Validation and Selection     |                                  |
+| Wed 10/13/2021  | Publishing Results                 |                                  |
+| Mon 10/18/2021  | Shiny                              |                                  |
+| Wed 10/20/2021  | Docker Recap and Shiny             |                                  |
+| Mon 10/25/2021  | Introduction to Scientific Python  |                                  |
+| Wed 10/27/2021  | SQL (and pandas, dplyr)            | [1][m11]                         |
+| Mon 11/01/2021  | SKLearn Introduction               |                                  |
+| Wed 11/03/2021  | Training Neural Networks           |                                  |
+| Mon 11/08/2021  | Bokeh                              |                                  |
+| Wed 11/10/2021  | Browser Based Visualization w/ d3  |                                  |
+| Mon 11/15/2021  | Data Science Ethics                |                                  |
+| Wed 11/17/2021  | Panel Discussion                   |                                  |
+| Mon 11/22/2021  | Thanksgiving 🦃                    |                                  |
+| Wed 11/24/2021  | Feedback Day                       |                                  |
+| Mon 11/29/2021  | Class Presentations I              |                                  |
+| Wed 12/01/2021  | Class Presentations II             |                                  |
+| ---             | ---                                | ---                              |
 
 
 There is also a lab held every Tuesday. This will be generally
@@ -96,3 +96,5 @@ This will start an RStudio Instance.
 [m9]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/03-Docker/docker.org
 [m10]:https://learnxinyminutes.com/docs/docker/
 [m11]:https://tomaugspurger.github.io/dplry-pandas.html
+[m12]:https://en.wikipedia.org/wiki/Labor_Day
+[m13]:https://git-scm.com/book/en/v2
