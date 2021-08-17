@@ -1,3 +1,6 @@
+
+
+
 Intro and Demo
 Compute Resources & R 1
 Programming Languages via R (R 2) & Datasets
@@ -10,7 +13,7 @@ Tidy Data & ggplot 2
 Git Concepts and Practices
 Labor Day
 Interactive Staging and RMarkdown/Make
-Classification
+gClassification
 Dimensionality Reduction
 Parameter Fitting and Optim
 Model Validation

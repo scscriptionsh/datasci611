@@ -46,30 +46,14 @@ box_out 'Log into RStudio on port 8787'\
 
 fi
 
-if [ "$MODE" == "sshd" ];
+if [ "$MODE" == "term" ];
 then
-export R_PASS=$(strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo)
-docker run --rm \
- -p 8722:22 \
- -e PASSWORD=$R_PASS\
- -v $(echo $HOME/.ssh):/home/rstudio/.ssh\
- -v $(pwd):/home/rstudio/bios611\
- -d\
- -t 611\
- /usr/sbin/sshd -D > /tmp/docker-output
+x11docker --clipboard --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/xfce4-terminal
+fi
 
-export DOUT=$(cat /tmp/docker-output)
-
-echo $DOUT
-
-export CID=$(echo $DOUT | tail -1)
-
-box_out 'ssh into the machine on port 8722'\
-        'Username: rstudio'\
-        "Password: $R_PASS"\
-        'to kill the docker container'\
-        "run \"docker kill $CID\""
-
+if [ "$MODE" == "emacs" ];
+then
+x11docker --clipboard --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/emacs
 fi
 
 
