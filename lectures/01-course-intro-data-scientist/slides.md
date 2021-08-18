@@ -26,6 +26,8 @@ tools of the trade that host and enable your work.
 This course's job is to introduce those tools to you.
 </small>
 
+
+
 What is a Data Scientist?
 ========================================================
 
@@ -181,6 +183,5 @@ Absolutely critical:
    `docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/rstudio`
       
 </small>
-
 
 
