@@ -33,7 +33,7 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 
 | Date            | Course Title                       | Material                         | Homework                       |
 | ---             | ---                                | ---                              | ---                            |
-| Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                  | [hw1][hw1] due: Mon 08/23/2021 |
+| Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                  | [hw1][hw1] due: Wed 08/25/2021 |
 | Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]          |                                |
 | Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]          |                                |
 | Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] |                                |
