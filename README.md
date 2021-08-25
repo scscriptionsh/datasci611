@@ -98,5 +98,5 @@ This will start an RStudio Instance.
 [m11]:https://tomaugspurger.github.io/dplry-pandas.html
 [m12]:https://en.wikipedia.org/wiki/Labor_Day
 [m13]:https://git-scm.com/book/en/v2
-
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
+[hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
