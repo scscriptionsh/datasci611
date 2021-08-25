@@ -179,6 +179,18 @@ are running bash by simply typing:
 bash
 #+end_src
 
+** Types of Data
+
+1. Strings: an ordered collection of characters.
+2. Numbers
+
+On the shell things tend to pass back and forth between these types
+pretty fluently. This is bad design but we have to live with it.
+
+The most important thing to bear in mind is that when I say something
+is "just a string" I mean that the computer doesn't know what to do
+with it - its just purely data.
+
 ** REPL
 
 The shell is one example of a "read, eval, print" loop. It 
@@ -190,19 +202,21 @@ The shell is one example of a "read, eval, print" loop. It
 
 At its most superficial level this is how we interact with a shell:
 
-#+CAPTION: ls "lists" files 
-#+begin_src bash
+#+begin_src sh :results code :exports both 
 ls
 #+end_src
 
 #+RESULTS:
-| 4.png     |
-| unix.html |
-| unix.org  |
-| unix.pdf  |
-| unix.tex  |
-| z.pdf     |
-| z.png     |
+#+begin_src sh
+4.png
+my-commands
+unix.html
+unix.org
+unix.pdf
+unix.tex
+z.pdf
+z.png
+#+end_src
 
 Reading is trivial - the input you type is just a list of
 characters. Evaluation is where things get tricky:
@@ -235,20 +249,22 @@ passed no arguments to the command, so it executed it without any.
 
 *** Eg 1
 
-#+CAPTION: ls with arguments
-#+begin_src bash
+#+begin_src sh :results code :exports both 
 ls -t -l
 #+end_src
 
 #+RESULTS:
-| total      | 112 |       |       |       |     |    |       |           |
-| -rw-rw-r-- |   1 | toups | toups |  7424 | Jun | 17 | 13:24 | unix.org  |
-| -rw-rw-r-- |   1 | toups | toups | 11191 | Jun |  7 | 11:47 | unix.html |
-| -rw-rw-r-- |   1 | toups | toups |  7457 | Jun |  7 | 11:39 | z.png     |
-| -rw-rw-r-- |   1 | toups | toups | 53969 | Jun |  4 | 15:08 | unix.pdf  |
-| -rw-rw-r-- |   1 | toups | toups |  1483 | Jun |  4 | 15:08 | unix.tex  |
-| -rw-rw-r-- |   1 | toups | toups | 12641 | Jun |  4 | 15:01 | z.pdf     |
-| -rw-rw-r-- |   1 | toups | toups |  6534 | Jun |  4 | 14:38 | 4.png     |
+#+begin_src sh
+total 156
+-rw-rw-r-- 1 toups toups 30610 Aug 25 10:13 unix.org
+-rw-rw-r-- 1 toups toups 28591 Jun 17 20:30 unix.html
+drwxrwxr-x 2 toups toups  4096 Jun 17 20:00 my-commands
+-rw-rw-r-- 1 toups toups  7457 Jun  7 11:39 z.png
+-rw-rw-r-- 1 toups toups 53969 Jun  4 15:08 unix.pdf
+-rw-rw-r-- 1 toups toups  1483 Jun  4 15:08 unix.tex
+-rw-rw-r-- 1 toups toups 12641 Jun  4 15:01 z.pdf
+-rw-rw-r-- 1 toups toups  6534 Jun  4 14:38 4.png
+#+end_src
 
 In the above example, the shell reads "ls -t -l", splits it apart on
 the spaces like this: ~[ls, -t, -l]~ finds the ~ls~ command, and
@@ -263,8 +279,6 @@ about the files" (~-l~)
 #+begin_src bash
 #something_silly a b c
 #+end_src
-
-#+RESULTS:
 
 The above will generate an error like this:
 
@@ -282,13 +296,16 @@ Some background: apart from a few built in commands (the so-called
 somewhere on the hard drive.  The command ~which~ tells us where such
 commands qua files are located:
 
-#+CAPTION: the location of the which command
-#+begin_src bash
+
+#+begin_src sh :results code :exports both 
 which which
 #+end_src
 
 #+RESULTS:
-: /usr/bin/which
+#+begin_src sh
+/usr/bin/which
+#+end_src
+
 
 A good piece of jargon to have in your head here is that ~which~
 "resolves" to ~/usr/bin/which~.
@@ -308,12 +325,14 @@ work?
 They look  in something called an environment variable called
 PATH. You can see what an environment variable holds like this:
 
-#+begin_src bash
+#+begin_src sh :results code :exports both
 echo $PATH
 #+end_src
 
 #+RESULTS:
-: /home/toups/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+#+begin_src sh
+/usr/local/texlive/bin/x86_64-linux:/usr/lib/rstudio-server/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+#+end_src
 
 Apparently, ~PATH~ contains a series of locations on the filesystem
 separated by ":" characters. Bash searches this list in order to find
@@ -333,16 +352,15 @@ Let's create a directory
 
 And then let's create a directory:
 
-#+CAPTION: creating a directory
-#+begin_src bash
-mkdir my-commands
-readlink -f my-commands
+#+begin_src sh :results code :exports both
+  mkdir my-commands
+  readlink -f my-commands
 #+end_src
 
-.
-
 #+RESULTS:
-: /home/toups/work/courses/bios611/lectures/02-unix/my-commands
+#+begin_src sh
+/home/toups/work/courses/bios611/lectures/02-unix/my-commands
+#+end_src
 
 (your file will obviously be somewhere else on your personal computer).
 
@@ -356,27 +374,38 @@ echo hello world
 
 #+end_src
 
-First we need to tell our Unix that we want to give the file
-"hello.sh" permission to act as an executable:
+We can do this with this shell magic
 
-#+begin_src bash
-chmod u+x my-commands/hello.sh
+#+begin_src sh :results code :exports both
+
+  cat <<EOF > my-commands/hello.sh
+echo hello world
+EOF
+  
 #+end_src
 
 #+RESULTS:
+#+begin_src sh
+#+end_src
+
+
+First we need to tell our Unix that we want to give the file
+"hello.sh" permission to act as an executable:
+
+#+begin_src sh :results code :exports both
+chmod u+x my-commands/hello.sh
+#+end_src
+
 
 And then we can 
 
-
-#+CAPTION: Executing w/ a custom path
-#+NAME: ex_path_ex
-#+begin_src bash :results org replace :exports both
+#+begin_src sh :results code :exports both 
 PATH="$(readlink -f my-commands):$PATH"
 hello.sh
 #+end_src
 
-#+RESULTS: ex_path_ex
-#+begin_src org
+#+RESULTS:
+#+begin_src sh
 hello world
 #+end_src
 

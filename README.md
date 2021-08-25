@@ -35,7 +35,7 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | ---             | ---                                | ---                              | ---                            |
 | Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                  | [hw1][hw1] due: Wed 08/25/2021 |
 | Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]          | [hw2][hw2] due: Mon 08/30/2021 |
-| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]          |                                |
+| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]          | [hw3][hw3] due: Wed 09/01/2021                               |
 | Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] |                                |
 | Wed 09/01/2021  | Labor Day 🍞🌹                     | [1][m12]                         |                                |
 | Mon 09/06/2020  | git basics & github basics         | [1][m13]                         |                                |
