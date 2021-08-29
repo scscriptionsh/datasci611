@@ -1,6 +1,6 @@
-% Created 2021-06-04 Fri 15:08
+% Created 2021-08-25 Wed 13:53
 % Intended LaTeX compiler: pdflatex
-\documentclass[presentation]{beamer}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -14,50 +14,1041 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usetheme{default}
-\author{Vincent Toups}
+\author{toups}
 \date{\today}
 \title{}
 \hypersetup{
- pdfauthor={Vincent Toups},
+ pdfauthor={toups},
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+ pdfcreator={Emacs 26.3 (Org mode 9.3.6)}, 
  pdflang={English}}
 \begin{document}
 
-\begin{frame}{Outline}
 \tableofcontents
-\end{frame}
 
-\begin{frame}[label={sec:orgfc49186},fragile]{Why Learn Unix}
- Unix, generally in the form of Linux, but also commonly encountered as
+\section{Why Learn Unix}
+\label{sec:org8431c3b}
+
+Unix, generally in the form of Linux, but also commonly encountered as
 the underlying idiom of OSX and other important systems, powers the
 world.
 
 \begin{table}[htbp]
-\label{tab:org474670e}
+\label{tab:org6fc85a7}
 \centering
-\begin{tabular}{llrll}
+\begin{tabular}{llrrr}
 Source & Month & Year & Unix & Windows\\
 \hline
-W3Techs & May & 2021 & 75.3\% & 24.8\%\\
-W3Techs & Jan & 2020 & 71.0\% & 29.0\%\\
-W3Techs & Jan & 2018 & 66.8\% & 33.2\%\\
-W3Techs & Jan & 2016 & 67.7\% & 32.3\%\\
-W3Techs & Jan & 2014 & 66.8\% & 33.2\%\\
-W3Techs & Jan & 2012 & 63.5\% & 36.5\%\\
+W3Techs & May & 2021 & 75.3 & 24.8\\
+W3Techs & Jan & 2020 & 71.0 & 29.0\\
+W3Techs & Jan & 2018 & 66.8 & 33.2\\
+W3Techs & Jan & 2016 & 67.7 & 32.3\\
+W3Techs & Jan & 2014 & 66.8 & 33.2\\
+W3Techs & Jan & 2012 & 63.5 & 36.5\\
 \end{tabular}
 \end{table}
 
-
 \begin{verbatim}
 library(tidyverse);
-df <- tibble(x=runif(1000),y=runif(1000));
-print(ggplot(df, aes(x,y)) + geom_point());  
+print(ggplot(servers, aes(Year, Unix)) + geom_line());
 \end{verbatim}
 
-Some more shit.
-\end{frame}
+And the result: 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./z.png}
+\caption{\label{fig:orgac2913b}Percentage of servers running unix like operating systems over time.}
+\end{figure}
+
+Some very popular data science software (RStudio Server, Jupyter/Labs)
+runs on Linux (even if you access them via a web browser on any
+platform).
+
+This means that if you become a working data scientist or want to
+support yourself working with many data scientific tools as a
+researcher, some knowledge of Unix will be useful to you.
+
+If that weren't enough, the true key to portable data science is
+Docker. It is true that you can run Docker in Windows but the
+configuration of docker containers requires a good working knowledge
+of the Unix idiom, since most containers are Linux based.
+
+For this book, Linux based Docker Containers will be the norm. For
+Windows users I highly recommend using the instructions located \href{https://docs.docker.com/docker-for-windows/wsl/}{here}:
+
+\begin{verbatim}
+https://docs.docker.com/docker-for-windows/wsl/
+\end{verbatim}
+
+to set up both Windows Subsystem for Linux (which will allow you to
+run a Linux environment natively on Windows) and setting up the
+appropriate Docker install on top of it. 
+
+Mac users can use the standard Docker install. Linux users will
+typically know what they want to do, but the short version is install
+Docker via the instructions appropriate to your distribution and make
+sure you are in the docker group. 
+
+Will will discuss Docker in greater detail in later chapters.
+
+\section{Introduction to Computers}
+\label{sec:org6a25a62}
+
+If you were born after 1990 or so there is a good chance you've never
+seen a text-based shell. Modern computers of the most common variety
+(smartphones) do an even more aggressive (or successful, depending on
+your attitude and needs) job of protecting you from the underlying
+operating system. Thus it is worth a brief conceptual review:
+
+A computer, even a smartphone, is a machine with a processor, which
+performs mathematical operations on data, memory, which is volatile
+storage (it will be erased in the event that the computer is turned
+off) which forms the short term memory of the machine, and
+non-volatile storage (disks, solid state memory, even, sometimes
+still, spinning rust) which is persistant data store which survives
+even when the machine is off.
+
+At the most basic level, a computer reads data from a disk into local
+memory and its processor reads a program out of that memory, executing
+instructions which modify the data in memory and/or write it back to
+long term storage.
+
+In the early days of computing this was the conceptual world the
+compute programmer inhabited as well: interacting with a computer was
+the process of telling it, in great detail, which memory to access,
+what to do with it, and how to store or output the results.
+
+Since those days the trend has been towards even greater levels of
+abstraction.  Now, a typical smartphone "protects" the user from most
+of these details: you never think explicitly, about the distinctions
+between storage and memory or about the details of how programs work.
+
+\section{Introduction to Unix Shells}
+\label{sec:org72de1f5}
+
+We will now dive much deeper into the computer than you may have
+before. What may be surprising about this jump is just how much more
+water there is beneath us still: Unix Shells, while providing what
+must seem like shockingly low level access to the workings of a
+machine compared to modern graphical user interfaces, still afford us
+an almost entirely abstract representation of our computer, albiet one
+which has traded implicitness for explicitness to a great degree.
+
+A shell (in this context) is a textual interface between you and the
+services provided by your operating system. From the shell we can do
+all the things we ordinarily do from a graphical user interface:
+inspect files, launch programs, organize data, poke and peek at
+various system resources and settings. We do these things by executing
+commands.
+
+Before we dive into the details you might ask yourself: why would we
+\uline{want} to have such low level access? It is true, these text-mode
+shells impose a substantial cognitive burden on the user, particularly
+at first. What do we purchase with that additional cognitive energy?
+
+\begin{enumerate}
+\item control - the shell gives us enormous, fine grained, control over
+the resources the computer gives us.
+\item reproducibility - because all the actions we might undertake with
+the shell are represented as text, we can easily copy and paste
+them into a file and re-run them.
+\end{enumerate}
+
+\subsection{Running a Shell}
+\label{sec:org3787738}
+
+If you are on Linux or OSX you will want to run your Terminal
+application. If you are working on a Windows machine you may want to
+install Git Bash, Cygwin, or install Ubuntu or another Linux variant
+in a Virtual Machine or spin up an Ubuntu container in Docker.
+
+\subsection{Control}
+\label{sec:org9c00a9b}
+
+The unix Shell is loosely organized under the banner of "The Unix
+Philosophy". Whereas graphical user interfaces tend to become
+monoliths from which it is difficult to escape, the Unix Philosophy
+suggests that tools (programs) should:
+
+\begin{enumerate}
+\item do one thing
+\item do it well
+\end{enumerate}
+
+This philosophy is enabled by a very simple organizational principal:
+almost everything in Unix is represented as a file. All programs
+operate on files, typically by reading an input file and producing an
+output file. More complex outcomes are acheived by stringing many
+small programs together, each operating on the output of the previous
+until a desired result occurs. Text based files are very commonly the
+inputs and outputs of these processes.
+
+\subsection{Reproducibility}
+\label{sec:org503ee8a}
+
+Unix Shells are text based interfaces. While it can seem onerous,
+initially, to have to laborously type out each desired command to the
+shell, doing so is very traceable. After we understand what we want to
+do by interacting with a shell directly, we can copy and paste the
+commands we've concocted into a "shell script" and re-execute
+them. Repeatative tasks can be trialed a few times and then run over
+and over again and gradually refined. 
+
+When you combine this fact with tools like git, which make it easy to
+record the history of a file over time, you have system for ensuring
+that what you do is recorded for posterity and reproducible. 
+
+Graphical User Interfaces, in contrast, introduce many non-meaningful
+degrees of freedom (for instance, the precise x, y coordinate of a
+folder on your desktop) which make it difficult to automate workflows
+for them, even when such tools exist. 
+
+Learning to use the Shell will teach you a powerful way of simple and
+easily orchestrating work your computer does.
+
+\section{Shell Concepts}
+\label{sec:orgc03559a}
+
+\subsection{Many Shells}
+\label{sec:orgcab7262}
+
+Unix supports \uline{many} different shells which behave
+similarly. Throughout this course I will be assuming \href{https://en.wikipedia.org/wiki/Bash\_(Unix\_shell)}{bash} because it
+is the most common. I'll be trying to write bash code which will run
+in most other shells (most notably zsh, which is recently the default
+OSX shell) for simplicity. But if you run into an issue, make sure you
+are running bash by simply typing:
+
+\begin{verbatim}
+bash
+\end{verbatim}
+\captionof{figure}{how to start bash}
+
+\subsection{Types of Data}
+\label{sec:orgf15cb6b}
+
+\begin{enumerate}
+\item Strings: an ordered collection of characters.
+\item Numbers
+\end{enumerate}
+
+On the shell things tend to pass back and forth between these types
+pretty fluently. This is bad design but we have to live with it.
+
+The most important thing to bear in mind is that when I say something
+is "just a string" I mean that the computer doesn't know what to do
+with it - its just purely data.
+
+\subsection{REPL}
+\label{sec:org1908a77}
+
+The shell is one example of a "read, eval, print" loop. It 
+
+\begin{enumerate}
+\item reads an input (typically a line of text)
+\item evaluates it (turning it into an action or side effect or value of
+some sort)
+\item and then prints the result (or nothing, if a side effect)
+\end{enumerate}
+
+At its most superficial level this is how we interact with a shell:
+
+\begin{verbatim}
+ls
+\end{verbatim}
+
+\begin{verbatim}
+4.png
+experiment.sh
+homework.md
+my-commands
+unix.html
+unix.org
+unix.pdf
+unix.tex
+z.pdf
+z.png
+\end{verbatim}
+
+Reading is trivial - the input you type is just a list of
+characters. Evaluation is where things get tricky:
+
+\subsection{Evaluation}
+\label{sec:org510e2ac}
+
+A theme of this course is that \uline{all programming languages} do more or
+less the same thing: they translate text into actions. If you develop
+a good mental model of that process then you \uline{understand} the
+language.
+
+Given the ubiquity of Bash, its evaluation model is surprisingly
+complicated. Luckily for us, we will be concerned with its simplest
+aspects.
+
+Superficially and in the simplest case, bash does the following when
+you type a command:
+
+\begin{enumerate}
+\item the text is split into tokens on the spaces
+\item the first token is assumed to be a command you want to
+execute. Bash tries to find a file which implements this command by
+looking it up on the "PATH" (of which more later).
+\item the subsequent tokens are passed to the command as
+"arguments". Arguments are additional pieces of information the
+command may want or need to change the way it executes.
+\end{enumerate}
+
+So when we typed "ls" above, bash read this as us wanting to run the
+command "ls" which it found on our hard drive. Then it saw that we
+passed no arguments to the command, so it executed it without any.
+
+\subsubsection{Eg 1}
+\label{sec:org1134eef}
+
+\begin{verbatim}
+ls -t -l
+\end{verbatim}
+
+\begin{verbatim}
+total 196
+-rw-r--r-- 1 toups toups   806 Aug 25 11:08 homework.md
+-rw-r--r-- 1 toups toups   130 Aug 25 10:53 experiment.sh
+-rw-rw-r-- 1 toups toups 59640 Aug 25 10:35 unix.html
+-rw-rw-r-- 1 toups toups 30646 Aug 25 10:34 unix.org
+drwxrwxr-x 2 toups toups  4096 Jun 17 20:00 my-commands
+-rw-rw-r-- 1 toups toups  7457 Jun  7 11:39 z.png
+-rw-rw-r-- 1 toups toups 53969 Jun  4 15:08 unix.pdf
+-rw-rw-r-- 1 toups toups  1483 Jun  4 15:08 unix.tex
+-rw-rw-r-- 1 toups toups 12641 Jun  4 15:01 z.pdf
+-rw-rw-r-- 1 toups toups  6534 Jun  4 14:38 4.png
+\end{verbatim}
+
+In the above example, the shell reads "ls -t -l", splits it apart on
+the spaces like this: \texttt{[ls, -t, -l]} finds the \texttt{ls} command, and
+passes the \texttt{-t} and \texttt{-l} arguments to it. Note that these arguments
+are just passed as strings to the \texttt{ls} command. It is up to \texttt{ls} to
+decide what, if anything, they mean. In this case, they mean "sort the
+file list by modification time" (\texttt{-t}) and "print out more information
+about the files" (\texttt{-l})
+
+\subsubsection{Eg 2}
+\label{sec:org6bf3b0c}
+
+\begin{verbatim}
+#something_silly a b c
+\end{verbatim}
+
+The above will generate an error like this:
+
+\begin{verbatim}
+bash: line 1: something_silly: command not found
+\end{verbatim}
+
+\subsection{The PATH and other environment variables}
+\label{sec:org0d07484}
+
+When a string is evaluated the shell must find what command we want to
+run. How does it do so? 
+
+Some background: apart from a few built in commands (the so-called
+\href{https://www.gnu.org/software/bash/manual/html\_node/Bash-Builtins.html}{builtins}) commands in shell scripts are just executable files stored
+somewhere on the hard drive.  The command \texttt{which} tells us where such
+commands qua files are located:
+
+
+\begin{verbatim}
+which which
+\end{verbatim}
+
+\begin{verbatim}
+/usr/bin/which
+\end{verbatim}
+
+
+A good piece of jargon to have in your head here is that \texttt{which}
+"resolves" to \texttt{/usr/bin/which}.
+
+If you haven't seen unix style file locations, note:
+
+\begin{enumerate}
+\item on a unix system \uline{every file} lives beneath the so-called "root" of
+the file system, called \texttt{/}.
+\item anything between two \texttt{/} (called \uline{path separators}) is a
+\_directory.
+\item the last term may be a directory or a file. In this case, it is the
+executable file which implements the \texttt{which} commands.
+\end{enumerate}
+
+\texttt{which} resolves in the same way that Bash resolves, but how does that
+work?
+
+They look  in something called an environment variable called
+PATH. You can see what an environment variable holds like this:
+
+\begin{verbatim}
+echo $PATH
+\end{verbatim}
+
+\begin{verbatim}
+/usr/local/texlive/bin/x86_64-linux:/usr/lib/rstudio-server/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+\end{verbatim}
+
+Apparently, \texttt{PATH} contains a series of locations on the filesystem
+separated by ":" characters. Bash searches this list in order to find
+executables during command evaluation.
+
+So in the case of \texttt{which} it looks in 
+
+\begin{enumerate}
+\item \texttt{/home/toups/.local/bin} (no hit)
+\item \texttt{/usr/local/local/sbin} (no hit)
+\item \texttt{/usr/bin} (hit!)
+\end{enumerate}
+
+By modifying this environment variable we can modify the way bash
+looks up commands. But how would we create our own command to test out
+this ability?
+
+Let's create a directory
+
+And then let's create a directory:
+
+\begin{verbatim}
+mkdir my-commands
+readlink -f my-commands
+\end{verbatim}
+
+\begin{verbatim}
+/home/toups/work/courses/bios611/lectures/02-unix/my-commands
+\end{verbatim}
+
+(your file will obviously be somewhere else on your personal computer).
+
+And now lets create the file
+
+\begin{verbatim}
+#!/bin/bash
+
+echo hello world
+
+\end{verbatim}
+\captionof{figure}{my-commands/hello.sh}
+
+We can do this with this shell magic
+
+\begin{verbatim}
+
+  cat <<EOF > my-commands/hello.sh
+echo hello world
+EOF
+
+\end{verbatim}
+
+First we need to tell our Unix that we want to give the file
+"hello.sh" permission to act as an executable:
+
+\begin{verbatim}
+chmod u+x my-commands/hello.sh
+\end{verbatim}
+
+And then we can 
+
+\begin{verbatim}
+PATH="$(readlink -f my-commands):$PATH"
+hello.sh
+\end{verbatim}
+
+\begin{verbatim}
+hello world
+\end{verbatim}
+
+If some of the above steps are a little confusing to you, that is ok -
+we're not going for a full understanding of working on the command
+line: we want just enough to get around.
+
+We will develop more as we go.
+
+The PATH isn't the only environment variable. What variables are
+defined will vary a lot by system and situation, but you can see a
+list of all of them by saying:
+
+\begin{verbatim}
+env | head
+\end{verbatim}
+\captionof{figure}{\label{orgf22290c}the environment}
+
+\begin{verbatim}
+WINDOWID=41943043
+COLORTERM=truecolor
+R_HOME=/usr/local/lib/R
+HOSTNAME=15eeeb8175c0
+PWD=/home/toups/work/courses/bios611/lectures/02-unix
+XDG_SESSION_TYPE=x11
+_=/usr/bin/env
+XAUTHORITY=/x11docker/Xauthority.client
+TZ=UTC+04
+container=docker
+\end{verbatim}
+
+\subsection{Variables}
+\label{sec:orgd1e769e}
+
+You can declare your own variables or modify those that already exist
+(assuming they aren't read only).
+
+The easiest way to declare a variable is:
+
+\begin{verbatim}
+VARNAME=somevalue
+echo $VARNAME
+\end{verbatim}
+\captionof{figure}{\label{org1ecfa1b}declaring a variable}
+
+\begin{verbatim}
+somevalue
+\end{verbatim}
+
+Note that when we declare a variable we do \uline{not} precede the name with
+a \texttt{\$}. The dollar sign is what tells Bash to look the variable value
+up when we want to \uline{use} it somewhere. 
+
+With variable definition and usage rules in our head, we can now
+extend our mental model of bash evaluation.
+
+\begin{enumerate}
+\item for every line in a script
+a. perform variable substitution (wherever we see a \$NAME look up
+the value and insert it into the line)
+b. if the line is a command, do command evaluation
+   otherwise do variable assignment
+\end{enumerate}
+
+The only really important remaining ingredient is non-variable
+substitution.
+
+Consider again the following line from the above example:
+
+\begin{verbatim}
+PATH="$(readlink -f my-commands):$PATH"
+\end{verbatim}
+\captionof{figure}{\label{orgc5d6259}Substitution}
+
+Ordinarily no \uline{evaluation} occurs on the right hand side of an
+assignment. The material there is just treated as a string (or a
+number, if it happens to be a number). But by using a \texttt{\$(...)}
+construct we can perform a substitution: the interior of the \texttt{\$(...)}
+is evaluated like a command and the result is inserted into the line
+where it appears.
+
+We can use this to compose together multiple commands. Consider that
+\texttt{ls -t | head -n 1} will return the most recently modified file. \texttt{head
+<filename>} will print out the first few lines of a file. If we want
+to print the first few lines of the most recently modified file:
+
+\begin{verbatim}
+head $(ls -t | head -n 1)
+\end{verbatim}
+\captionof{figure}{\label{org665867b}combining commands with substitution}
+
+\begin{verbatim}
+For this and any homework assignment feel free to actually type code
+in and run it.
+
+1. Suppose you run this code:
+
+```
+alias hello="echo hello world"
+hello
+```
+
+\end{verbatim}
+
+(The most recently modified file is this document!).
+
+\subsection{stdin, stdout, stderr and pipes}
+\label{sec:org7be4f7d}
+
+We have one more important element of the shell to learn. Recall that
+shell commands communicate by reading input from somewhere and writing
+it out to a new location. Most often the place they read from is the
+"standard input" (abbreviated stdin). And the most common place they
+output things is the "standard output". If there is an error of some
+kind most processes report this on another file called the "standard
+error."
+
+In the above example, when we used the command \texttt{head} we passed a
+filename in as a command line argument and the result was printed to
+the standard output.
+
+We can also redirect the standard output to a file:
+
+\begin{verbatim}
+ls -t > files-in-order
+head files-in-order -n 3
+rm files-in-order
+\end{verbatim}
+\captionof{figure}{\label{orgc31039c}Redirecting the standard output.}
+
+\begin{verbatim}
+files-in-order
+homework.md
+experiment.sh
+\end{verbatim}
+
+The syntax \texttt{<COMMAND> > file} sends the standard output to \texttt{file}.
+
+But often creating a temporary file is a hassle if we just want to
+apply many commands in sequence. Thus we can also "pipe" one command's
+output to another's input. In that case the second command reads from
+the output of the previous \uline{instead} of from the stdin file.
+
+\begin{verbatim}
+ls -t | head -n 3
+\end{verbatim}
+\captionof{figure}{\label{org1f3d987}Piping output into input.}
+
+\begin{verbatim}
+homework.md
+experiment.sh
+unix.html
+\end{verbatim}
+
+The \texttt{|} (called a "pipe") means: take the output from the first item
+and send it to the second. We can pipe many times in a row.
+
+\begin{verbatim}
+ls -t | head -n 3 | grep y
+\end{verbatim}
+\captionof{figure}{\label{org127d3a7}A chain of pipes.}
+
+The output of \texttt{ls} goes to \texttt{head} and the output of \texttt{head} goes to
+\texttt{grep}. Some bash scripts are little more than a long series of
+pipes. Learning to program this way is very enlightening and we'll see
+a similar "chain of operations" approach in R and Python.
+
+\subsection{Conventions to bear in mind}
+\label{sec:org78bfd1a}
+
+The shell itself doesn't enforce any convention whatsoever on the
+arguments passed to a command. Each space separated collection of
+characters counts as an argument and a command may interpret them
+in any way it wishes.
+
+However, there are some conventions that you'll typically see.
+
+\subsubsection{The sub-command pattern}
+\label{sec:orgf8ad249}
+
+Many of the tools we'll use in this course will use the
+sub-command pattern. In this pattern a command will implement a
+set of sub-commands. These are typically invoked by mentioning the
+command and then the sub-command without any prefixes. For
+example:
+
+\begin{verbatim}
+git status
+\end{verbatim}
+
+Invokes the \texttt{status} sub-command of the command
+\texttt{git}. Sub-commands can and often do take additional arguments
+which are treated just like any other shell argument.
+
+\begin{verbatim}
+git diff --stat
+\end{verbatim}
+
+In this case the \texttt{-{}-stat} is a command line switch, something
+which we recognize as modifying the behavior of the command.
+
+\subsubsection{short and long options}
+\label{sec:orge8b2472}
+
+Command line arguments are also given in the form of short and
+long options.
+
+A short option is written as \texttt{-<single-letter>} and a long option
+is written \texttt{-{}-<option-name>}. It is often the case (but not
+always) that a short option has a long option which represents the
+same thing and vice versa. For example
+
+\begin{verbatim}
+ls -a
+\end{verbatim}
+
+and
+
+\begin{verbatim}
+ls --all 
+\end{verbatim}
+
+mean the same thing. Options can take inputs, which just means one
+or more tokens after the option without \texttt{-} or \texttt{-{}-} in front of
+them.
+
+For instance:
+
+\begin{verbatim}
+head -n 10 hello.txt
+\end{verbatim}
+
+In the above example "10" is an argument to the \texttt{-n} option. In
+this case it tells \texttt{head} that we want to print the first 10 lines
+of the file \texttt{hello.txt}.
+
+It is often the case that any arguments at the end of the argument
+list not preceeded by options that take arguments are files that
+the command operates on or otherwise creates or modifies.
+
+\begin{verbatim}
+ln -s hello.txt link-to-hello.txt
+\end{verbatim}
+
+Here \texttt{-s} is a switch which takes no arguments and the last two
+arguments to the command are interpreted as the source and target
+of the \texttt{ln} command itself.
+
+\subsubsection{Warning}
+\label{sec:org84e1651}
+
+Not every shell command will follow these conventions. In
+particular, \texttt{find} lets you specify \emph{long} arguments with a single
+\texttt{-} in front of them. But keeping these conventions in mind will
+help you understand what is happening on the shell.
+
+\subsection{Important Commands}
+\label{sec:orgb400de6}
+
+\subsubsection{man}
+\label{sec:org201c667}
+
+Short for "manual" - given a command name it returns information about
+using that command. Some commands are not documented this way but
+almost all the most common ones are.
+
+\begin{verbatim}
+man bash | head -n 10
+\end{verbatim}
+\captionof{figure}{\label{org3c15d3d}Using man.}
+
+\begin{verbatim}
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, including manpages, you can run the 'unminimize'
+command. You will still need to ensure the 'man-db' package is installed.
+\end{verbatim}
+
+I consult a man page at least once a day while working so don't be
+afraid to lean on this command.
+
+\subsubsection{apropos}
+\label{sec:orga7980be}
+
+\texttt{apropos} takes a keyword and returns a list of commands that might be
+related. Also handy if you are new to a system, although these days
+google is probably more effective. Sometimes handy in a pinch, though.
+
+\begin{verbatim}
+apropos lisp
+\end{verbatim}
+\captionof{figure}{\label{orge684d56}Using apropos.}
+
+\subsubsection{cd \& pwd}
+\label{sec:org1c1872e}
+
+\texttt{cd} changes the current working directory and \texttt{pwd} tells you the
+current working directory.
+
+\begin{verbatim}
+OLD_DIR=$(pwd)
+cd /tmp # the temporary directory on a Linux machine.
+touch test # touch just creates an empty file or updates a file's modification time.
+cd $OLD_DIR
+\end{verbatim}
+\captionof{figure}{\label{orga65b837}cd example.}
+
+Also interesting: \texttt{pushd} and \texttt{popd}.
+
+\subsubsection{find}
+\label{sec:org5e3ae75}
+
+\texttt{find} lets us search for files in a variety of ways. A simple
+example:
+
+\begin{verbatim}
+find . -iname "*.png"
+\end{verbatim}
+\captionof{figure}{\label{org491366f}Finding all R files beneath the pwd.}
+
+\begin{verbatim}
+./4.png
+./z.png
+\end{verbatim}
+
+\texttt{find} is very powerful and also a little weird in places. But it is
+so useful that having a basic working knowledge of the command will be
+very much worth it.
+
+\subsubsection{grep}
+\label{sec:org1f25d5e}
+
+\texttt{grep} lets you search for things \uline{in} files:
+
+\begin{verbatim}
+grep -n hello unix.*
+\end{verbatim}
+\captionof{figure}{\label{org7be74f4}Using grep.}
+
+\begin{verbatim}
+unix.html:895:<label class="org-src-name"><span class="listing-number">Listing 2: </span>my-commands/hello.sh</label><pre class="src src-bash"><span style="color: #cd853f;">#</span><span style="color: #cd853f;">!/bin/</span><span style="color: #20b2aa; font-weight: bold;">bash</span>
+unix.html:897:<span style="color: #76ee00;">echo</span> hello world
+unix.html:908:  cat &lt;&lt;EOF &gt; my-commands/hello.sh
+unix.html:909:<span style="color: #ffff00; font-weight: bold;">echo hello world</span>
+unix.html:923:"hello.sh" permission to act as an executable:
+unix.html:927:<pre class="src src-sh">chmod u+x my-commands/hello.sh
+unix.html:943:hello.sh
+unix.html:948:<pre class="src src-sh">hello world
+unix.html:1259:<pre class="src src-bash">head -n 10 hello.txt
+unix.html:1266:of the file <code>hello.txt</code>.
+unix.html:1276:<pre class="src src-bash">ln -s hello.txt link-to-hello.txt
+unix.html:1418:<label class="org-src-name"><span class="listing-number">Listing 14: </span>Using grep.</label><pre class="src src-bash" id="orgf4537c2">grep -n hello unix.*
+unix.html:1423:<pre class="src src-org">unix.html:887:&lt;label class="org-src-name"&gt;&lt;span class="listing-number"&gt;Listing 4: &lt;/span&gt;my-commands/hello.sh&lt;/label&gt;&lt;pre class="src src-bash"&gt;&lt;span style="color: #cd853f;"&gt;#&lt;/span&gt;&lt;span style="color: #cd853f;"&gt;!/bin/&lt;/span&gt;&lt;span style="color: #20b2aa; font-weight: bold;"&gt;bash&lt;/span&gt;
+unix.html:1424:unix.html:889:&lt;span style="color: #76ee00;"&gt;echo&lt;/span&gt; hello world
+unix.html:1425:unix.html:896:"hello.sh" permission to act as an executable:
+unix.html:1426:unix.html:900:&lt;pre class="src src-bash"&gt;chmod u+x my-commands/hello.sh
+unix.html:1427:unix.html:911:hello.sh
+unix.html:1428:unix.html:916:&lt;pre class="src src-org"&gt;hello world
+unix.html:1429:unix.html:1227:&lt;pre class="src src-bash"&gt;head -n 10 hello.txt
+unix.html:1430:unix.html:1234:of the file &lt;code&gt;hello.txt&lt;/code&gt;.
+unix.html:1431:unix.html:1244:&lt;pre class="src src-bash"&gt;ln -s hello.txt link-to-hello.txt
+unix.html:1432:unix.html:1386:&lt;label class="org-src-name"&gt;&lt;span class="listing-number"&gt;Listing 17: &lt;/span&gt;Using grep.&lt;/label&gt;&lt;pre class="src src-bash" id="org832d784"&gt;grep -n hello unix.*
+unix.html:1433:unix.html:1391:&lt;pre class="src src-org"&gt;unix.html:776:&amp;lt;label class="org-src-name"&amp;gt;&amp;lt;span class="listing-number"&amp;gt;Listing 6: &amp;lt;/span&amp;gt;my-commands/hello.sh&amp;lt;/label&amp;gt;&amp;lt;pre class="src src-bash"&amp;gt;&amp;lt;span style="color: #7f7f7f;"&amp;gt;#&amp;lt;/span&amp;gt;&amp;lt;span style="color: #7f7f7f;"&amp;gt;!/bin/&amp;lt;/span&amp;gt;&amp;lt;span style="color: #1c86ee;"&amp;gt;bash&amp;lt;/span&amp;gt;
+unix.html:1434:unix.html:1392:unix.html:778:&amp;lt;span style="color: #cd6600;"&amp;gt;echo&amp;lt;/span&amp;gt; hello world
+unix.html:1435:unix.html:1393:unix.html:785:"hello.sh" permission to act as an executable:
+unix.html:1436:unix.html:1394:unix.html:789:&amp;lt;pre class="src src-bash"&amp;gt;chmod u+x my-commands/hello.sh
+unix.html:1437:unix.html:1395:unix.html:799:hello.sh
+unix.html:1438:unix.html:1396:unix.html:808:hello world
+unix.html:1439:unix.html:1397:unix.org:365:#+CAPTION: my-commands/hello.sh
+unix.html:1440:unix.html:1398:unix.org:369:echo hello world
+unix.html:1441:unix.html:1399:unix.org:374:"hello.sh" permission to act as an executable:
+unix.html:1442:unix.html:1400:unix.org:377:chmod u+x my-commands/hello.sh
+unix.html:1443:unix.html:1401:unix.org:389:hello.sh
+unix.html:1444:unix.html:1402:unix.org:394:hello world
+unix.html:1445:unix.html:1403:unix.org:628:      head -n 10 hello.txt
+unix.html:1446:unix.html:1404:unix.org:633:    of the file &lt;span style="color: #b3b3b3;"&gt;~hello.txt~&lt;/span&gt;.
+unix.html:1447:unix.html:1405:unix.org:640:      ln -s hello.txt link-to-hello.txt
+unix.html:1448:unix.html:1406:unix.org:749:grep -n hello unix.*
+unix.html:1449:unix.html:1407:unix.org:754:unix.html:776:&amp;lt;label class="org-src-name"&amp;gt;&amp;lt;span class="listing-number"&amp;gt;Listing 6: &amp;lt;/span&amp;gt;my-commands/hello.sh&amp;lt;/label&amp;gt;&amp;lt;pre class="src src-bash"&amp;gt;&amp;lt;span style="color: #7f7f7f;"&amp;gt;#&amp;lt;/span&amp;gt;&amp;lt;span style="color: #7f7f7f;"&amp;gt;!/bin/&amp;lt;/span&amp;gt;&amp;lt;span style="color: #1c86ee;"&amp;gt;bash&amp;lt;/span&amp;gt;
+unix.html:1450:unix.html:1408:unix.org:755:unix.html:778:&amp;lt;span style="color: #cd6600;"&amp;gt;echo&amp;lt;/span&amp;gt; hello world
+unix.html:1451:unix.html:1409:unix.org:756:unix.html:785:"hello.sh" permission to act as an executable:
+unix.html:1452:unix.html:1410:unix.org:757:unix.html:789:&amp;lt;pre class="src src-bash"&amp;gt;chmod u+x my-commands/hello.sh
+unix.html:1453:unix.html:1411:unix.org:758:unix.html:799:hello.sh
+unix.html:1454:unix.html:1412:unix.org:759:unix.html:808:hello world
+unix.html:1455:unix.html:1413:unix.org:760:unix.org:344:#+CAPTION: my-commands/hello.sh
+unix.html:1456:unix.html:1414:unix.org:761:unix.org:348:echo hello world
+unix.html:1457:unix.html:1415:unix.org:762:unix.org:353:"hello.sh" permission to act as an executable:
+unix.html:1458:unix.html:1416:unix.org:763:unix.org:356:chmod u+x my-commands/hello.sh
+unix.html:1459:unix.html:1417:unix.org:764:unix.org:368:hello.sh
+unix.html:1460:unix.html:1418:unix.org:765:unix.org:373:hello world
+unix.html:1461:unix.html:1419:unix.org:766:unix.org:643:grep hello 
+unix.html:1462:unix.org:369:#+CAPTION: my-commands/hello.sh
+unix.html:1463:unix.org:373:echo hello world
+unix.html:1464:unix.org:381:  cat &lt;&lt;EOF &gt; my-commands/hello.sh
+unix.html:1465:unix.org:382:echo hello world
+unix.html:1466:unix.org:393:"hello.sh" permission to act as an executable:
+unix.html:1467:unix.org:396:chmod u+x my-commands/hello.sh
+unix.html:1468:unix.org:404:hello.sh
+unix.html:1469:unix.org:409:hello world
+unix.html:1470:unix.org:643:      head -n 10 hello.txt
+unix.html:1471:unix.org:648:    of the file <span style="color: #b3b3b3;">~hello.txt~</span>.
+unix.html:1472:unix.org:655:      ln -s hello.txt link-to-hello.txt
+unix.html:1473:unix.org:764:grep -n hello unix.*
+unix.html:1474:unix.org:769:unix.html:776:&lt;label class="org-src-name"&gt;&lt;span class="listing-number"&gt;Listing 6: &lt;/span&gt;my-commands/hello.sh&lt;/label&gt;&lt;pre class="src src-bash"&gt;&lt;span style="color: #7f7f7f;"&gt;#&lt;/span&gt;&lt;span style="color: #7f7f7f;"&gt;!/bin/&lt;/span&gt;&lt;span style="color: #1c86ee;"&gt;bash&lt;/span&gt;
+unix.html:1475:unix.org:770:unix.html:778:&lt;span style="color: #cd6600;"&gt;echo&lt;/span&gt; hello world
+unix.html:1476:unix.org:771:unix.html:785:"hello.sh" permission to act as an executable:
+unix.html:1477:unix.org:772:unix.html:789:&lt;pre class="src src-bash"&gt;chmod u+x my-commands/hello.sh
+unix.html:1478:unix.org:773:unix.html:799:hello.sh
+unix.html:1479:unix.org:774:unix.html:808:hello world
+unix.html:1480:unix.org:775:unix.org:344:#+CAPTION: my-commands/hello.sh
+unix.html:1481:unix.org:776:unix.org:348:echo hello world
+unix.html:1482:unix.org:777:unix.org:353:"hello.sh" permission to act as an executable:
+unix.html:1483:unix.org:778:unix.org:356:chmod u+x my-commands/hello.sh
+unix.html:1484:unix.org:779:unix.org:368:hello.sh
+unix.html:1485:unix.org:780:unix.org:373:hello world
+unix.html:1486:unix.org:781:unix.org:643:grep hello 
+unix.org:369:#+CAPTION: my-commands/hello.sh
+unix.org:373:echo hello world
+unix.org:381:  cat <<EOF > my-commands/hello.sh
+unix.org:382:echo hello world
+unix.org:393:"hello.sh" permission to act as an executable:
+unix.org:396:chmod u+x my-commands/hello.sh
+unix.org:404:hello.sh
+unix.org:409:hello world
+unix.org:643:      head -n 10 hello.txt
+unix.org:648:    of the file ~hello.txt~.
+unix.org:655:      ln -s hello.txt link-to-hello.txt
+unix.org:764:grep -n hello unix.*
+unix.org:769:unix.html:776:<label class="org-src-name"><span class="listing-number">Listing 6: </span>my-commands/hello.sh</label><pre class="src src-bash"><span style="color: #7f7f7f;">#</span><span style="color: #7f7f7f;">!/bin/</span><span style="color: #1c86ee;">bash</span>
+unix.org:770:unix.html:778:<span style="color: #cd6600;">echo</span> hello world
+unix.org:771:unix.html:785:"hello.sh" permission to act as an executable:
+unix.org:772:unix.html:789:<pre class="src src-bash">chmod u+x my-commands/hello.sh
+unix.org:773:unix.html:799:hello.sh
+unix.org:774:unix.html:808:hello world
+unix.org:775:unix.org:344:#+CAPTION: my-commands/hello.sh
+unix.org:776:unix.org:348:echo hello world
+unix.org:777:unix.org:353:"hello.sh" permission to act as an executable:
+unix.org:778:unix.org:356:chmod u+x my-commands/hello.sh
+unix.org:779:unix.org:368:hello.sh
+unix.org:780:unix.org:373:hello world
+unix.org:781:unix.org:643:grep hello 
+\end{verbatim}
+
+Given a string and a list of files as arguments, grep prints out the
+file and line number (with the right command line switch \texttt{-n}) where
+the string occurs.
+
+\subsubsection{xargs}
+\label{sec:org75809f3}
+
+\texttt{xargs} deals its inputs to a command. The use case is when we want
+the output of one command to go to the command line of a second
+command, as opposed to going to the standard input of the second
+command.
+
+If that isn't super clear, don't worry about it. I introduce \texttt{xargs}
+here because I want to show one very useful use case:
+
+Suppose I want to find everywhere a particular function is mentioned
+in all the R files in a project. Then I say:
+
+\begin{verbatim}
+find . -iname "*.R" | xargs grep read_csv
+\end{verbatim}
+\captionof{figure}{\label{org4e1d371}Using find with grep.}
+
+If we were to pipe the first term directly to \texttt{grep} we would just
+search the filenames for the function \texttt{read\_csv}. We don't want that -
+we want to search \texttt{each} file with grep. Using \texttt{xargs} in this way
+allows us to first find a set of files and then search for them.
+
+\section{Foreground and Background Processes}
+\label{sec:org865da40}
+
+It is possible to launch a command in "the background". Let's look
+at a silly example.
+
+The command "sleep" just waits for a specified number of seconds
+before completing:
+
+\begin{verbatim}
+sleep 10 # sleep for ten seconds
+\end{verbatim}
+
+If you want to access the console again you have two choices: if you
+press CTRL-c (the control key and "c" at the same time) you will
+send the process the "kill" signal. Sometimes this will fail
+however, if the process has gone really rogue.
+
+Another possibility is to press CTRL-z, which \emph{stops} the process
+and gives you control. The process isn't dead, though, just
+frozen. When you stop a process like this the terminal prints out an
+id:
+
+\begin{verbatim}
+> sleep 10 # sleep for ten seconds
+CTRL-z
+[1]+  Stopped                 sleep 100
+> 
+\end{verbatim}
+
+You can now either re-foreground the process via
+
+\begin{verbatim}
+> fg 1
+\end{verbatim}
+
+OR you can "background" the process:
+
+\begin{verbatim}
+> bg 1
+\end{verbatim}
+
+Note that backgrounding a process won't stop it from printing to
+your terminal, which can be very disruptive.  These process
+management functions were designed for the old days when you'd
+interface with a mainframe via a single "dumb" terminal (imagine a
+green glowing screen).
+
+Nowawadays you can start as many terminals as you want and, indeed,
+most terminal programs allow you to keep many tabs open. Don't be
+afraid to use them.
+
+\subsection{Process IDs and Killing Processes}
+\label{sec:orgd69abf4}
+
+Sometimes a process goes wrong and needs to be terminated. The
+details of this process depend on the unix, but typically you use
+the command \texttt{ps} to list the processes which are running and then
+use \texttt{kill} to terminate the process usings its process id. If your
+terminal is blocked you may need to background the process
+first.
+
+\section{Linux Distributions}
+\label{sec:org6044715}
+
+The most popular Unix-like operating systems are Linux and OSX. That
+would seem simple enough except that Linux is an umbrella which covers
+a huge variety of unix-like operating systems.  In fact, Linux
+technically refers \emph{just} to the so-called "kernel" of the operating
+system - the basic software that intermediates between the computer
+hardware and the user. But the kernel alone is not typically enough to
+make a functional computer, so a set of utilities (often drawn from
+something called the GNU Project) provides the basic utilities
+(including but not limited to things like the commands listed in the
+previous section). But even Linux and the GNU System together don't
+constitute a useful system (for most cases). Additional tools and
+conventions are layered on top to form a "distribution" of Linux.
+
+There are hundreds of actively developed Linux distributions although
+the number left over after you eliminate those distributions which are
+largely similar, based on the same set of tools, would be smaller. As
+of the time of this writing some of the more popular linux
+distributions are Arch, Ubuntu, Mint and Centos/Rocky Linux.
+
+\section{Linux Variants and Package Managers}
+\label{sec:org5c9ea9b}
+
+The primary reason we want to develop some comfort with Linux is
+because we will be using it to build environments for doing data
+scientific work. And the most frequent thing we will do to set those
+environments up is install software.
+
+Throughout this book we will be using Ubuntu Linux (in the form of the
+\texttt{rocker/verse} Docker containers) as our basis for our data science
+projects. Sometimes we might want to extend that container with other
+tools like Python and Jupyter. Adding software to a Linux system is
+the job of a package manager.
+
+Complicating this discussion is the fact there are a variety of
+package managers for a variety of linux variations.
+
+Here, we will almost always be using `apt` to install packages (unless
+we use a programming language specific package manager, of which more
+later). But be aware that at some point in the future you might have
+to look up how to use another system's package manager.
+
+\section{Concluding Notes}
+\label{sec:org5576b9e}
+
+Unix Shell Scripting is a discipline unto itself. The fact is that
+many people make almost their entire careers out of knowing and
+wrangling shell scripts. Despite the fact that these technologies are
+decades old, they still glue together an enormous amount of what makes
+the software world go round. 
+
+As a data scientist you'll need to be comfortable writing and reading
+some of that glue. Shell scripting is also enormously empowering.
 \end{document}

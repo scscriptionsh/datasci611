@@ -170,8 +170,22 @@ Things To Do Before Next Class
 ==============================
 
 <small>
-Absolutely critical:
+Visit these sites:
 
+https://www.kaggle.com/
+https://teddit.net/r/datasets
+
+(teddit is a mirror of reddit that is more usuable)
+
+https://duckduckgo.com/?q=open+data+sets&t=newext&atb=v234-1&ia=web
+
+</small>
+
+
+Things to Try Before Next Class
+===============================
+
+<small>
 1. Get a docker environment running. You should be able to do this in
    Windows or Linux or Mac. 
    https://docs.docker.com/get-started/
@@ -181,7 +195,21 @@ Absolutely critical:
     
 2. Run a rocker/verse image.
    `docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/rstudio`
-      
 </small>
+
+Course Material
+===============
+
+Located here:
+
+https://github.com/Vincent-Toups/datasci611
+
+Homework
+========
+
+1. Pick a data set you might find interesting.
+
+2. Write a pitch for your analysis (~500 words). What do you hope to
+learn by looking at it in detail?
 
 

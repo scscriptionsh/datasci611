@@ -365,19 +365,19 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 
 > install.packages("matlab")
-[91mInstalling package into ‘/usr/local/lib/R/site-library’
+Installing package into ‘/usr/local/lib/R/site-library’
 (as ‘lib’ is unspecified)
-[0m[91mtrying URL 'https://packagemanager.rstudio.com/all/__linux__/focal/latest/src/contrib/matlab_1.0.2.tar.gz'
-[0m[91mContent type 'binary/octet-stream' length 171431 bytes (167 KB)
-============[0m[91m====[0m[91m=====[0m[91m=====[0m[91m=[0m[91m=====[0m[91m=====[0m[91m====[0m[91m=====[0m[91m====
+trying URL 'https://packagemanager.rstudio.com/all/__linux__/focal/latest/src/contrib/matlab_1.0.2.tar.gz'
+Content type 'binary/octet-stream' length 171431 bytes (167 KB)
+==================================================
 downloaded 167 KB
 
-[0m[91m* installing *binary* package ‘matlab’ ...
-[0m[91m* DONE (matlab)
-[0m[91m
+* installing *binary* package ‘matlab’ ...
+* DONE (matlab)
+
 The downloaded source packages are in
 	‘/tmp/RtmprAB7aJ/downloaded_packages’
-[0m> 
+> 
 > 
 Removing intermediate container a355c45f0300
  ---> ad2915350df6

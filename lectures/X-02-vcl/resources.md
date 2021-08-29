@@ -122,6 +122,7 @@ WinSCP
 
 ![](./winscp.png)
 
+
 TMUX
 ====
 
@@ -202,15 +203,29 @@ sudo apt install emacs
 Emacs, however, has all the charm of a large industrial complex (which
 is to say, considerable inaccessible charm).
 
+***
+
 A more accessible editor (much less powerful) is nano:
 
 ```
 nano 
 ```
 
-***
 
 ![](./nano.png)
+
+Quitting Vi
+===========
+
+You will almost surely find yourself confronted, at some point, by Vi,
+a venerable old text editor with roots as deep as Emacs. 
+
+Vi is modal and very confusing.
+
+Press "ESC q!" to quit.
+
+We will talk at greater length about terminal life when we discuss
+Unix.
 
 Homework
 ========
