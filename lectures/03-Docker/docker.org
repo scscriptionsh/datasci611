@@ -240,9 +240,9 @@ Let's make a figure that compares power distribution against
 #+begin_src R
 library(tidyverse)
 
-d <- read_csv("lectures/X-01-web-scraping/powers.csv") %>% 
+d <- read_csv("./data/powers.csv") %>% 
   filter(universe=="New Earth") %>% select(-universe, -url); 
-alignment <- read_csv("lectures/X-01-web-scraping/character-data.csv") %>%
+alignment <- read_csv("./data/X-01-web-scraping/character-data.csv") %>%
   filter(universe=="New Earth" & property_name == "Alignment") %>%
   select(-universe, -property_name) %>%
   rename(alignment=value);
@@ -425,14 +425,19 @@ to our toy script:
 
 #+begin_src R
   library(matlab);
-  vectors <- pivot_wider(d %>% mutate(dummy=T),
+  wider_data <- pivot_wider(d %>% mutate(dummy=T),
                          character,
                          names_from = power,
                          values_from = dummy,
-                         values_fill = F) %>%
-      select(-character) %>% as.matrix() %>%
+                         values_fill = F);
+  vectors <- wider_data %>%
+      select(-character) %>%
+      as.matrix() %>%
       `*`(1.0);
   imagesc(vectors);
+
+  write_csv(wider_data, "powers_wider.csv", row.names=F);
+  
 #+end_src
 
 #+CAPTION: Character power vectors.
@@ -452,7 +457,7 @@ to our toy script:
 FROM rocker/verse 
 RUN R -e "install.packages(\"matlab\")"
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y python3-pip
-RUN pip3 install keras
+RUN pip3 install tensorflow
   #+end_src
 
   We've added a few more ~RUN~ lines. These interact with the
@@ -521,3 +526,64 @@ Successfully tagged 611-example:latest
 Now we can restart our Docker container and visit our terminal in
 RStudio and see if we have keras.
 
+Once that is done we can write a simple script to do a basic
+auto-encoder on our vector data.
+
+#+INCLUDE: "./auto-encode.py" src python
+
+Which results in something like this:
+
+#+CAPTION: The autoencoder representation of the powers data.
+#+NAME:   fig:aa-rep
+[[./encoded_rep.png]]
+
+* Concluding Remarks
+
+  What have we earned by learning to use Docker like this? Well,
+  imagine we distribute our project with a README like this:
+
+
+  #+begin_src markdown
+    Super Hero Power Analysis
+    =========================
+    
+    Hi, Welcome to my small project to analyze super hero powers.
+    
+    To run this code, just build the docker container like this:
+    
+    ```
+    docker build . -t hero
+    ```
+    
+    And then start an RStudio server like this:
+    
+    ```
+    docker run -e PASSWORD=dolly_parton \
+      -v $(pwd):/home/rstudio/work\
+      -p 8787:8787 --rm\
+      hero
+    ```
+    
+    And visit http://localhost:8787 in your browser. Log in with user
+    `rstudio` and password `dolly_parton`.
+    
+  #+end_src
+
+  Once inside this docker container, the user can focus on your
+  analysis, not on installing libraries.
+
+  Furthermore, the Dockerfile serves as the authoritative
+  representation of what you need to run the project.
+
+* What Next?
+
+  You may have noticed that our project is starting to get a little
+  complicated, even if we have solved the problem with distributing
+  libraries along with our data analysis. Less obviously, I've gone
+  through several versions of this lecture and associated material
+  while preparing these notes. What if someone is interested in a
+  previous version of this lecture?
+
+  Over the next few topics we will begin to tame these beasts.
+
+  
