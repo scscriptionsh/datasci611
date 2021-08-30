@@ -35,10 +35,10 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | ---             | ---                                | ---                              | ---                            |
 | Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                  | [hw1][hw1] due: Wed 08/25/2021 |
 | Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]          | [hw2][hw2] due: Mon 08/30/2021 |
-| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]          | [hw3][hw3] due: Wed 09/01/2021                               |
-| Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] |                                |
-| Wed 09/01/2021  | Labor Day 🍞🌹                     | [1][m12]                         |                                |
-| Mon 09/06/2020  | git basics & github basics         | [1][m13]                         |                                |
+| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]          | [hw3][hw3] due: Wed 09/08/2021 |
+| Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10] | [hw4][hw4] due: Wed 09/13/2021 |
+| Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15]       |                                |
+| Mon 09/06/2020  | Labor Day 🍞🌹                     | [1][m12],[2][m16]                         |                                |
 | Wed 09/08/2021  | How to Think about Programming & R |                                  |                                |
 | Mon 09/13/2021  | More R                             |                                  |                                |
 | Wed 09/15/2021  | Tidy Data & GGPlot                 |                                  |                                |
@@ -98,5 +98,10 @@ This will start an RStudio Instance.
 [m11]:https://tomaugspurger.github.io/dplry-pandas.html
 [m12]:https://en.wikipedia.org/wiki/Labor_Day
 [m13]:https://git-scm.com/book/en/v2
+[m14]:https://docs.github.com/en/get-started
+[m15]:https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+[m16]:https://hyperallergic.com/313435/an-illustrated-guide-to-guy-debords-the-society-of-the-spectacle/
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
+[hw3]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/02-unix/homework.md
+[hw4]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/03-Docker/homework.md
