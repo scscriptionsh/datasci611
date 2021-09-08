@@ -37,9 +37,9 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]             | [hw2][hw2] due: Mon 08/30/2021 |
 | Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]             | [hw3][hw3] due: Wed 09/08/2021 |
 | Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10]    | [hw4][hw4] due: Wed 09/15/2021 |
-| Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15],[4][m16] | [hw5][hw5] due: Mon 09/20/2021     |
+| Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15],[4][m16] | [hw5][hw5] due: Mon 09/20/2021 |
 | Mon 09/06/2020  | Labor Day 🍞🌹                     | [1][m12],[2][m16]                   |                                |
-| Wed 09/08/2021  | How to Think about Programming & R |                                     |                                |
+| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19],[3][m20]          | [hw6][hw6] due: Wed 09/22/2021 |
 | Mon 09/13/2021  | More R                             |                                     |                                |
 | Wed 09/15/2021  | Tidy Data & GGPlot                 |                                     |                                |
 | Mon 09/20/2021  | Make and Makefiles                 |                                     |                                |
@@ -102,7 +102,13 @@ This will start an RStudio Instance.
 [m15]:https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 [m16]:https://hyperallergic.com/313435/an-illustrated-guide-to-guy-debords-the-society-of-the-spectacle/
 [m17]:https://liyanxu.blog/2017/02/12/install-git-on-windows-and-set-up-ssh-keys/
+[m18]:https://learnxinyminutes.com/docs/r/
+[m19]:http://adv-r.had.co.nz/
+[m20]:http://adv-r.had.co.nz/Computing-on-the-language.html
+
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
 [hw3]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/02-unix/homework.md
 [hw4]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/03-Docker/homework.md
+[hw5]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/04-git-basics/homework.md
+[hw6]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/05-Programming-and-Programming-in-R/homework-p1.md
