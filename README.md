@@ -39,7 +39,7 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10]    | [hw4][hw4] due: Wed 09/15/2021 |
 | Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15],[4][m16] | [hw5][hw5] due: Mon 09/20/2021 |
 | Mon 09/06/2020  | Labor Day 🍞🌹                     | [1][m12],[2][m16]                   |                                |
-| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19],[3][m20]          | [hw6][hw6] due: Wed 09/22/2021 |
+| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19],[3][m20]          | [hw6][hw6] due: ???? |
 | Mon 09/13/2021  | More R                             |                                     |                                |
 | Wed 09/15/2021  | Tidy Data & GGPlot                 |                                     |                                |
 | Mon 09/20/2021  | Make and Makefiles                 |                                     |                                |
