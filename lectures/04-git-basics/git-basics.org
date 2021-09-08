@@ -1,5 +1,4 @@
 * What is Git
-  
 Git is a "revision control system." The motivation for such systems is
 that it is very difficult for a group of people to work on a software
 project /at the same time/. The original version control systems aimed
@@ -189,7 +188,6 @@ We've seen how to run git but what does it do?
 Simple version: git maintains a history of your codebase as a chain of
 "commits."
 
-
 Let's see what that looks like:
 
 #+begin_src sh :results code :exports both :dir /tmp/example
@@ -233,7 +231,7 @@ Now we will make our first commit.
 
 #+RESULTS:
 #+begin_src sh
-[main (root-commit) b816b32] Initial commit.
+[main (root-commit) ab48777] Initial commit.
  1 file changed, 5 insertions(+)
  create mode 100644 README.md
 #+end_src
@@ -258,9 +256,9 @@ git log
 
 #+RESULTS:
 #+begin_src sh
-commit b816b326badce21e07a1639c377f7cc60337e946
+commit 3b04865fb07730643d9358b465713ef50e5177ba
 Author: Vincent Toups <toups@email.unc.edu>
-Date:   Mon Aug 23 13:55:31 2021 -0400
+Date:   Mon Aug 30 11:34:03 2021 -0400
 
     Initial commit.
 #+end_src
@@ -280,7 +278,7 @@ git commit -m "Initial R source file."
 
 #+RESULTS:
 #+begin_src sh
-[main 546f135] Initial R source file.
+[main 32dd9c2] Initial R source file.
  1 file changed, 1 insertion(+)
  create mode 100644 hello.R
 #+end_src
@@ -376,8 +374,232 @@ no changes added to commit (use "git add" and/or "git commit -a")
 #+end_src
 
 Now one really nice thing about git is that it really does tell you
-how to use it if you just read the output of git status.
+how to use it if you just read the output of git status. Let's stage
+just the new file:
 
 #+begin_src sh :results code :exports both :dir /tmp/example
+  git add hello.py
+  git status
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   hello.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
 
 #+end_src
+
+Now we can see that if we ~commit~ the commit will only contain
+~hello.py~.
+
+#+begin_src sh :results code :exports both :dir /tmp/example
+  git commit -m "Added hello.py"
+  git status
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+[main 561ace2] Added hello.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.py
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+#+end_src
+
+Sure enough - we no longer see any information about ~hello.py~ but
+our other changes are still there.
+
+* The Git Trinity
+
+A bit like when we learned Bash you need to start to build a mental
+model of git in your brain. And the three most important parts of that
+mental model are:
+
+1. the branch (and its HEAD) - the current state of the repository at
+   the HEAD of the last branch.
+2. the staging area - the changes that will become the /next/ commit.
+3. the working copy - what is in the directory where you are working.
+
+The thing to burn into your brain is "I fill the staging area with git
+add and then add those changes to the branch with git commit."
+
+* Using Github
+
+Github is a hosting service for git repositories plus a constellation
+of other utilities. 
+
+It is entirely separate from git and, in a sense, is parasitic on
+it. This is typical of [[https://en.wikipedia.org/wiki/Platform_economy#Assessment][Platform Economics]] and we should all be a
+little suspicious of it. But like the jaws of history, we are all in
+the jaws of network effects and consequently we have to accomodate
+github.
+
+I will only say that there are [[https://itsfoss.com/github-alternatives/][alternatives]].
+
+** Step 1
+
+The first step is to create a git repository locally. We know how to
+do that already. When you are ready to push to github, you create a
+repository there like this:
+
+#+CAPTION: Creating a new repository.
+[[./new_repository.png]]
+
+This will give you some instructions like this:
+
+#+CAPTION: Filling in the form
+[[./new_form.png]]
+
+I'm sure there are situations where you might want to create a
+repository _first_ on github and then clone it, but it seems silly to
+me. We have at least that much dignity.
+
+We want the second set of instructions from this:
+
+#+begin_src 
+…or create a new repository on the command line
+
+echo "# 611-example" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Vincent-Toups/611-example.git
+git push -u origin main
+
+…or push an existing repository from the command line
+
+git remote add origin git@github.com:Vincent-Toups/611-example.git
+git branch -M main
+git push -u origin main
+
+#+end_src
+
+Indeed, these instructions sort of assume we're real git newbies,
+which we are not. We are already on the branch ~main~ so we just need
+to say 
+
+#+begin_src sh :results code :exports both :dir /tmp/example
+  git remote add origin git@github.com:Vincent-Toups/611-example.git
+  git push -u origin main
+#+end_src
+
+But wait!
+
+Before we do that we need to think about /authentication/.
+
+If you are using Windows git probably installed a credential
+manager. But I'm going to show you how to set up an SSH key so you
+don't have to keep typing in your git password over and over and so
+you'll know how to use ssh keys later for other reasons.
+
+* What is an SSH Key Pair?
+
+SSH Keys are handy little blobs of data. You have a public key, which
+you can freely distribute to anyone for any reason, pretty much. And
+you have a private key. Using your private key you can generate a
+message which someone can use your public key to verify comes from
+you. You don't need to share your private key to authenticate
+yourself.
+
+On a unix-like shell (git bash also works) you generate an ssh key pair
+like this:
+
+(PS - DON'T do this in your git repository! Keep your ssh key private!)
+
+#+begin_src sh 
+$ cd /tmp/
+$ mkdir ssh-keys
+$ cd ssh-keys/
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/toups/.ssh/id_rsa): github_rsa_key
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in github_rsa_key
+Your public key has been saved in github_rsa_key.pub
+The key fingerprint is:
+SHA256:OrCwHThgGEzWpSHmyqt4jdIOca31GZ51Q1n6bcFJW2c toups@7cdbeba530bb
+The key's randomart image is:
++---[RSA 3072]----+
+|+=....      . . E|
+|=o..o      + o =.|
+|oo .      +   =  |
+|+. o     . . . . |
+|o.= = . S o . o  |
+| o.B * * . . .   |
+|.oooo B          |
+|+.+ .  .         |
+|o+.              |
++----[SHA256]-----+
+$  
+#+end_src
+
+This will generate two files. It is very important to understand that
+the ~.pub~ file is the PUBLIC key. This is the key you can upload to
+github. Never let anyone have a copy of your private key. Indeed, be
+careful to avoid distributing it accidentally!
+
+Now we can upload our key to github. First select "Settings":
+
+
+#+CAPTION: select settings
+[[./settings.png]]
+
+Then "SSH and GPG Keys"
+
+#+CAPTION: keys
+[[./ssh-keys-menu.png]]
+
+Then "New SSH Key"
+
+#+CAPTION: new ssh key
+[[./new-ssh-key.png]]
+
+You can put anything you want for the title, but its useful to put
+something like "work laptop" that identifies where the associated
+private key is stored. Then you will need to open the public key file
+(in notepad, for instance) and copy it carefully into the text box.
+
+Once you've completed this process you can finally go back to your
+console.
+
+#+begin_src sh :results code :exports both :dir /tmp/example
+  ssh-add /tmp/ssh-keys/github_rsa_key
+  git remote add origin git@github.com:Vincent-Toups/611-example.git
+  git push -u origin main  
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+#+end_src
+
+Here we've informed our ssh-agent that we want to use the specified
+private key and then we simply push. If we refresh our repo page we
+should see our files and our README.
+
+#+CAPTION: Tada
+[[./repo.png]]
+
+* Conclusions
+
+So we have a basic understanding of git. There is a lot more to learn
+and we shall. But now you should be able to create a repository, add
+stuff to commits, associate it with a repository hosted by github,
+push, etc.
+
+Eventually we will need to learn all the powers of git. But in the
+meantime this will let us get started with some data science!

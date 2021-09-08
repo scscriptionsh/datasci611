@@ -88,6 +88,22 @@ abstraction.  Now, a typical smartphone "protects" the user from most
 of these details: you never think explicitly, about the distinctions
 between storage and memory or about the details of how programs work.
 
+* How to Understand Computer Languages
+
+A programming language is a program which takes text (represented as a
+"string" of characters) and _interprets_ it to produce some sort of
+value or side effect.
+
+In order to understand a computer programming language you need to
+build a model of this process in your mind. The process of
+transforming text into values and actions is called "evaluation" or
+"interpretation" in the lingo of computer science and as we learn to
+get around in the shell we will need to accumulate a set of
+"evaluation rules" in our mind. The more rules we accumulate the more
+we will understand shell scripting.
+
+When we get to learning R and Python the same process will apply.
+
 * Introduction to Unix Shells
 
 We will now dive much deeper into the computer than you may have
@@ -334,6 +350,16 @@ echo $PATH
 /usr/local/texlive/bin/x86_64-linux:/usr/lib/rstudio-server/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 #+end_src
 
+To understand this behavior we need to add a new rule to our mental
+"evaluation engine":
+
+#+NAME: environment variable rule
+#+begin_quote
+When we see a $ followed immediately by a name we look up the value of
+the variable named and insert it into the string. This happens before
+the other rules are executed.
+#+end_quote
+
 Apparently, ~PATH~ contains a series of locations on the filesystem
 separated by ":" characters. Bash searches this list in order to find
 executables during command evaluation.
@@ -408,6 +434,16 @@ hello.sh
 #+begin_src sh
 hello world
 #+end_src
+
+In order to understand this result we need to add another rule:
+
+#+NAME: Set environment variablers
+#+begin_quote
+If we see a name followed immediate by an equal sign and then a value,
+modify or create a new environment variable of that name with the
+specified value. No regular evaluation occurs but environment
+variables themselves are expanded before setting the value.
+#+end_quote
 
 If some of the above steps are a little confusing to you, that is ok -
 we're not going for a full understanding of working on the command

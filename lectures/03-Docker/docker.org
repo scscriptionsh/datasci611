@@ -105,7 +105,7 @@ rocker/verse.
    container like this:
 
    #+begin_src bash
-     docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/verse
+     docker run -v $(pwd):/home/rstudio/work -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/verse
    #+end_src
 
    Given what we learned in the unix and shell scripting chapter, we
@@ -215,7 +215,7 @@ it uniquely.
 Now we can launch our machine:
 
    #+begin_src bash
-     docker run -e PASSWORD=yourpassword --rm -p 8787:8787 -v $(pwd):/home/rstudio/project rocker/verse
+     docker run -e PASSWORD=yourpassword --rm -p 8787:8787 -v $(pwd):/home/rstudio/work rocker/verse
    #+end_src
 
    #+CAPTION: R studio, without the mess.
@@ -408,7 +408,7 @@ b18239add6ae   rocker/verse   "/init"   19 hours ago   Up 19 hours   0.0.0.0:878
 #+NAME: ex_start_custom
 #+begin_src bash :results org replace :exports both
   docker kill b18239add6ae
-  docker run -d -e PASSWORD=yourpassword --rm -p 8787:8787 -v $(pwd):/home/rstudio/project 611-example
+  docker run -d -e PASSWORD=yourpassword --rm -p 8787:8787 -v $(pwd):/home/rstudio/project -t 611-example
 #+end_src
 
 #+RESULTS: ex_start_custom
