@@ -44,7 +44,7 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Wed 09/15/2021  | Tidyverse for Tidying & GGPlot     | [1][m22],[2][m24],[3][m25],[4][m26],[5][m27][6][m28] |                                |
 | Mon 09/20/2021  | Make and Makefiles                 | [1][m29][2][m30]                                                     |                                |
 | Wed 09/22/2021  | git concepts and practices         | [1][m31][2][m32][3][m33]                                                |                                |
-| Mon 09/27/2021  | Project Organization               |                                                      |                                |
+| Mon 09/27/2021  | Project Organization               | [1][m34][2][m35][3][m36]                                                     |                                |
 | Wed 09/29/2021  | Dimensionality Reduction           |                                                      |                                |
 | Mon 10/04/2021  | Clustering                         |                                                      |                                |
 | Wed 10/06/2021  | Classification                     |                                                      |                                |
@@ -119,6 +119,9 @@ This will start an RStudio Instance.
 [m31]:https://www.man7.org/linux/man-pages/man1/diff.1.html
 [m32]:https://man7.org/linux/man-pages/man1/patch.1.html
 [m33]:https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
+[m34]:https://github.com/virkud/bios611-project1
+[m35]:https://www.latex-project.org/
+[m36]:https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html
 
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
