@@ -31,4 +31,3 @@ The latter invocation is useful if we want to debug the installation
 of a library, since it gives us a root shell in a container
 representing `my_image`.
 
-

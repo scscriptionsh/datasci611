@@ -1,0 +1,8 @@
+```{r}
+data <- read_csv("https://raw.githubusercontent.com/Vincent-Toups/datasci611/main/lectures/10-dimensionality-reduction/homework_data.csv");
+
+results <- prcomp(data, center=T, scale=T);
+
+ggplot(results$x %>% as_tibble(), aes(PC1, PC2)) + geom_point()
+
+```

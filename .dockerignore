@@ -48,3 +48,14 @@ flycheck_*.el
 /network-security.data
 
 lectures/X-01-web-scraping/.hash-cache
+
+*.csv
+*.png
+*.pdf
+
+/source_data/*.csv
+./lectures/scratchspace/lfunc_lfunctions.txt
+
+/*.csv
+
+**

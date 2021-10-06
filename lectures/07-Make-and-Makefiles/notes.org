@@ -302,7 +302,7 @@ artifacts.
 
 #+CAPTION: Makefile
 #+begin_src Makefile
-derived_data/deduplicated.csv logs/logs/deduplication-notes.md:\
+derived_data/deduplicated.csv logs/deduplication-notes.md:\
  deduplicate.R source_data/character-data.csv utils.R
 	Rscript deduplicate.R
 

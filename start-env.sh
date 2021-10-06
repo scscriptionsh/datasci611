@@ -48,16 +48,10 @@ fi
 
 if [ "$MODE" == "term" ];
 then
-x11docker --clipboard --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/xfce4-terminal
+x11docker --clipboard --share ~/.ssh --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/xfce4-terminal
 fi
 
 if [ "$MODE" == "emacs" ];
 then
-x11docker --clipboard --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/emacs
+x11docker --clipboard --share ~/.ssh --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/emacs ~/work/courses/bios611/
 fi
-
-
-
-
-
- 

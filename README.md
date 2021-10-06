@@ -39,32 +39,32 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10]                     | [hw4][hw4] due: Wed 09/15/2021 |
 | Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15],[4][m16]                  | [hw5][hw5] due: Mon 09/20/2021 |
 | Mon 09/06/2020  | Labor Day 🍞🌹                     | [1][m12],[2][m16]                                    |                                |
-| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19]                                    | [hw6][hw6] due: Wed 09/27/2021           |
+| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19]                                    | [hw6][hw6] due: Wed 09/27/2021 |
 | Mon 09/13/2021  | More R                             | [1][m20],[2][m23]                                    |                                |
 | Wed 09/15/2021  | Tidyverse for Tidying & GGPlot     | [1][m22],[2][m24],[3][m25],[4][m26],[5][m27][6][m28] |                                |
-| Mon 09/20/2021  | Make and Makefiles                 | [1][m29][2][m30]                                                     |                                |
-| Wed 09/22/2021  | git concepts and practices         | [1][m31][2][m32][3][m33]                                                |                                |
-| Mon 09/27/2021  | Project Organization               | [1][m34][2][m35][3][m36]                                                     |                                |
-| Wed 09/29/2021  | Dimensionality Reduction           |                                                      |                                |
-| Mon 10/04/2021  | Clustering                         |                                                      |                                |
-| Wed 10/06/2021  | Classification                     |                                                      |                                |
-| Mon 10/11/2021  | Model Validation and Selection     |                                                      |                                |
-| Wed 10/13/2021  | Publishing Results                 |                                                      |                                |
-| Mon 10/18/2021  | Shiny                              |                                                      |                                |
-| Wed 10/20/2021  | Docker Recap and Shiny             |                                                      |                                |
-| Mon 10/25/2021  | Introduction to Scientific Python  |                                                      |                                |
-| Wed 10/27/2021  | SQL (and pandas, dplyr)            | [1][m11]                                             |                                |
-| Mon 11/01/2021  | SKLearn Introduction               |                                                      |                                |
-| Wed 11/03/2021  | Training Neural Networks           |                                                      |                                |
-| Mon 11/08/2021  | Bokeh                              |                                                      |                                |
-| Wed 11/10/2021  | Browser Based Visualization w/ d3  |                                                      |                                |
-| Mon 11/15/2021  | Data Science Ethics                |                                                      |                                |
-| Wed 11/17/2021  | Panel Discussion                   |                                                      |                                |
-| Mon 11/22/2021  | Thanksgiving 🦃                    |                                                      |                                |
-| Wed 11/24/2021  | Feedback Day                       |                                                      |                                |
-| Mon 11/29/2021  | Class Presentations I              |                                                      |                                |
-| Wed 12/01/2021  | Class Presentations II             |                                                      |                                |
-| ---             | ---                                | ---                                                  |                                |
+| Mon 09/20/2021  | Make and Makefiles                 | [1][m29][2][m30]                                     |                                |
+| Wed 09/22/2021  | git concepts and practices         | [1][m31][2][m32][3][m33]                             |                                |
+| Mon 09/27/2021  | Project Organization               | [1][m34][2][m35][3][m36]                             |                                |
+| Wed 09/29/2021  | ~~~~                               |                                                      |                                |
+| Mon 10/04/2021  | Dimensionality Reduction           | [1][m37][2][m38][3][m39][4][m40]                     | [hw7][hw7] due: Mon 10/11/2021 |
+| Wed 10/06/2021  | Clustering                         | [1][m41][2][m42][3][m43][4][m44]                     | [hw8][hw8] due: Wed 10/13/2021 |
+| Mon 10/11/2021  | Classification                     |                                                      |                                |
+| Wed 10/13/2021  | Model Validation and Selection     |                                                      |                                |
+| Mon 10/18/2021  | Publishing Results                 |                                                      |                                |
+| Wed 10/20/2021  | Shiny                              |                                                      |                                |
+| Mon 10/25/2021  | Docker Recap and Shiny             |                                                      |                                |
+| Wed 10/27/2021  | Introduction to Scientific Python  |                                                      |                                |
+| Mon 11/01/2021  | SQL (and pandas, dplyr)            | [1][m11]                                             |                                |
+| Wed 11/03/2021  | SKLearn Introduction               |                                                      |                                |
+| Mon 11/08/2021  | Training Neural Networks           |                                                      |                                |
+| Wed 11/10/2021  | Bokeh                              |                                                      |                                |
+| Mon 11/15/2021  | Browser Based Visualization w/ d3  |                                                      |                                |
+| Wed 11/17/2021  | Data Science Ethics                |                                                      |                                |
+| Mon 11/22/2021  | Panel Discussion                   |                                                      |                                |
+| Wed 11/24/2021  | Thanksgiving 🦃                    |                                                      |                                |
+| Mon 11/29/2021  | Feedback Day                       |                                                      |                                |
+| Wed 12/01/2021  | Class Presentations I              |                                                      |                                |
+| ---             | Class Presentations II             |                                                      | ---                            |
 
 
 There is also a lab held every Tuesday. This will be generally
@@ -122,6 +122,14 @@ This will start an RStudio Instance.
 [m34]:https://github.com/virkud/bios611-project1
 [m35]:https://www.latex-project.org/
 [m36]:https://bookdown.org/yihui/rmarkdown-cookbook/install-latex.html
+[m37]:https://en.wikipedia.org/wiki/Manifold_hypothesis
+[m38]:https://en.wikipedia.org/wiki/Vector_space
+[m39]:https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding
+[m40]:https://scikit-learn.org/stable/modules/manifold.html
+[m41]:https://https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html
+[m42]:https://rstudio.github.io/reticulate/
+[m43]:https://en.wikipedia.org/wiki/K-means_clustering
+[m44]:https://en.wikipedia.org/wiki/Spectral_clustering
 
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
@@ -129,3 +137,5 @@ This will start an RStudio Instance.
 [hw4]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/03-Docker/homework.md
 [hw5]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/04-git-basics/homework.md
 [hw6]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/05-Programming-and-Programming-in-R/homework-p1.md
+[hw7]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/10-dimensionality-reduction/homework.md
+[hw8]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/11-clustering/homework.md

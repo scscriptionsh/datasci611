@@ -1,7 +1,9 @@
 library(tidyverse);
 
-powers <- read_csv("../X-01-web-scraping/powers.csv");
-characters <- read_csv("../X-01-web-scraping/character-data.csv");
+source("util.R");
+
+powers <- read_csv("source_data/powers.csv");
+characters <- read_csv("source_data/character-data.csv");
 
 initial_powers_rows <- nrow(powers);
 initial_characters_rows <- nrow(characters);

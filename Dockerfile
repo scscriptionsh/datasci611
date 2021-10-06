@@ -18,4 +18,7 @@ RUN make configure &&\
  make all doc info &&\
  make install install-doc install-html install-info
 WORKDIR /
-RUN R -e "install.packages(\"shiny\")"
+RUN R -e "install.packages(c(\"shiny\",\"deSolve\",\"signal\"))"
+RUN R -e "install.packages(\"Rcpp\")";
+RUN R -e "install.packages(\"reticulate\")";
+RUN R -e "install.packages(\"ppclust\")";

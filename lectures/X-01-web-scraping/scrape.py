@@ -131,6 +131,19 @@ def get_character_info(url, append_to=[]):
             pickle.dump(data, f, pickle.HIGHEST_PROTOCOL);
         return append_to + data;
 
+def get_character_page_length(url):
+    out = [];
+    body = get(url);
+    soup = bs(body);
+    full_name = soup.find("h1",class_="page-header__title").text.strip();
+    universe = extract_universe(full_name);
+    character = full_name.replace('('+universe+')','').strip();
+    return [character, universe, len(body)]
+
+def get_all_character_page_data(urls):
+    data = [ get_character_page_length(url) for url in urls ];
+    return pd.DataFrame(data,columns=["character","universe","page_length"]);
+
 def get_all_character_info(urls):
     out = [];
     i = 0;
@@ -141,6 +154,17 @@ def get_all_character_info(urls):
         i = i + 1;
     return pd.DataFrame(out,columns=["character","universe","property_name","value"]);
 
-character_data = get_all_character_info((powers >> select(X.url))['url']);
-character_data.to_csv("character-data.csv",index=False);
+character_data = None;
+if os.path.isfile("character-data.csv"):
+    character_data = pd.read_csv("character-data.csv");
+else:
+    character_data = get_all_character_info(unique_urls);
+    character_data.to_csv("character-data.csv",index=False);
+
+character_page_data = None;
+if os.path.isfile("character-page-data.csv"):
+    character_page_data = pd.read_csv("character-page-data.csv");
+else:
+    character_page_data = get_all_character_page_data(unique_urls);
+    character_page_data.to_csv("character-page-data.csv",index=False);
 

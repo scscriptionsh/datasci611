@@ -1,0 +1,452 @@
+Clustering!
+===========
+
+Clustering is one of the handiest tools to have in your
+arsenal. Because many data science projects begin with nothing and we
+must discover the structure in our data, having a tool which groups
+data for us helps us quickly apprehend the data.
+
+Let's take a look at a few methods. As we will see, clustering is very
+inter-related to dimensionality reduction. In particular, a clustering
+reduces the structure of a data set down past any structure with a
+topology and into a simple set. Often, underlying this assumption is
+the idea that each set has its own statistical properties, but they
+can be understood seperately.
+
+K-Means
+=======
+
+K-Means is great because its so simple any of us could have invented
+it. Its almost a joke that it works! Its also worth knowing because
+many other methods use k-means as an initialization or or final
+clustering step after a transformation.
+
+The algorithm:
+
+Given a number of clusters to search for N
+
+1. assign each point to a cluster N at random.
+2. calculate the mean position of each cluster using the previous
+   assignments.
+3. loop through the points - assign each point to the cluster to whose
+   center it is closest.
+4. Repeat this process until the centers stop moving around.
+
+That is it. Read these once and then look at what it looks like in 2d:
+
+![](./K-means_convergence.gif)
+
+Assumptions of K-Means
+======================
+
+1. the data is in a vector space (why?)
+2. the clusters are characterized by their centers or centroids
+3. cluster membership falls off at a similar rate from all centroids 
+4. clusters are about the same size
+
+(These correspond roughly to the assumption that the clusters are
+spherical gaussians in N dimensions with the same or similar standard
+deviations).
+
+A little bit like PCA - there really is no reason to ever expect these
+conditions to be true but somehow k-means works pretty well pretty often!
+
+Example
+=======
+
+We saw a trivial example in the gif above. Let's try something else.
+
+```{r}
+library(tidyverse);
+library(matlab);
+
+voltages <- read_csv("voltages.csv");
+ggplot(voltages, aes(time, V + label*2)) + geom_line(aes(color=factor(label),
+                                                         group=sprintf("%d:%d",trial,label)));
+voltages_wide <- voltages %>%
+    arrange(time) %>%
+    pivot_wider(id_cols=c("trial","label"),
+                names_from="time",
+                values_from="V") %>%
+    mutate(index=1:nrow(.)) %>%
+    arrange(runif(nrow(.)));
+
+voltages_matrix <- voltages_wide %>% select(-trial,-label,-index) %>% as.matrix();
+imagesc(voltages_matrix);
+
+
+
+results <- kmeans(voltages_matrix, centers=3);
+
+voltages_ex <- voltages %>% left_join(voltages_wide %>%
+                                      mutate(cluster=results$cluster) %>%
+                                      select(trial, label, cluster),
+                                      by=c("trial","label"))
+
+ggplot(voltages_ex, aes(time, V+cluster*2)) +
+    geom_line(aes(group=sprintf("%d:%d",trial,label),
+                  color=factor(label)))
+
+```
+
+So k-means, in this case, perfectly separates the three clusters. 
+
+Mutual Information
+==================
+
+Note: we have labels in this situation (1..3) and clusters, also
+indexed 1..3. But k-means, even if it behaves perfectly, isn't
+guaranteed to give the cluster label 1 to the elements in group 1. Eg,
+group 1 might be given cluster label 3, group 2 cluster label 1, and
+group 3 cluster label 2.
+
+How do we compare labelings in general?
+
+One strategy might be to calculate the centers of each labelled group
+and compare them to the cluster centers given by k-means:
+
+```{r}
+label_centers <- voltages %>%
+    group_by(time, label) %>%
+    summarize(V=mean(V)) %>%
+    ungroup();
+
+p1 <- ggplot(label_centers, aes(time,V)) + geom_line(aes(color=factor(label), group=label));
+p1
+
+cluster_centers <- results$centers %>% t() %>% as_tibble(rownames="time") %>%
+    pivot_longer(cols=c(`1`,`2`,`3`)) %>% rename(cluster=name, V=value) %>%
+    mutate(time=as.numeric(time)) %>% filter(complete.cases(.));
+
+
+p2 <- ggplot(cluster_centers, aes(time, V)) + geom_line(aes(color=factor(cluster), group=cluster))
+
+library(gridExtra);
+
+grid.arrange(p1,p2,nrow=2);
+
+```
+
+Honestly, still pretty complicated. However, given two labelings of
+equal length, there is something we can calculate to quantify how well
+the labels line up without explicitly knowing which cluster accounts
+for which label. This is particularly useful when the clustering isn't
+perfect: how can you tell which cluster really aligns with which label
+in such circumstances.
+
+The mutual information between two variables tells you how surprised
+you are to see a particular label from set 2 given you see one in set 2.
+
+```{r}
+mutinf <- function(a,b){
+    sa <- shannon(a);
+    sb <- shannon(b);
+    sab <- shannon(sprintf("%d:%d", a, b));
+    sa + sb - sab;
+}
+```
+
+Note that when a and b are identical then the above is just `sa + sa -
+sa` and consequently the MI is equal to the entropy of `a` or `b`.  We
+can thus normalize our MI for interpretability:
+
+```{r}
+normalized_mutinf <- function(a,b){
+    2*mutinf(a,b)/(shannon(a)+shannon(b));
+}
+```
+
+This varies between 0 and 1 and returns 1 only when our two cluster
+labelings are identical. 
+
+```{r}
+normalized_mutinf(results$cluster, voltages_wide$label);
+```
+
+To compare two clusterings, you can use the normalized mutual
+information.
+
+Beyond K-Means
+==============
+
+There are many methods for clustering data and honestly, within the
+scope of this course I can hardly do better than to point you to the
+documentation from sklearn's clustering module.
+
+![](./sphx_glr_plot_cluster_comparison_001.png)
+
+From a user's point of view this table does a good job of giving you
+an intuition about what clustering algorithms are good for and how
+they fail in particular situations.
+
+But there is a story here which I want to underline:
+
+Just like with dimensionality reduction, there is a relationship
+between the methods you use and the assumptions you make about your
+data's mathematical structure.
+
+As we pointed out: k-means assumes you have vectorial data which is
+furthermore distributed into uniformly shaped gaussians of about the
+same size and shape. It also assumes that an element is either in a
+cluster or not - so the probabilistic nature of the gaussians is
+surpressed in favor of simplicity. 
+
+If we relax that last assumption we get fuzzy-k-means. In this
+algorithm each entity is only assigned a _probability_ of being in a
+cluster based on its distance from the center. Fuzzy-k-means works
+well when your data is distributed in concentric clusters by may have
+outliers that you want to "automatically ignore".
+
+```{r}
+library(ppclust);
+
+results <- fcm(voltages_matrix, centers=3);
+imagesc(results$u)
+```
+
+For each data point we get 3 probabilities. To extract the clusters we
+can say:
+
+```{r}
+best_clusters <- results$u %>% as_tibble(rownames="index") %>%
+    rowwise() %>%
+    mutate(best=which.max(c(`Cluster 1`,
+                            `Cluster 2`,
+                            `Cluster 3`)),
+           best_p=max(c(`Cluster 1`,
+                        `Cluster 2`,
+                        `Cluster 3`)));
+best_clusters
+```
+
+Its handy to see how we might visualize this data as well.
+
+```{r}
+voltages_ex <- voltages_wide %>% mutate(best=best_clusters$best,
+                                        best_p=best_clusters$best_p);
+
+ggplot(voltages %>% inner_join(voltages_ex %>% select(trial, label, best, best_p), by=c("trial","label")),
+       aes(time, V + 2*label)) +
+    geom_line(aes(color=factor(best), alpha=best_p, group=sprintf("%d:%d",trial,label)));
+
+```
+
+If we relax the assumption that our Gaussians are uniform then we get
+Gaussian Mixture Models. A GMM assumes that the data data is drawn
+from N Gaussian distributions whose individual parameters are
+estimated from the data. This can handle clusters of different sizes
+and shapes more easily.
+
+Expectation maximization is used to fit the parameters, but the whole
+thing works more or less the way k-means does: we begin with some
+estimates of groups and then modify the parameters of our model to
+maximize the likelihood of the data we have.
+
+I'll skip GMM to focus on what is probably the best currently
+available general purpose clustering algorith: spectral clustering.
+
+Spectral Clustering
+===================
+
+Spectral clustering reduces the assumptions you make about the data
+down to an extremely minimal one:
+
+Two points are more likely to be in the same cluster if they are close
+to one another.
+
+This is similar to the assumption that we made when we looked at
+multidimensional scaling, which requires _only_ a metric on the
+original data. The mere existence of a metric is a much weaker
+condition than the existence of a vector space, and thus we can work
+with substantially more types of data. In fact, spectral clustering is
+weaker even than a vector space: its input data is just a matrix
+saying which points are similar to one another by any criteria. 
+
+This could be as simple as "person X is friends with person Y" or
+depend on more structure: two points count as "similar" if they are
+within a certain distance of one-another according to a metric.
+
+Once we have this data we can calculate something called the "Graph
+Laplacian" which characterizes the graph connecting your data set. The
+eigenvectors of this matrix can be truncated to form a low dimensional
+representation of the data in this "connectivity space" and then
+regular k-means can be used to cluster the points. The results are
+quite good.
+
+```{r}
+library(reticulate);
+use_python("/usr/bin/python3");
+
+cluster <- import("sklearn.cluster");
+sc <- cluster$SpectralClustering(n_clusters=as.integer(3),
+                                 affinity="nearest_neighbors");
+
+```
+
+Spectral clustering is an expensive operation so let's reduce our data
+down using PCA first.
+
+```{r}
+pca.r <- prcomp(voltages, scale=T, center=T);
+
+```
+
+Number of Clusters
+==================
+
+Choosing the number of clusters is a dark art. In a sense, there is no
+right answer without some prior knowledge. A common approach is to
+just do a lot of clustering, plot the results with a dimensionality
+reduction method, and reduce the number of clusters until things look right.
+
+Remember, the value of doing a clustering is sometimes to just
+automatically segment the data in some useful way. We don't always
+need the clusters to be clean.
+
+The reason this is a challenge is because you can always improve you
+"goodness of fit" by adding more clusters. The model where you have as
+many clusters as points clearly perfectly models the data.
+
+Experiment, make plots. Make summaries. 
+
+Some Concluding Notes
+=====================
+
+Dimensionality reduction and clustering go hand in hand, and often
+require making similar assumptions about the data you are working
+with.
+
+
+
+Appendix:
+=========
+
+Our data is from Guy Debord's "The Society of the Spectacle." This is
+a somewhat polemical book about commodification in capitalism. While
+I'm hardly a Marxist I do often find myself reflecting on "The Society 
+of the Spectacle" in this highly social-media influenced age.
+
+After a bit of manual repair and fiddling I ripped the paragraphs from
+the book into a data frame. We will create vectors from them by
+counting words. 
+
+Since we haven't done a lecture specifically on feature generation,
+let's take a look at this process in more detail.
+
+```{r}
+
+library(tidyverse);
+library(matlab);
+
+spectacle  <- read_csv("source_data/spectacle_paragraphs.csv") %>%
+    mutate(paragraph=paragraph %>%
+               str_trim() %>%
+               str_to_lower() %>%
+               str_replace_all('[^a-z \\t\\n]',"") %>%
+               str_replace_all('[[:space:]]+'," ") %>%
+               str_trim()
+           ) %>%
+    mutate(paragraph_length=str_length(paragraph)) %>% arrange(desc(paragraph_length));
+
+all_words <- spectacle$paragraph %>% paste(collapse=" ") %>% str_split(" ") %>% table() %>% names();
+
+shannon <- function(tokens){
+    tbl <- table(tokens);
+    p <- (tbl %>% as.numeric())/sum(tbl %>% as.numeric());
+    sum(-p*log(p));
+}
+
+observations <- do.call(rbind,Map(function(row){
+    p <- spectacle$paragraph[[row]];
+    words <- str_split(p," ",simplify=T);
+    tbl <- table(words);
+    tbl_names <- names(tbl);
+    missing_words <- all_words[!(all_words %in% tbl_names)];
+    tbl[missing_words] <- 0;
+    tibble(word=names(tbl),
+           count=unname(tbl),
+           prob=unname(tbl)/sum(unname(tbl) %>% as.numeric())) %>%
+        mutate(paragraph=spectacle$header[[row]]);
+},seq(nrow(spectacle))));
+
+observations$spectacle_sector <- round(10*observations$paragraph/max(observations$paragraph))
+
+word_info <- observations %>%
+    group_by(word) %>%
+    summarize(m=mean(count), s=sd(count), e=shannon(count)) %>%
+    arrange(desc(s))
+
+observations_wide <- observations %>% arrange(word) %>%
+    pivot_wider(id_col=c("paragraph","spectacle_sector"), names_from=word,
+                values_from=count);
+
+vectors <- observations_wide %>%
+    arrange(paragraph) %>%
+    select(-paragraph,-spectacle_sector) %>% as.matrix();
+imagesc(vectors);
+
+```
+
+It can't hurt us to do a quick PCA to see whether anything obvious
+pops out.
+
+```{r}
+
+results <- prcomp(vectors, center=TRUE, scale=TRUE);
+imagesc(results$x);
+
+```
+
+Predictably, we aren't using the full representational power of our
+~200 dimensional vector space here. And we can see some structure in
+our PCs.
+
+Our variance falls off relatively slowly, however. So we may not
+expect to see anything of interest in the first two component
+projection, but let's take a look anyway. In fact, here is a handy trick:
+
+```{r}
+plot(results$x %>% as_tibble() %>% select(PC1,
+                                          PC2,
+                                          PC3,
+                                          PC4,
+                                          PC5,
+                                          PC6,
+                                          PC7,
+                                          PC8,
+                                          PC9,
+                                          PC10));
+     
+```
+
+No obvious clusters in these projections. They might still be there,
+though.
+
+Let's try the most basic clustering method in the world: k-means:
+
+```{r}
+km.res <- kmeans(vectors,centers=10,iter.max=1000);
+```
+
+The natural thing to do with our results:
+
+```{r}
+ggplot(results$x %>% as_tibble(),aes(PC1, PC2)) + geom_point(aes(color=factor(km.res$cluster)));
+```
+This isn't so easy to interpret. Let's take a look at the TSNE projection. 
+
+```{r}
+library(reticulate);
+manifold <- import("sklearn.manifold");
+use_python("/usr/bin/python3");
+tsne_instance <- manifold$TSNE(n_components=as.integer(2), metric="euclidean");
+tsne.results <- tsne_instance$fit_transform(vectors) %>% as_tibble();
+
+ggplot(tsne.results, aes(V1, V2)) + geom_point(aes(color=factor(km.res$cluster)));
+```
+
+```{r}
+cc <- sort(km.res$cluster, index.return = T)$ix;
+imagesc(vectors[cc,])
+
+```

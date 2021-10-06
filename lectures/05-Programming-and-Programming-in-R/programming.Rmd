@@ -154,7 +154,7 @@ That might seem like a long winded way of saying what is happening,
 but its useful to be precise. 
 
 ```{r}
-10+11*2
+(10+11)*2
 ```
 
 Apparently ordinary "high school" precedence rules apply to algebraic
@@ -166,6 +166,7 @@ Variables
 
 ```{r}
 x <- 100;
+x
 ```
 
 If we evaluate the above nothing visible happens. `<-` is called
@@ -352,7 +353,11 @@ functions and the language allows us to rely on precedence. But we can
 always invoke them in the "ordinary" way like this:
 
 ```{r}
-`+`(1,2) 
+`+`(1,2)
+
+z <- `+`
+z(1,2)
+ 
 ```
 
 ```
@@ -445,6 +450,8 @@ y <- if (x < 100){
          "Goodbye"
      }
 ```
+
+STOP
 
 This will give 10. 
 
@@ -663,6 +670,26 @@ This gives us what we want.
 Otherwise it creates a new one.
 ```
 
+Named And Default Arguments
+---------------------------
+
+Arguments to functions are typically assigned by order but you can
+also give arguments default values (which also gives the user the
+ability to specify arguments by name).
+
+```{r}
+example <- function(x=10,y=11){
+    x+y;
+}
+```
+
+```{r}
+example(x=100);
+example(y=13);
+example(y=12,x=1);
+example(101);
+```
+
 Laziness
 --------
 
@@ -713,4 +740,278 @@ by quite a while without having to think about these things in
 detail but unfortunately, in R, because of the Tidyverse, we need to
 develop a relatively good level of confidence with variable lookup
 rules because the Tidyverse breaks the rules pretty liberally.
+
+Tidbits
+=======
+
+Before we jump back into the crazy stuff, a few tidbits. 
+
+```
+?<function-name>
+```
+
+Will load the help for any built in function or any library function
+which has been properly documented.
+
+```
+apropos("search-term")
+```
+
+returns functions related to the search term. Sort of
+useful. Probably better to use Duck Duck Go.
+
+Newlines can be placed after a binary operator without changing the
+meaning of the phrase.
+
+```{r}
+10 +
+    11 ## ok
+
+10
++ 11 ## wrongish - 10, then 11
+```
+
+    Parentheses also work. You can also put newlines after commas in an argument list.
+
+Nonstandard Evaluation
+======================
+
+This is it!
+
+Let's prime our brains with a bit more mundane everyday R.
+
+```{r}
+
+library(tidyverse);
+dataframe <- read_csv("source_data/character-data.csv") %>% distinct();
+head(dataframe);
+
+```
+
+A dataframe is a really useful abstraction. It is a "data structure"
+which gives a row by column view of a data set. Each column is given
+a name. Data frames are the basis of most sorts of data analysis you
+might do in R.
+
+The "tidyverse" comes with a library "dplyr" which lets us quickly
+operate on data frames.
+
+eg:
+
+```{r}
+
+dataframe %>% group_by(property_name) %>% tally() %>% arrange(desc(n))
+
+```
+
+A pretty common step in pre-processing data is to regularize and
+simplify character data. We can do this by removing spaces and
+non-alphanumeric characters and shifting everything to lowercase.
+
+eg:
+
+```{r}
+
+library(stringr);
+
+normalize_strings <- function(s){
+    str_replace_all(str_to_lower(s), "[^a-z]+", "_");
+}
+
+tidied <- dataframe %>%
+    mutate(property_name=normalize_strings(property_name),
+           universe=normalize_strings(universe),
+           character=normalize_strings(character),
+           value=normalize_strings(value)) %>% distinct();
+
+```
+
+Question: Above, inside the argument list for "mutate", we mention
+`property_name`? The code runs, and apparently _in that context_ it
+refers to the `property_name` column of the data frame. But _how_
+can we integrate that with our evaluation model?
+
+Currently, our model tells us that R sees the name and then looks in
+successively nested lexical environments until it sees one where the
+variable is bound. But there is no environment in our "stack" of
+environments where `property_name` is bound. So what gives?
+
+What gives is non-standard evaluation.
+
+substitute
+----------
+
+Consider the function:
+
+```{r}
+ex <- function(x){
+    substitute(x);
+}
+ex(v1+v2)
+```
+
+Recall that R is lazy about evaluating its arguments. `substitute`
+is a function which returns its arguments _without evaluating
+them_. Now we have something which we may call an "expression."
+
+This might be a little surprising of a thing to have, but if we
+think about what a programming language is its no surprise such a
+thing exists. R is just handing us the object it uses to evaluate
+code.
+
+Given an expression we can _evaluate it ourselves_ with `eval`.
+
+```{r}
+eval(ex(v1+v2),list(v1=c(1,2,3), v2=c(4,5,6)));
+```
+
+Now we can (almost) understand how `mutate` is doing its trick. It
+is capturing its arguments and substituting in its own evaluation
+context. Something like this:
+
+```{r}
+do_with_dataframe_columns <- function(df, expr){
+    eval(substitute(expr), df);
+}
+```
+
+With this function we may say:
+
+```{r}
+a_frame <- tibble(x=c(1,2,3), y=c(4,5,6));
+do_with_dataframe_columns(a_frame, x*y);
+```
+
+Of course, something more complicated must be going on with the
+tidyverse functions because the expressions we use there can access
+both column values and regular variable values from the environment
+where the expression was created.
+
+How does that work?
+
+A Stack of Environments
+-----------------------
+
+We can take inspiration from R itself for our solution. In fact,
+we're just going to rely on R's own strategy.
+
+Here we go:
+
+```{r}
+
+do_with_dataframe_columns2 <- function(df, expr){
+    e <- as.environment(df); ## Create an official environment object
+    parent.env(e) <- parent.frame(); ## set its parent to the environment where the function was called
+    eval(substitute(expr), e); ## Perform the evaluation.
+}
+
+z <- 100;
+
+do_with_dataframe_columns2(a_frame, z + x + y)
+
+```
+
+Problems w/ Tidyverse Evaluation
+================================
+
+Suppose you want to write a function which performs `group_by` and
+`tally` over a user-provided column.  Here is an attempt:
+
+```{r}
+group_and_tally <- function(df, column){
+    df %>% group_by(column) %>% tally();
+}
+group_and_tally(dataframe, property_name);
+```
+
+This gives us an error:
+
+```
++ + > Error: Must group by variables found in `.data`.
+* Column `column` is not found.
+Run `rlang::last_error()` to see where the error occurred.
+> 
+```
+
+Tons of problems here! 
+
+1. Because of the non-standard evaluation, we don't even true to
+   evaluate `property_name`. 
+2. Instead the evaluation strategy of the
+   tidyverse tries to evaluate `column` which we want to evaluate to
+   `property_name`. which hardly even makes sense.
+   
+We need some way to tell the tidyverse function that we want to use
+the _value_ of the argument passed in.
+
+```{r}
+group_and_tally <- function(df, column){
+    df %>% group_by({{ column }}) %>% tally();
+}
+group_and_tally(dataframe, property_name);
+```
+
+The construct `{{ }}` is called an "embrace." It is more a feature of
+the tidyverse than of R - the braces tell a tidyverse function that
+you want to refer to the name of the argument at the function
+call. How precisely `{{ }}` manages to work is out of the scope of
+this course but you can imagine: `group_by` captures the argument
+without evaluating it, inspects it to see that it is a `{{ }}`
+expression and then further pokes around in the current and parent
+environment to figure out what the enclosed symbol means.
+
+The Top Level Environment, Libraries and Packages
+=================================================
+
+In a latter portion of the course we will talk about how to write our
+own R libraries. But now that we have a relatively good understanding
+of environments and how variables are looked up we can understand how
+libraries work.
+
+When we say something like 
+
+```{r}
+library(readr)
+```
+
+We are telling R to insert the `readr` package (which you can think of
+as a kind of environment) onto the stack of environments in which R
+looks up top level bindings. Thus, all the exported variables in the
+package become visible.
+
+What happens if two packages expose the same variable? R will warn you
+that one has shadowed the other.
+
+Note that you can always access any variable from an installed package
+with a namespace qualifier like this:
+
+```{r}
+readr::read_csv
+```
+
+Indeed, when writing R packages, such explicit references are
+preferred.
+
+Conclusions
+===========
+
+The important thing to appreciate in this chapter is that because of 
+
+1. The lazy nature of R's evaluation of function arguments,
+2. The ability of function bodies to capture the expression passed in
+   rather than the value they represent
+3. The support in R for evaluating expressions in user-crafted
+   environments
+   
+it is possible that what looks like normal R code might do something
+surprising or cause surprising issues. 
+
+In some languages such features might be a mere curiousity but in R
+there is a widely used library set called the "tidyverse" which makes
+extensive use of these non-standard evaluation strategies. In our next
+lecture we will begin to discuss these libraries. 
+
+In general we will not pause to dwell on the non-standard semantics of
+expressions in the tidyverse unless they are of special interest, but
+its worthwhile that we appreciate that black magic is going on.
 
