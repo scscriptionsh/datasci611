@@ -48,8 +48,8 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Wed 09/29/2021  | ~~~~                               |                                                      |                                |
 | Mon 10/04/2021  | Dimensionality Reduction           | [1][m37][2][m38][3][m39][4][m40]                     | [hw7][hw7] due: Mon 10/11/2021 |
 | Wed 10/06/2021  | Clustering                         | [1][m41][2][m42][3][m43][4][m44]                     | [hw8][hw8] due: Wed 10/13/2021 |
-| Mon 10/11/2021  | Classification                     | [1][m45][2][m46][3][m47][4][m48][5][m49][6][m50]     | [hw9][hw9] due: Mon 10/18/2021 |
-| Wed 10/13/2021  | Model Validation and Selection     |                                                      |                                |
+| Mon 10/11/2021  | Classification                     | [1][m45][2][m46][3][m47][4][m48][5][m49][6][m50][7][m51]     | [hw9][hw9] due: Mon 10/18/2021 |
+| Wed 10/13/2021  | Model Validation and Selection     | [1][m52][2][m53]                                                     |                                |
 | Mon 10/18/2021  | Publishing Results                 |                                                      |                                |
 | Wed 10/20/2021  | Shiny                              |                                                      |                                |
 | Mon 10/25/2021  | Docker Recap and Shiny             |                                                      |                                |
@@ -137,6 +137,8 @@ This will start an RStudio Instance.
 [m49]:https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 [m50]:https://en.wikipedia.org/wiki/Logistic_regression
 [m51]:https://en.wikipedia.org/wiki/F-score
+[m52]:https://topepo.github.io/caret/model-training-and-tuning.html
+[m53]:https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
