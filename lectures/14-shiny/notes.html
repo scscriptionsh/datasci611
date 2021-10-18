@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-10-18 Mon 14:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="toups" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfedc2de">1. The Web, The Browser and RShiny</a>
+<ul>
+<li><a href="#org29cb25d">1.1. Section 0: Interactive Visualization</a></li>
+<li><a href="#org0d6b6e1">1.2. Section 1: Overview of the Web</a>
+<ul>
+<li><a href="#org1de07b1">1.2.1. How the Web Works</a></li>
+<li><a href="#orgedf490e">1.2.2. HTTP Requests</a></li>
+<li><a href="#org2d28b9b">1.2.3. Debugging with your Browser</a></li>
+<li><a href="#orgbf44164">1.2.4. HTML/CSS</a></li>
+<li><a href="#orgf67aab1">1.2.5. Javascript!</a></li>
+</ul>
+</li>
+<li><a href="#org48868e7">1.3. RShiny</a>
+<ul>
+<li><a href="#org3e4e987">1.3.1. Shiny Hello World</a></li>
+<li><a href="#org54d68fb">1.3.2. UI and Server</a></li>
+<li><a href="#org0ab06bb">1.3.3. A More Complicated Example</a></li>
+<li><a href="#org07d6091">1.3.4. Shiny Concepts</a></li>
+<li><a href="#orgd383f1e">1.3.5. Sources, Conductors and Endpoints</a></li>
+<li><a href="#orgfa71954">1.3.6. Shiny, ggplot and plotly.</a></li>
+<li><a href="#org44d69ac">1.3.7. Inputs</a></li>
+<li><a href="#orgd859710">1.3.8. Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org31ca66a">2. Recap</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfedc2de" class="outline-2">
+<h2 id="orgfedc2de"><span class="section-number-2">1</span> The Web, The Browser and RShiny</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org29cb25d" class="outline-3">
+<h3 id="org29cb25d"><span class="section-number-3">1.1</span> Section 0: Interactive Visualization</h3>
+<div class="outline-text-3" id="text-1-1">
+<ol class="org-ol">
+<li>Interactive Visualization is great for your portfolio.</li>
+<li>Its really good for the interactive stage of your project.</li>
+<li>It is also really compelling. Perhaps too compelling!</li>
+</ol>
+
+<p>
+Don't let your research get TED-talkified. An interactive
+visualization should eventually yield to some concrete hypothesis
+evaluated rigorously. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d6b6e1" class="outline-3">
+<h3 id="org0d6b6e1"><span class="section-number-3">1.2</span> Section 1: Overview of the Web</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Rshiny is a library for R which allows us to build interactive data
+oriented applications which run in a web browser.
+</p>
+
+<p>
+The intent is to allow you to exploit the interactivity of the web
+browser without learning the associated technologies (HTTP(S),
+Javascript, HTML, CSS, etc).
+</p>
+
+<p>
+This is a laudible goal but some background in these extremely useful
+and absolutely pervasive technologies is good for any technical person
+to have.
+</p>
+</div>
+
+<div id="outline-container-org1de07b1" class="outline-4">
+<h4 id="org1de07b1"><span class="section-number-4">1.2.1</span> How the Web Works</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Your browser is a client which talks to servers.  In the simplest case
+a server is just something waiting on an ip address (and a port) for a
+client to initiate a connection so that it can respond.
+</p>
+
+<p>
+Something called a domain-name server maps names to ip
+addresses. There are a few special cases:
+</p>
+
+<ol class="org-ol">
+<li>localhost is a "domain" which always maps to the local computer</li>
+<li>0.0.0.0 is "any interface" on the local machine. You can think of
+localhost as resolving to 0.0.0.0</li>
+<li>127.0.0.1 also represents "this machine"</li>
+</ol>
+
+<p>
+Most traffic going through your browser uses a protocol called
+HTTP. HTTPS is the secure version of this protocol the details of
+which we will gloss over. More or less from our point of view the two
+are identical.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedf490e" class="outline-4">
+<h4 id="orgedf490e"><span class="section-number-4">1.2.2</span> HTTP Requests</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+You can think of an HTTP request as a single document (the details of
+its representation aren't very important). It does have some
+stereoypical parts, however:
+</p>
+
+<ol class="org-ol">
+<li>HEADER - contains information about the request type, the resource requested, parameters</li>
+<li>BODY - may contain anything. Think of it as some text information</li>
+</ol>
+
+<p>
+The header often contains information for the server about the way to
+interpret the body - it may say that the body is to be understood as
+JSON or a CSV or some other format. 
+</p>
+
+<p>
+There are a few request types worth knowing:
+</p>
+
+<ol class="org-ol">
+<li>GET - a request for a resource. Typically doesn't contain a body
+since it represents a simple request for something.</li>
+<li>POST - a request to update a resource on the server. POSTs are used
+for a lot of things but a nice way to think of POST is "as in POST
+a Tweet". You update your timeline (the resource) the the tween
+(some new data).</li>
+<li>PUT - A request to replace a resource entirely with the contents of
+the request. A PUT would be the appropriate message type if you
+were to replace your profile image on Twitter. You aren't amending
+your photo. You are replacing it.</li>
+<li>DELETE - a request to delete the resource.</li>
+</ol>
+
+<p>
+To a large degree these things are conventional. For instance, you
+might update your profile on Twitter with a POST request for the
+resource representing your profile.
+</p>
+
+<p>
+NB - cookies are little things that a client and server pass back and
+forth in the HEADER to represent so-called "session" information.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d28b9b" class="outline-4">
+<h4 id="org2d28b9b"><span class="section-number-4">1.2.3</span> Debugging with your Browser</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+Again, ideally you won't need to do this but I wanted to show you how.
+</p>
+
+
+<div id="org3a32532" class="figure">
+<p><img src="./images/debugger.png" alt="debugger.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>A debugger open at Linked In showing the requests the page has initiated.</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf44164" class="outline-4">
+<h4 id="orgbf44164"><span class="section-number-4">1.2.4</span> HTML/CSS</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+HTML is a text based language for describing documents. CSS is the
+associated language for describing how those documents should be
+rendered. HTML looks like this:
+</p>
+
+<pre class="example">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src=""/&gt;
+        &lt;p&gt;Hello World&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>
+Note that every opening tag (eg "&lt;p&gt;") is matched by a closing tag (eg
+"&lt;/p&gt;"). Some tags don't need this treatment if they don't enclose
+anything. In that case you see the "/" at the end of the tag as in the
+image example above. This is a self closing tag. You should read such
+as both the open and close tag. Eg:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;/<span style="color: #00ff7f;">p</span>&gt;
+</pre>
+</div>
+
+<p>
+Is the same as 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="color: #00ff7f;">p</span>&gt;&lt;/<span style="color: #00ff7f;">p</span>&gt;
+</pre>
+</div>
+
+<p>
+Browsers are pretty forgiving if you forget to close a tag but who
+knows what you'll see if you forget. Its wrong to not close tags. In
+fact, for the appendices in the clustering lecture I had some serious
+problems pulling data from a web page because there were unclosed
+tags.
+</p>
+
+<p>
+Note that the HTML above just conveys semantic information with its
+tags. Its up to the browser to use CSS to determine how the page is
+actually drawn.
+</p>
+
+<p>
+CSS (cascading style sheets) tell the browser how to actually "render"
+the page.
+</p>
+
+<p>
+It looks like this:
+</p>
+
+<pre class="example">
+p {
+  background-color: red;
+  font-size: 15px;
+}
+</pre>
+
+<p>
+You link CSS to a document via a line in the "&lt;head&gt;&lt;/head&gt;":
+</p>
+
+<pre class="example">
+&lt;link rel="stylesheet" href="styles.css"&gt;
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgf67aab1" class="outline-4">
+<h4 id="orgf67aab1"><span class="section-number-4">1.2.5</span> Javascript!</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<p>
+Like HTML and CSS RShiny purports to hide this from you. Javascript is
+the programming language running inside your browser. It handles
+non-trivial behaviors that happen on the client.
+</p>
+
+<p>
+Javascript is, very broadly speaking, similar to R.
+</p>
+
+<p>
+Key differences:
+</p>
+
+<ol class="org-ol">
+<li>Much less environment tom-foolery. You cannot get your hands on
+environments.</li>
+<li>Eager evaluation is the only model: arguments to functions are
+evaluated before the function body is entered and cannot be
+evaluated anywhere else but the calling context.</li>
+<li>Ubiquity of "objects." Javascript heavily uses objects which are
+similar to R lists but meant only for key/value associations. There
+are also javascript arrays but these can hold any type of object
+and are only one dimensional.</li>
+<li>Asynchronous execution model. The primary role of javascript code
+is to do something and then get out of the way so the browser can
+take over. Thus, you frequently write "callbacks" or some variation
+on them (promises or use of the async/await pattern) to tell the
+browser you want to run a piece of code when some specific event
+happens.</li>
+</ol>
+
+<p>
+Programming in JS is outside of the scope of this class but its a very
+useful skill to develop. In particular, there is a library called D3
+which is used for interactive visualizations. You can achieve
+substantially better results with D3 than shiny, but you must learn
+both javascript and D3's idiosyncratic view of the world.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org48868e7" class="outline-3">
+<h3 id="org48868e7"><span class="section-number-3">1.3</span> RShiny</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Because browsers are so ubiquitous and powerful they are a great
+platform for visualization engines.
+</p>
+
+<p>
+However, the above combination of technologies is a lot to onboard if
+you don't want to dedicate a significant amount of time to it.
+</p>
+
+<p>
+Thus: Shiny. Shiny allows you to build <span class="underline">both</span> the front and <span class="underline">back</span> end
+of an application entirely in R. You can extend Shiny if you know
+browser technologies but in many cases you don't need to.
+</p>
+</div>
+
+<div id="outline-container-org3e4e987" class="outline-4">
+<h4 id="org3e4e987"><span class="section-number-4">1.3.1</span> Shiny Hello World</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Shiny is built into the rocker/verse Docker container. You might need
+to install it via
+</p>
+
+<pre class="example">
+install.packages("shiny");
+</pre>
+
+<p>
+Hello World:
+</p>
+
+<pre class="example">
+cat &lt;&lt; EOF &gt; shiny-hello.R
+library(shiny);
+
+ui &lt;- fluidPage("Hello World");
+
+server &lt;- function(input,output,session){
+  # Does nothing
+}
+
+# Start the Server
+shinyApp(ui=ui,server=server,
+  options=list(port=8080, host="0.0.0.0"));
+
+EOF
+</pre>
+
+<p>
+Running this code will start a server on port 8080. If you are running
+w/ Docker you need to remap you port appropriately. The appropriate
+invocation is like if you want to start your shiny app by itself.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">docker run <span style="color: #ffa07a;">\</span>
+    -p 8080:8080 <span style="color: #ffa07a;">\ </span>
+    -v <span style="color: #fa8072;">`pwd`</span>:/home/rstudio/project <span style="color: #ffa07a;">\</span>
+    -e <span style="color: #9acd32;">PASSWORD</span>=$<span style="color: #9acd32;">SECRET_PWD</span> <span style="color: #ffa07a;">\</span>
+    -it l13 sudo -H -u rstudio <span style="color: #ffa07a;">\</span>
+    /bin/bash -c <span style="color: #ffa07a;">"cd ~/project; Rscript shiny-hello.R"</span>
+</pre>
+</div>
+
+<p>
+What this invocation does (for those keeping track) is use "sudo" to
+run a command as the rstudio user. We run bash, change to the right
+directory and then launch the R process.
+</p>
+
+<p>
+As usual, you'll need to replace that `pwd` with either the full local
+directory name in Windows or with "$(pwd)" if you have spaces in your
+names. You'll need to escape spaces etc.
+</p>
+
+<p>
+You can also start a shiny app from within R Studio at the command
+line by adding this to your invocation:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">docker run <span style="color: #ffa07a;">\</span>
+       -p 8080:8080 <span style="color: #ffa07a;">\</span>
+       -p 8787:8787 <span style="color: #ffa07a;">\</span>
+       -e <span style="color: #9acd32;">PASSWORD</span>=&lt;your_password&gt;
+       -v $(<span style="color: #76ee00;">pwd</span>):/home/rstudio/project
+       -t &lt;your-container-tag&gt;
+</pre>
+</div>
+
+<p>
+Then within R studio you can launch your shiny app from the command
+line/terminal:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">Rscript shiny-hello.R
+</pre>
+</div>
+
+<p>
+And it should be accessible on localhost:8080 on your browser.
+</p>
+
+<p>
+You can run a shiny app from within Rstudio but I want you to know how
+to launch your apps stand alone. I do, however, recommend this
+approach over starting via Docker. Its easier.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54d68fb" class="outline-4">
+<h4 id="org54d68fb"><span class="section-number-4">1.3.2</span> UI and Server</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+To create a shiny app you need to define a UI object and a server
+function. 
+</p>
+
+<p>
+The UI Object describes the layout of the page including any
+interactive elements.
+</p>
+
+<p>
+The server function describes how events which occur on the front end
+propagate to the back end and back to the front end.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ab06bb" class="outline-4">
+<h4 id="org0ab06bb"><span class="section-number-4">1.3.3</span> A More Complicated Example</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(shiny)
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Define UI for app that draws a histogram ----</span>
+ui <span style="color: #1e90ff;">&lt;-</span> fluidPage(
+
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">App title ----</span>
+  titlePanel(<span style="color: #ffa07a;">"Hello Shiny!"</span>),
+
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">Sidebar layout with input and output definitions ----</span>
+  sidebarLayout(
+
+    <span style="color: #cd853f;"># </span><span style="color: #cd853f;">Sidebar panel for inputs ----</span>
+    sidebarPanel(
+
+      <span style="color: #cd853f;"># </span><span style="color: #cd853f;">Input: Slider for the number of bins ----</span>
+      sliderInput(inputId = <span style="color: #ffa07a;">"bins"</span>,
+                  label = <span style="color: #ffa07a;">"Number of bins:"</span>,
+                  min = 1,
+                  max = 50,
+                  value = 30)
+
+    ),
+
+    <span style="color: #cd853f;"># </span><span style="color: #cd853f;">Main panel for displaying outputs ----</span>
+    mainPanel(
+
+      <span style="color: #cd853f;"># </span><span style="color: #cd853f;">Output: Histogram ----</span>
+      plotOutput(outputId = <span style="color: #ffa07a;">"distPlot"</span>)
+
+    )
+  )
+)
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Define server logic required to draw a histogram ----</span>
+<span style="color: #00ff7f;">server</span> <span style="color: #1e90ff;">&lt;-</span> <span style="color: #20b2aa; font-weight: bold;">function</span>(input, output) {
+
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">Histogram of the Old Faithful Geyser Data ----</span>
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">with requested number of bins</span>
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">This expression that generates a histogram is wrapped in a call</span>
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">to renderPlot to indicate that:</span>
+  <span style="color: #cd853f;">#</span>
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">1. It is "reactive" and therefore should be automatically</span>
+  <span style="color: #cd853f;">#    </span><span style="color: #cd853f;">re-executed when inputs (input$bins) change</span>
+  <span style="color: #cd853f;"># </span><span style="color: #cd853f;">2. Its output type is a plot</span>
+  output$distPlot <span style="color: #1e90ff;">&lt;-</span> renderPlot({
+
+    x    <span style="color: #1e90ff;">&lt;-</span> faithful$waiting
+    bins <span style="color: #1e90ff;">&lt;-</span> seq(min(x), max(x), length.out = input$bins + 1)
+
+    hist(x, breaks = bins, col = <span style="color: #ffa07a;">"#75AADB"</span>, border = <span style="color: #ffa07a;">"white"</span>,
+         xlab = <span style="color: #ffa07a;">"Waiting time to next eruption (in mins)"</span>,
+         main = <span style="color: #ffa07a;">"Histogram of waiting times"</span>)
+
+    })
+
+}
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Start the Server</span>
+shinyApp(ui=ui,server=server,
+  options=list(port=8080, host=<span style="color: #ffa07a;">"0.0.0.0"</span>));
+</pre>
+</div>
+
+<p>
+The important bits here are:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">sliderInput(inputId = <span style="color: #ffa07a;">"bins"</span>,
+            label = <span style="color: #ffa07a;">"Number of bins:"</span>,
+            min = 1,
+            max = 50,
+            value = 30)
+
+</pre>
+</div>
+
+<p>
+Note that the input we create here is given an ID: "bins."
+</p>
+
+<p>
+This allows us to refer to it on the input object here:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">bins <span style="color: #1e90ff;">&lt;-</span> seq(min(x), max(x), length.out = input$bins + 1)
+</pre>
+</div>
+
+<p>
+And note that we create, in the main panel:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">plotOutput(outputId = <span style="color: #ffa07a;">"distPlot"</span>)
+</pre>
+</div>
+
+<p>
+And give it an output id "distPlot".
+</p>
+
+<p>
+This allows us to update the plot when an event occurs:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">output$distPlot <span style="color: #1e90ff;">&lt;-</span> renderPlot({
+
+  x    <span style="color: #1e90ff;">&lt;-</span> faithful$waiting
+  bins <span style="color: #1e90ff;">&lt;-</span> seq(min(x), max(x), length.out = input$bins + 1)
+
+  hist(x, breaks = bins, col = <span style="color: #ffa07a;">"#75AADB"</span>, border = <span style="color: #ffa07a;">"white"</span>,
+       xlab = <span style="color: #ffa07a;">"Waiting time to next eruption (in mins)"</span>,
+       main = <span style="color: #ffa07a;">"Histogram of waiting times"</span>)
+
+  })
+</pre>
+</div>
+
+<p>
+Note that we wrap our output in renderPlot. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07d6091" class="outline-4">
+<h4 id="org07d6091"><span class="section-number-4">1.3.4</span> Shiny Concepts</h4>
+<div class="outline-text-4" id="text-1-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org0a067e2"></a>Reactive Programming<br />
+<div class="outline-text-5" id="text-1-3-4-1">
+<p>
+<a href="https://shiny.rstudio.com/articles/basics.html">From the RShiny documentation</a>:
+</p>
+
+<p>
+"Reactive programming is a coding style that starts with reactive
+values–values that change in response to the user, or over time–and
+builds on top of them with reactive expressions–expressions that
+access reactive values and execute other reactive expressions.
+</p>
+
+<p>
+What’s interesting about reactive expressions is that whenever they
+execute, they automatically keep track of what reactive values they
+read and what reactive expressions they invoked. If those
+“dependencies” become out of date, then they know that their own
+return value has also become out of date. Because of this dependency
+tracking, changing a reactive value will automatically instruct all
+reactive expressions that directly or indirectly depend on that value
+to re-execute."
+</p>
+
+<p>
+Note that this is a bit like a makefile except for values in R.
+</p>
+
+<p>
+Here is an example from the documentation:
+</p>
+
+<p>
+(Note that this example makes use of the rock, pressure and cars
+datasets).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">datasetInput <span style="color: #1e90ff;">&lt;-</span> reactive({
+   <span style="color: #20b2aa; font-weight: bold;">switch</span>(input$dataset,
+          <span style="color: #ffa07a;">"rock"</span> = rock,
+          <span style="color: #ffa07a;">"pressure"</span> = pressure,
+          <span style="color: #ffa07a;">"cars"</span> = cars)
+})
+</pre>
+</div>
+
+<p>
+We have some of the tools to parse this expression already. First of
+all, it seems like this reactive value refers to an input object which
+has no binding.
+</p>
+
+<p>
+Reactive expressions must thus do something funny with the evaluation
+semantics of the language.
+</p>
+
+<p>
+Indeed, if we try to execute this expression in R:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">datasetInput()
+datasetInput()
+Error in .getReactiveEnvironment()$ currentContext() : Operation not allowed
+without an active reactive context.
+(You tried to do something that can only be done from
+    inside a reactive expression or observer.)
+</pre>
+</div>
+
+<p>
+However, if we call datasetInput from inside of our server function it
+will run. Reactive expressions need to be in the right context to mean
+something. Most of the time that context is the UI declaration or the
+server function.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgd383f1e" class="outline-4">
+<h4 id="orgd383f1e"><span class="section-number-4">1.3.5</span> Sources, Conductors and Endpoints</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+Consider this example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(shiny);
+
+ui <span style="color: #1e90ff;">&lt;-</span> fluidPage(
+    numericInput(inputId=<span style="color: #ffa07a;">"n"</span>,value=1,label=<span style="color: #ffa07a;">"n"</span>),
+    textOutput(outputId=<span style="color: #ffa07a;">"nthValue"</span>),
+    textOutput(outputId=<span style="color: #ffa07a;">"nthValueInv"</span>));
+
+<span style="color: #00ff7f;">fib</span> <span style="color: #1e90ff;">&lt;-</span> <span style="color: #20b2aa; font-weight: bold;">function</span>(n) ifelse(n&lt;3, 1, fib(n-1)+fib(n-2))
+
+<span style="color: #00ff7f;">server</span> <span style="color: #1e90ff;">&lt;-</span> <span style="color: #20b2aa; font-weight: bold;">function</span>(input, output) {
+  currentFib         <span style="color: #1e90ff;">&lt;-</span> reactive({ fib(as.numeric(input$n)) })
+
+  output$nthValue    <span style="color: #1e90ff;">&lt;-</span> renderText({ currentFib() })
+  output$nthValueInv <span style="color: #1e90ff;">&lt;-</span> renderText({ 1 / currentFib() })
+}
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Start the Server</span>
+shinyApp(ui=ui,server=server,
+  options=list(port=8080, host=<span style="color: #ffa07a;">"0.0.0.0"</span>));
+</pre>
+</div>
+
+
+<div id="orgd20df3a" class="figure">
+<p><img src="./images/reactive-roles.png" alt="reactive-roles.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>The three types of reactive objects in Shiny.</p>
+</div>
+
+<p>
+<a href="https://shiny.rstudio.com/articles/reactivity-overview.html">Reactivity Overview</a>
+</p>
+
+<p>
+A useful metaphor for reactive objects is that they are cells in a big
+virtual spreadsheet linked by formulas. When you change a cell that a
+formula depends on, the formula is re-run. You can simplify a
+calculation in a spreadsheet by putting values into intermediate
+cells. These are the reactive conductors.
+</p>
+
+<p>
+We can label all the parts of our app now. The inputs are sources, the
+outputs are endpoints and the currentFib object represents a
+conductor. It happens to cache our data.
+</p>
+
+<p>
+Note that we put all the reactive code inside the server function.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa71954" class="outline-4">
+<h4 id="orgfa71954"><span class="section-number-4">1.3.6</span> Shiny, ggplot and plotly.</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+We can use ggplot directly inside of Shiny:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(shiny);
+<span style="color: #1e90ff;">library</span>(tidyverse);
+
+ui <span style="color: #1e90ff;">&lt;-</span> shinyUI(fluidPage(
+numericInput(inputId=<span style="color: #ffa07a;">"n"</span>,value=1,label=<span style="color: #ffa07a;">"Samples"</span>),
+plotOutput(outputId=<span style="color: #ffa07a;">"thePlot"</span>)));
+
+<span style="color: #00ff7f;">server</span> <span style="color: #1e90ff;">&lt;-</span> <span style="color: #20b2aa; font-weight: bold;">function</span>(input, output) {
+    output$thePlot <span style="color: #1e90ff;">&lt;-</span> renderPlot(ggplot(tibble(x=rnorm(as.numeric(input$n))),aes(x))
+                                 +geom_histogram());
+}
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Start the Server</span>
+shinyApp(ui=ui,server=server,
+  options=list(port=8080, host=<span style="color: #ffa07a;">"0.0.0.0"</span>));
+
+</pre>
+</div>
+
+<p>
+But doing so isn't that satisfactory. Its much nicer to use plotly to
+convert our figures into HTML/Javascript. It produces a much more
+interactive result.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(shiny);
+<span style="color: #1e90ff;">library</span>(tidyverse);
+<span style="color: #1e90ff;">library</span>(plotly);
+
+ui <span style="color: #1e90ff;">&lt;-</span> shinyUI(fluidPage(
+numericInput(inputId=<span style="color: #ffa07a;">"n"</span>,value=1,label=<span style="color: #ffa07a;">"Samples"</span>),
+plotlyOutput(outputId=<span style="color: #ffa07a;">"thePlot"</span>)));
+
+<span style="color: #00ff7f;">server</span> <span style="color: #1e90ff;">&lt;-</span> <span style="color: #20b2aa; font-weight: bold;">function</span>(input, output) {
+    output$thePlot <span style="color: #1e90ff;">&lt;-</span> renderPlotly(ggplot(tibble(x=rnorm(as.numeric(input$n))),aes(x))
+                                 +geom_histogram());
+}
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Start the Server</span>
+shinyApp(ui=ui,server=server,
+  options=list(port=8080, host=<span style="color: #ffa07a;">"0.0.0.0"</span>));
+</pre>
+</div>
+
+<p>
+Note that we just use "plotlyOutput" in our UI and "renderPlotly" in
+our server code.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org44d69ac" class="outline-4">
+<h4 id="org44d69ac"><span class="section-number-4">1.3.7</span> Inputs</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+<a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/">A good place to get a sense for what you can put in a UI as an input</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd859710" class="outline-4">
+<h4 id="orgd859710"><span class="section-number-4">1.3.8</span> Example</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<p>
+Interactive visualizations are useful for quick explorations. Let's
+whip something up.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(shiny);
+<span style="color: #1e90ff;">library</span>(tidyverse);
+<span style="color: #1e90ff;">library</span>(plotly);
+
+pows <span style="color: #1e90ff;">&lt;-</span> read_csv(<span style="color: #ffa07a;">"derived_data/character_powers.csv"</span>);
+powers <span style="color: #1e90ff;">&lt;-</span> pows$name <span style="color: #1e90ff;">%&gt;%</span> unique();
+pows <span style="color: #1e90ff;">&lt;-</span> pows <span style="color: #1e90ff;">%&gt;%</span> filter(value==1);
+
+chars <span style="color: #1e90ff;">&lt;-</span> read_csv(<span style="color: #ffa07a;">"derived_data/character_properties.csv"</span>);
+props <span style="color: #1e90ff;">&lt;-</span> chars$name <span style="color: #1e90ff;">%&gt;%</span> unique();
+
+interesting_properties <span style="color: #1e90ff;">&lt;-</span> c(<span style="color: #ffa07a;">"affiliation"</span>,
+                            <span style="color: #ffa07a;">"alignment"</span>,
+                            <span style="color: #ffa07a;">"citizenship"</span>,
+                            <span style="color: #ffa07a;">"marital_status"</span>,
+                            <span style="color: #ffa07a;">"occupation"</span>,
+                            <span style="color: #ffa07a;">"gender"</span>,
+                            <span style="color: #ffa07a;">"eyes"</span>,
+                            <span style="color: #ffa07a;">"hair"</span>,
+                            <span style="color: #ffa07a;">"creators"</span>,
+                            <span style="color: #ffa07a;">"base_of_operations"</span>,
+                            <span style="color: #ffa07a;">"skin"</span>,
+                            <span style="color: #ffa07a;">"race"</span>,
+                            <span style="color: #ffa07a;">"status"</span>);
+
+emb <span style="color: #1e90ff;">&lt;-</span> read_csv(<span style="color: #ffa07a;">"derived_data/character_embedding.csv"</span>);
+
+ui <span style="color: #1e90ff;">&lt;-</span> shinyUI(fluidPage(
+    titlePanel(<span style="color: #ffa07a;">"Comic Character Explorer"</span>),
+    sidebarLayout(sidebarPanel(selectizeInput(inputId=<span style="color: #ffa07a;">"power"</span>,
+                                              label=<span style="color: #ffa07a;">"Power"</span>,
+                                              choices=powers,
+                                              multiple=F),
+                               selectizeInput(inputId=<span style="color: #ffa07a;">"property"</span>,
+                                              label=<span style="color: #ffa07a;">"Property"</span>,
+                                              choices=interesting_properties,
+                                              multiple=F)),
+                  mainPanel(plotlyOutput(<span style="color: #ffa07a;">"graph"</span>)))
+));
+
+<span style="color: #00ff7f;">server</span> <span style="color: #1e90ff;">&lt;-</span> <span style="color: #20b2aa; font-weight: bold;">function</span>(input, output) {
+    output$graph <span style="color: #1e90ff;">&lt;-</span> renderPlotly({
+
+        power <span style="color: #1e90ff;">&lt;-</span> input$power;
+        property <span style="color: #1e90ff;">&lt;-</span> input$property;
+
+        power_ss <span style="color: #1e90ff;">&lt;-</span> pows <span style="color: #1e90ff;">%&gt;%</span> filter(name==power);
+
+        chars_ss <span style="color: #1e90ff;">&lt;-</span> chars <span style="color: #1e90ff;">%&gt;%</span>
+            filter(name==property) <span style="color: #1e90ff;">%&gt;%</span>
+            group_by(character) <span style="color: #1e90ff;">%&gt;%</span>
+            filter(row_number()==1) <span style="color: #1e90ff;">%&gt;%</span>
+            ungroup();
+
+
+        emb_ex <span style="color: #1e90ff;">&lt;-</span> emb <span style="color: #1e90ff;">%&gt;%</span> left_join(chars_ss, by=<span style="color: #ffa07a;">"character"</span>);
+
+        plt <span style="color: #1e90ff;">&lt;-</span> ggplot(emb_ex, aes(x, y, text=character)) +
+            geom_point(aes(size=c(<span style="color: #ffa07a;">"TRUE"</span>=1,<span style="color: #ffa07a;">"FALSE"</span>=0.5)[(character <span style="color: #1e90ff;">%in%</span> power_ss$character) <span style="color: #1e90ff;">%&gt;%</span> as.character()],
+                           color=factor(value))) +
+            labs(size=<span style="color: #ffa07a;">"Has Power"</span>,
+                 color=<span style="color: #ffa07a;">"Property"</span>);
+        ggplotly(plt, tooltip=<span style="color: #ffa07a;">"text"</span>);
+    });
+}
+
+<span style="color: #cd853f;"># </span><span style="color: #cd853f;">Start the Server</span>
+shinyApp(ui=ui,server=server,
+  options=list(port=8080, host=<span style="color: #ffa07a;">"0.0.0.0"</span>));
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org31ca66a" class="outline-2">
+<h2 id="org31ca66a"><span class="section-number-2">2</span> Recap</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Shiny is an R system which lets you write pure R and constructs a web
+application for you. The basic idea is to connect inputs (defined in
+your UI) to your server function, which typically produces plots and
+tables as outputs.
+</p>
+
+<p>
+Sometimes you need to cache intermediate results to prevent them from
+being run too often. Use reactive elements or "conductors" to stage
+such intermediate calculations.
+</p>
+
+<p>
+The result is a server which presents a web page (HTML/CSS/JS) which
+makes a series of requests to your back end, which in turn renders the
+appropriate figures.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: toups</p>
+<p class="date">Created: 2021-10-18 Mon 14:47</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
