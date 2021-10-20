@@ -1,0 +1,451 @@
+Misc Topics & Python
+====================
+author: Vincent Toups
+date: 11 Sept 2020
+width:1400
+height:800
+css:style.css
+
+1. A Little More Caret
+2. Optimization Overview
+3. Python Introduction
+
+Caret and RFE
+=============
+
+Last week we discussed using Caret to do recursive feature
+elimination. 
+
+The example I used didn't quite work, however (the lmFunctions was
+broken) and some of you may want to do RVE with a different metric
+than Accuracy.
+
+Recap
+=====
+
+1. Caret is a library which helps us do model characterization and
+   selection. 
+2. Many models supported by Caret do not require explicit feature
+   selection because they perform this function for us in one way or
+   another.
+3. For those that do not we can use the `rfe` function to do recursive
+   feature elimination. This supports a smaller number of methods.
+   
+Options for GLMs.
+=================
+
+If you want to do a feature selection task for a GLM you can use
+"glmStepAIC"
+
+```{r echo=FALSE, include=FALSE}
+source("utils.R");
+library(tidyverse);
+library(caret);
+
+info <- read_csv("./source_data/datasets_26532_33799_heroes_information.csv") %>%
+    nice_names() %>%
+    filter(height > 0 & weight > 0 & race == "Human" & gender %in% c("Male","Female")) %>%
+    add_other("eye_color", 0.1) %>% add_other("hair_color", 0.075);
+stats <- read_csv("./source_data/datasets_38396_60978_charcters_stats.csv") %>%
+    nice_names() %>% filter(total > 5);
+dataset <- info %>% select(name, gender, eye_color, hair_color, weight, height) %>%
+    inner_join(stats, by="name") %>% chars_to_factors();
+```
+
+```{r echo=FALSE, include=FALSE}
+predictors <- names(dataset) %without% c("name",
+                                         "gender",
+                                         "total");
+
+
+objControl <- trainControl(method = 'repeatedcv', 
+                         number = 5, 
+                         repeats = 5, 
+                         summaryFunction = twoClassSummary, 
+                         classProbs = TRUE)
+
+
+glm_fit <- invisible(train(dataset[,predictors], dataset$gender,
+                 method='glmStepAIC', 
+                 verbose = TRUE,
+                 trControl = objControl,  
+                 metric = "ROC",
+                 preProc = c("center", "scale"),
+                 train.fraction = 0.5));
+glm_fit
+```
+```{r echo=FALSE, include=FALSE}
+predictors <- names(dataset) %without% c("name",
+                                         "gender",
+                                         "total");
+
+
+objControl <- trainControl(method = 'repeatedcv', 
+                         number = 5, 
+                         repeats = 5, 
+                         summaryFunction = twoClassSummary, 
+                         classProbs = TRUE)
+
+
+glm_fit <- invisible(train(dataset[,predictors], dataset$gender,
+                 method='glmStepAIC', 
+                 verbose = TRUE,
+                 trControl = objControl,  
+                 metric = "ROC",
+                 preProc = c("center", "scale"),
+                 train.fraction = 0.5));
+glm_fit
+```
+
+```{r ECHO=FALSE}
+glm_fit;
+```
+***
+```{r}
+## ...
+##             Df Deviance     AIC
+## - power      1   82.735  96.735
+## <none>           81.283  97.283
+## - weight     1   85.907  99.907
+## - speed      1   86.040 100.040
+## - eye_color  3   93.386 103.386
+## - height     1   96.521 110.521
+
+## Step:  AIC=96.74
+## .outcome ~ eye_color + weight + height + speed
+
+##             Df Deviance     AIC
+## <none>           82.735  96.735
+## - speed      1   86.290  98.290
+## - weight     1   86.661  98.661
+## - eye_color  3   94.004 102.004
+## - height     1   96.593 108.593
+## There were 50 or more warnings (use warnings() to see the first 50)
+summary(glm_fit);
+```
+
+Using F1 Instead of ROC
+=======================
+
+To use a different metric we need to define a new summary function. We
+can just add an F1 Score to the build in function:
+
+(NB - we can get the source code for most R functions by just
+mentioning it on the command line).
+
+```{r}
+twoClassSummary
+```
+
+So...
+=====
+
+```{r}
+library(MLmetrics);
+f1_summary <- function (data, lev = NULL, model = NULL) 
+{
+    if (length(lev) > 2) {
+        stop(paste("Your outcome has", length(lev), "levels. The twoClassSummary() function isn't appropriate."))
+    }
+    caret:::requireNamespaceQuietStop("pROC")
+    if (!all(levels(data[, "pred"]) == lev)) {
+        stop("levels of observed and predicted data do not match")
+    }
+    rocObject <- try(pROC::roc(data$obs, data[, lev[1]], direction = ">", 
+        quiet = TRUE), silent = TRUE)
+    rocAUC <- if (inherits(rocObject, "try-error")) 
+        NA
+    else rocObject$auc
+    
+    out <- c(rocAUC,
+             sensitivity(data[, "pred"], data[, "obs"], lev[1]),
+             specificity(data[, "pred"], data[, "obs"], lev[2]),
+             MLmetrics::F1_Score(data[, "obs"], data[, "pred"], "Female"));
+    names(out) <- c("ROC", "Sens", "Spec","F1");
+    out
+}
+```
+
+And We Use It Thus
+==================
+
+```{r echo=FALSE, include=FALSE}
+objControl <- trainControl(method = 'repeatedcv', 
+                         number = 5, 
+                         repeats = 5, 
+                         summaryFunction = f1_summary, 
+                         classProbs = TRUE)
+glm_fit <- invisible(train(dataset[,predictors], dataset$gender,
+                 method='glmStepAIC', 
+                 verbose = TRUE,
+                 trControl = objControl,  
+                 metric = "F1",
+                 preProc = c("center", "scale"),
+                 train.fraction = 0.5));
+glm_fit
+```
+```
+objControl <- trainControl(method = 'repeatedcv', 
+                         number = 5, 
+                         repeats = 5, 
+                         summaryFunction = f1_summary, 
+                         classProbs = TRUE)
+glm_fit <- invisible(train(dataset[,predictors], dataset$gender,
+                 method='glmStepAIC', 
+                 verbose = TRUE,
+                 trControl = objControl,  
+                 metric = "F1",
+                 preProc = c("center", "scale"),
+                 train.fraction = 0.5));
+glm_fit
+```
+```{r}
+glm_fit
+```
+
+Nota Bene 1
+===========
+
+Our discrete variables have been one hot encoded. That is, each factor
+variable is converted into N dimensions where N is the number of
+levels. We don't have much choice since these variables aren't
+ordered.
+
+But this does (weakly) introduce correlated variables into our model:
+if `eye_colorGreen` is 1 then we know that all other `eye_color`
+variables are 0. 
+
+Nota Bene
+=========
+
+glmStepAIC uses the Akaiki Information Criterion to select features
+rather than the metric we pass to the train function. We'd need to
+implement even more custom code to modify the metric used for feature
+selection.
+
+This is a log-likelihood penalized by a factor proportional to the
+number of degrees of freedom in the model.
+
+Ridge Regression & Lasso
+========================
+
+![](./images/lasso-ridge.png)
+
+Background
+==========
+
+Whether we do classification or regression we are looking for a model
+which minimizes the sum of squared errors: 
+
+```
+min(sum((y-y_pred)*(y-y_pred)))
+```
+
+Where (in a linear model) each `y_pred` is given by:
+
+```
+b0 + b . x
+```
+
+That is, each `y_pred` is a weighted sum of the predictors plus some
+offset term.
+
+If (for some reason) a component of b were 0 that would amount to
+eliminating it from the model. What if we forced components to be
+zero?
+
+Ridge Regression & Lasso
+========================
+
+![](./images/lasso-ridge.png)
+
+This is an example of regularization, which we'll see appear again if
+we discuss neural networks. Restricting your degrees of freedom helps
+keep you from overfitting.
+
+Lasso is better than Ridge Regression because it forces some
+predictors entirely to zero. You may want to threshold if you use
+Ridge Regression.
+
+glmnet: linear mixture of LASSO and Ridge
+=========================================
+
+[Introduction to GLMNET](https://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html)
+
+[](./images/glmnet-obj-function.png)
+
+```
+
+predictors <- names(dataset) %without% c("name",
+                                         "gender",
+                                         "total");
+
+form <- as.formula(sprintf("gender ~ %s", paste(predictors, collapse="+")));
+
+objControl <- trainControl(method = 'repeatedcv', 
+                         number = 5, 
+                         repeats = 5, 
+                         summaryFunction = twoClassSummary, 
+                         classProbs = TRUE)
+
+
+glm_fit <- invisible(train(form, data=dataset,
+                 method='glmnet', 
+                 verbose = TRUE,
+                 trControl = objControl,  
+                 metric = "ROC",
+                 preProc = c("center", "scale"),
+                 train.fraction = 0.5));
+```
+***
+```{r echo=F, include=F}
+
+predictors <- names(dataset) %without% c("name",
+                                         "gender",
+                                         "total");
+
+form <- as.formula(sprintf("gender ~ %s", paste(predictors, collapse="+")));
+
+objControl <- trainControl(method = 'repeatedcv', 
+                         number = 5, 
+                         repeats = 5, 
+                         summaryFunction = twoClassSummary, 
+                         classProbs = TRUE)
+
+
+glm_fit <- invisible(train(form, data=dataset,
+                 method='glmnet', 
+                 verbose = TRUE,
+                 trControl = objControl,  
+                 metric = "ROC",
+                 preProc = c("center", "scale"),
+                 train.fraction = 0.5));
+```
+```{r}
+glm_fit
+```
+
+Optimization In General
+=======================
+
+1. Modeling is always defined in terms of an underlying optimizatin task. 
+2. Luckily, smart people have spent a great deal of time on this problem
+3. But it is worth thinking a little about
+
+***
+
+```{r}
+library(tidyverse);
+x <- seq(from=0, to=10, length.out=100);
+exd <- tibble(x=x, y=0.5*x + 0.5*x*x + 0.1*rnorm(length(x)));
+ggplot(exd, aes(x,y)) + geom_point();
+```
+
+Imagine fitting this function - we can guess its a degree two
+polynomial with 0 intercept, say, but we still have two parameters to
+choose. Call then a and b.
+
+Guessing Randomly
+=================
+
+```{r}
+rms <- function(a,b,tbl){
+    d <- tbl$y - (a*tbl$x + b*tbl$x*tbl$x);
+    sum(d*d)
+}
+results <- tibble(a=runif(1000,0,1),b=runif(1000,0,1)) %>% rowwise() %>%
+    mutate(error=rms(a,b,exd)) %>% ungroup();
+ggplot(results, aes(a,b)) + geom_point(aes(color=error)) +
+    geom_point(data=results %>% arrange(error) %>% head(10), color="red");
+
+```
+
+***
+
+```{r}
+results %>% arrange(error) %>% head(10)
+```
+ Not that good!
+
+Optim
+=====
+
+```
+?optim
+optim                  package:stats                   R Documentation
+
+General-purpose Optimization
+
+Description:
+
+     General-purpose optimization based on Nelder-Mead, quasi-Newton
+     and conjugate-gradient algorithms. It includes an option for
+     box-constrained optimization and simulated annealing.
+
+Usage:
+
+     optim(par, fn, gr = NULL, ...,
+           method = c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN",
+                      "Brent"),
+           lower = -Inf, upper = Inf,
+           control = list(), hessian = FALSE)
+     
+     optimHess(par, fn, gr = NULL, ..., control = list())
+     
+Arguments:
+
+     par: Initial values for the parameters to be optimized over.
+
+      fn: A function to be minimized (or maximized), with first
+          argument the vector of parameters over which minimization is
+          to take place.  It should return a scalar result.
+
+      gr: A function to return the gradient for the ‘"BFGS"’, ‘"CG"’
+          and ‘"L-BFGS-B"’ methods.  If it is ‘NULL’, a
+          finite-difference approximation will be used.
+
+          For the ‘"SANN"’ method it specifies a function to generate a
+          new candidate point.  If it is ‘NULL’ a default Gaussian
+          Markov kernel is used.
+
+     ...: Further arguments to be passed to ‘fn’ and ‘gr’.
+```
+
+Using It
+========
+
+```{r}
+optim(runif(2), # a random guess
+      function(v){
+          rms(v[1],v[2],exd);
+      },
+      gr=NULL);
+```
+
+Note that we only called our error function ~50 times! This is a huge
+improvement of 1000.
+
+Gradient Descent
+================
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Gradient_descent.svg/800px-Gradient_descent.svg.png)
+By Gradient_descent.png: The original uploader was Olegalexandrov at English Wikipedia.derivative work: Zerodamage - This file was derived from:  Gradient descent.png:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=20569355
+
+***
+
+"Always go downhill." The hill is our error function.
+
+Limitations and Variations
+==========================
+
+Gradient descent finds the _local_ minimum. To improve robustnes lots
+of elements are added: descenders with momentum, decreasing step size,
+multiple descenders that push on eachother etc.
+
+Optimization is a field unto itself and luckily we usually don't care
+too much about the details as data scientists.
+
+In the end the important questions are: how does my model behave, does
+it overfit, what are the costs associated with different sorts of
+errors? What does my model _mean_?
+
