@@ -31,40 +31,40 @@ Class is held in: McGavran-Greenberg PH-Rm 2308
 Lab is held in: McGavran-Greenberg PH-Rm 2308
 
 
-| Date            | Course Title                       | Material                                                 | Homework                       |
-| ---             | ---                                | ---                                                      | ---                            |
-| Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                                          | [hw1][hw1] due: Wed 08/25/2021 |
-| Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]                                  | [hw2][hw2] due: Mon 08/30/2021 |
-| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]                                  | [hw3][hw3] due: Wed 09/08/2021 |
-| Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10]                         | [hw4][hw4] due: Wed 09/15/2021 |
-| Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15],[4][m16]                      | [hw5][hw5] due: Mon 09/20/2021 |
-| Mon 09/06/2020  | Labor Day 🍞🌹                     | [1][m12],[2][m16]                                        |                                |
-| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19]                                        | [hw6][hw6] due: Wed 09/27/2021 |
-| Mon 09/13/2021  | More R                             | [1][m20],[2][m23]                                        |                                |
-| Wed 09/15/2021  | Tidyverse for Tidying & GGPlot     | [1][m22],[2][m24],[3][m25],[4][m26],[5][m27][6][m28]     |                                |
-| Mon 09/20/2021  | Make and Makefiles                 | [1][m29][2][m30]                                         |                                |
-| Wed 09/22/2021  | git concepts and practices         | [1][m31][2][m32][3][m33]                                 |                                |
-| Mon 09/27/2021  | Project Organization               | [1][m34][2][m35][3][m36]                                 |                                |
-| Wed 09/29/2021  | ~~~~                               |                                                          |                                |
-| Mon 10/04/2021  | Dimensionality Reduction           | [1][m37][2][m38][3][m39][4][m40]                         | [hw7][hw7] due: Mon 10/11/2021 |
-| Wed 10/06/2021  | Clustering                         | [1][m41][2][m42][3][m43][4][m44]                         | [hw8][hw8] due: Wed 10/13/2021 |
-| Mon 10/11/2021  | Classification                     | [1][m45][2][m46][3][m47][4][m48][5][m49][6][m50][7][m51] | [hw9][hw9] due: Mon 10/18/2021 |
-| Wed 10/13/2021  | Model Validation and Selection     | [1][m52][2][m53]                                         |                                 |
-| Mon 10/18/2021  | Shiny                              | [1][m54][2][m55][3][m56][4][m57][5][m58][6][m59]         | [hw10][hw10] due: Mon 10/25/2021|
-| Wed 10/20/2021  | Docker Recap and Shiny             |                                                          |                                |
-| Mon 10/25/2021  | Introduction to Scientific Python  |                                                          |                                |
-| Wed 10/27/2021  | SQL (and pandas, dplyr)            | [1][m11]                                                 |                                |
-| Mon 11/01/2021  | SKLearn Introduction               |                                                          |                                |
-| Wed 11/03/2021  | Training Neural Networks           |                                                          |                                |
-| Mon 11/08/2021  | Bokeh                              |                                                          |                                |
-| Wed 11/10/2021  | Browser Based Visualization w/ d3  |                                                          |                                |
-| Mon 11/15/2021  | Data Science Ethics                |                                                          |                                |
-| Wed 11/17/2021  | Panel Discussion                   |                                                          |                                |
-| Mon 11/22/2021  | Thanksgiving 🦃                    |                                                          |                                |
-| Wed 11/24/2021  | Feedback Day                       |                                                          |                                |
-| Mon 11/29/2021  | Class Presentations I              |                                                          |                                |
-| Wed 12/01/2021  | Class Presentations II             |                                                          | ---                            |
-| ---             |                                    |                                                          |                                |
+| Date            | Course Title                       | Material                                                 | Homework                         |
+| ---             | ---                                | ---                                                      | ---                              |
+| Mon 08/18/20201 | Introduction                       | [1][m1],[2][m2]                                          | [hw1][hw1] due: Wed 08/25/2021   |
+| Mon 08/23/2021  | Compute Resources                  | [1][m3],[2][m4],[3][m5]                                  | [hw2][hw2] due: Mon 08/30/2021   |
+| Wed 08/25/2021  | Unix                               | [1][m8],[2][m6],[3][m7]                                  | [hw3][hw3] due: Wed 09/08/2021   |
+| Mon 08/30/2021  | Docker                             | [1][m9],[2][m4],[3][m5],[4][m10]                         | [hw4][hw4] due: Wed 09/15/2021   |
+| Wed 09/01/2021  | git basics & github basics         | [1][m13],[2][m14],[3][m15],[4][m16]                      | [hw5][hw5] due: Mon 09/20/2021   |
+| Mon 09/06/2020  | Labor Day 🍞🌹                     | [1][m12],[2][m16]                                        |                                  |
+| Wed 09/08/2021  | How to Think about Programming & R | [1][m18],[2][m19]                                        | [hw6][hw6] due: Wed 09/27/2021   |
+| Mon 09/13/2021  | More R                             | [1][m20],[2][m23]                                        |                                  |
+| Wed 09/15/2021  | Tidyverse for Tidying & GGPlot     | [1][m22],[2][m24],[3][m25],[4][m26],[5][m27][6][m28]     |                                  |
+| Mon 09/20/2021  | Make and Makefiles                 | [1][m29][2][m30]                                         |                                  |
+| Wed 09/22/2021  | git concepts and practices         | [1][m31][2][m32][3][m33]                                 |                                  |
+| Mon 09/27/2021  | Project Organization               | [1][m34][2][m35][3][m36]                                 |                                  |
+| Wed 09/29/2021  | ~~~~                               |                                                          |                                  |
+| Mon 10/04/2021  | Dimensionality Reduction           | [1][m37][2][m38][3][m39][4][m40]                         | [hw7][hw7] due: Mon 10/11/2021   |
+| Wed 10/06/2021  | Clustering                         | [1][m41][2][m42][3][m43][4][m44]                         | [hw8][hw8] due: Wed 10/13/2021   |
+| Mon 10/11/2021  | Classification                     | [1][m45][2][m46][3][m47][4][m48][5][m49][6][m50][7][m51] | [hw9][hw9] due: Mon 10/18/2021   |
+| Wed 10/13/2021  | Model Validation and Selection     | [1][m52][2][m53]                                         |                                  |
+| Mon 10/18/2021  | Shiny                              | [1][m54][2][m55][3][m56][4][m57][5][m58][6][m59]         | [hw10][hw10] due: Mon 10/25/2021 |
+| Wed 10/20/2021  | Introduction to Scientific Python  | [1][m60][2][m61]                                         | [hw11][hw11] due: Wed 10/27/2021 |
+| Mon 10/25/2021  | Docker Recap and Shiny             |                                                          |                                  |
+| Wed 10/27/2021  | SQL (and pandas, dplyr)            | [1][m11]                                                 |                                  |
+| Mon 11/01/2021  | SKLearn Introduction               |                                                          |                                  |
+| Wed 11/03/2021  | Training Neural Networks           |                                                          |                                  |
+| Mon 11/08/2021  | Bokeh                              |                                                          |                                  |
+| Wed 11/10/2021  | Browser Based Visualization w/ d3  |                                                          |                                  |
+| Mon 11/15/2021  | Data Science Ethics                |                                                          |                                  |
+| Wed 11/17/2021  | Panel Discussion                   |                                                          |                                  |
+| Mon 11/22/2021  | Thanksgiving 🦃                    |                                                          |                                  |
+| Wed 11/24/2021  | Feedback Day                       |                                                          |                                  |
+| Mon 11/29/2021  | Class Presentations I              |                                                          |                                  |
+| Wed 12/01/2021  | Class Presentations II             |                                                          | ---                              |
+| ---             |                                    |                                                          |                                  |
 
 
 There is also a lab held every Tuesday. This will be generally
@@ -145,6 +145,8 @@ This will start an RStudio Instance.
 [m57]:https://en.wikipedia.org/wiki/JavaScript
 [m58]:https://shiny.rstudio.com/
 [m59]:https://plotly.com/r/
+[m60]:https://learnxinyminutes.com/docs/python/
+[m61]:https://numpy.org/
 
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
@@ -156,3 +158,4 @@ This will start an RStudio Instance.
 [hw8]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/11-clustering/homework.md
 [hw9]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/12-classification/homework.md
 [hw10]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/14-shiny/shiny-homework.md
+[hw11]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/15-python/python-homework.md
