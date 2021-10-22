@@ -1,6 +1,23 @@
 1. What is the difference between global, nonlocal and normal
    variables?
    
+   Answer in two parts: describe the difference types of environments
+   that a variable can be bound in in Python and then describe the meaning 
+   of declarations:
+   
+   ```
+   global variable_name
+   ```
+   
+   and
+   
+   ```
+   nonlocal variable_name
+   ```
+   
+   And the absence of either statement.
+   
+   
 2. Given the implementation of our Point class 
 
 ```{python}
