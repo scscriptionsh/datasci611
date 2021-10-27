@@ -1,0 +1,709 @@
+* SQL, dplyr, pandas
+
+Today's lecture is a little ambitious because I want to teach you
+several related things (or at least make it clear they are related).
+
+We begin with SQL which itself began in 1973, making the language just
+about 50 years old. You can think of SQL as standing for "Structured
+Query Language" but everyone just pronounces it like the english word
+"sequel."
+
+The purpose of SQL is to let users "query" a relational database.
+
+1. a relational database is a structured database where every bit of
+   data is stored in tables as a matter of implementation and where
+   those table function as "relations" as a matter of convention.
+2. a query is a _program_ which operates in the context of a database
+   which returns a table of data.
+
+Often the precise exigencies which demand that software engineers use
+a relational database are abstract to the data scientist, but to
+encourage comeradery and the general dissemination of knowledge I'll
+try to explain why the world is set up this way. Data scientists often
+analyze data which is _already_ joined into a single table, and thus
+might find the design of databases obscure without additional
+context. And since you may find yourself needing to interact with
+databases from time to time, its worth commenting on why they are the
+way they are.
+
+The main idea is the efficient representation of complex data in a way
+which makes it easy to maintain and limits the potential for
+errors. An example is clarifying:
+
+Imagine a database of students on UNC's campus. We may wish to know
+their name, birthday, major and current address.  As data scientists
+we probabaly imagine this looking something like this sort of table:
+
+
+#+NAME: students_table
+| first_name | last_name | birth_date | major         | address              |
+|------------+-----------+------------+---------------+----------------------|
+| Nathan     | Hedley    | 02/18/1961 | Culinary Arts | 123 Franklin Street  |
+| Michelle   | MacArthur | 03/26/1999 | Physics       | 123 Franklin Street  |
+| ...        |           |            |               |                      |
+
+But consider the following fact: For each major we may wish to store
+other information (like the building it operates out of, the courses
+you must complete for it, the current head of the department,
+etc). And this is true for addresses also (some addresses may be
+dormitories on campus, for instance). We could put these extra columns
+into the above table in some cases (although putting a row in this
+table for each course required by each major seems a bit absurd), but
+that still leaves a lot of potential for error.
+
+For example, if a student changes her address, we must find every row
+that student appears and modify their address. If we forget or make a
+mistake, the data begins to become trecherous and misleading.
+
+Thus we normalize our databases, which means, basically, that we have
+one table for each sort of thing and we record information only once
+in the whole database. 
+
+The above data might be stored as something like:
+
+#+NAME: students_table
+| student_id | first_name | last_name | major_id | address_id |
+|------------+------------+-----------+----------+------------|
+|          0 | Nathan     | Hedley    |        0 |          0 |
+|          1 | Michelle   | MacArthur |       10 |          0 |
+|        ... |            |           |          |            |
+
+#+NAME: major_table
+| major_id | text_name     | department_head |
+|----------+---------------+-----------------|
+|        0 | Culinary Arts | Swedish Chef    |
+|      ... | ...           | ...             |
+|       10 | Physics       |                 |
+
+#+NAME: major_course_requirements
+| major_id | course_id |
+|----------+-----------|
+|        0 |        10 |
+|        0 |        13 |
+|        1 |        15 |
+|        1 |        12 |
+| ...      |           |
+
+And you can imagine further. 
+
+With this sort of design if something changes about a course (for
+instance, its description) we only need to update one entry in one
+table. The rest of the data remains coherent. 
+
+The price to pay for splitting our data up like this is, of course,
+that any particular question we might want to ask requires crawling
+all over the database.
+
+Consider a question like: What courses does Nathan Hedly need to take
+to finish his major?
+
+Consider a more interesting question:
+
+Of all the students taking Physics 330 who are also physics majors,
+what is the average number of courses they have left to graduate?
+
+The data we need to answer these questions is in our database, but we
+need a way to _query_ the database to extract it. Enter SQL!
+
+* SQL
+
+SQL is a programming language similar to the ones we already know but
+strange in a few ways.
+
+1. The chunks of text we must digest to know understand what an SQL
+   program does are large. In a regular language we can ask what "10"
+   means but SQL programs can only result in tables and thus we need
+   enough program to at least produce a table.
+2. Its very verbose. Originally called the structured _english_ query
+   language SQL makes a half-hearted attempt to make SQL programs seem
+   like english. This is a weird goal which is out of style.
+
+Despite these considerations, we can make progress with SQL in more or
+less the same way that we would in another language. 
+
+Why should you, the budding data scientist, learn SQL?
+
+1. You will probably need to extract data from an SQL database at some
+   point in your life.
+2. Even if that never happens, you might need to put data into an SQL
+   database if its too big to fit in memory and you need to work with
+   it. Databases are designed to work on datasets much larger than you
+   can fit into a tibble or even load into memory.
+
+* SQLite
+
+SQLite is a brilliant little piece of software which allows you to set
+up and work with an SQL database in a single file on a disk. Other
+than the filesystem max filesize there are no limits on how much data
+you can put in your database (this is often terabytes or more). SQLite
+is reasonably performant and very easy to use standalone. We can also
+use it directly within R or Python to operate on dataframes, which can
+be convenient in certain circumstances (it is, for example, much
+easier to work with pandas dataframes with SQL than with its own
+horrible nest of built in operations).
+
+* Using SQLite.
+
+There is an SQLite package in the Ubunut repositories, but its usually
+pretty out of date. Better to compile it ourselves:
+
+#+begin_src Dockerfile
+RUN wget https://sqlite.org/snapshot/sqlite-snapshot-202110132029.tar.gz
+RUN tar xvf sqlite-snapshot-202110132029.tar.gz
+WORKDIR sqlite-snapshot-202110132029
+RUN ./configure && make && make install
+WORKDIR /
+#+end_src
+
+Once we have this going we can actually learn a few things about SQL
+by just spinning up SQLite without any data at all:
+
+#+begin_src 
+docker build . -t 611 
+docker run -it sqlite3
+#+end_src
+
+This will give us a read-eval-print loop where we can run a few
+trivial snippets:
+
+#+begin_src sh :results code :exports both
+  rm -rf /tmp/example
+  mkdir /tmp/example
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+#+end_src
+
+
+#+begin_src sqlite :db "/tmp/example/db.sqlite" :results code :exports both :dir /tmp/example :colnames yes
+select 10;
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+10
+10
+#+end_src
+
+While there are ways to _insert_ data and modify data, as data
+scientist we're  mostly interested in _accessing_ data. The first
+thing to understand is that when we work with SQL EVERYTHING we
+produce is a table. That can be made a a little clearer by naming the
+column we just created:
+
+#+begin_src sqlite :db "/tmp/example/db.sqlite" :results code :exports both :dir /tmp/example :colnames yes
+select 10 as c2, 11 as c2;
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+c2,c2
+10,11
+#+end_src
+
+Here SQLite is outputing its results as a CSV - this can be convenient
+if we want to load it up into R afterward and we aren't using a direct
+interface (of which more later).
+
+What we've experimented with here is the "SELECT" statement. Most of
+what we do with an SQL database starts with SELECT. SELECT is roughly
+the equivalent of the "transmute" function in dplyr: we create a table
+by typing a comma separated sequence of expressions that produce
+values. These expressions are a lot like the programming languages you
+already know:
+
+#+begin_src sqlite :db "/tmp/example/db.sqlite" :results code :exports both :dir /tmp/example :colnames yes
+select 10+13 as c2, 11+100 as c2;
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+c2,c2
+23,111
+#+end_src
+ 
+We can even use strings and call a handful of functions on them:
+
+#+begin_src sqlite :db "/tmp/example/db.sqlite" :results code :exports both :dir /tmp/example :colnames yes
+select substr("ABCDEF",0,3) as c2, 11+100 as c2;
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+c2,c2
+AB,111
+#+end_src
+
+Note from this example, we can see that SQLITE uses 0 based
+indexing. SUBSTR has the behavior of a Python slice.
+
+Notably absent from the expression language used in SQL is
+_variables_. We can not create bindings or modify them. SQL is totally
+"functional" there is no state.
+
+To do anything non-trivial with SQLite we need to have some data. 
+
+* Getting Data into the Database
+
+Our goal here is to create a fresh SQLite database and load data into
+it. The steps are:
+
+1. Identify the "schema" of the data
+2. Write a script that:
+   a. creates the appropriate tables
+   b. configures SQLITE to read our csvs
+   c. reads the data in
+
+Our data is the usual old stuff:
+
+#+begin_src sh :results code :exports both
+head source_data/powers.csv -n 2
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+power,character,universe,url
+accelerated_healing,abraham_dusk,wildstorm_universe,https://dc.fandom.com/wiki/Abraham_Dusk_(Wildstorm_Universe)
+#+end_src
+
+And
+
+#+begin_src sh :results code :exports both
+head source_data/characters.csv -n 2
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+character,universe,property_name,value
+abraham_dusk,wildstorm_universe,real_name,abraham_dusk
+#+end_src
+
+#+begin_src sh :results code :exports both
+head source_data/character-page-data.csv -n 2
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+character,universe,page_length
+Abraham Dusk,Wildstorm Universe,360879
+#+end_src
+
+SQL is a typed language, although SQLite doesn't enforce type
+information.
+
+Let's create a file called "import-data.lite.sql"
+
+#+INCLUDE: "import-data.lite.sql" src sqlite :lines "1-25"
+
+This just creates our Schema. 
+
+We now need to tell SQLite that we want to load comma separated value
+files.
+
+#+INCLUDE: "import-data.lite.sql" src sqlite :lines "25-"
+
+And that is it. Now we can create our database:
+
+#+begin_src sh
+rm -f comics.db
+sqlite3 comics.db < import-data.lite.sql
+#+end_src
+
+#+RESULTS:
+
+(Demo)
+
+We can also just interact with the database directly from these notes:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select * from page_data limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name|universe|page_length
+Abraham Dusk|Wildstorm Universe|360879.0
+Accelerated Man|Earth 19|361310.0
+Ahn Kwang-Jo|Prime Earth|390275.0
+Alec Holland|Lego Batman|368585.0
+Alec Holland|Prime Earth|401822.0
+Alexander Fairchild|Wildstorm Universe|370234.0
+Alexander Luthor|Smallville|440525.0
+Alexander Staunton|Prime Earth|359330.0
+Alexander Trent|New Earth|370103.0
+Alonzo Malrey|New Earth|353685.0
+#+end_src
+
+Now we can learn a few things:
+
+* SELECT
+
+We used SELECT to generate a trivial table above, but more typically
+you SELECT _FROM_ something:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select character_name from page_data limit 10;
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name
+Abraham Dusk
+Accelerated Man
+Ahn Kwang-Jo
+Alec Holland
+Alec Holland
+Alexander Fairchild
+Alexander Luthor
+Alexander Staunton
+Alexander Trent
+Alonzo Malrey
+#+end_src
+
+We often don't want an entire table, so the SELECT statement supports
+a "WHERE" clause:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select * from page_data where substr(character_name, 0, 3) = "ka" limit 10;
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name|universe|page_length
+kaizen_gamorra_yohn_kohl|wildstorm_universe|364704.0
+kal_kent|dc_one_million|395600.0
+kal_el|earth_one|1215737.0
+kal_el|earth_prime|518432.0
+katar_hol|the_batman_tv_series|370685.0
+kay_challis|doom_patrol_tv_series|385329.0
+kaja_dox|prime_earth|363369.0
+kal|earth_32|364867.0
+kal_el|justice_league_3|398793.0
+kal_el|terra_occulta|360877.0
+#+end_src
+
+We can use AND, OR and NOT to combine tests in a where clause.
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select * from page_data 
+where (substr(character_name,0,3) = "ka" or
+ substr(character_name,0,3) = "su") and
+ page_length >= 500000
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name|universe|page_length
+kal_el|earth_one|1215737.0
+kal_el|earth_prime|518432.0
+superman|clark_kent|575295.0
+kara_zor_el|earth_one|553139.0
+kara_zor_el|new_earth|567026.0
+kal_el|new_earth|790094.0
+kara_zor_el|prime_earth|546627.0
+#+end_src
+
+Note that we use parentheses to group conditions.
+
+As promised, select also allows you to cook up new columns:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select character_name as c, 
+ universe as u, 
+ round(page_length/1000) as page_length_thousands 
+from page_data 
+where (substr(character_name,0,3) = "ka" or
+ substr(character_name,0,3) = "su") and
+ page_length >= 500000
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+c|u|page_length_thousands
+kal_el|earth_one|1216.0
+kal_el|earth_prime|518.0
+superman|clark_kent|575.0
+kara_zor_el|earth_one|553.0
+kara_zor_el|new_earth|567.0
+kal_el|new_earth|790.0
+kara_zor_el|prime_earth|547.0
+#+end_src
+
+Select also supports group operations. Note that when we group_by
+every expression in our select must be an "aggregate" function. One
+that takes _all_ the elements in the group and returns a single
+element.
+
+For example, here is a summary of the number of bytes total for each
+universe:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select universe,
+ sum(page_length) as page_length
+from page_data
+group by universe
+limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+universe|page_length
+1941_superman_cartoons|366804.0
+a_tragedy|1429166.0
+absorbasco|348288.0
+act_of_god|348498.0
+action_comics_vol_1_2|372343.0
+action_comics_vol_1_53|407412.0
+action_comics_vol_1_54|393529.0
+action_comics_vol_1_6|462944.0
+adventure_comics_vol_1_39|370273.0
+adventures_of_captain_marvel_1941_serial|714402.0
+#+end_src
+
+Note that we _can_ use any name or value in the group by clause
+without an aggregate function around it.
+
+We often want to order our results. This is different depending on
+whether you are ordering a normal query or the results of a group by.
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select * from page_data
+order by page_length desc
+limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name|universe|page_length
+kal_el|earth_one|1215737.0
+bruce_wayne|new_earth|848293.0
+kal_el|new_earth|790094.0
+batman|bruce_wayne|661515.0
+flash|barry_allen|660719.0
+orin|new_earth|657000.0
+wonder_woman|diana_prince|656532.0
+aquaman|arthur_curry|656008.0
+diana_of_themyscira|new_earth|646638.0
+guy_gardner|new_earth|609453.0
+#+end_src
+
+Or ascending:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select * from page_data
+order by page_length asc
+limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name|universe|page_length
+beast_men|beast_me|340441.0
+inertron|inertro|342643.0
+star_conquerors|star_conqueror|342673.0
+imskians|imskian|342734.0
+paula_s_space_transformer|paula_s_space_transforme|342846.0
+ultima_thule|ultima_thul|343001.0
+transmatter_cube|transmatter_cub|343242.0
+bane|earth_9|343585.0
+dev_em_i|dc_extended_universe|343593.0
+touch_stones|touch_stone|343654.0
+#+end_src
+
+(Lots of garbage in this data set!)
+
+If you are sorting a group then you need to use the ORDER BY pattern:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select universe,
+ sum(page_length) as page_length
+from page_data
+group by universe
+order by page_length desc
+limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+universe|page_length
+new_earth|1079849524.0
+prime_earth|585828539.0
+earth_one|148180034.0
+dcau|103740280.0
+wildstorm_universe|93304628.0
+arrowverse|80028114.0
+pre_zero_hour|69158887.0
+earth_16|63877393.0
+smallville|57053184.0
+earth_two|52836887.0
+#+end_src
+
+This covers most of what you can do with the SELECT statement. Happily
+SQLite has relatively recently come to support Windowing and
+Partitioning, but I won't cover them in class. A guide is linked in
+the notes. 
+
+* JOINS
+
+Because many databases are normalized, you will almost certainly need
+to perform joins. Joins are straightforward enough:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+select p.character_name, p.universe, o.power from page_data p
+join powers o on o.character_name = p.character_name 
+             and o.universe = p.universe
+order by p.page_length desc
+limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+character_name|universe|power
+kal_el|earth_one|accelerated_healing
+kal_el|earth_one|chronokinesis
+kal_el|earth_one|decelerated_aging
+kal_el|earth_one|dimensional_travel
+kal_el|earth_one|energy_absorption
+kal_el|earth_one|enhanced_hearing
+kal_el|earth_one|enhanced_sense_of_smell
+kal_el|earth_one|enhanced_senses
+kal_el|earth_one|enhanced_vision
+kal_el|earth_one|flight
+#+end_src
+
+Note that in order to make the join a little more concise we gave
+short names to the tables.
+
+Its important to think about the order of the different parts of an
+SQL query:
+
+You must _join_ before you can group by. You must filter after you
+join but before you group.
+
+That reminds me: if you group and want to filter the results you use a
+"HAVING" expression.
+
+* CTEs (Common Table Expressions)
+
+It is very handy to create temporary tables on your way to a
+result. You can do this like this:
+
+#+begin_src sqlite
+create table kal_el as 
+select * from powers where character_name = "kal_el";
+
+<do stuff>
+
+drop table kal_el;
+#+end_src
+
+But instead of faffing around with remembering to delete these tables
+you can also just use a CTE:
+
+#+begin_src sqlite :db "comics.db" :results code :exports both  :colnames yes :list
+with kal_el_powers as (select * from powers where character_name = "kal_el")
+select power, sum(1) as count from kal_el_powers group by power 
+order by sum(1) desc
+limit 10
+#+end_src
+
+#+RESULTS:
+#+begin_src sqlite
+power|count
+superhuman_strength|132
+flight|132
+superhuman_speed|128
+thermal_blast|127
+invulnerability|126
+enhanced_vision|126
+enhanced_hearing|123
+energy_absorption|122
+superhuman_stamina|120
+super_breath|119
+#+end_src
+
+
+Note that creating such temporary tables can often lead to a big
+improvement in the performance of your query: filtering down to just
+the subset of data you care about _before_ doing a join can
+drastically improve the speed of the results.
+
+* Saving the Results of a Query
+
+Saving the results of a query is pretty easy.
+
+One possibility is to just create a table in your db as above. As we
+will see, its easy to access tables from R or Python, so creating a
+table in the db is an ok solution.
+
+Another option is to ask SQLite to dump the results for you.
+
+#+INCLUDE: "dump_kal_el_powers.lite.sql" src sqlite
+
+We can dump like this:
+
+#+begin_src sh :results code :exports both
+sqlite3 comics.db < dump_kal_el_powers.lite.sql
+cat kal_el.csv | head
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+power,count
+superhuman_strength,132
+flight,132
+superhuman_speed,128
+thermal_blast,127
+invulnerability,126
+enhanced_vision,126
+enhanced_hearing,123
+energy_absorption,122
+superhuman_stamina,120
+#+end_src
+
+* Using R to Work with SQL(lite)
+
+#+begin_src Dockerfile
+RUN R -e "install.package('RSQLite')";
+#+end_src
+
+#+begin_src R :results code :exports both
+library(DBI)
+con <- dbConnect(RSQLite::SQLite(), "comics.db")
+dbListTables(con)
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+page_data
+powers
+properties
+#+end_src
+
+#+begin_src R :results code :exports both
+library(DBI)
+con <- dbConnect(RSQLite::SQLite(), "comics.db")
+r <- dbGetQuery(con, "select * from powers limit 10")
+dbDisconnect(con);
+r
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+accelerated_healing	abraham_dusk	wildstorm_universe	https://dc.fandom.com/wiki/Abraham_Dusk_(Wildstorm_Universe)
+accelerated_healing	accelerated_man	earth	https://dc.fandom.com/wiki/Accelerated_Man_(Earth_19)
+accelerated_healing	ahn_kwang_jo	prime_earth	https://dc.fandom.com/wiki/Ahn_Kwang-Jo_(Prime_Earth)
+accelerated_healing	alec_holland	lego_batman	https://dc.fandom.com/wiki/Alec_Holland_(Lego_Batman)
+accelerated_healing	alec_holland	prime_earth	https://dc.fandom.com/wiki/Alec_Holland_(Prime_Earth)
+accelerated_healing	alexander_fairchild	wildstorm_universe	https://dc.fandom.com/wiki/Alexander_Fairchild_(Wildstorm_Universe)
+accelerated_healing	alexander_luthor	smallville	https://dc.fandom.com/wiki/Alexander_Luthor_(Smallville)
+accelerated_healing	alexander_staunton	prime_earth	https://dc.fandom.com/wiki/Alexander_Staunton_(Prime_Earth)
+accelerated_healing	alexander_trent	new_earth	https://dc.fandom.com/wiki/Alexander_Trent_(New_Earth)
+accelerated_healing	alonzo_malrey	new_earth	https://dc.fandom.com/wiki/Alonzo_Malrey_(New_Earth)
+#+end_src
+
+* More to Come
+
+We'll talk about accessing this data from Python Wed and then seque
+into using Pandas then.

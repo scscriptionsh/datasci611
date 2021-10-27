@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-10-25 Mon 15:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="toups" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org73e2df1">1. SQL, dplyr, pandas</a></li>
+<li><a href="#org907845e">2. SQL</a></li>
+<li><a href="#orgd3c69c5">3. SQLite</a></li>
+<li><a href="#orga5edbbc">4. Using SQLite.</a></li>
+<li><a href="#org2ee4cc3">5. Getting Data into the Database</a></li>
+<li><a href="#orga2792f3">6. SELECT</a></li>
+<li><a href="#org12f4a98">7. JOINS</a></li>
+<li><a href="#org91d3eff">8. CTEs (Common Table Expressions)</a></li>
+<li><a href="#org978e694">9. Saving the Results of a Query</a></li>
+<li><a href="#org07cf9d2">10. Using R to Work with SQL(lite)</a></li>
+<li><a href="#orge8dfa35">11. More to Come</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org73e2df1" class="outline-2">
+<h2 id="org73e2df1"><span class="section-number-2">1</span> SQL, dplyr, pandas</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Today's lecture is a little ambitious because I want to teach you
+several related things (or at least make it clear they are related).
+</p>
+
+<p>
+We begin with SQL which itself began in 1973, making the language just
+about 50 years old. You can think of SQL as standing for "Structured
+Query Language" but everyone just pronounces it like the english word
+"sequel."
+</p>
+
+<p>
+The purpose of SQL is to let users "query" a relational database.
+</p>
+
+<ol class="org-ol">
+<li>a relational database is a structured database where every bit of
+data is stored in tables as a matter of implementation and where
+those table function as "relations" as a matter of convention.</li>
+<li>a query is a <span class="underline">program</span> which operates in the context of a database
+which returns a table of data.</li>
+</ol>
+
+<p>
+Often the precise exigencies which demand that software engineers use
+a relational database are abstract to the data scientist, but to
+encourage comeradery and the general dissemination of knowledge I'll
+try to explain why the world is set up this way. Data scientists often
+analyze data which is <span class="underline">already</span> joined into a single table, and thus
+might find the design of databases obscure without additional
+context. And since you may find yourself needing to interact with
+databases from time to time, its worth commenting on why they are the
+way they are.
+</p>
+
+<p>
+The main idea is the efficient representation of complex data in a way
+which makes it easy to maintain and limits the potential for
+errors. An example is clarifying:
+</p>
+
+<p>
+Imagine a database of students on UNC's campus. We may wish to know
+their name, birthday, major and current address.  As data scientists
+we probabaly imagine this looking something like this sort of table:
+</p>
+
+
+<table id="org55d6ad0" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">first<sub>name</sub></th>
+<th scope="col" class="org-left">last<sub>name</sub></th>
+<th scope="col" class="org-left">birth<sub>date</sub></th>
+<th scope="col" class="org-left">major</th>
+<th scope="col" class="org-left">address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Nathan</td>
+<td class="org-left">Hedley</td>
+<td class="org-left">02/18/1961</td>
+<td class="org-left">Culinary Arts</td>
+<td class="org-left">123 Franklin Street</td>
+</tr>
+
+<tr>
+<td class="org-left">Michelle</td>
+<td class="org-left">MacArthur</td>
+<td class="org-left">03/26/1999</td>
+<td class="org-left">Physics</td>
+<td class="org-left">123 Franklin Street</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2026;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+But consider the following fact: For each major we may wish to store
+other information (like the building it operates out of, the courses
+you must complete for it, the current head of the department,
+etc). And this is true for addresses also (some addresses may be
+dormitories on campus, for instance). We could put these extra columns
+into the above table in some cases (although putting a row in this
+table for each course required by each major seems a bit absurd), but
+that still leaves a lot of potential for error.
+</p>
+
+<p>
+For example, if a student changes her address, we must find every row
+that student appears and modify their address. If we forget or make a
+mistake, the data begins to become trecherous and misleading.
+</p>
+
+<p>
+Thus we normalize our databases, which means, basically, that we have
+one table for each sort of thing and we record information only once
+in the whole database. 
+</p>
+
+<p>
+The above data might be stored as something like:
+</p>
+
+<table id="org907b44a" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">student<sub>id</sub></th>
+<th scope="col" class="org-left">first<sub>name</sub></th>
+<th scope="col" class="org-left">last<sub>name</sub></th>
+<th scope="col" class="org-right">major<sub>id</sub></th>
+<th scope="col" class="org-right">address<sub>id</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">Nathan</td>
+<td class="org-left">Hedley</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Michelle</td>
+<td class="org-left">MacArthur</td>
+<td class="org-right">10</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">&#x2026;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<table id="org5f1e7aa" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">major<sub>id</sub></th>
+<th scope="col" class="org-left">text<sub>name</sub></th>
+<th scope="col" class="org-left">department<sub>head</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">Culinary Arts</td>
+<td class="org-left">Swedish Chef</td>
+</tr>
+
+<tr>
+<td class="org-right">&#x2026;</td>
+<td class="org-left">&#x2026;</td>
+<td class="org-left">&#x2026;</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Physics</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<table id="org6588a5a" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">major<sub>id</sub></th>
+<th scope="col" class="org-right">course<sub>id</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">13</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">12</td>
+</tr>
+
+<tr>
+<td class="org-right">&#x2026;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+And you can imagine further. 
+</p>
+
+<p>
+With this sort of design if something changes about a course (for
+instance, its description) we only need to update one entry in one
+table. The rest of the data remains coherent. 
+</p>
+
+<p>
+The price to pay for splitting our data up like this is, of course,
+that any particular question we might want to ask requires crawling
+all over the database.
+</p>
+
+<p>
+Consider a question like: What courses does Nathan Hedly need to take
+to finish his major?
+</p>
+
+<p>
+Consider a more interesting question:
+</p>
+
+<p>
+Of all the students taking Physics 330 who are also physics majors,
+what is the average number of courses they have left to graduate?
+</p>
+
+<p>
+The data we need to answer these questions is in our database, but we
+need a way to <span class="underline">query</span> the database to extract it. Enter SQL!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org907845e" class="outline-2">
+<h2 id="org907845e"><span class="section-number-2">2</span> SQL</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+SQL is a programming language similar to the ones we already know but
+strange in a few ways.
+</p>
+
+<ol class="org-ol">
+<li>The chunks of text we must digest to know understand what an SQL
+program does are large. In a regular language we can ask what "10"
+means but SQL programs can only result in tables and thus we need
+enough program to at least produce a table.</li>
+<li>Its very verbose. Originally called the structured <span class="underline">english</span> query
+language SQL makes a half-hearted attempt to make SQL programs seem
+like english. This is a weird goal which is out of style.</li>
+</ol>
+
+<p>
+Despite these considerations, we can make progress with SQL in more or
+less the same way that we would in another language. 
+</p>
+
+<p>
+Why should you, the budding data scientist, learn SQL?
+</p>
+
+<ol class="org-ol">
+<li>You will probably need to extract data from an SQL database at some
+point in your life.</li>
+<li>Even if that never happens, you might need to put data into an SQL
+database if its too big to fit in memory and you need to work with
+it. Databases are designed to work on datasets much larger than you
+can fit into a tibble or even load into memory.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd3c69c5" class="outline-2">
+<h2 id="orgd3c69c5"><span class="section-number-2">3</span> SQLite</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+SQLite is a brilliant little piece of software which allows you to set
+up and work with an SQL database in a single file on a disk. Other
+than the filesystem max filesize there are no limits on how much data
+you can put in your database (this is often terabytes or more). SQLite
+is reasonably performant and very easy to use standalone. We can also
+use it directly within R or Python to operate on dataframes, which can
+be convenient in certain circumstances (it is, for example, much
+easier to work with pandas dataframes with SQL than with its own
+horrible nest of built in operations).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5edbbc" class="outline-2">
+<h2 id="orga5edbbc"><span class="section-number-2">4</span> Using SQLite.</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+There is an SQLite package in the Ubunut repositories, but its usually
+pretty out of date. Better to compile it ourselves:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-Dockerfile">RUN wget https://sqlite.org/snapshot/sqlite-snapshot-202110132029.tar.gz
+RUN tar xvf sqlite-snapshot-202110132029.tar.gz
+WORKDIR sqlite-snapshot-202110132029
+RUN ./configure &amp;&amp; make &amp;&amp; make install
+WORKDIR /
+</pre>
+</div>
+
+<p>
+Once we have this going we can actually learn a few things about SQL
+by just spinning up SQLite without any data at all:
+</p>
+
+<pre class="example">
+docker build . -t 611 
+docker run -it sqlite3
+</pre>
+
+<p>
+This will give us a read-eval-print loop where we can run a few
+trivial snippets:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">rm -rf /tmp/example
+mkdir /tmp/example
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">
+</pre>
+</div>
+
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> 10;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">10
+10
+</pre>
+</div>
+
+<p>
+While there are ways to <span class="underline">insert</span> data and modify data, as data
+scientist we're  mostly interested in <span class="underline">accessing</span> data. The first
+thing to understand is that when we work with SQL EVERYTHING we
+produce is a table. That can be made a a little clearer by naming the
+column we just created:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> 10 <span style="color: #20b2aa; font-weight: bold;">as</span> c2, 11 <span style="color: #20b2aa; font-weight: bold;">as</span> c2;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">c2,c2
+10,11
+</pre>
+</div>
+
+<p>
+Here SQLite is outputing its results as a CSV - this can be convenient
+if we want to load it up into R afterward and we aren't using a direct
+interface (of which more later).
+</p>
+
+<p>
+What we've experimented with here is the "SELECT" statement. Most of
+what we do with an SQL database starts with SELECT. SELECT is roughly
+the equivalent of the "transmute" function in dplyr: we create a table
+by typing a comma separated sequence of expressions that produce
+values. These expressions are a lot like the programming languages you
+already know:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> 10+13 <span style="color: #20b2aa; font-weight: bold;">as</span> c2, 11+100 <span style="color: #20b2aa; font-weight: bold;">as</span> c2;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">c2,c2
+23,111
+</pre>
+</div>
+
+<p>
+We can even use strings and call a handful of functions on them:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> substr("ABCDEF",0,3) <span style="color: #20b2aa; font-weight: bold;">as</span> c2, 11+100 <span style="color: #20b2aa; font-weight: bold;">as</span> c2;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">c2,c2
+AB,111
+</pre>
+</div>
+
+<p>
+Note from this example, we can see that SQLITE uses 0 based
+indexing. SUBSTR has the behavior of a Python slice.
+</p>
+
+<p>
+Notably absent from the expression language used in SQL is
+<span class="underline">variables</span>. We can not create bindings or modify them. SQL is totally
+"functional" there is no state.
+</p>
+
+<p>
+To do anything non-trivial with SQLite we need to have some data. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ee4cc3" class="outline-2">
+<h2 id="org2ee4cc3"><span class="section-number-2">5</span> Getting Data into the Database</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Our goal here is to create a fresh SQLite database and load data into
+it. The steps are:
+</p>
+
+<ol class="org-ol">
+<li>Identify the "schema" of the data</li>
+<li>Write a script that:
+a. creates the appropriate tables
+b. configures SQLITE to read our csvs
+c. reads the data in</li>
+</ol>
+
+<p>
+Our data is the usual old stuff:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">head source_data/powers.csv -n 2
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">power,character,universe,url
+accelerated_healing,abraham_dusk,wildstorm_universe,https://dc.fandom.com/wiki/Abraham_Dusk_(Wildstorm_Universe)
+</pre>
+</div>
+
+<p>
+And
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">head source_data/characters.csv -n 2
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">character,universe,property_name,value
+abraham_dusk,wildstorm_universe,real_name,abraham_dusk
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">head source_data/character-page-data.csv -n 2
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">character,universe,page_length
+abraham_dusk,wildstorm_universe,360879
+</pre>
+</div>
+
+<p>
+SQL is a typed language, although SQLite doesn't enforce type
+information.
+</p>
+
+<p>
+Let's create a file called "import-data.lite.sql"
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">DROP</span> <span style="color: #20b2aa; font-weight: bold;">TABLE</span> <span style="color: #00ff7f;">IF</span> <span style="color: #20b2aa; font-weight: bold;">EXISTS</span> powers;
+<span style="color: #20b2aa; font-weight: bold;">DROP</span> <span style="color: #20b2aa; font-weight: bold;">TABLE</span> <span style="color: #00ff7f;">IF</span> <span style="color: #20b2aa; font-weight: bold;">EXISTS</span> properties;
+<span style="color: #20b2aa; font-weight: bold;">DROP</span> <span style="color: #20b2aa; font-weight: bold;">TABLE</span> <span style="color: #00ff7f;">IF</span> <span style="color: #20b2aa; font-weight: bold;">EXISTS</span> page_data;
+
+<span style="color: #20b2aa; font-weight: bold;">CREATE</span> <span style="color: #20b2aa; font-weight: bold;">TABLE</span> <span style="color: #00ff7f;">powers</span> (
+power text,
+character_name text,
+universe text,
+url text
+);
+
+<span style="color: #20b2aa; font-weight: bold;">CREATE</span> <span style="color: #20b2aa; font-weight: bold;">TABLE</span> <span style="color: #00ff7f;">properties</span> (
+character_name text,
+universe text,
+property_name text,
+property_value text
+);
+
+<span style="color: #20b2aa; font-weight: bold;">CREATE</span> <span style="color: #20b2aa; font-weight: bold;">TABLE</span> <span style="color: #00ff7f;">page_data</span> (
+character_name text,
+universe text,
+page_length <span style="color: #9370db;">real</span>
+);
+</pre>
+</div>
+
+<p>
+This just creates our Schema. 
+</p>
+
+<p>
+We now need to tell SQLite that we want to load comma separated value
+files.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">.mode csv
+.header <span style="color: #20b2aa; font-weight: bold;">on</span>
+
+.import <span style="color: #cd853f;">--csv --skip 1 source_data/character-page-data.csv page_data</span>
+
+.import <span style="color: #cd853f;">--csv --skip 1 source_data/powers.csv powers</span>
+
+.import <span style="color: #cd853f;">--csv --skip 1 source_data/characters.csv properties</span>
+</pre>
+</div>
+
+<p>
+And that is it. Now we can create our database:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">rm -f comics.db
+sqlite3 comics.db &lt; import-data.lite.sql
+</pre>
+</div>
+
+<p>
+(Demo)
+</p>
+
+<p>
+We can also just interact with the database directly from these notes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> page_data <span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name|universe|page_length
+abraham_dusk|wildstorm_universe|360879.0
+accelerated_man|earth_19|361310.0
+ahn_kwang_jo|prime_earth|390275.0
+alec_holland|lego_batman|368585.0
+alec_holland|prime_earth|401822.0
+alexander_fairchild|wildstorm_universe|370234.0
+alexander_luthor|smallville|440525.0
+alexander_staunton|prime_earth|359330.0
+alexander_trent|new_earth|370103.0
+alonzo_malrey|new_earth|353685.0
+</pre>
+</div>
+
+<p>
+Now we can learn a few things:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2792f3" class="outline-2">
+<h2 id="orga2792f3"><span class="section-number-2">6</span> SELECT</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+We used SELECT to generate a trivial table above, but more typically
+you SELECT <span class="underline">FROM</span> something:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> character_name <span style="color: #20b2aa; font-weight: bold;">from</span> page_data <span style="color: #20b2aa; font-weight: bold;">limit</span> 10;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name
+abraham_dusk
+accelerated_man
+ahn_kwang_jo
+alec_holland
+alec_holland
+alexander_fairchild
+alexander_luthor
+alexander_staunton
+alexander_trent
+alonzo_malrey
+</pre>
+</div>
+
+<p>
+We often don't want an entire table, so the SELECT statement supports
+a "WHERE" clause:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> page_data <span style="color: #20b2aa; font-weight: bold;">where</span> substr(character_name, 0, 3) = "ka" <span style="color: #20b2aa; font-weight: bold;">limit</span> 10;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name|universe|page_length
+kaizen_gamorra_yohn_kohl|wildstorm_universe|364704.0
+kal_kent|dc_one_million|395600.0
+kal_el|earth_one|1215737.0
+kal_el|earth_prime|518432.0
+katar_hol|the_batman_tv_series|370685.0
+kay_challis|doom_patrol_tv_series|385329.0
+kaja_dox|prime_earth|363369.0
+kal|earth_32|364867.0
+kal_el|justice_league_3|398793.0
+kal_el|terra_occulta|360877.0
+</pre>
+</div>
+
+<p>
+We can use AND, OR and NOT to combine tests in a where clause.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> page_data 
+<span style="color: #20b2aa; font-weight: bold;">where</span> (substr(character_name,0,3) = "ka" <span style="color: #20b2aa; font-weight: bold;">or</span>
+ substr(character_name,0,3) = "su") <span style="color: #20b2aa; font-weight: bold;">and</span>
+ page_length &gt;= 500000
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name|universe|page_length
+kal_el|earth_one|1215737.0
+kal_el|earth_prime|518432.0
+superman|clark_kent|575295.0
+kara_zor_el|earth_one|553139.0
+kara_zor_el|new_earth|567026.0
+kal_el|new_earth|790094.0
+kara_zor_el|prime_earth|546627.0
+</pre>
+</div>
+
+<p>
+Note that we use parentheses to group conditions.
+</p>
+
+<p>
+As promised, select also allows you to cook up new columns:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> character_name <span style="color: #20b2aa; font-weight: bold;">as</span> c, 
+ universe <span style="color: #20b2aa; font-weight: bold;">as</span> u, 
+ round(page_length/1000) <span style="color: #20b2aa; font-weight: bold;">as</span> page_length_thousands 
+<span style="color: #20b2aa; font-weight: bold;">from</span> page_data 
+<span style="color: #20b2aa; font-weight: bold;">where</span> (substr(character_name,0,3) = "ka" <span style="color: #20b2aa; font-weight: bold;">or</span>
+ substr(character_name,0,3) = "su") <span style="color: #20b2aa; font-weight: bold;">and</span>
+ page_length &gt;= 500000
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">c|u|page_length_thousands
+kal_el|earth_one|1216.0
+kal_el|earth_prime|518.0
+superman|clark_kent|575.0
+kara_zor_el|earth_one|553.0
+kara_zor_el|new_earth|567.0
+kal_el|new_earth|790.0
+kara_zor_el|prime_earth|547.0
+</pre>
+</div>
+
+<p>
+Select also supports group operations. Note that when we group<sub>by</sub>
+every expression in our select must be an "aggregate" function. One
+that takes <span class="underline">all</span> the elements in the group and returns a single
+element.
+</p>
+
+<p>
+For example, here is a summary of the number of bytes total for each
+universe:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> universe,
+ <span style="color: #76ee00;">sum</span>(page_length) <span style="color: #20b2aa; font-weight: bold;">as</span> page_length
+<span style="color: #20b2aa; font-weight: bold;">from</span> page_data
+<span style="color: #20b2aa; font-weight: bold;">group</span> <span style="color: #20b2aa; font-weight: bold;">by</span> universe
+<span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">universe|page_length
+1941_superman_cartoons|366804.0
+a_tragedy|1429166.0
+absorbasco|348288.0
+act_of_god|348498.0
+action_comics_vol_1_2|372343.0
+action_comics_vol_1_53|407412.0
+action_comics_vol_1_54|393529.0
+action_comics_vol_1_6|462944.0
+adventure_comics_vol_1_39|370273.0
+adventures_of_captain_marvel_1941_serial|714402.0
+</pre>
+</div>
+
+<p>
+Note that we <span class="underline">can</span> use any name or value in the group by clause
+without an aggregate function around it.
+</p>
+
+<p>
+We often want to order our results. This is different depending on
+whether you are ordering a normal query or the results of a group by.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> page_data
+<span style="color: #20b2aa; font-weight: bold;">order</span> <span style="color: #20b2aa; font-weight: bold;">by</span> page_length <span style="color: #20b2aa; font-weight: bold;">desc</span>
+<span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name|universe|page_length
+kal_el|earth_one|1215737.0
+bruce_wayne|new_earth|848293.0
+kal_el|new_earth|790094.0
+batman|bruce_wayne|661515.0
+flash|barry_allen|660719.0
+orin|new_earth|657000.0
+wonder_woman|diana_prince|656532.0
+aquaman|arthur_curry|656008.0
+diana_of_themyscira|new_earth|646638.0
+guy_gardner|new_earth|609453.0
+</pre>
+</div>
+
+<p>
+Or ascending:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> page_data
+<span style="color: #20b2aa; font-weight: bold;">order</span> <span style="color: #20b2aa; font-weight: bold;">by</span> page_length <span style="color: #20b2aa; font-weight: bold;">asc</span>
+<span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name|universe|page_length
+beast_men|beast_me|340441.0
+inertron|inertro|342643.0
+star_conquerors|star_conqueror|342673.0
+imskians|imskian|342734.0
+paula_s_space_transformer|paula_s_space_transforme|342846.0
+ultima_thule|ultima_thul|343001.0
+transmatter_cube|transmatter_cub|343242.0
+bane|earth_9|343585.0
+dev_em_i|dc_extended_universe|343593.0
+touch_stones|touch_stone|343654.0
+</pre>
+</div>
+
+<p>
+(Lots of garbage in this data set!)
+</p>
+
+<p>
+If you are sorting a group then you need to use the ORDER BY pattern:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> universe,
+ <span style="color: #76ee00;">sum</span>(page_length) <span style="color: #20b2aa; font-weight: bold;">as</span> page_length
+<span style="color: #20b2aa; font-weight: bold;">from</span> page_data
+<span style="color: #20b2aa; font-weight: bold;">group</span> <span style="color: #20b2aa; font-weight: bold;">by</span> universe
+<span style="color: #20b2aa; font-weight: bold;">order</span> <span style="color: #20b2aa; font-weight: bold;">by</span> page_length <span style="color: #20b2aa; font-weight: bold;">desc</span>
+<span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">universe|page_length
+new_earth|1079849524.0
+prime_earth|585828539.0
+earth_one|148180034.0
+dcau|103740280.0
+wildstorm_universe|93304628.0
+arrowverse|80028114.0
+pre_zero_hour|69158887.0
+earth_16|63877393.0
+smallville|57053184.0
+earth_two|52836887.0
+</pre>
+</div>
+
+<p>
+This covers most of what you can do with the SELECT statement. Happily
+SQLite has relatively recently come to support Windowing and
+Partitioning, but I won't cover them in class. A guide is linked in
+the notes. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12f4a98" class="outline-2">
+<h2 id="org12f4a98"><span class="section-number-2">7</span> JOINS</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Because many databases are normalized, you will almost certainly need
+to perform joins. Joins are straightforward enough:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">select</span> p.character_name, p.universe, o.power <span style="color: #20b2aa; font-weight: bold;">from</span> page_data p
+<span style="color: #20b2aa; font-weight: bold;">join</span> powers o <span style="color: #20b2aa; font-weight: bold;">on</span> o.character_name = p.character_name 
+             <span style="color: #20b2aa; font-weight: bold;">and</span> o.universe = p.universe
+<span style="color: #20b2aa; font-weight: bold;">order</span> <span style="color: #20b2aa; font-weight: bold;">by</span> p.page_length <span style="color: #20b2aa; font-weight: bold;">desc</span>
+<span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">character_name|universe|power
+kal_el|earth_one|accelerated_healing
+kal_el|earth_one|chronokinesis
+kal_el|earth_one|decelerated_aging
+kal_el|earth_one|dimensional_travel
+kal_el|earth_one|energy_absorption
+kal_el|earth_one|enhanced_hearing
+kal_el|earth_one|enhanced_sense_of_smell
+kal_el|earth_one|enhanced_senses
+kal_el|earth_one|enhanced_vision
+kal_el|earth_one|flight
+</pre>
+</div>
+
+<p>
+Note that in order to make the join a little more concise we gave
+short names to the tables.
+</p>
+
+<p>
+Its important to think about the order of the different parts of an
+SQL query:
+</p>
+
+<p>
+You must <span class="underline">join</span> before you can group by. You must filter after you
+join but before you group.
+</p>
+
+<p>
+That reminds me: if you group and want to filter the results you use a
+"HAVING" expression.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91d3eff" class="outline-2">
+<h2 id="org91d3eff"><span class="section-number-2">8</span> CTEs (Common Table Expressions)</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+It is very handy to create temporary tables on your way to a
+result. You can do this like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">create</span> <span style="color: #20b2aa; font-weight: bold;">table</span> <span style="color: #00ff7f;">kal_el</span> <span style="color: #20b2aa; font-weight: bold;">as</span> 
+<span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> powers <span style="color: #20b2aa; font-weight: bold;">where</span> character_name = "kal_el";
+
+&lt;do stuff&gt;
+
+<span style="color: #20b2aa; font-weight: bold;">drop</span> <span style="color: #20b2aa; font-weight: bold;">table</span> <span style="color: #00ff7f;">kal_el</span>;
+</pre>
+</div>
+
+<p>
+But instead of faffing around with remembering to delete these tables
+you can also just use a CTE:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite"><span style="color: #20b2aa; font-weight: bold;">with</span> kal_el_powers <span style="color: #20b2aa; font-weight: bold;">as</span> (<span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> powers <span style="color: #20b2aa; font-weight: bold;">where</span> character_name = "kal_el")
+<span style="color: #20b2aa; font-weight: bold;">select</span> power, <span style="color: #76ee00;">sum</span>(1) <span style="color: #20b2aa; font-weight: bold;">as</span> <span style="color: #76ee00;">count</span> <span style="color: #20b2aa; font-weight: bold;">from</span> kal_el_powers <span style="color: #20b2aa; font-weight: bold;">group</span> <span style="color: #20b2aa; font-weight: bold;">by</span> power 
+<span style="color: #20b2aa; font-weight: bold;">order</span> <span style="color: #20b2aa; font-weight: bold;">by</span> <span style="color: #76ee00;">sum</span>(1) <span style="color: #20b2aa; font-weight: bold;">desc</span>
+<span style="color: #20b2aa; font-weight: bold;">limit</span> 10
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">power|<span style="color: #76ee00;">count</span>
+superhuman_strength|132
+flight|132
+superhuman_speed|128
+thermal_blast|127
+invulnerability|126
+enhanced_vision|126
+enhanced_hearing|123
+energy_absorption|122
+superhuman_stamina|120
+super_breath|119
+</pre>
+</div>
+
+
+<p>
+Note that creating such temporary tables can often lead to a big
+improvement in the performance of your query: filtering down to just
+the subset of data you care about <span class="underline">before</span> doing a join can
+drastically improve the speed of the results.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org978e694" class="outline-2">
+<h2 id="org978e694"><span class="section-number-2">9</span> Saving the Results of a Query</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Saving the results of a query is pretty easy.
+</p>
+
+<p>
+One possibility is to just create a table in your db as above. As we
+will see, its easy to access tables from R or Python, so creating a
+table in the db is an ok solution.
+</p>
+
+<p>
+Another option is to ask SQLite to dump the results for you.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sqlite">.mode csv
+.separator ,
+.headers <span style="color: #20b2aa; font-weight: bold;">on</span>
+.once kal_el.csv
+
+<span style="color: #20b2aa; font-weight: bold;">with</span> kal_el_powers <span style="color: #20b2aa; font-weight: bold;">as</span> (<span style="color: #20b2aa; font-weight: bold;">select</span> * <span style="color: #20b2aa; font-weight: bold;">from</span> powers <span style="color: #20b2aa; font-weight: bold;">where</span> character_name = "kal_el")
+<span style="color: #20b2aa; font-weight: bold;">select</span> power, <span style="color: #76ee00;">sum</span>(1) <span style="color: #20b2aa; font-weight: bold;">as</span> <span style="color: #76ee00;">count</span> <span style="color: #20b2aa; font-weight: bold;">from</span> kal_el_powers <span style="color: #20b2aa; font-weight: bold;">group</span> <span style="color: #20b2aa; font-weight: bold;">by</span> power 
+<span style="color: #20b2aa; font-weight: bold;">order</span> <span style="color: #20b2aa; font-weight: bold;">by</span> <span style="color: #76ee00;">sum</span>(1) <span style="color: #20b2aa; font-weight: bold;">desc</span>
+</pre>
+</div>
+
+<p>
+We can dump like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sqlite3 comics.db &lt; dump_kal_el_powers.lite.sql
+cat kal_el.csv | head
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">power,count
+superhuman_strength,132
+flight,132
+superhuman_speed,128
+thermal_blast,127
+invulnerability,126
+enhanced_vision,126
+enhanced_hearing,123
+energy_absorption,122
+superhuman_stamina,120
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org07cf9d2" class="outline-2">
+<h2 id="org07cf9d2"><span class="section-number-2">10</span> Using R to Work with SQL(lite)</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-Dockerfile">RUN R -e "install.package('RSQLite')";
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(DBI)
+con <span style="color: #1e90ff;">&lt;-</span> dbConnect(RSQLite::SQLite(), <span style="color: #ffa07a;">"comics.db"</span>)
+dbListTables(con)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-R">page_data
+powers
+properties
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #1e90ff;">library</span>(DBI)
+con <span style="color: #1e90ff;">&lt;-</span> dbConnect(RSQLite::SQLite(), <span style="color: #ffa07a;">"comics.db"</span>)
+r <span style="color: #1e90ff;">&lt;-</span> dbGetQuery(con, <span style="color: #ffa07a;">"select * from powers limit 10"</span>)
+dbDisconnect(con);
+r
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-R">accelerated_healing     abraham_dusk    wildstorm_universe      https://dc.fandom.com/wiki/Abraham_Dusk_(Wildstorm_Universe)
+accelerated_healing     accelerated_man earth   https://dc.fandom.com/wiki/Accelerated_Man_(Earth_19)
+accelerated_healing     ahn_kwang_jo    prime_earth     https://dc.fandom.com/wiki/Ahn_Kwang-Jo_(Prime_Earth)
+accelerated_healing     alec_holland    lego_batman     https://dc.fandom.com/wiki/Alec_Holland_(Lego_Batman)
+accelerated_healing     alec_holland    prime_earth     https://dc.fandom.com/wiki/Alec_Holland_(Prime_Earth)
+accelerated_healing     alexander_fairchild     wildstorm_universe      https://dc.fandom.com/wiki/Alexander_Fairchild_(Wildstorm_Universe)
+accelerated_healing     alexander_luthor        smallville      https://dc.fandom.com/wiki/Alexander_Luthor_(Smallville)
+accelerated_healing     alexander_staunton      prime_earth     https://dc.fandom.com/wiki/Alexander_Staunton_(Prime_Earth)
+accelerated_healing     alexander_trent new_earth       https://dc.fandom.com/wiki/Alexander_Trent_(New_Earth)
+accelerated_healing     alonzo_malrey   new_earth       https://dc.fandom.com/wiki/Alonzo_Malrey_(New_Earth)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge8dfa35" class="outline-2">
+<h2 id="orge8dfa35"><span class="section-number-2">11</span> More to Come</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+We'll talk about accessing this data from Python Wed and then seque
+into using Pandas then.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: toups</p>
+<p class="date">Created: 2021-10-25 Mon 15:31</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

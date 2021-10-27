@@ -52,8 +52,9 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Wed 10/13/2021  | Model Validation and Selection     | [1][m52][2][m53]                                         |                                  |
 | Mon 10/18/2021  | Shiny                              | [1][m54][2][m55][3][m56][4][m57][5][m58][6][m59]         | [hw10][hw10] due: Mon 10/25/2021 |
 | Wed 10/20/2021  | Introduction to Scientific Python  | [1][m60][2][m61]                                         | [hw11][hw11] due: Wed 10/27/2021 |
-| Mon 10/25/2021  | Docker Recap and Shiny             |                                                          |                                  |
-| Wed 10/27/2021  | SQL (and pandas, dplyr)            | [1][m11]                                                 |                                  |
+| Mon 10/25/2021  | SQL (and pandas, dplyr)            | [1][m11][2][m62][3][m63]                                 |                                  |
+| Wed 10/27/2021  | Pandas & SQL                       | [1][m64]                                                 | [hw12][hw12] due: Wed 11/03/2021 |
+| Fri 10/29/2021  |                                    |                                                          | Mid Term Project Review          |
 | Mon 11/01/2021  | SKLearn Introduction               |                                                          |                                  |
 | Wed 11/03/2021  | Training Neural Networks           |                                                          |                                  |
 | Mon 11/08/2021  | Bokeh                              |                                                          |                                  |
@@ -147,6 +148,9 @@ This will start an RStudio Instance.
 [m59]:https://plotly.com/r/
 [m60]:https://learnxinyminutes.com/docs/python/
 [m61]:https://numpy.org/
+[m62]:https://sqlite.org/index.html
+[m63]:https://www.sqlite.org/windowfunctions.html
+[m64]:https://predictivehacks.com/dplyr-like-pipes-for-data-manipulation-in-python-using-pandas/ 
 
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md

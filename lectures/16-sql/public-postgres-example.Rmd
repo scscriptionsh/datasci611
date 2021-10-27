@@ -1,0 +1,50 @@
+
+Let's walk through an example of connecting to a public Postgres
+database.
+
+
+```{r}
+library(tidyverse);
+library(RPostgres);
+library(DBI);
+
+
+
+con <- dbConnect(RPostgres::Postgres(),
+                 host="hh-pgsql-public.ebi.ac.uk",
+                 user="reader",
+                 password="NWDMCE5xdipIjRrp",
+                 dbname="pfmegrnargs",
+                 port="5432");
+tbl <- dbGetQuery(con, "select * from ensembl_karyotype limit 10") %>% as_tibble();
+dbDisconnect(con)
+tbl
+```
+
+Here is a set of handy ideas:
+
+```{r}
+
+query <- function(query, db_args){
+    con <- do.call(dbConnect, db_args);
+    result <- NULL;
+    tryCatch({
+        result <- dbGetQuery(con, query);
+    }, finally={
+        dbDisconnect(con);
+    })
+    result;
+}
+
+```
+
+```{r}
+settings <- list(RPostgres::Postgres(),
+                 host="hh-pgsql-public.ebi.ac.uk",
+                 user="reader",
+                 password="NWDMCE5xdipIjRrp",
+                 dbname="pfmegrnargs",
+                 port="5432");
+results <- query("select * from ensembl_karyotype limit 10", settings);
+results
+```
