@@ -53,7 +53,7 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Mon 10/18/2021  | Shiny                              | [1][m54][2][m55][3][m56][4][m57][5][m58][6][m59]         | [hw10][hw10] due: Mon 10/25/2021 |
 | Wed 10/20/2021  | Introduction to Scientific Python  | [1][m60][2][m61]                                         | [hw11][hw11] due: Wed 10/27/2021 |
 | Mon 10/25/2021  | SQL (and pandas, dplyr)            | [1][m11][2][m62][3][m63]                                 |                                  |
-| Wed 10/27/2021  | Pandas & SQL                       | [1][m64]                                                 | [hw12][hw12] due: Wed 11/03/2021 |
+| Wed 10/27/2021  | Pandas & SQL                       | [1][m64][2]                                              | [hw12][hw12] due: Wed 11/03/2021 |
 | Fri 10/29/2021  |                                    |                                                          | Mid Term Project Review          |
 | Mon 11/01/2021  | SKLearn Introduction               |                                                          |                                  |
 | Wed 11/03/2021  | Training Neural Networks           |                                                          |                                  |
@@ -163,3 +163,4 @@ This will start an RStudio Instance.
 [hw9]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/12-classification/homework.md
 [hw10]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/14-shiny/shiny-homework.md
 [hw11]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/15-python/python-homework.md
+[hw12]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/17-pandas-sklearn/sql-pandas-homework.md
