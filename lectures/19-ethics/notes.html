@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-28 Wed 18:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7231ac8">1. Ethical Implications of Data Science</a></li>
+<li><a href="#orge0c7f0d">2. Moral Philosophy</a></li>
+<li><a href="#org5c36c69">3. Responsibilities</a>
+<ul>
+<li><a href="#orgf7951c5">3.1. Responsibility to the Truth</a>
+<ul>
+<li><a href="#orgced5b79">3.1.1. Social Contracts</a></li>
+<li><a href="#org9ef2d57">3.1.2. Fudging Data Explicitly</a></li>
+<li><a href="#orgb220e90">3.1.3. The Private Sector</a></li>
+<li><a href="#org98e7409">3.1.4. P-Hacking</a></li>
+<li><a href="#orga2522e2">3.1.5. Pre-registration</a></li>
+<li><a href="#org9fda7fe">3.1.6. Informal Pre-registration</a></li>
+<li><a href="#org2503b0d">3.1.7. Git Discipline</a></li>
+</ul>
+</li>
+<li><a href="#org7f3d846">3.2. Obligation to Society</a>
+<ul>
+<li><a href="#org3c3d1b8">3.2.1. Case Study : Metering</a></li>
+<li><a href="#orgefe6080">3.2.2. Case Study: Racial Bias in Facial Recognition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org90acd49">4. Concluding Remarks</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7231ac8" class="outline-2">
+<h2 id="org7231ac8"><span class="section-number-2">1</span> Ethical Implications of Data Science</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+People live and die every day on the basis of moral decisions made by
+others. <a href="https://drugabuse.com/contingency-management/">Contingency Management</a> (to name one example) is an effective
+method for managing drug addiction which is not widely used in the
+United States because of the perception of a <a href="https://www.nytimes.com/2020/10/27/health/addiction-treatment-pays-drug-users-to-stay-clean.html">moral hazard</a>.
+</p>
+
+<p>
+Moral issues are not limited to minor adjustments in treatment
+practices either: at various moments in the history of human beings
+radical acts of creation and destruction have been precipitated by
+acts of moral theorizing. The French Revolution, The Genocide of the
+Jews and other peoples in Nazi Germany, Soviet Gulags and America's
+own for profit prison and jail system (where, in some places, Sheriffs
+get to keep any money they don't use to feed inmates) have had a
+genuine, powerful, destructive effect on human beings.
+</p>
+
+<p>
+Things aren't always negative. Civil Rights movements in the mid to
+late period of the last century were successful, after much struggle,
+in mitigating many of the negative effects of deeply corrupt systems.
+</p>
+
+<p>
+The critical point is that moral judgements were at the heart of all
+these events.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0c7f0d" class="outline-2">
+<h2 id="orge0c7f0d"><span class="section-number-2">2</span> Moral Philosophy</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Most people do not entertain serious thought about their moral
+philosophy. When we pick up our moral intuitions from religion or
+culture, they are more or less passively received. And yet most of us
+have the capacity for moral disgust, though it isn't obvious to me
+that our instinctual intuitions are any more effective at perceiving
+moral circumstances than our brains are.
+</p>
+
+<p>
+Good Books:
+</p>
+
+<ol class="org-ol">
+<li>JL Mackie's Ethics</li>
+<li>Peter Singer's Practical Ethics</li>
+<li>Rachels and Rachels' The Elements of Moral Philosophy</li>
+</ol>
+
+<p>
+I enjoy the work of Martha Nussbaum.
+</p>
+
+<p>
+Luckily we don't need much by way of moral philosophy to appreciate
+the ethical implications of data science.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c36c69" class="outline-2">
+<h2 id="org5c36c69"><span class="section-number-2">3</span> Responsibilities</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Data Scientists have two primary moral responsibilities (in my
+opinion). They are related. I tend to conceptualize these issues in
+terms of explicit and implicit contracts.
+</p>
+</div>
+
+<div id="outline-container-orgf7951c5" class="outline-3">
+<h3 id="orgf7951c5"><span class="section-number-3">3.1</span> Responsibility to the Truth</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgced5b79" class="outline-4">
+<h4 id="orgced5b79"><span class="section-number-4">3.1.1</span> Social Contracts</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+One of the marvellous things about the contemporary world is that
+society sets aside a fairly large amount of treasure to support a
+class of citizens whose only responsibility is the pursuit of various
+forms of truth.
+</p>
+
+<p>
+A wonderful book of philosophy, "The Grasshopper" by Bernard Suits,
+defines a game as "Any activity that involves the voluntary pursuit of
+a goal by less than efficient means." A good argument can be made that
+mathematics fits this definition - and yet we set aside money each
+year for thousands of mathematicians to play mathematical games.
+</p>
+
+<p>
+The implicit contract between an academic and society is thus that the
+academic pursues and reports on the pursuit of truth. 
+</p>
+
+<p>
+If you work in the private sector as a statistician or a data
+scientist, you are being paid to say true things about the data you
+analyze.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ef2d57" class="outline-4">
+<h4 id="org9ef2d57"><span class="section-number-4">3.1.2</span> Fudging Data Explicitly</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+At the same time, our society is almost entirely based on
+incentives. And thus I can virtually guarantee that you will
+encounter, at some point in your lives, if not already, a circumstance
+in which you will feel pressure to aver something as true when you
+don't have adequate evidence.
+</p>
+
+<p>
+The trouble is that we are often rewarded for positive results rather
+that correct results. New, positive, results are much more publishable
+than old confirmations or disconfirmations. 
+</p>
+
+<p>
+The best advice I can give you here is learn to identify lost causes
+quickly so that you can cut your losses. Also learn to publish
+negative results. Consider journals which exist entirely for that
+purpose, like <a href="https://www.negative-results.org/">"The Journal of Negative Results."</a> or <a href="https://jnrbm.biomedcentral.com/">"The Journal of
+Negative Results in BioMedicine."</a>
+</p>
+
+<p>
+One benefit of academia is that you can usually count on your
+colleagues to find and criticize incorrect results and thus, despite
+publish or perish, there are serious long term career consequences to
+bad science.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb220e90" class="outline-4">
+<h4 id="orgb220e90"><span class="section-number-4">3.1.3</span> The Private Sector</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+In the private sector, on the other hand, you will face both a
+pressure to report a positive result and a wild willingless to
+interpret your results positively if doing so will advance a project
+upon which someone has staked political capital.
+</p>
+
+<p>
+Unlike the working as an academic, data scientists are unlikely to
+stay at one job for more than five years, and the results of their
+previous work are not generally publically available. Thus, it is much
+easier to pass of bad results as good ones and assume that when things
+eventually do go wrong you'll be long gone.
+</p>
+
+<p>
+The best way to avoid this pressure is to learn to forcefully and
+accurately present correct results, no matter the political
+implications.
+</p>
+
+<p>
+Also, learn to resist pushes to go back to the drawing board without
+new data.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98e7409" class="outline-4">
+<h4 id="org98e7409"><span class="section-number-4">3.1.4</span> P-Hacking</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+Literally modifying data or overstaing positive results is clearly
+unethical. This is what we used to call a sin of commision back in
+Catholic School: you know what you are up to and you should feel bad
+about it.
+</p>
+
+<p>
+A much more insidious form of Academic Fraud corresponds to sins of
+omission, where you report results which would not stand up to due
+diligence.
+</p>
+
+<p>
+Some suggested reading:
+</p>
+
+<ol class="org-ol">
+<li><a href="http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf">The garden of forking paths:  Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time - Andrew Gelman†and Eric Loken, 14 Nov 2013</a></li>
+<li>[[<a href="https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html">https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html</a>][Too Good to Be True</li>
+</ol>
+<p>
+Statistics may say that women wear red when they’re fertile … but you can’t always trust statistics.
+By Andrew Gelman
+July 24, 2013]]
+</p>
+
+<p>
+It is tempting to view data science as a "fishing expidition" in which
+we get a data set and we dig into it until such a time as we find a
+good result.
+</p>
+
+<p>
+But we know from our model characterization lessons that even the
+simplest sort of modelling exercise depends on a number of choices
+like:
+</p>
+
+<ol class="org-ol">
+<li>How we eliminate outliers</li>
+<li>How we define categorical variables from continua</li>
+<li>What variables we choose to include in our model</li>
+<li>How we perform our train and test split</li>
+<li>What methods we choose to apply (eg, logistic regression vs linear
+discriminant analysis vs gradient boosted regression)</li>
+</ol>
+
+<p>
+With enough such decisions we can, consciously or subconsciously, pick
+out a sequence of events which leads to a positive result which, if
+the analysis we're repeated with newly collected data, might not be
+repeatable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2522e2" class="outline-4">
+<h4 id="orga2522e2"><span class="section-number-4">3.1.5</span> <a href="https://en.wikipedia.org/wiki/Preregistration_(science)">Pre-registration</a></h4>
+<div class="outline-text-4" id="text-3-1-5">
+<p>
+One solution to this problem is "pre-registration". When studies are
+pre-registered the researcher designs a research plan before the data
+is even in their hands. Thus it cannot be tailored either consciously
+or subconsciously to produce a positive result - a spurious positive
+result in this case is a genuine statistical fluke.
+</p>
+
+<p>
+Many Journals support pre-registration these days. Consider using
+them. Careers have been ruined by p-hacking. Pre-registration makes
+your short term job harder but will give you a more robust long term
+career.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fda7fe" class="outline-4">
+<h4 id="org9fda7fe"><span class="section-number-4">3.1.6</span> Informal Pre-registration</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<p>
+Even if you aren't publishing in a journal, consider informal
+pre-registration. Design your research plans ahead of time, Post them
+on your blog or share them with your manager. Get comfortable
+explaining what a p-value is so that stake holders can understand the
+issues. Don't wait to do this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2503b0d" class="outline-4">
+<h4 id="org2503b0d"><span class="section-number-4">3.1.7</span> Git Discipline</h4>
+<div class="outline-text-4" id="text-3-1-7">
+<p>
+At the very least you must maintain a careful record of your research
+decisions. Hence the emphasis on small, well documented, commits and a
+clean git history. Think of this as post-registration: you have a
+comprehensive record of all the things you have tried. If your source
+code is available online, then anyone can see your research
+history. This might help keep you honest.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7f3d846" class="outline-3">
+<h3 id="org7f3d846"><span class="section-number-3">3.2</span> Obligation to Society</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+This is a tricky one to discuss because there isn't all that much
+agreement on precisely what obligations we have to
+society. Unfortunately, from my point of view, if you work in the
+private sector you will inevitable encounter people who believe that
+their social obligations are minimal or are met entirely by the
+pursuit of their own self interest. 
+</p>
+
+<p>
+It isn't my place to make a comprehensive case for a more cooperative
+conception of your role in the world but I will point out that most
+human beings, even those who claim otherwise, fail spectacularly to
+demonstrate, at an intuitive level, the moral intuitions suggested by
+the hardest nosed Randian Libertarian.
+</p>
+
+<p>
+The philosopher Peter Singer makes this kind of practical moral
+argument quite easily, though I disagree with some broad elements of
+his philosophy.
+</p>
+
+<p>
+In any case, I want to encourage you to consider the implicit
+contracts that people enter into constantly in order to function in
+the world.
+</p>
+</div>
+
+<div id="outline-container-org3c3d1b8" class="outline-4">
+<h4 id="org3c3d1b8"><span class="section-number-4">3.2.1</span> Case Study : Metering</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Most of us are familiar with the idea of metering services. For
+instance: water. We get a bill at the end of the month which reflects
+how much water we've used. Explicitly or implicitly we have some
+understanding about this process. When I was a kid, a person came to
+our house once or twice a month to read the digits on the meter and
+these numbers would inform the bill.
+</p>
+
+<p>
+Most people still think of their water meter as primarily <span class="underline">metering</span>. 
+</p>
+
+<p>
+However, contemporary smart meters record water usage at an hourly or
+even quarter hourly rate and the data may be collected and stored
+forever by the water company or even third parties. 
+</p>
+
+<p>
+Things really get interesting when you consider the possibility of
+disaggregating the data.
+</p>
+
+
+
+<div id="orgba32b10" class="figure">
+<p><img src="./images/meter_disag.jpg" alt="meter_disag.jpg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Meter Disaggregation uses a model to convert a string of consumption values to usages by different appliances.</p>
+</div>
+
+<p>
+It turns out disaggregating water data is very difficult because the
+temporal resolution of the recordings are typically much too low to be
+appropriate for the algorithms that work.
+</p>
+
+<p>
+Disaggregation is often portrayed as beneficial to the end user:
+</p>
+
+<ol class="org-ol">
+<li>It might allow them to understand how they use their resources</li>
+<li>It can detect leaks or otherwise malfunctioning devices</li>
+</ol>
+
+<p>
+But it is also a pretty big invasion of your privacy. Its easy to come
+up with salacious ways this data might be employed: maybe someone's
+wife is away for the weekend but the monthly disaggregation report
+shows an unusual number of showers at the house for the same time
+period. 
+</p>
+
+<p>
+But its also not too hard to think of less nice possibilities: a
+dissident living in a repressive regime might be exposed because water
+usage peaks during the weekends, when they host meetings to organize
+anti-government actions.
+</p>
+
+<p>
+I would argue that even when a company or researcher has access to
+data, if the data was collected under a set of presumptions held by
+the user, then analysis should be restricted to that assumption.
+</p>
+
+<p>
+You may find it difficult to resist the pressure to break this rule in
+practice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefe6080" class="outline-4">
+<h4 id="orgefe6080"><span class="section-number-4">3.2.2</span> Case Study: Racial Bias in Facial Recognition</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Facial Recognition is big business and sadly its already being applied
+in many places. 
+</p>
+
+<p>
+I admit, even I was surprised when I saw this demo:
+</p>
+
+<p>
+<a href="https://www.hownormalami.eu/">How Normal Am I</a>
+</p>
+
+<p>
+Facial Recognition Tech sucks, however. Its not that it can't
+recognize faces, it is that it is racially and gender biased in how
+false positives and false negatives are distributed.
+</p>
+
+<p>
+Luckily the government isn't entirely asleep at the wheel:
+</p>
+
+<p>
+From <a href="https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf">Face Recognition Vendor Test (FRVT)Part 3: Demographic Effects Patrick Grother, Mei Ngan, Kayee Hanaoka</a>
+</p>
+
+<blockquote>
+<p>
+False positives:Using the higher quality Application photos, false
+positive rates are high-est in West and East African and East Asian
+people, and lowest in Eastern European in-dividuals.  This effect is
+generally large, with a factor of 100 more false positives between
+countries.  However, with a number of algorithms developed in China
+this effect is re-versed, with low false positive rates on East Asian
+faces.  With domestic law enforcement images, the highest false
+positives are in American Indians, with elevated rates in African
+American and Asian populations; the relative ordering depends on sex
+and varies with algorithm. 
+</p>
+
+<p>
+We found false positives to be higher in
+women than men, and this is consistent across algorithms and
+datasets. This effect is smaller than that due to race.
+</p>
+
+<p>
+We found elevated false positives in the elderly and in children; the
+effects were larger inthe oldest and youngest, and smallest in
+middle-aged adults"
+</p>
+</blockquote>
+
+<p>
+But these technologies are still actively being pitched. 
+</p>
+
+<p>
+In the US a run in with the police can be deadly.
+</p>
+
+<p>
+So the lesson here is: "Don't try to sell some data analysis unless
+you really understand the biases involved and even then, ask yourself
+if the world would really be a better place if it were out in the
+world."
+</p>
+
+<p>
+My take would be your time would be better spent contacting your
+representatives to ban this technology.
+</p>
+
+<p>
+But why is it that these technologies have such a predictable bias in
+favor of the majority population? It all comes down to training data,
+which itself often contains biases. In the case of facial recognition
+the issue appears to be <span class="underline">less</span> training data for non-majority faces
+and thus a higher than expected rate of error for non-majority faces.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org90acd49" class="outline-2">
+<h2 id="org90acd49"><span class="section-number-2">4</span> Concluding Remarks</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+It is your job to tell people the truth to the best of your ability,
+including tricky ideas like uncertainty therein.
+</p>
+
+<p>
+The challenges here are manifold: 
+</p>
+
+<ol class="org-ol">
+<li>It is hard to figure out what is true.</li>
+<li>It is hard to explain uncertainty to lay stakeholders</li>
+<li>There are political pressures for positive results in both academia
+and the private sector, though of different forms</li>
+<li>Data Science is rarely as neutral as it looks because it often
+relies on training data of dubious quality.</li>
+</ol>
+
+<p>
+I think the best ethical advice I can give you is to compartmentalize
+yourself as a data/scientist. You might be seeking funding for your
+startup as its founder, but when you are operating as the data
+scientist, stick stricly to that role, no matter how much investors
+want to see a miracle. This is really the only way to meet your long
+term explicit and implicit obligations.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent</p>
+<p class="date">Created: 2020-10-28 Wed 18:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
