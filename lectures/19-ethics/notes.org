@@ -1,5 +1,7 @@
 * Ethical Implications of Data Science
 
+** Life and Death  
+
 People live and die every day on the basis of moral decisions made by
 others. [[https://drugabuse.com/contingency-management/][Contingency Management]] (to name one example) is an effective
 method for managing drug addiction which is not widely used in the
@@ -40,6 +42,37 @@ I enjoy the work of Martha Nussbaum.
 
 Luckily we don't need much by way of moral philosophy to appreciate
 the ethical implications of data science.
+
+* The Belmont Report
+
+  Soft homework: read the [[https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html][Belmont Report]].
+
+  From the website: "The Belmont Report was written by the National
+  Commission for the Protection of Human Subjects of Biomedical and
+  Behavioral Research. The Commission, created as a result of the
+  National Research Act of 1974, was charged with identifying the
+  basic ethical principles that should underlie the conduct of
+  biomedical and behavioral research involving human subjects and
+  developing guidelines to assure that such research is conducted in
+  accordance with those principles. Informed by monthly discussions
+  that spanned nearly four years and an intensive four days of
+  deliberation in 1976, the Commission published the Belmont Report,
+  which identifies basic ethical principles and guidelines that
+  address ethical issues arising from the conduct of research with
+  human subjects."
+
+  The history of unethical medical research is grim indeed and I will
+  highlight only one case: the [[https://www.cdc.gov/tuskegee/timeline.htm][USPHS Syphilis Study at Tuskegee]]
+  experiment in which the US Public Health Services allowed around 300
+  black men to go untreated for Syphilis despite an existing effective
+  treatment to study the progression of the disease, despite the fact
+  that there was no compelling reason to collect such data.
+
+  Incidents like this lead to the development of the Belmont Report
+  and subsequent legislation and conventions.
+
+  Unfortunately, this level of scrutiniy is rarely applied to
+  contemporary data science.
 
 * Responsibilities
 
@@ -95,14 +128,14 @@ bad science.
 *** The Private Sector
 
 In the private sector, on the other hand, you will face both a
-pressure to report a positive result and a wild willingless to
+pressure to report a positive result and a wild willingness to
 interpret your results positively if doing so will advance a project
 upon which someone has staked political capital.
 
 Unlike the working as an academic, data scientists are unlikely to
 stay at one job for more than five years, and the results of their
-previous work are not generally publically available. Thus, it is much
-easier to pass of bad results as good ones and assume that when things
+previous work are not generally publicly available. Thus, it is much
+easier to pass off bad results as good ones and assume that when things
 eventually do go wrong you'll be long gone.
 
 The best way to avoid this pressure is to learn to forcefully and
@@ -114,8 +147,34 @@ new data.
 
 *** P-Hacking
 
-Literally modifying data or overstaing positive results is clearly
-unethical. This is what we used to call a sin of commision back in
+    The cautionary tale of [[https://en.wikipedia.org/wiki/Brian_Wansink#Retractions_and_corrections][Brian Wansink]].
+
+    Here is [[https://web.archive.org/web/20170312041524/http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no][the post]] and an exerpt:
+
+    #+begin_quote
+    When she arrived, I gave her a data set of a self-funded, failed study
+which had null results (it was a one month study in an all-you-can-eat
+Italian restaurant buffet where we had charged some people ½ as much
+as others).  I said, "This cost us a lot of time and our own money to
+collect.  There's got to be something here we can salvage because it's
+a cool (rich & unique) data set."  I had three ideas for potential
+Plan B, C, & D directions (since Plan A had failed).  I told her what
+the analyses should be and what the tables should look like.  I then
+asked her if she wanted to do them.
+
+Every day she came back with puzzling new results, and every day we
+would scratch our heads, ask "Why," and come up with another way to
+reanalyze the data with yet another set of plausible hypotheses.
+Eventually we started discovering solutions that held up regardless of
+how we pressure-tested them.  I outlined the first paper, and she
+wrote it up, and every day for a month I told her how to rewrite it
+and she did.  This happened with a second paper, and then a third
+paper (which was one that was based on her own discovery while digging
+through the data).
+    #+end_quote
+
+Literally modifying data or overstating positive results is clearly
+unethical. This is what we used to call a sin of commission back in
 Catholic School: you know what you are up to and you should feel bad
 about it.
 
@@ -126,17 +185,14 @@ diligence.
 Some suggested reading:
 
 1. [[http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf][The garden of forking paths:  Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time - Andrew Gelman†and Eric Loken, 14 Nov 2013]]
-2. [[https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html][Too Good to Be True
-Statistics may say that women wear red when they’re fertile … but you can’t always trust statistics.
-By Andrew Gelman
-July 24, 2013]]
+2. [[https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html][Too Good to Be True Statistics may say that women wear red when they’re fertile … but you can’t always trust statistics. By Andrew GelmanJuly 24, 2013]]
 
-It is tempting to view data science as a "fishing expidition" in which
+It is tempting to view data science as a "fishing expedition" in which
 we get a data set and we dig into it until such a time as we find a
 good result.
 
 But we know from our model characterization lessons that even the
-simplest sort of modelling exercise depends on a number of choices
+simplest sort of modeling exercise depends on a number of choices
 like:
 
 1. How we eliminate outliers
@@ -197,7 +253,7 @@ demonstrate, at an intuitive level, the moral intuitions suggested by
 the hardest nosed Randian Libertarian.
 
 The philosopher Peter Singer makes this kind of practical moral
-argument quite easily, though I disagree with some broad elements of
+argument [[https://link.springer.com/referenceworkentry/10.1007/978-3-319-16999-6_444-1?page=5][quite easily]], though I disagree with some broad elements of
 his philosophy.
 
 In any case, I want to encourage you to consider the implicit
@@ -249,7 +305,7 @@ anti-government actions.
 
 I would argue that even when a company or researcher has access to
 data, if the data was collected under a set of presumptions held by
-the user, then analysis should be restricted to that assumption.
+the user, then analysis should be restricted to those assumptions.
 
 You may find it difficult to resist the pressure to break this rule in
 practice.
@@ -273,11 +329,11 @@ From [[https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf][Face Recognit
 
 #+BEGIN_QUOTE 
 False positives:Using the higher quality Application photos, false
-positive rates are high-est in West and East African and East Asian
-people, and lowest in Eastern European in-dividuals.  This effect is
+positive rates are highest in West and East African and East Asian
+people, and lowest in Eastern European individuals.  This effect is
 generally large, with a factor of 100 more false positives between
 countries.  However, with a number of algorithms developed in China
-this effect is re-versed, with low false positive rates on East Asian
+this effect is reversed, with low false positive rates on East Asian
 faces.  With domestic law enforcement images, the highest false
 positives are in American Indians, with elevated rates in African
 American and Asian populations; the relative ordering depends on sex
@@ -288,7 +344,7 @@ women than men, and this is consistent across algorithms and
 datasets. This effect is smaller than that due to race.
 
 We found elevated false positives in the elderly and in children; the
-effects were larger inthe oldest and youngest, and smallest in
+effects were larger in the oldest and youngest, and smallest in
 middle-aged adults"
 #+END_QUOTE
 
@@ -301,6 +357,9 @@ you really understand the biases involved and even then, ask yourself
 if the world would really be a better place if it were out in the
 world."
 
+In fact, there are many questions you should ask yourself during the
+development of a [[https://theconvivialsociety.substack.com/p/the-questions-concerning-technology][new technology]], including the development of a model.
+
 My take would be your time would be better spent contacting your
 representatives to ban this technology.
 
@@ -309,6 +368,11 @@ favor of the majority population? It all comes down to training data,
 which itself often contains biases. In the case of facial recognition
 the issue appears to be _less_ training data for non-majority faces
 and thus a higher than expected rate of error for non-majority faces.
+
+As we have learned even in the simple examples we used for model
+characterization and validation, models require a great deal of
+subjective adjustment of hyperparameters and it is in these
+adjustments that bias can manifest. 
 
 * Concluding Remarks
 

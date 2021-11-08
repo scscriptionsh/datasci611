@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-10-28 Wed 18:29 -->
+<!-- 2021-11-08 Mon 15:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Vincent" />
+<meta name="author" content="Vincent Toups" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -194,50 +194,26 @@
   /*]]>*/-->
 </style>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -246,36 +222,45 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7231ac8">1. Ethical Implications of Data Science</a></li>
-<li><a href="#orge0c7f0d">2. Moral Philosophy</a></li>
-<li><a href="#org5c36c69">3. Responsibilities</a>
+<li><a href="#org8d82b96">1. Ethical Implications of Data Science</a>
 <ul>
-<li><a href="#orgf7951c5">3.1. Responsibility to the Truth</a>
-<ul>
-<li><a href="#orgced5b79">3.1.1. Social Contracts</a></li>
-<li><a href="#org9ef2d57">3.1.2. Fudging Data Explicitly</a></li>
-<li><a href="#orgb220e90">3.1.3. The Private Sector</a></li>
-<li><a href="#org98e7409">3.1.4. P-Hacking</a></li>
-<li><a href="#orga2522e2">3.1.5. Pre-registration</a></li>
-<li><a href="#org9fda7fe">3.1.6. Informal Pre-registration</a></li>
-<li><a href="#org2503b0d">3.1.7. Git Discipline</a></li>
+<li><a href="#org336d90b">1.1. Life and Death</a></li>
 </ul>
 </li>
-<li><a href="#org7f3d846">3.2. Obligation to Society</a>
+<li><a href="#org56288e4">2. Moral Philosophy</a></li>
+<li><a href="#org11be19d">3. The Belmont Report</a></li>
+<li><a href="#orgb108527">4. Responsibilities</a>
 <ul>
-<li><a href="#org3c3d1b8">3.2.1. Case Study : Metering</a></li>
-<li><a href="#orgefe6080">3.2.2. Case Study: Racial Bias in Facial Recognition</a></li>
+<li><a href="#org8606edb">4.1. Responsibility to the Truth</a>
+<ul>
+<li><a href="#org1b727ad">4.1.1. Social Contracts</a></li>
+<li><a href="#org87a65b5">4.1.2. Fudging Data Explicitly</a></li>
+<li><a href="#org2d4bc0c">4.1.3. The Private Sector</a></li>
+<li><a href="#orgbc54947">4.1.4. P-Hacking</a></li>
+<li><a href="#org8332a79">4.1.5. Pre-registration</a></li>
+<li><a href="#orge91b625">4.1.6. Informal Pre-registration</a></li>
+<li><a href="#org03d8c35">4.1.7. Git Discipline</a></li>
+</ul>
+</li>
+<li><a href="#org8bbc3e6">4.2. Obligation to Society</a>
+<ul>
+<li><a href="#org4977ff3">4.2.1. Case Study : Metering</a></li>
+<li><a href="#org44d93e9">4.2.2. Case Study: Racial Bias in Facial Recognition</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org90acd49">4. Concluding Remarks</a></li>
+<li><a href="#org127657e">5. Concluding Remarks</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7231ac8" class="outline-2">
-<h2 id="org7231ac8"><span class="section-number-2">1</span> Ethical Implications of Data Science</h2>
+<div id="outline-container-org8d82b96" class="outline-2">
+<h2 id="org8d82b96"><span class="section-number-2">1</span> Ethical Implications of Data Science</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org336d90b" class="outline-3">
+<h3 id="org336d90b"><span class="section-number-3">1.1</span> Life and Death</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
 People live and die every day on the basis of moral decisions made by
 others. <a href="https://drugabuse.com/contingency-management/">Contingency Management</a> (to name one example) is an effective
@@ -306,9 +291,10 @@ these events.
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orge0c7f0d" class="outline-2">
-<h2 id="orge0c7f0d"><span class="section-number-2">2</span> Moral Philosophy</h2>
+<div id="outline-container-org56288e4" class="outline-2">
+<h2 id="org56288e4"><span class="section-number-2">2</span> Moral Philosophy</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Most people do not entertain serious thought about their moral
@@ -340,9 +326,53 @@ the ethical implications of data science.
 </div>
 </div>
 
-<div id="outline-container-org5c36c69" class="outline-2">
-<h2 id="org5c36c69"><span class="section-number-2">3</span> Responsibilities</h2>
+<div id="outline-container-org11be19d" class="outline-2">
+<h2 id="org11be19d"><span class="section-number-2">3</span> The Belmont Report</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+Soft homework: read the <a href="https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html">Belmont Report</a>.
+</p>
+
+<p>
+From the website: "The Belmont Report was written by the National
+Commission for the Protection of Human Subjects of Biomedical and
+Behavioral Research. The Commission, created as a result of the
+National Research Act of 1974, was charged with identifying the
+basic ethical principles that should underlie the conduct of
+biomedical and behavioral research involving human subjects and
+developing guidelines to assure that such research is conducted in
+accordance with those principles. Informed by monthly discussions
+that spanned nearly four years and an intensive four days of
+deliberation in 1976, the Commission published the Belmont Report,
+which identifies basic ethical principles and guidelines that
+address ethical issues arising from the conduct of research with
+human subjects."
+</p>
+
+<p>
+The history of unethical medical research is grim indeed and I will
+highlight only one case: the <a href="https://www.cdc.gov/tuskegee/timeline.htm">USPHS Syphilis Study at Tuskegee</a>
+experiment in which the US Public Health Services allowed around 300
+black men to go untreated for Syphilis despite an existing effective
+treatment to study the progression of the disease, despite the fact
+that there was no compelling reason to collect such data.
+</p>
+
+<p>
+Incidents like this lead to the development of the Belmont Report
+and subsequent legislation and conventions.
+</p>
+
+<p>
+Unfortunately, this level of scrutiniy is rarely applied to
+contemporary data science.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb108527" class="outline-2">
+<h2 id="orgb108527"><span class="section-number-2">4</span> Responsibilities</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 Data Scientists have two primary moral responsibilities (in my
 opinion). They are related. I tend to conceptualize these issues in
@@ -350,13 +380,13 @@ terms of explicit and implicit contracts.
 </p>
 </div>
 
-<div id="outline-container-orgf7951c5" class="outline-3">
-<h3 id="orgf7951c5"><span class="section-number-3">3.1</span> Responsibility to the Truth</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org8606edb" class="outline-3">
+<h3 id="org8606edb"><span class="section-number-3">4.1</span> Responsibility to the Truth</h3>
+<div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-orgced5b79" class="outline-4">
-<h4 id="orgced5b79"><span class="section-number-4">3.1.1</span> Social Contracts</h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-org1b727ad" class="outline-4">
+<h4 id="org1b727ad"><span class="section-number-4">4.1.1</span> Social Contracts</h4>
+<div class="outline-text-4" id="text-4-1-1">
 <p>
 One of the marvellous things about the contemporary world is that
 society sets aside a fairly large amount of treasure to support a
@@ -385,9 +415,9 @@ analyze.
 </div>
 </div>
 
-<div id="outline-container-org9ef2d57" class="outline-4">
-<h4 id="org9ef2d57"><span class="section-number-4">3.1.2</span> Fudging Data Explicitly</h4>
-<div class="outline-text-4" id="text-3-1-2">
+<div id="outline-container-org87a65b5" class="outline-4">
+<h4 id="org87a65b5"><span class="section-number-4">4.1.2</span> Fudging Data Explicitly</h4>
+<div class="outline-text-4" id="text-4-1-2">
 <p>
 At the same time, our society is almost entirely based on
 incentives. And thus I can virtually guarantee that you will
@@ -419,12 +449,12 @@ bad science.
 </div>
 </div>
 
-<div id="outline-container-orgb220e90" class="outline-4">
-<h4 id="orgb220e90"><span class="section-number-4">3.1.3</span> The Private Sector</h4>
-<div class="outline-text-4" id="text-3-1-3">
+<div id="outline-container-org2d4bc0c" class="outline-4">
+<h4 id="org2d4bc0c"><span class="section-number-4">4.1.3</span> The Private Sector</h4>
+<div class="outline-text-4" id="text-4-1-3">
 <p>
 In the private sector, on the other hand, you will face both a
-pressure to report a positive result and a wild willingless to
+pressure to report a positive result and a wild willingness to
 interpret your results positively if doing so will advance a project
 upon which someone has staked political capital.
 </p>
@@ -432,8 +462,8 @@ upon which someone has staked political capital.
 <p>
 Unlike the working as an academic, data scientists are unlikely to
 stay at one job for more than five years, and the results of their
-previous work are not generally publically available. Thus, it is much
-easier to pass of bad results as good ones and assume that when things
+previous work are not generally publicly available. Thus, it is much
+easier to pass off bad results as good ones and assume that when things
 eventually do go wrong you'll be long gone.
 </p>
 
@@ -450,12 +480,46 @@ new data.
 </div>
 </div>
 
-<div id="outline-container-org98e7409" class="outline-4">
-<h4 id="org98e7409"><span class="section-number-4">3.1.4</span> P-Hacking</h4>
-<div class="outline-text-4" id="text-3-1-4">
+<div id="outline-container-orgbc54947" class="outline-4">
+<h4 id="orgbc54947"><span class="section-number-4">4.1.4</span> P-Hacking</h4>
+<div class="outline-text-4" id="text-4-1-4">
 <p>
-Literally modifying data or overstaing positive results is clearly
-unethical. This is what we used to call a sin of commision back in
+The cautionary tale of <a href="https://en.wikipedia.org/wiki/Brian_Wansink#Retractions_and_corrections">Brian Wansink</a>.
+</p>
+
+<p>
+Here is <a href="https://web.archive.org/web/20170312041524/http://www.brianwansink.com/phd-advice/the-grad-student-who-never-said-no">the post</a> and an exerpt:
+</p>
+
+<blockquote>
+<p>
+    qWhen she arrived, I gave her a data set of a self-funded, failed study
+which had null results (it was a one month study in an all-you-can-eat
+Italian restaurant buffet where we had charged some people ½ as much
+as others).  I said, "This cost us a lot of time and our own money to
+collect.  There's got to be something here we can salvage because it's
+a cool (rich &amp; unique) data set."  I had three ideas for potential
+Plan B, C, &amp; D directions (since Plan A had failed).  I told her what
+the analyses should be and what the tables should look like.  I then
+asked her if she wanted to do them.
+</p>
+
+<p>
+Every day she came back with puzzling new results, and every day we
+would scratch our heads, ask "Why," and come up with another way to
+reanalyze the data with yet another set of plausible hypotheses.
+Eventually we started discovering solutions that held up regardless of
+how we pressure-tested them.  I outlined the first paper, and she
+wrote it up, and every day for a month I told her how to rewrite it
+and she did.  This happened with a second paper, and then a third
+paper (which was one that was based on her own discovery while digging
+through the data).
+</p>
+</blockquote>
+
+<p>
+Literally modifying data or overstating positive results is clearly
+unethical. This is what we used to call a sin of commission back in
 Catholic School: you know what you are up to and you should feel bad
 about it.
 </p>
@@ -472,23 +536,18 @@ Some suggested reading:
 
 <ol class="org-ol">
 <li><a href="http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf">The garden of forking paths:  Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time - Andrew Gelman†and Eric Loken, 14 Nov 2013</a></li>
-<li>[[<a href="https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html">https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html</a>][Too Good to Be True</li>
+<li><a href="https://slate.com/technology/2013/07/statistics-and-psychology-multiple-comparisons-give-spurious-results.html">Too Good to Be True Statistics may say that women wear red when they’re fertile … but you can’t always trust statistics. By Andrew GelmanJuly 24, 2013</a></li>
 </ol>
-<p>
-Statistics may say that women wear red when they’re fertile … but you can’t always trust statistics.
-By Andrew Gelman
-July 24, 2013]]
-</p>
 
 <p>
-It is tempting to view data science as a "fishing expidition" in which
+It is tempting to view data science as a "fishing expedition" in which
 we get a data set and we dig into it until such a time as we find a
 good result.
 </p>
 
 <p>
 But we know from our model characterization lessons that even the
-simplest sort of modelling exercise depends on a number of choices
+simplest sort of modeling exercise depends on a number of choices
 like:
 </p>
 
@@ -510,9 +569,9 @@ repeatable.
 </div>
 </div>
 
-<div id="outline-container-orga2522e2" class="outline-4">
-<h4 id="orga2522e2"><span class="section-number-4">3.1.5</span> <a href="https://en.wikipedia.org/wiki/Preregistration_(science)">Pre-registration</a></h4>
-<div class="outline-text-4" id="text-3-1-5">
+<div id="outline-container-org8332a79" class="outline-4">
+<h4 id="org8332a79"><span class="section-number-4">4.1.5</span> <a href="https://en.wikipedia.org/wiki/Preregistration_(science)">Pre-registration</a></h4>
+<div class="outline-text-4" id="text-4-1-5">
 <p>
 One solution to this problem is "pre-registration". When studies are
 pre-registered the researcher designs a research plan before the data
@@ -530,9 +589,9 @@ career.
 </div>
 </div>
 
-<div id="outline-container-org9fda7fe" class="outline-4">
-<h4 id="org9fda7fe"><span class="section-number-4">3.1.6</span> Informal Pre-registration</h4>
-<div class="outline-text-4" id="text-3-1-6">
+<div id="outline-container-orge91b625" class="outline-4">
+<h4 id="orge91b625"><span class="section-number-4">4.1.6</span> Informal Pre-registration</h4>
+<div class="outline-text-4" id="text-4-1-6">
 <p>
 Even if you aren't publishing in a journal, consider informal
 pre-registration. Design your research plans ahead of time, Post them
@@ -543,9 +602,9 @@ issues. Don't wait to do this.
 </div>
 </div>
 
-<div id="outline-container-org2503b0d" class="outline-4">
-<h4 id="org2503b0d"><span class="section-number-4">3.1.7</span> Git Discipline</h4>
-<div class="outline-text-4" id="text-3-1-7">
+<div id="outline-container-org03d8c35" class="outline-4">
+<h4 id="org03d8c35"><span class="section-number-4">4.1.7</span> Git Discipline</h4>
+<div class="outline-text-4" id="text-4-1-7">
 <p>
 At the very least you must maintain a careful record of your research
 decisions. Hence the emphasis on small, well documented, commits and a
@@ -558,9 +617,9 @@ history. This might help keep you honest.
 </div>
 </div>
 
-<div id="outline-container-org7f3d846" class="outline-3">
-<h3 id="org7f3d846"><span class="section-number-3">3.2</span> Obligation to Society</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org8bbc3e6" class="outline-3">
+<h3 id="org8bbc3e6"><span class="section-number-3">4.2</span> Obligation to Society</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 This is a tricky one to discuss because there isn't all that much
 agreement on precisely what obligations we have to
@@ -580,7 +639,7 @@ the hardest nosed Randian Libertarian.
 
 <p>
 The philosopher Peter Singer makes this kind of practical moral
-argument quite easily, though I disagree with some broad elements of
+argument <a href="https://link.springer.com/referenceworkentry/10.1007/978-3-319-16999-6_444-1?page=5">quite easily</a>, though I disagree with some broad elements of
 his philosophy.
 </p>
 
@@ -591,9 +650,9 @@ the world.
 </p>
 </div>
 
-<div id="outline-container-org3c3d1b8" class="outline-4">
-<h4 id="org3c3d1b8"><span class="section-number-4">3.2.1</span> Case Study : Metering</h4>
-<div class="outline-text-4" id="text-3-2-1">
+<div id="outline-container-org4977ff3" class="outline-4">
+<h4 id="org4977ff3"><span class="section-number-4">4.2.1</span> Case Study : Metering</h4>
+<div class="outline-text-4" id="text-4-2-1">
 <p>
 Most of us are familiar with the idea of metering services. For
 instance: water. We get a bill at the end of the month which reflects
@@ -620,7 +679,7 @@ disaggregating the data.
 
 
 
-<div id="orgba32b10" class="figure">
+<div id="org9fbec8a" class="figure">
 <p><img src="./images/meter_disag.jpg" alt="meter_disag.jpg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Meter Disaggregation uses a model to convert a string of consumption values to usages by different appliances.</p>
@@ -659,7 +718,7 @@ anti-government actions.
 <p>
 I would argue that even when a company or researcher has access to
 data, if the data was collected under a set of presumptions held by
-the user, then analysis should be restricted to that assumption.
+the user, then analysis should be restricted to those assumptions.
 </p>
 
 <p>
@@ -669,9 +728,9 @@ practice.
 </div>
 </div>
 
-<div id="outline-container-orgefe6080" class="outline-4">
-<h4 id="orgefe6080"><span class="section-number-4">3.2.2</span> Case Study: Racial Bias in Facial Recognition</h4>
-<div class="outline-text-4" id="text-3-2-2">
+<div id="outline-container-org44d93e9" class="outline-4">
+<h4 id="org44d93e9"><span class="section-number-4">4.2.2</span> Case Study: Racial Bias in Facial Recognition</h4>
+<div class="outline-text-4" id="text-4-2-2">
 <p>
 Facial Recognition is big business and sadly its already being applied
 in many places. 
@@ -702,11 +761,11 @@ From <a href="https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf">Face R
 <blockquote>
 <p>
 False positives:Using the higher quality Application photos, false
-positive rates are high-est in West and East African and East Asian
-people, and lowest in Eastern European in-dividuals.  This effect is
+positive rates are highest in West and East African and East Asian
+people, and lowest in Eastern European individuals.  This effect is
 generally large, with a factor of 100 more false positives between
 countries.  However, with a number of algorithms developed in China
-this effect is re-versed, with low false positive rates on East Asian
+this effect is reversed, with low false positive rates on East Asian
 faces.  With domestic law enforcement images, the highest false
 positives are in American Indians, with elevated rates in African
 American and Asian populations; the relative ordering depends on sex
@@ -721,7 +780,7 @@ datasets. This effect is smaller than that due to race.
 
 <p>
 We found elevated false positives in the elderly and in children; the
-effects were larger inthe oldest and youngest, and smallest in
+effects were larger in the oldest and youngest, and smallest in
 middle-aged adults"
 </p>
 </blockquote>
@@ -742,6 +801,11 @@ world."
 </p>
 
 <p>
+In fact, there are many questions you should ask yourself during the
+development of a <a href="https://theconvivialsociety.substack.com/p/the-questions-concerning-technology">new technology</a>, including the development of a model.
+</p>
+
+<p>
 My take would be your time would be better spent contacting your
 representatives to ban this technology.
 </p>
@@ -753,14 +817,21 @@ which itself often contains biases. In the case of facial recognition
 the issue appears to be <span class="underline">less</span> training data for non-majority faces
 and thus a higher than expected rate of error for non-majority faces.
 </p>
+
+<p>
+As we have learned even in the simple examples we used for model
+characterization and validation, models require a great deal of
+subjective adjustment of hyperparameters and it is in these
+adjustments that bias can manifest. 
+</p>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org90acd49" class="outline-2">
-<h2 id="org90acd49"><span class="section-number-2">4</span> Concluding Remarks</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org127657e" class="outline-2">
+<h2 id="org127657e"><span class="section-number-2">5</span> Concluding Remarks</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 It is your job to tell people the truth to the best of your ability,
 including tricky ideas like uncertainty therein.
@@ -791,9 +862,9 @@ term explicit and implicit obligations.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Vincent</p>
-<p class="date">Created: 2020-10-28 Wed 18:29</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Author: Vincent Toups</p>
+<p class="date">Created: 2021-11-08 Mon 15:20</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
