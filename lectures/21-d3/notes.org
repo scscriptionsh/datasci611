@@ -1,0 +1,185 @@
+* D3/Browser Based Visualization
+
+What the heck - let's do it. 
+
+** Why
+
+Data scientists make a lot of visualizations and the browser is the
+best platform for visualizations.
+
+1. Its everywhere
+2. Its very optimized for showing documents even doing high
+   performance graphics
+
+Its true that you can use Bokeh or Shiny to do visualization in the
+browser but these tools just get in the way, in my opinion. 
+
+** Downsides
+
+1. You have to learn Javascript/HTML/ etc. 
+
+This isn't really a downside, though, because these skills are very
+useful and frankly not all that complicated compared the rest of the
+stuff you have to do with data science.
+
+** Javascript
+
+Real fast:
+
+#+begin_src js
+function plus(a,b){
+  return a + b;
+}
+
+if(a < b){
+   console.log(a);
+} else {
+   console.log(b);
+}
+
+for(var i = 0; i < 10; i = i + 1){
+   console.log(i);
+}
+
+var i = 0;
+while(i < 10){
+  i++;
+  console.log(i);
+}
+
+[1,2,3,4,5].foreach((n, i) => console.log(n+i));
+
+const dict = {x:10, y:11, f:function(){console.log(this.x)}};
+console.log(dict["x"]);
+console.log(dict.y);
+
+#+end_src
+
+Thats pretty much it!
+
+** Preliminaries
+
+You can get pretty far just opening up files on your computer with
+your browser:
+
+#+INCLUDE: self-contained-hello-world.html src html
+
+Recollect from our brief intro to web stuff:
+
+1. This is an HTML document.
+2. The header contains some meta-data, including scripts we either
+   load (from d3's content distribution system) or write ourselves,
+3. The body describes a document. It has a "header" title and an empty
+   "div" which we are going to use when we do something with our data.
+
+The browser interprets all this to create what we see. The d3 code
+we've got in this toy example demonstrates the usage of the chaining
+style with which we are familiar from Python and its easy enough to
+squint at this and try to understand what it does.
+
+1. Find the element with id "content"
+2. tell d3 we are interested in working with "p" elements.
+3. Tell d3 we're interested in working with the data [4, 5, ...]
+4. For every data point for which we don't see a document element,
+   append a new one with the text so generated.
+
+This is the simplest sort of D3 Program you could write: just create a
+set of HTML document elements based on the data we've got.
+
+What about loading external data?
+
+** Loading external data
+
+#+INCLUDE" ex2.html src html
+
+This is going to give us an error for security reasons. We can get
+around this by running our own webserver. This is actually very easy
+with the infrastructure we've got in place.
+
+#+begin_src sh
+python3 -m http.server 8000
+#+end_src
+
+Then we can just point our browser at localhost:8080 and get to the
+races. As usual, we can do this from our Docker container like so:
+
+#+begin_src sh
+docker run -v $(pwd):/home/rstudio/project -p 8000:8000\
+ --user rstudio\
+ --workdir /home/rstudio/project/lectures/21-d3\
+ python3 -m http.server 8000
+#+end_src
+
+Let's do something with the data:
+
+#+INCLUDE: ex3.html src html
+
+All this is very boring so far, in terms of output.  But its worth
+noting:
+
+1. We've used a Javascript _promise_ to represent something which will
+   be done in the background and a request that, once it is finished,
+   we do something.
+
+2. We've used another callback to do some parsing on the data. 
+
+There is frankly a ton of stuff we could discuss here about how
+Javascript works but let's cut to the chase. 
+
+#+INCLUDE: ex4.html src html
+
+Now we're getting somewhere. The syntax we're using here is a little
+different than what we are used to but if you think about it we're
+using very much the same idea that we employed in ggplot (no
+coincidence here, actually): We provide an anonymous function (or a
+nonymouse one) that maps a data _value_ to an aesthetic (in this case,
+the attribute of some HTML element).
+
+** More Data
+
+Consider:
+
+#+INCLUDE: ex5.html src html
+
+Notes:
+
+#+INCLUDE: ex5.html src html :lines "44-47" 
+
+We've added another HTML element here to hold our character name.
+
+And:
+
+#+INCLUDE: ex5.html src html :lines "45-48"
+
+We're now loading two data sets:
+
+#+INCLUDE: ex5.html src html :lines "10-22"
+
+We're using the Promise API to take two promises and merge them into a
+single promise for two things (in an array).
+
+And finally, we've added a mouseover event handler:
+
+#+INCLUDE: ex5.html src html :lines "33-36"
+
+** A Second Panel
+
+Let's do something with that extra SVG. Natural thing to do is add the
+powers for the given character. That was the purpose of building the
+index in the previous step.
+
+#+INCLUDE: ex6.html src HTML+
+
+Things to note:
+
+1. We've added a second H2 to show the power names. 
+2. An adapter function uses the index we created during the data load
+   to convert a character name (available in the mouseover handler) to
+   a list of powers which we use to fill in the second SVG.
+3. We use a "transition" to make the changes smooth. This makes it
+   much easier to see whether powers are shared between adjacent
+   points.
+
+Let's try and tidy things up a little bit.
+
+

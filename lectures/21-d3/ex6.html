@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is Hello World page</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const power_names = "accelerated_healing,adhesion,aerokinesis,alien_physiology,amphibian,android_body,animal_control,animal_empathy,animal_mimicry,astral_projection,atlantean_physiology,balance_manipulation,bio_fission,bio_fusion,bizarro_physiology,body_art_animation,cheating_death,chemical_catalysis,chi_manipulation,chlorokinesis,chronokinesis,clairvoyance,claws,cosmic_awareness,cryokinesis,crystal_generation,cybernetic_enhancement,darkness_manipulation,decelerated_aging,deflection,density_control,dimensional_travel,discern_motivation,disintegration,divine_empowerment,divine_grace,echolocation,ectokinesis,eidetic_kinesthesia,elasticity,electrokinesis,electromagnetism,elemental_control,empathy,energy_absorption,energy_construct_creation,energy_negation,energy_projection,energy_resistance,energy_transference,enhanced_hearing,enhanced_intellect,enhanced_sense_of_smell,enhanced_senses,enhanced_vision,exorcism,fatal_touch,fear_projection,flight,force_field,geokinesis,gravity_manipulation,healing,hydrokinesis,hypnosis,illusion_casting,immortality,infection,intangibility,interstellar_travel,invisibility,invulnerability,lycanthropy,magic,magnetic_manipulation,matter_absorption,mechanokinesis,metamorphosis,mind_control,molecular_acceleration,molecular_reconstruction,necromancy,necrotic_empowerment,omnipotence,omnipresence,omniscience,phasing,pheromone_control,photokinesis,possession,power_absorption,power_distribution,power_replication,precognition,prehensile_hair,probability_manipulation,psychic_link,psychokinesis,pyrokinesis,radiation_production,reality_alteration,regeneration,removable_limbs,resurrection,retrocognition,robot_body,self_sustenance,size_alteration,sound_manipulation,summoning,super_breath,super_leaping,superhuman_agility,superhuman_durability,superhuman_reflexes,superhuman_speed,superhuman_stamina,superhuman_strength,symbiosis,talons,telekinesis,telepathy,teleportation,therianthropy,thermal_blast,thermokinesis,toxic_immunity,toxikinesis,transformation,unique_physiology,vampirism,water_sense,weather_manipulation,zombie_physiology".split(",");
+    function main(){
+	const powers_index = {};
+	const rect_width = 500/power_names.length
+	const rect_max_height = 50;
+	
+	Promise.all([
+	    d3.csv("source_data/powers_tsne.csv", function(row){
+		row.X1 = +row.X1;
+		row.X2 = +row.X2;
+		return row;
+	    }),
+	    d3.csv("source_data/powers_for_tsne.csv", function(row, index){
+		power_names.forEach(name => row[name] = +row[name]);
+		powers_index[row.character] = index;
+		return row;
+	    })
+	])
+	    .then(function(data){
+		const proj = data[0];
+		const vecs = data[1];
+
+		function character_to_power_data(character){
+		    const row = vecs[powers_index[character]];
+		    return power_names.map((name,i) => { return {power:name, has:row[name], x:i}});
+		}
+
+		
+		d3.select("#content")
+		    .selectAll("circle")
+		    .data(proj)
+		    .enter().append("circle")
+		    .attr("cx", function(d) {return d.X1})
+		    .attr("cy", d => d.X2)
+		    .attr("r", 1)
+		    .attr("character", d => d.character)
+		    .on('mouseover', function(){
+			const character = d3.select(this).attr("character");
+			d3.select("#character").text(character);
+			d3.select("#powers")
+			    .selectAll("rect")
+			    .data(character_to_power_data(character))
+			    .transition()
+			    .attr("height", r => r.has*rect_max_height);
+		    });
+		d3.select("#powers")
+		    .selectAll("rect")
+		    .data(character_to_power_data("bart_allen"))
+		    .enter()
+		    .append("rect")
+		    .attr("power", r => r.power)
+		    .attr("x", r => r.x*rect_width)
+		    .attr("y", 0)
+		    .attr("width", rect_width)
+		    .attr("height", r => r.has*rect_max_height)
+		    .attr("fill", "#0000ff")
+		    .on('mouseover', function(){
+			const power = d3.select(this)
+			      .attr("power");
+			d3.select("#power_name").text(power);
+		    });
+	    });
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+    
+  </script>
+</head>
+<body>
+  <h1>Powers</h1>
+  <h2 id="character">bart_allen</h2>
+  <svg id="content" width="500" height="500" viewBox="-75 -75 150 150"></svg></br>
+  <h2 id="power_name">***</h2>
+  <svg id="powers" width="500" height="50" viewBox="0 0 500 50"></svg>
+</body>
+</html>

@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-11-15 Mon 14:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent Toups" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc0e4064">1. D3/Browser Based Visualization</a>
+<ul>
+<li><a href="#org3fd43a8">1.1. Why</a></li>
+<li><a href="#org7037f9a">1.2. Downsides</a></li>
+<li><a href="#orgfd0834e">1.3. Preliminaries</a></li>
+<li><a href="#orgde7b2ce">1.4. Loading external data</a></li>
+<li><a href="#org20f6aef">1.5. More Data</a></li>
+<li><a href="#org8f6cb48">1.6. A Second Panel</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc0e4064" class="outline-2">
+<h2 id="orgc0e4064"><span class="section-number-2">1</span> D3/Browser Based Visualization</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+What the heck - let's do it. 
+</p>
+</div>
+
+<div id="outline-container-org3fd43a8" class="outline-3">
+<h3 id="org3fd43a8"><span class="section-number-3">1.1</span> Why</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Data scientists make a lot of visualizations and the browser is the
+best platform for visualizations.
+</p>
+
+<ol class="org-ol">
+<li>Its everywhere</li>
+<li>Its very optimized for showing documents even doing high
+performance graphics</li>
+</ol>
+
+<p>
+Its true that you can use Bokeh or Shiny to do visualization in the
+browser but these tools just get in the way, in my opinion. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7037f9a" class="outline-3">
+<h3 id="org7037f9a"><span class="section-number-3">1.2</span> Downsides</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li>You have to learn Javascript/HTML/ etc.</li>
+</ol>
+
+<p>
+This isn't really a downside, though, because these skills are very
+useful and frankly not all that complicated compared the rest of the
+stuff you have to do with data science.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd0834e" class="outline-3">
+<h3 id="orgfd0834e"><span class="section-number-3">1.3</span> Preliminaries</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+You can get pretty far just opening up files on your computer with
+your browser:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;This is Hello World page&lt;/title&gt;
+  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    function main(){
+	d3.select("#content")
+	    .selectAll("p")
+	    .data([4, 8, 15, 16, 23, 42])
+	    .enter().append("p")
+	    .text(function(d) { return "I’m number " + d + "!"; });	
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;div id="content"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>
+Recollect from our brief intro to web stuff:
+</p>
+
+<ol class="org-ol">
+<li>This is an HTML document.</li>
+<li>The header contains some meta-data, including scripts we either
+load (from d3's content distribution system) or write ourselves,</li>
+<li>The body describes a document. It has a "header" title and an empty
+"div" which we are going to use when we do something with our data.</li>
+</ol>
+
+<p>
+The browser interprets all this to create what we see. The d3 code
+we've got in this toy example demonstrates the usage of the chaining
+style with which we are familiar from Python and its easy enough to
+squint at this and try to understand what it does.
+</p>
+
+<ol class="org-ol">
+<li>Find the element with id "content"</li>
+<li>tell d3 we are interested in working with "p" elements.</li>
+<li>Tell d3 we're interested in working with the data [4, 5, &#x2026;]</li>
+<li>For every data point for which we don't see a document element,
+append a new one with the text so generated.</li>
+</ol>
+
+<p>
+This is the simplest sort of D3 Program you could write: just create a
+set of HTML document elements based on the data we've got.
+</p>
+
+<p>
+What about loading external data?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde7b2ce" class="outline-3">
+<h3 id="orgde7b2ce"><span class="section-number-3">1.4</span> Loading external data</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+#+INCLUDE" ex2.html src html
+</p>
+
+<p>
+This is going to give us an error for security reasons. We can get
+around this by running our own webserver. This is actually very easy
+with the infrastructure we've got in place.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">python3 -m http.server 8000
+</pre>
+</div>
+
+<p>
+Then we can just point our browser at localhost:8080 and get to the
+races. As usual, we can do this from our Docker container like so:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">docker run -v $(pwd):/home/rstudio/project -p 8000:8000\
+ --user rstudio\
+ --workdir /home/rstudio/project/lectures/21-d3\
+ python3 -m http.server 8000
+</pre>
+</div>
+
+<p>
+Let's do something with the data:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;This is Hello World page&lt;/title&gt;
+  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    function main(){
+	d3.csv("source_data/powers_tsne.csv", function(row){
+	    row.X1 = +row.X1;
+	    row.X2 = +row.X2;
+	    return row;
+	}).then(function(data){
+	    d3.select("#content")
+		.selectAll("p")
+		.data(data)
+		.enter().append("p")
+		.text(function(d) { return "I'm character " + d.character + "!"; });
+	});
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;div id="content"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>
+All this is very boring so far, in terms of output.  But its worth
+noting:
+</p>
+
+<ol class="org-ol">
+<li>We've used a Javascript <span class="underline">promise</span> to represent something which will
+be done in the background and a request that, once it is finished,
+we do something.</li>
+
+<li>We've used another callback to do some parsing on the data.</li>
+</ol>
+
+<p>
+There is frankly a ton of stuff we could discuss here about how
+Javascript works but let's cut to the chase. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;This is Hello World page&lt;/title&gt;
+  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    function main(){
+	d3.csv("source_data/powers_tsne.csv", function(row){
+	    row.X1 = +row.X1;
+	    row.X2 = +row.X2;
+	    return row;
+	}).then(function(data){
+	    d3.select("#content")
+		.selectAll("circle")
+		.data(data)
+		.enter().append("circle")
+		.attr("cx", function(d) {return d.X1})
+		.attr("cy", d =&gt; d.X2)
+		.attr("r", 1)
+	});
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Powers&lt;/h1&gt;
+  &lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>
+Now we're getting somewhere. The syntax we're using here is a little
+different than what we are used to but if you think about it we're
+using very much the same idea that we employed in ggplot (no
+coincidence here, actually): We provide an anonymous function (or a
+nonymouse one) that maps a data <span class="underline">value</span> to an aesthetic (in this case,
+the attribute of some HTML element).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20f6aef" class="outline-3">
+<h3 id="org20f6aef"><span class="section-number-3">1.5</span> More Data</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Consider:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;This is Hello World page&lt;/title&gt;
+  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    const power_names = "accelerated_healing,adhesion,aerokinesis,alien_physiology,amphibian,android_body,animal_control,animal_empathy,animal_mimicry,astral_projection,atlantean_physiology,balance_manipulation,bio_fission,bio_fusion,bizarro_physiology,body_art_animation,cheating_death,chemical_catalysis,chi_manipulation,chlorokinesis,chronokinesis,clairvoyance,claws,cosmic_awareness,cryokinesis,crystal_generation,cybernetic_enhancement,darkness_manipulation,decelerated_aging,deflection,density_control,dimensional_travel,discern_motivation,disintegration,divine_empowerment,divine_grace,echolocation,ectokinesis,eidetic_kinesthesia,elasticity,electrokinesis,electromagnetism,elemental_control,empathy,energy_absorption,energy_construct_creation,energy_negation,energy_projection,energy_resistance,energy_transference,enhanced_hearing,enhanced_intellect,enhanced_sense_of_smell,enhanced_senses,enhanced_vision,exorcism,fatal_touch,fear_projection,flight,force_field,geokinesis,gravity_manipulation,healing,hydrokinesis,hypnosis,illusion_casting,immortality,infection,intangibility,interstellar_travel,invisibility,invulnerability,lycanthropy,magic,magnetic_manipulation,matter_absorption,mechanokinesis,metamorphosis,mind_control,molecular_acceleration,molecular_reconstruction,necromancy,necrotic_empowerment,omnipotence,omnipresence,omniscience,phasing,pheromone_control,photokinesis,possession,power_absorption,power_distribution,power_replication,precognition,prehensile_hair,probability_manipulation,psychic_link,psychokinesis,pyrokinesis,radiation_production,reality_alteration,regeneration,removable_limbs,resurrection,retrocognition,robot_body,self_sustenance,size_alteration,sound_manipulation,summoning,super_breath,super_leaping,superhuman_agility,superhuman_durability,superhuman_reflexes,superhuman_speed,superhuman_stamina,superhuman_strength,symbiosis,talons,telekinesis,telepathy,teleportation,therianthropy,thermal_blast,thermokinesis,toxic_immunity,toxikinesis,transformation,unique_physiology,vampirism,water_sense,weather_manipulation,zombie_physiology".split(",");
+    function main(){
+	const powers_index = {};
+	Promise.all([
+	    d3.csv("source_data/powers_tsne.csv", function(row){
+		row.X1 = +row.X1;
+		row.X2 = +row.X2;
+		return row;
+	    }),
+	    d3.csv("source_data/powers_for_tsne.csv", function(row, index){
+		power_names.forEach(name =&gt; row[name] = +row[name]);
+		powers_index[row.character] = index;
+		return row;
+	    })
+	])
+	    .then(function(data){
+		const proj = data[0];
+		const vecs = data[1];
+		d3.select("#content")
+		    .selectAll("circle")
+		    .data(proj)
+		    .enter().append("circle")
+		    .attr("cx", function(d) {return d.X1})
+		    .attr("cy", d =&gt; d.X2)
+		    .attr("r", 1)
+		    .attr("character", d =&gt; d.character)
+		    .on('mouseover', function(){
+			d3.select("#character").text(d3.select(this).attr("character"));
+		    })
+
+	});
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Powers&lt;/h1&gt;
+  &lt;h2 id="character"&gt;superman&lt;/h2&gt;
+  &lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;&lt;/br&gt;
+  &lt;svg id="powers" width="500" height="50" viewBox="0 0 500 50"&gt;&lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>
+Notes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;body&gt;
+  &lt;h1&gt;Powers&lt;/h1&gt;
+  &lt;h2 id="character"&gt;superman&lt;/h2&gt;
+</pre>
+</div>
+
+<p>
+We've added another HTML element here to hold our character name.
+</p>
+
+<p>
+And:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;h1&gt;Powers&lt;/h1&gt;
+&lt;h2 id="character"&gt;superman&lt;/h2&gt;
+&lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;&lt;/br&gt;
+</pre>
+</div>
+
+<p>
+We're now loading two data sets:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">Promise.all([
+    d3.csv("source_data/powers_tsne.csv", function(row){
+	row.X1 = +row.X1;
+	row.X2 = +row.X2;
+	return row;
+    }),
+    d3.csv("source_data/powers_for_tsne.csv", function(row, index){
+	power_names.forEach(name =&gt; row[name] = +row[name]);
+	powers_index[row.character] = index;
+	return row;
+    })
+])
+</pre>
+</div>
+
+<p>
+We're using the Promise API to take two promises and merge them into a
+single promise for two things (in an array).
+</p>
+
+<p>
+And finally, we've added a mouseover event handler:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">.on('mouseover', function(){
+    d3.select("#character").text(d3.select(this).attr("character"));
+})
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8f6cb48" class="outline-3">
+<h3 id="org8f6cb48"><span class="section-number-3">1.6</span> A Second Panel</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Let's do something with that extra SVG. Natural thing to do is add the
+powers for the given character. That was the purpose of building the
+index in the previous step.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-HTML+">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;This is Hello World page&lt;/title&gt;
+  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    const power_names = "accelerated_healing,adhesion,aerokinesis,alien_physiology,amphibian,android_body,animal_control,animal_empathy,animal_mimicry,astral_projection,atlantean_physiology,balance_manipulation,bio_fission,bio_fusion,bizarro_physiology,body_art_animation,cheating_death,chemical_catalysis,chi_manipulation,chlorokinesis,chronokinesis,clairvoyance,claws,cosmic_awareness,cryokinesis,crystal_generation,cybernetic_enhancement,darkness_manipulation,decelerated_aging,deflection,density_control,dimensional_travel,discern_motivation,disintegration,divine_empowerment,divine_grace,echolocation,ectokinesis,eidetic_kinesthesia,elasticity,electrokinesis,electromagnetism,elemental_control,empathy,energy_absorption,energy_construct_creation,energy_negation,energy_projection,energy_resistance,energy_transference,enhanced_hearing,enhanced_intellect,enhanced_sense_of_smell,enhanced_senses,enhanced_vision,exorcism,fatal_touch,fear_projection,flight,force_field,geokinesis,gravity_manipulation,healing,hydrokinesis,hypnosis,illusion_casting,immortality,infection,intangibility,interstellar_travel,invisibility,invulnerability,lycanthropy,magic,magnetic_manipulation,matter_absorption,mechanokinesis,metamorphosis,mind_control,molecular_acceleration,molecular_reconstruction,necromancy,necrotic_empowerment,omnipotence,omnipresence,omniscience,phasing,pheromone_control,photokinesis,possession,power_absorption,power_distribution,power_replication,precognition,prehensile_hair,probability_manipulation,psychic_link,psychokinesis,pyrokinesis,radiation_production,reality_alteration,regeneration,removable_limbs,resurrection,retrocognition,robot_body,self_sustenance,size_alteration,sound_manipulation,summoning,super_breath,super_leaping,superhuman_agility,superhuman_durability,superhuman_reflexes,superhuman_speed,superhuman_stamina,superhuman_strength,symbiosis,talons,telekinesis,telepathy,teleportation,therianthropy,thermal_blast,thermokinesis,toxic_immunity,toxikinesis,transformation,unique_physiology,vampirism,water_sense,weather_manipulation,zombie_physiology".split(",");
+    function main(){
+	const powers_index = {};
+	const rect_width = 500/power_names.length
+	const rect_max_height = 50;
+
+	Promise.all([
+	    d3.csv("source_data/powers_tsne.csv", function(row){
+		row.X1 = +row.X1;
+		row.X2 = +row.X2;
+		return row;
+	    }),
+	    d3.csv("source_data/powers_for_tsne.csv", function(row, index){
+		power_names.forEach(name =&gt; row[name] = +row[name]);
+		powers_index[row.character] = index;
+		return row;
+	    })
+	])
+	    .then(function(data){
+		const proj = data[0];
+		const vecs = data[1];
+
+		function character_to_power_data(character){
+		    const row = vecs[powers_index[character]];
+		    return power_names.map((name,i) =&gt; { return {power:name, has:row[name], x:i}});
+		}
+
+
+		d3.select("#content")
+		    .selectAll("circle")
+		    .data(proj)
+		    .enter().append("circle")
+		    .attr("cx", function(d) {return d.X1})
+		    .attr("cy", d =&gt; d.X2)
+		    .attr("r", 1)
+		    .attr("character", d =&gt; d.character)
+		    .on('mouseover', function(){
+			const character = d3.select(this).attr("character");
+			d3.select("#character").text(character);
+			d3.select("#powers")
+			    .selectAll("rect")
+			    .data(character_to_power_data(character))
+			    .transition()
+			    .attr("height", r =&gt; r.has*rect_max_height);
+		    });
+		d3.select("#powers")
+		    .selectAll("rect")
+		    .data(character_to_power_data("bart_allen"))
+		    .enter()
+		    .append("rect")
+		    .attr("power", r =&gt; r.power)
+		    .attr("x", r =&gt; r.x*rect_width)
+		    .attr("y", 0)
+		    .attr("width", rect_width)
+		    .attr("height", r =&gt; r.has*rect_max_height)
+		    .attr("fill", "#0000ff")
+		    .on('mouseover', function(){
+			const power = d3.select(this)
+			      .attr("power");
+			d3.select("#power_name").text(power);
+		    });
+	    });
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Powers&lt;/h1&gt;
+  &lt;h2 id="character"&gt;bart_allen&lt;/h2&gt;
+  &lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;&lt;/br&gt;
+  &lt;h2 id="power_name"&gt;***&lt;/h2&gt;
+  &lt;svg id="powers" width="500" height="50" viewBox="0 0 500 50"&gt;&lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent Toups</p>
+<p class="date">Created: 2021-11-15 Mon 14:40</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

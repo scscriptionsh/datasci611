@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is Hello World page</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    function main(){
+	d3.select("#content")
+	    .selectAll("p")
+	    .data([4, 8, 15, 16, 23, 42])
+	    .enter().append("p")
+	    .text(function(d) { return "I’m number " + d + "!"; });	
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+    
+  </script>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <div id="content"></div>
+</body>
+</html>

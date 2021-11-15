@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is Hello World page</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    function main(){
+	d3.csv("source_data/powers_tsne.csv", function(row){
+	    row.X1 = +row.X1;
+	    row.X2 = +row.X2;
+	    return row;
+	}).then(function(data){
+	    d3.select("#content")
+		.selectAll("p")
+		.data(data)
+		.enter().append("p")
+		.text(function(d) { return "I'm character " + d.character + "!"; });
+	});
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+    
+  </script>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <div id="content"></div>
+</body>
+</html>
