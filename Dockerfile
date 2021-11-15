@@ -39,5 +39,6 @@ RUN pip3 install sos sos-r sos-notebook sos-papermill jupyterlab-sos sos-python
 RUN jupyter labextension install transient-display-data 
 RUN jupyter labextension install jupyterlab-sos
 RUN python3 -m sos_notebook.install
-RUN R -e "install.package('RSQLite')";
+RUN R -e "install.packages('RSQLite')";
 RUN pip3 install matplotlib plotly bokeh plotnine dplython
+
