@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Apollo 18 - TMBW: The They Might Be Giants Knowledge Base</title>
+<meta name="generator" content="MediaWiki 1.25.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/index.php?title=Apollo_18&amp;action=edit" />
+<link rel="edit" title="Edit" href="/wiki/index.php?title=Apollo_18&amp;action=edit" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="This Might Be A Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://tmbw.net/wiki/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/wiki/Apollo_18" />
+<link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=azure&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:a2f1a9e3354033da4df1a393c1f9ca92 */</style>
+<script>if(window.mw){
+mw.loader.state({"azureSkinJS":"loading"});
+}</script>
+<script src="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=azure&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Apollo_18","wgTitle":"Apollo 18","wgCurRevisionId":318559,"wgRevisionId":318559,"wgArticleId":738,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["TMBG Albums","Albums Available For Download On iTunes"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Apollo_18","wgRelevantArticleId":738,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"hidesig":true,"preview":true,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=azureSkinJS\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<script language="javascript" type="text/javascript">getcss();</script>
+		<script language="javascript" type="text/javascript">theyDayBanner();</script>
+	<!-- Logic for making the site mobile responsive --><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+  $('#pagetools-title').on('click',function() {
+    $('body').toggleClass('pagetools-open');
+  });
+  $('#sitenav-title').on('click',function() {
+    $('body').toggleClass('sitenav-open');
+  });
+  $('#personaltoolstitle').on('click',function() {
+    $('body').toggleClass('personaltools-open');
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Apollo_18 skin-azure action-view vector-animateLayout">
+	  	<div id="personaltools">
+  	  <span id="personaltoolstitle" onclick="jQuery('#ul-personaltools').slideToggle();">Personal tools</span>
+      <ul id="ul-personaltools">
+        <li id="pt-createaccount"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Apollo+18&amp;type=signup">Create account</a></li>
+        <li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Apollo+18">Log in</a></li>
+	</ul>
+	</div><!-- /personaltools -->
+	<div id="globalWrapper">
+	<div id="supershadow">
+	<div id="container">
+		
+	<a href="/wiki/Main_Page" title="Main Page" id="headerwrapper">
+        <div id="header">This Might Be A Wiki</div>
+        <div id="subtitle">The TMBG Knowledge Base</div>
+      </a>
+      <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
+	<a name="top" id="top"></a>
+	<h1 class="first">Apollo 18</h1>
+	<div id="bodyContent" class="mw-body">
+	<div id="siteSub">From This Might Be A Wiki</div>
+	<div id="contentsub"></div>
+        <!-- start content -->
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table cellspacing="5" cellpadding="3" style="background-color:rgb(176,196,222);border-top-color:rgb(156,176,202);border-left-color:rgb(146,166,192);border-right-color:rgb(146,166,192);border-bottom-color:rgb(126,146,172);" class="albuminfotable">
+<tr>
+<td rowspan="3" width="140" height="140"> <center><a href="/wiki/File:Apollo18.png" class="image" title="Apollo 18 album cover"><img alt="Apollo 18 album cover" src="/wiki/images/thumb/4/4c/Apollo18.png/140px-Apollo18.png" width="140" height="140" srcset="/wiki/images/thumb/4/4c/Apollo18.png/210px-Apollo18.png 1.5x, /wiki/images/thumb/4/4c/Apollo18.png/280px-Apollo18.png 2x" /></a></center>
+</td>
+<td colspan="6" style="background-color: rgb(206,226,252);">
+<center><b>Apollo 18</b><br /> Studio album by <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a></center>
+</td></tr>
+<tr>
+<td class="albuminfotitle">First released
+</td>
+<td> March 20, <a href="/wiki/1992" title="1992">1992</a><br /><font size="-2">Release details / collectors: <a onclick="javascript:jQuery('#div1').load('index.php?title=Apollo_18/Release_Details&amp;action=render&amp;release=', function() { jQuery('#div1-table').slideDown(200);} );" href="#">Show</a> | <a onclick="javascript:jQuery('#div1-table').slideUp(200)" href="#">Hide</a></font>
+</td>
+<td class="albuminfotitle">Tracks
+</td>
+<td> 18
+</td>
+<td class="albuminfotitle">Last album
+</td>
+<td> <a href="/wiki/Flood" title="Flood">Flood</a>
+</td></tr>
+<tr>
+<td class="albuminfotitle">Label
+</td>
+<td> <a href="/wiki/Elektra_Entertainment" title="Elektra Entertainment">Elektra</a> &lt;61257&gt;
+</td>
+<td class="albuminfotitle">Length
+</td>
+<td> 43:00
+</td>
+<td class="albuminfotitle">Next album
+</td>
+<td> <a href="/wiki/John_Henry" title="John Henry">John Henry</a>
+</td></tr></table>
+<div id="div1-table" style="display:none"><table cellspacing="5" cellpadding="3" align="center" style="background-color: rgb(206,226,252);border-top-color:rgb(156,176,202);border-left-color:rgb(146,166,192);border-right-color:rgb(146,166,192);border-bottom-color:rgb(126,146,172);" class="albuminfotable"><tr><td><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://tmbw.net/wiki/index.php?title=Apollo_18/Release_Details&amp;action=edit&amp;editintro=Template:Release_Details_Instructions&amp;preload=">edit</a><span class="mw-editsection-bracket">]</span></span><div id="div1"><center style="clear:both"><img alt="Loading..." src="http&#58;//tmbw.net/wiki/images/4/42/Loading.gif" style="vertical-align:bottom" /> <b>Loading...</b>
+<p><br />
+If loading fails, <a target="_blank" href="/wiki/Apollo_18/Release Details">click here</a>.
+</p>
+<br /></center></div></td></tr><tr><td><div align="center"><font size="-2"><i>See <a href="/wiki/Discography_Abbreviations" title="Discography Abbreviations">Discography Abbreviations</a> for definition of various terms.</i></font></div></td></tr></table></div>
+<p><br />
+<i><b>Apollo 18</b></i> is <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a>' fourth studio album, released in 1992. It was the band's second release with the major label <a href="/wiki/Elektra" title="Elektra" class="mw-redirect">Elektra Records</a>.
+</p>
+<div class="toc-right" style="float: right; clear: right;"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Purchase"><span class="tocnumber">1</span> <span class="toctext">Purchase</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Background"><span class="tocnumber">2.1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Artwork"><span class="tocnumber">2.2</span> <span class="toctext">Artwork</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Sales_and_singles"><span class="tocnumber">2.3</span> <span class="toctext">Sales and singles</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Fingertips"><span class="tocnumber">2.4</span> <span class="toctext">Fingertips</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Track_listing"><span class="tocnumber">3</span> <span class="toctext">Track listing</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Trivia"><span class="tocnumber">4</span> <span class="toctext">Trivia</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Information_bulletins"><span class="tocnumber">4.1</span> <span class="toctext">Information bulletins</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Image_gallery"><span class="tocnumber">5</span> <span class="toctext">Image gallery</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Vinyl"><span class="tocnumber">5.1</span> <span class="toctext">Vinyl</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#CD"><span class="tocnumber">5.2</span> <span class="toctext">CD</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Cassette"><span class="tocnumber">5.3</span> <span class="toctext">Cassette</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Promotional_material"><span class="tocnumber">5.4</span> <span class="toctext">Promotional material</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Other"><span class="tocnumber">5.5</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<h3><span class="mw-headline" id="Purchase">Purchase</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=1" title="Edit section: Purchase">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="toc-right" style="float: right; clear: right;"></div>
+<table class="ebena downloadtable tmbwSortable" id="unique_id">
+
+<tr class="header">
+<td><font size="1"><b>Seller</b></font>
+</td>
+<td><font size="1"><b>Format</b></font>
+</td>
+<td><font size="1"><b>Price</b></font>
+</td>
+<td><font size="1"><b>Link</b></font>
+<p><br />
+</p>
+</td></tr>
+<tr>
+<td><font size="1"><div class="sprite-Itunes10" style="text-indent:19px;"><a href="/wiki/ITunes" title="ITunes">iTunes</a></div></font>
+</td>
+<td><font size="1">AAC</font>
+</td>
+<td align="right"><font size="1"></font>
+</td>
+<td><b><div align="center"><span class="lighttext"></b>N/A<b></span></div></b>
+</td></tr>
+<tr>
+<td><font size="1"><div class="sprite-cd" style="background:none;"><img src="http&#58;//www.majhost.com/gallery/apollo18/musics/tmbg/wiki/asbestos2.png" style="width:16px;height:16px;" alt="" />&#160;<a rel="nofollow" class="external text" href="http://asbestosrecords.bigcartel.com/product/they-might-be-giants-apollo-18">Asbestos Records</a></div></font>
+</td>
+<td><font size="1">Vinyl</font>
+</td>
+<td align="right"><font size="1">$17.99</font>
+</td>
+<td><b><span class="plainlinks"><a href="https://go.tmbw.net/3ogxo6j" onclick="_gaq.push(['_trackEvent', 'Purchase Clickthrough', 'Clickthrough', 'Apollo_18']);" target="_blank"><img src="http://tmbw.net/wiki/images/f/ff/Purchase.gif" alt="Purchase" /></a></span></b>
+</td></tr></table>
+<div class="right-images" style="float: right; clear: right; margin-left: 1.4em">
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:A18vinylback.png" class="image"><img alt="" src="/wiki/images/thumb/3/34/A18vinylback.png/300px-A18vinylback.png" width="300" height="300" class="thumbimage" srcset="/wiki/images/thumb/3/34/A18vinylback.png/450px-A18vinylback.png 1.5x, /wiki/images/thumb/3/34/A18vinylback.png/600px-A18vinylback.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:A18vinylback.png" class="internal" title="Enlarge"></a></div>Vinyl back</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Apollo_18_Poster.jpg" class="image"><img alt="" src="/wiki/images/thumb/a/a4/Apollo_18_Poster.jpg/300px-Apollo_18_Poster.jpg" width="300" height="199" class="thumbimage" srcset="/wiki/images/thumb/a/a4/Apollo_18_Poster.jpg/450px-Apollo_18_Poster.jpg 1.5x, /wiki/images/thumb/a/a4/Apollo_18_Poster.jpg/600px-Apollo_18_Poster.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Apollo_18_Poster.jpg" class="internal" title="Enlarge"></a></div>An <a href="/wiki/Elektra" title="Elektra" class="mw-redirect">Elektra</a> poster promoting the album</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Apollo_18_alt_poster.png" class="image"><img alt="" src="/wiki/images/thumb/2/2f/Apollo_18_alt_poster.png/300px-Apollo_18_alt_poster.png" width="300" height="123" class="thumbimage" srcset="/wiki/images/thumb/2/2f/Apollo_18_alt_poster.png/450px-Apollo_18_alt_poster.png 1.5x, /wiki/images/thumb/2/2f/Apollo_18_alt_poster.png/600px-Apollo_18_alt_poster.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Apollo_18_alt_poster.png" class="internal" title="Enlarge"></a></div>A second poster</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Apollo_18_ad.png" class="image"><img alt="" src="/wiki/images/thumb/5/56/Apollo_18_ad.png/300px-Apollo_18_ad.png" width="300" height="799" class="thumbimage" srcset="/wiki/images/thumb/5/56/Apollo_18_ad.png/450px-Apollo_18_ad.png 1.5x, /wiki/images/thumb/5/56/Apollo_18_ad.png/600px-Apollo_18_ad.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Apollo_18_ad.png" class="internal" title="Enlarge"></a></div>UK magazine ad promoting the album</div></div></div>
+</div>
+<h3><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Background">Background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=3" title="Edit section: Background">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>For the band's follow-up to the successful <i><a href="/wiki/Flood" title="Flood">Flood</a></i>, <a href="/wiki/Elektra" title="Elektra" class="mw-redirect">Elektra</a> approached <a href="http://en.wikipedia.org/wiki/Elvis_Costello" class="extiw" title="wikipedia:Elvis Costello">Elvis Costello</a> to act as <a href="/wiki/Category:Producers" title="Category:Producers">producer</a>. John and John feared self-consciousness in the face of such an admired musician, and had assumed that <i>Flood'</i>s accomplished fruition would serve as an indication that the band was mature enough to produce the album itself, as they had originally planned. This disagreement caused a rift between Elektra and the Johns, which took a while to heal. <a href="/wiki/Flansburgh" title="Flansburgh" class="mw-redirect">Flansburgh</a>, <a href="/wiki/Linnell" title="Linnell" class="mw-redirect">Linnell</a>, and <a href="/wiki/Susan_Drew" title="Susan Drew">Susan Drew</a> of Elektra discuss this subject at length in bonus footage included on the <i><a href="/wiki/Gigantic" title="Gigantic" class="mw-redirect">Gigantic</a></i> DVD.
+</p><p><i>Apollo 18</i> illustrates TMBG's first significant attempts at fleshing out the simpler sound employed on earlier albums. The album's accompanying tour, named the <a href="/wiki/Category:Don%27t_Tread_On_The_Cut-Up_Snake_World_Tour_1992_Shows" title="Category:Don't Tread On The Cut-Up Snake World Tour 1992 Shows">Don't Tread On The Cut-Up Snake World Tour</a>, was the band's first to use a live <a href="/wiki/Category:Backing_Band_Members" title="Category:Backing Band Members">backing band</a>.
+</p>
+<h4><span class="mw-headline" id="Artwork">Artwork</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=4" title="Edit section: Artwork">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The album's cover art, which depicts a giant squid locked in combat with a sperm whale in space, was sourced from the an issue of the pulp science fiction magazine <a href="http://en.wikipedia.org/wiki/Fate_(magazine)" class="extiw" title="wikipedia:Fate (magazine)"><i>Fate</i></a>. Art surrounding <i>Apollo 18</i> tended to have a space theme; it was designed by John Flansburgh under the pseudonym "<a href="/wiki/Rolf_Conant" title="Rolf Conant">Rolf Conant</a>". While searching the NASA archives for graphics, John and John were approached by the NASA staff and selected as Musical Ambassadors for <a href="/wiki/International_Space_Year" title="International Space Year">International Space Year</a>. The logo for International Space Year is included on the back cover of the album.
+</p><p>The original Elektra Records logo from 1956 is used extensively throughout the record's packaging.
+</p>
+<h4><span class="mw-headline" id="Sales_and_singles">Sales and singles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=5" title="Edit section: Sales and singles">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tleft"><div class="thumbinner" style="width:515px;"><iframe src="/wiki/index.php?title=Apollo_18/Charts&amp;action=render&amp;chartOnly=" width="515" height="210" frameborder="0" scrolling="no"></iframe><div class="magnify" style="float:right"><a href="/wiki/Apollo_18/Charts"><img src="/wiki/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>A chart showing the historical performance of <i><strong class="selflink">Apollo 18</strong></i> on the <i>Billboard</i> 200</div></div>
+<p><i>Apollo 18</i> debuted on the <a href="/wiki/Album_Chart_History" title="Album Chart History"><i>Billboard</i> 200 album chart</a> the week of April 11, 1992; it spent 6 weeks on the chart, peaking at number 99.  The album generated three singles:  <i><a href="/wiki/The_Statue_Got_Me_High_(EP)" title="The Statue Got Me High (EP)">The Statue Got Me High</a></i>, <i><a href="/wiki/I_Palindrome_I_(EP)" title="I Palindrome I (EP)">I Palindrome I</a></i>, and <i><a href="/wiki/The_Guitar_(The_Lion_Sleeps_Tonight)_(EP)" title="The Guitar (The Lion Sleeps Tonight) (EP)">The Guitar (The Lion Sleeps Tonight)</a></i>.  "The Statue Got Me High" spent 8 weeks on the <a href="/wiki/Singles_Chart_History" title="Singles Chart History"><i>Billboard</i> Modern Rock Tracks Chart</a>, peaking at  number 24. The other singles from the album failed to chart. <a href="/wiki/Videos" title="Videos">Music videos</a> were produced for "<a href="/wiki/The_Statue_Got_Me_High" title="The Statue Got Me High">The Statue Got Me High</a>" and "<a href="/wiki/The_Guitar" title="The Guitar">The Guitar</a>", the former having a space theme consistent with the art surrounding the album, and the latter being the first TMBG music video <a href="/wiki/Videos_Directed_By_John_Flansburgh" title="Videos Directed By John Flansburgh">directed by John Flansburgh</a>.
+</p>
+<h4><span class="mw-headline" id="Fingertips">Fingertips</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=6" title="Edit section: Fingertips">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><i>Apollo 18</i> is an unusual album, mainly due to the "<a href="/wiki/Fingertips" title="Fingertips">Fingertips</a>" tracks: 21 short songs which average about 13 seconds in length. The liner notes state "The indexing of this disc is designed to complement the Shuffle Mode of modern CD players." This implies that the CD was designed for listening on shuffle&#8212;as you listen, the "Fingertips" tracks get interspersed among the songs of average length, creating a pleasant "musical collage". In most regions, "Fingertips" was properly divided into separate tracks for the CD; however, due to a mastering error at WEA, European and Japanese versions included the entire selection of "Fingertips" as one continuous track, a flaw which has continued to occur in more recent discs prodcued.
+</p><p>In the era of digital and streaming music, the unique nature of "Fingertips" has again proved problematic. According to Flansburgh<sup><span title="https&#58;//tmbgareok.tumblr.com/post/662948260935237632/i-just-tried-to-shuffle-apollo-18-on-spotify-for" class="plainlinks"><a rel="nofollow" class="external text" href="https://tmbgareok.tumblr.com/post/662948260935237632/i-just-tried-to-shuffle-apollo-18-on-spotify-for">[1&#93;</a></span></sup>:
+</p>
+<blockquote>For some interval on iTunes, because of some entity involved not wanting to pay full publishing on all the individual tracks[, they] kept it [off] the site completely, and then they left the song off and finally a single song got posted. There were parallel issues with streaming sites for some time, but the single song seems to be the only working solution to whatever issues the short tracks kick up.<br /><br />
+Seems like miniature songs don't count as "songs" for some platforms — don't count as plays, don't trigger royalties. Can't say I fully understand but it is a workaround and seems kinda dumb, but then again I don't know what record [companies] or publishers feel about paying out on "skit" tracks on hip hop albums, which if counted as compositions could double the number of "delivered" tracks and "published" songs, which would be a very big financial liability for something that might not otherwise move the needle, or be respected in a contract.</blockquote>
+<h3><span class="mw-headline" id="Track_listing">Track listing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=7" title="Edit section: Track listing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="ebena" align="left" style="min-width:50%;">
+<tr>
+<th style="font-size:85%;text-align:right;">#
+</th>
+<th style="font-size:85%;text-align:center;">Title
+</th>
+<th style="font-size:85%;">Length<span style="display:none;">&#160;</span>
+</th>
+<th style="font-size:85%;">Lyrics
+</th>
+<th style="font-size:85%;">Guitar Tab
+</th></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">1
+</td>
+<td><a href="/wiki/Dig_My_Grave" title="Dig My Grave">Dig My Grave</a>
+</td>
+<td align="center">1:08<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Dig_My_Grave" title="Lyrics:Dig My Grave"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Dig_My_Grave" title="Guitar Tab:Dig My Grave"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">2
+</td>
+<td><a href="/wiki/I_Palindrome_I" title="I Palindrome I">I Palindrome I</a>
+</td>
+<td align="center">2:22<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Palindrome_I" title="Lyrics:I Palindrome I"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Palindrome_I" title="Guitar Tab:I Palindrome I"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">3
+</td>
+<td><a href="/wiki/She%27s_Actual_Size" title="She's Actual Size">She's Actual Size</a>
+</td>
+<td align="center">2:05<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:She%27s_Actual_Size" title="Lyrics:She's Actual Size"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:She%27s_Actual_Size" title="Guitar Tab:She's Actual Size"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">4
+</td>
+<td><a href="/wiki/My_Evil_Twin" title="My Evil Twin">My Evil Twin</a>
+</td>
+<td align="center">2:37<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:My_Evil_Twin" title="Lyrics:My Evil Twin"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:My_Evil_Twin" title="Guitar Tab:My Evil Twin"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">5
+</td>
+<td><a href="/wiki/Mammal" title="Mammal">Mammal</a>
+</td>
+<td align="center">2:14<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Mammal" title="Lyrics:Mammal"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Mammal" title="Guitar Tab:Mammal"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">6
+</td>
+<td><a href="/wiki/The_Statue_Got_Me_High" title="The Statue Got Me High">The Statue Got Me High</a>
+</td>
+<td align="center">3:06<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:The_Statue_Got_Me_High" title="Lyrics:The Statue Got Me High"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:The_Statue_Got_Me_High" title="Guitar Tab:The Statue Got Me High"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">7
+</td>
+<td><a href="/wiki/Spider" title="Spider">Spider</a>
+</td>
+<td align="center">0:50<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Spider" title="Lyrics:Spider"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Spider&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">8
+</td>
+<td><a href="/wiki/The_Guitar" title="The Guitar">The Guitar</a>
+</td>
+<td align="center">3:49<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:The_Guitar" title="Lyrics:The Guitar"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:The_Guitar" title="Guitar Tab:The Guitar"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">9
+</td>
+<td><a href="/wiki/Dinner_Bell" title="Dinner Bell">Dinner Bell</a>
+</td>
+<td align="center">2:11<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Dinner_Bell" title="Lyrics:Dinner Bell"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Dinner_Bell" title="Guitar Tab:Dinner Bell"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">10
+</td>
+<td><a href="/wiki/Narrow_Your_Eyes" title="Narrow Your Eyes">Narrow Your Eyes</a>
+</td>
+<td align="center">2:46<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Narrow_Your_Eyes" title="Lyrics:Narrow Your Eyes"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Narrow_Your_Eyes" title="Guitar Tab:Narrow Your Eyes"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">11
+</td>
+<td><a href="/wiki/Hall_Of_Heads" title="Hall Of Heads">Hall Of Heads</a>
+</td>
+<td align="center">2:53<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Hall_Of_Heads" title="Lyrics:Hall Of Heads"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Hall_Of_Heads" title="Guitar Tab:Hall Of Heads"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">12
+</td>
+<td><a href="/wiki/Which_Describes_How_You%27re_Feeling" title="Which Describes How You're Feeling">Which Describes How You're Feeling</a>
+</td>
+<td align="center">1:13<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Which_Describes_How_You%27re_Feeling" title="Lyrics:Which Describes How You're Feeling"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Which_Describes_How_You%27re_Feeling" title="Guitar Tab:Which Describes How You're Feeling"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">13
+</td>
+<td><a href="/wiki/See_The_Constellation" title="See The Constellation">See The Constellation</a>
+</td>
+<td align="center">3:27<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:See_The_Constellation" title="Lyrics:See The Constellation"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:See_The_Constellation" title="Guitar Tab:See The Constellation"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">14
+</td>
+<td><a href="/wiki/If_I_Wasn%27t_Shy" title="If I Wasn't Shy">If I Wasn't Shy</a>
+</td>
+<td align="center">1:43<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:If_I_Wasn%27t_Shy" title="Lyrics:If I Wasn't Shy"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:If_I_Wasn%27t_Shy" title="Guitar Tab:If I Wasn't Shy"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">15
+</td>
+<td><a href="/wiki/Turn_Around" title="Turn Around">Turn Around</a>
+</td>
+<td align="center">2:53<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Turn_Around" title="Lyrics:Turn Around"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Turn_Around" title="Guitar Tab:Turn Around"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">16
+</td>
+<td><a href="/wiki/Hypnotist_Of_Ladies" title="Hypnotist Of Ladies">Hypnotist Of Ladies</a>
+</td>
+<td align="center">1:42<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Hypnotist_Of_Ladies" title="Lyrics:Hypnotist Of Ladies"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Hypnotist_Of_Ladies" title="Guitar Tab:Hypnotist Of Ladies"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">17
+</td>
+<td><a href="/wiki/Everything_Is_Catching_On_Fire" title="Everything Is Catching On Fire">Everything Is Catching On Fire</a>
+</td>
+<td align="center">0:12
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Everything_Is_Catching_On_Fire" title="Lyrics:Everything Is Catching On Fire"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Everything_Is_Catching_On_Fire" title="Guitar Tab:Everything Is Catching On Fire"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">18
+</td>
+<td><a href="/wiki/Fingertips_(Banjo)" title="Fingertips (Banjo)">Fingertips (Banjo)</a>
+</td>
+<td align="center">0:06
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Fingertips_(Banjo)" title="Lyrics:Fingertips (Banjo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Fingertips_(Banjo)" title="Guitar Tab:Fingertips (Banjo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">19
+</td>
+<td><a href="/wiki/I_Hear_The_Wind_Blow" title="I Hear The Wind Blow">I Hear The Wind Blow</a>
+</td>
+<td align="center">0:10
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Hear_The_Wind_Blow" title="Lyrics:I Hear The Wind Blow"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Hear_The_Wind_Blow" title="Guitar Tab:I Hear The Wind Blow"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">20
+</td>
+<td><a href="/wiki/Hey_Now_Everybody" title="Hey Now Everybody">Hey Now Everybody</a>
+</td>
+<td align="center">0:05
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Hey_Now_Everybody" title="Lyrics:Hey Now Everybody"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Hey_Now_Everybody" title="Guitar Tab:Hey Now Everybody"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">21
+</td>
+<td><a href="/wiki/Who%27s_That_Standing_Out_The_Window%3F" title="Who's That Standing Out The Window?">Who's That Standing Out The Window?</a>
+</td>
+<td align="center">0:06
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Who%27s_That_Standing_Out_The_Window%3F" title="Lyrics:Who's That Standing Out The Window?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Who%27s_That_Standing_Out_The_Window%3F" title="Guitar Tab:Who's That Standing Out The Window?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">22
+</td>
+<td><a href="/wiki/I_Found_A_New_Friend_Underneath_My_Pillow" title="I Found A New Friend Underneath My Pillow">I Found A New Friend Underneath My Pillow</a>
+</td>
+<td align="center">0:07
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Found_A_New_Friend_Underneath_My_Pillow" title="Lyrics:I Found A New Friend Underneath My Pillow"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Found_A_New_Friend_Underneath_My_Pillow" title="Guitar Tab:I Found A New Friend Underneath My Pillow"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">23
+</td>
+<td><a href="/wiki/Come_On_And_Wreck_My_Car" title="Come On And Wreck My Car">Come On And Wreck My Car</a>
+</td>
+<td align="center">0:12
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Come_On_And_Wreck_My_Car" title="Lyrics:Come On And Wreck My Car"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Come_On_And_Wreck_My_Car" title="Guitar Tab:Come On And Wreck My Car"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">24
+</td>
+<td><a href="/wiki/Aren%27t_You_The_Guy_Who_Hit_Me_In_The_Eye%3F" title="Aren't You The Guy Who Hit Me In The Eye?">Aren't You The Guy Who Hit Me In The Eye?</a>
+</td>
+<td align="center">0:06
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Aren%27t_You_The_Guy_Who_Hit_Me_In_The_Eye%3F" title="Lyrics:Aren't You The Guy Who Hit Me In The Eye?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Aren%27t_You_The_Guy_Who_Hit_Me_In_The_Eye%3F" title="Guitar Tab:Aren't You The Guy Who Hit Me In The Eye?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">25
+</td>
+<td><a href="/wiki/Please_Pass_The_Milk" title="Please Pass The Milk">Please Pass The Milk</a>
+</td>
+<td align="center">0:08
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Please_Pass_The_Milk" title="Lyrics:Please Pass The Milk"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Please_Pass_The_Milk" title="Guitar Tab:Please Pass The Milk"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">26
+</td>
+<td><a href="/wiki/Leave_Me_Alone" title="Leave Me Alone">Leave Me Alone</a>
+</td>
+<td align="center">0:05
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Leave_Me_Alone" title="Lyrics:Leave Me Alone"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Leave_Me_Alone" title="Guitar Tab:Leave Me Alone"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">27
+</td>
+<td><a href="/wiki/Who%27s_Knocking_On_The_Wall%3F" title="Who's Knocking On The Wall?">Who's Knocking On The Wall?</a>
+</td>
+<td align="center">0:04
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Who%27s_Knocking_On_The_Wall%3F" title="Lyrics:Who's Knocking On The Wall?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Who%27s_Knocking_On_The_Wall%3F" title="Guitar Tab:Who's Knocking On The Wall?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">28
+</td>
+<td><a href="/wiki/All_Alone,_All_By_Myself" title="All Alone, All By Myself">All Alone, All By Myself</a>
+</td>
+<td align="center">0:05
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:All_Alone,_All_By_Myself" title="Lyrics:All Alone, All By Myself"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:All_Alone,_All_By_Myself" title="Guitar Tab:All Alone, All By Myself"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">29
+</td>
+<td><a href="/wiki/What%27s_That_Blue_Thing_Doing_Here%3F" title="What's That Blue Thing Doing Here?">What's That Blue Thing Doing Here?</a>
+</td>
+<td align="center">0:08
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:What%27s_That_Blue_Thing_Doing_Here%3F" title="Lyrics:What's That Blue Thing Doing Here?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:What%27s_That_Blue_Thing_Doing_Here%3F" title="Guitar Tab:What's That Blue Thing Doing Here?"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">30
+</td>
+<td><a href="/wiki/Something_Grabbed_Ahold_Of_My_Hand" title="Something Grabbed Ahold Of My Hand">Something Grabbed Ahold Of My Hand</a>
+</td>
+<td align="center">0:12
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Something_Grabbed_Ahold_Of_My_Hand" title="Lyrics:Something Grabbed Ahold Of My Hand"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Something_Grabbed_Ahold_Of_My_Hand" title="Guitar Tab:Something Grabbed Ahold Of My Hand"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">31
+</td>
+<td><a href="/wiki/I_Don%27t_Understand_You" title="I Don't Understand You">I Don't Understand You</a>
+</td>
+<td align="center">0:27
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Don%27t_Understand_You" title="Lyrics:I Don't Understand You"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Don%27t_Understand_You" title="Guitar Tab:I Don't Understand You"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">32
+</td>
+<td><a href="/wiki/I_Heard_A_Sound" title="I Heard A Sound">I Heard A Sound</a>
+</td>
+<td align="center">0:04
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Heard_A_Sound" title="Lyrics:I Heard A Sound"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Heard_A_Sound" title="Guitar Tab:I Heard A Sound"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">33
+</td>
+<td><a href="/wiki/Mysterious_Whisper" title="Mysterious Whisper">Mysterious Whisper</a>
+</td>
+<td align="center">0:28
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Mysterious_Whisper" title="Lyrics:Mysterious Whisper"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Mysterious_Whisper" title="Guitar Tab:Mysterious Whisper"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">34
+</td>
+<td><a href="/wiki/The_Day_That_Love_Came_To_Play" title="The Day That Love Came To Play">The Day That Love Came To Play</a>
+</td>
+<td align="center">0:08
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:The_Day_That_Love_Came_To_Play" title="Lyrics:The Day That Love Came To Play"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:The_Day_That_Love_Came_To_Play" title="Guitar Tab:The Day That Love Came To Play"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">35
+</td>
+<td><a href="/wiki/I%27m_Having_A_Heart_Attack" title="I'm Having A Heart Attack">I'm Having A Heart Attack</a>
+</td>
+<td align="center">0:23
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I%27m_Having_A_Heart_Attack" title="Lyrics:I'm Having A Heart Attack"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I%27m_Having_A_Heart_Attack" title="Guitar Tab:I'm Having A Heart Attack"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">36
+</td>
+<td><a href="/wiki/Fingertips_(Whispered)" title="Fingertips (Whispered)">Fingertips (Whispered)</a>
+</td>
+<td align="center">0:10
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Fingertips_(Whispered)" title="Lyrics:Fingertips (Whispered)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Fingertips_(Whispered)" title="Guitar Tab:Fingertips (Whispered)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">37
+</td>
+<td><a href="/wiki/I_Walk_Along_Darkened_Corridors" title="I Walk Along Darkened Corridors">I Walk Along Darkened Corridors</a>
+</td>
+<td align="center">1:01
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Walk_Along_Darkened_Corridors" title="Lyrics:I Walk Along Darkened Corridors"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Walk_Along_Darkened_Corridors" title="Guitar Tab:I Walk Along Darkened Corridors"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">38
+</td>
+<td><a href="/wiki/Space_Suit" title="Space Suit">Space Suit</a>
+</td>
+<td align="center">1:36<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Space_Suit" title="Lyrics:Space Suit"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Space_Suit" title="Guitar Tab:Space Suit"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr></table><br style="clear:both;" />
+<h3><span class="mw-headline" id="Trivia">Trivia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=8" title="Edit section: Trivia">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><i>Apollo 18</i> was released on <a href="/wiki/Vinyl" title="Vinyl">vinyl</a> in Europe in 1992, but not domestically, which made it the last TMBG album released on vinyl until <i><a href="/wiki/The_Else" title="The Else">The Else</a></i> in <a href="/wiki/2007" title="2007">2007</a>. A vinyl reissue of the album was pressed in the US on <a href="/wiki/Asbestos_Records" title="Asbestos Records">Asbestos Records</a> in <a href="/wiki/2014" title="2014">2014</a>.  </li>
+<li>The liner notes indicate design by <a href="/wiki/Rolf_Conant" title="Rolf Conant">Rolf Conant</a>, a pseudonym of <a href="/wiki/John_Flansburgh" title="John Flansburgh">John Flansburgh</a>.</li>
+<li>The <a href="/wiki/Dial-A-Song" title="Dial-A-Song">Dial-A-Song</a> number in the booklet is incorrect, stating the number as 718-963-6962.  TMBG pointed this out to the <a href="/wiki/Audience" title="Audience" class="mw-redirect">audience</a> at shows around this time.  (The incorrect number was apparently for a warehouse.)</li>
+<li>The original <a href="http://en.wikipedia.org/wiki/Apollo_program" class="extiw" title="wikipedia:Apollo program">Apollo program</a> plan included lunar missions through Apollo 20, but further launches were cancelled after Apollo 17.  Although the <a href="http://en.wikipedia.org/wiki/Apollo%E2%80%93Soyuz_Test_Project" class="extiw" title="wikipedia:Apollo–Soyuz Test Project">Apollo–Soyuz Test Project</a> is sometimes informally referred to as Apollo 18, the appellation remained officially unused.</li></ul>
+<h4><span class="mw-headline" id="Information_bulletins">Information bulletins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=9" title="Edit section: Information bulletins">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<center><div class="centerblock"><b>Paper Archives</b><br />
+<p><a href="/wiki/TMBG_Information_Bulletin_Archive" title="TMBG Information Bulletin Archive">TMBG Information Bulletins</a> <font size="1">(<a href="/wiki/1990" title="1990">1990</a>-<a href="/wiki/1993" title="1993">93</a>)</font> | <a href="/wiki/Hello_Recording_Club_Newsletter_Archive" title="Hello Recording Club Newsletter Archive">Hello Recording Club Newsletters</a> <font size="1">(<a href="/wiki/1993" title="1993">1993</a>-<a href="/wiki/1996" title="1996">96</a>)</font>
+</p><p><b>Web Archives</b><br />
+</p>
+<b>TMBG Online Information Bulletin</b> <font size="1">(<a href="/wiki/1992" title="1992">1992</a>-<a href="/wiki/1993" title="1993">93</a>)</font> | <a href="/wiki/Letters_From_J_%26_J_Archive" title="Letters From J &amp; J Archive">Letters from J &amp; J</a> <font size="1">(<a href="/wiki/1993" title="1993">1993</a>-<a href="/wiki/1996" title="1996">96</a>)</font> | <a href="/wiki/TMBG.com_Related_Archive" title="TMBG.com Related Archive">TMBG.com-related</a> <font size="1">(<a href="/wiki/1994" title="1994">1994</a>-<a href="/wiki/1997" title="1997">97</a>)</font>  | <a href="/wiki/TMBG_Street_Team_Mailing_List_Archive" title="TMBG Street Team Mailing List Archive">TMBG Street Team</a> <font size="1">(<a href="/wiki/2004" title="2004">2004</a>-<a href="/wiki/2005" title="2005">05</a>)</font>  | <a href="/wiki/Myspace#Bulletins" title="Myspace">Myspace Bulletins</a> <font size="1">(<a href="/wiki/2006" title="2006">2006</a>-<a href="/wiki/2008" title="2008">08</a>)</font> | <a href="/wiki/Mailing_List_Archive" title="Mailing List Archive">TMBG Mailing List</a> <font size="1">(<a href="/wiki/2002" title="2002">2002</a>-<a href="/wiki/2021" title="2021">Present</a>)</font></div></center>
+<p>The TMBG Online Information Bulletin run by <a href="/wiki/Bo_Orloff" title="Bo Orloff">Bo Orloff</a> sent out five updates on the subject of this album:
+</p>
+<ul><li><a href="/wiki/Apollo_18/TMBG_Online_Information_Bulletin_1.0" title="Apollo 18/TMBG Online Information Bulletin 1.0">Bulletin 1.0 / February 1992</a> - track listing and release schedule</li>
+<li><a href="/wiki/Apollo_18/TMBG_Online_Information_Bulletin_1.1" title="Apollo 18/TMBG Online Information Bulletin 1.1">Bulletin 1.1 / February 1992</a> - press release</li>
+<li><a href="/wiki/Apollo_18/TMBG_Online_Information_Bulletin_1.2" title="Apollo 18/TMBG Online Information Bulletin 1.2">Bulletin 1.2 / February 1992</a> - band bio</li>
+<li><a href="/wiki/Apollo_18/TMBG_Online_Information_Bulletin_2.1" title="Apollo 18/TMBG Online Information Bulletin 2.1">Bulletin 2.1 / May 1992</a> - live band tour launch</li>
+<li><a href="/wiki/Apollo_18/TMBG_Online_Information_Bulletin_3.30.93" title="Apollo 18/TMBG Online Information Bulletin 3.30.93">Bulletin 3.30.93 / March 30, 1993</a> - Spring 93 Mini-Tour</li></ul>
+<h3><span class="mw-headline" id="Image_gallery">Image gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=10" title="Edit section: Image gallery">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Vinyl"><a href="/wiki/Vinyl" title="Vinyl">Vinyl</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=11" title="Edit section: Vinyl">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div align="center"><ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:A18lp.png" class="image"><img alt="" src="/wiki/images/thumb/5/5d/A18lp.png/120px-A18lp.png" width="120" height="120" srcset="/wiki/images/thumb/5/5d/A18lp.png/180px-A18lp.png 1.5x, /wiki/images/thumb/5/5d/A18lp.png/240px-A18lp.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Front cover
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:A18label.png" class="image"><img alt="" src="/wiki/images/thumb/b/b1/A18label.png/120px-A18label.png" width="120" height="120" srcset="/wiki/images/thumb/b/b1/A18label.png/180px-A18label.png 1.5x, /wiki/images/thumb/b/b1/A18label.png/240px-A18label.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Side 1 label
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:A18lyrics1.png" class="image"><img alt="" src="/wiki/images/thumb/3/31/A18lyrics1.png/120px-A18lyrics1.png" width="120" height="120" srcset="/wiki/images/thumb/3/31/A18lyrics1.png/180px-A18lyrics1.png 1.5x, /wiki/images/thumb/3/31/A18lyrics1.png/240px-A18lyrics1.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Lyric sheet (side 1)
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:A18lyrics2.png" class="image"><img alt="" src="/wiki/images/thumb/d/d8/A18lyrics2.png/120px-A18lyrics2.png" width="120" height="120" srcset="/wiki/images/thumb/d/d8/A18lyrics2.png/180px-A18lyrics2.png 1.5x, /wiki/images/thumb/d/d8/A18lyrics2.png/240px-A18lyrics2.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Lyric sheet (side 2)
+</p>
+			</div>
+		</div></li>
+</ul></div>
+<h4><span class="mw-headline" id="CD">CD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=12" title="Edit section: CD">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div align="center"><ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;"><a href="/wiki/File:A18CDback.png" class="image"><img alt="" src="/wiki/images/thumb/1/18/A18CDback.png/120px-A18CDback.png" width="120" height="103" srcset="/wiki/images/thumb/1/18/A18CDback.png/180px-A18CDback.png 1.5x, /wiki/images/thumb/1/18/A18CDback.png/240px-A18CDback.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Back cover artwork
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Apollo_18_CD.png" class="image"><img alt="" src="/wiki/images/thumb/5/5d/Apollo_18_CD.png/120px-Apollo_18_CD.png" width="120" height="120" srcset="/wiki/images/thumb/5/5d/Apollo_18_CD.png/180px-Apollo_18_CD.png 1.5x, /wiki/images/thumb/5/5d/Apollo_18_CD.png/240px-Apollo_18_CD.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Disc
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Apollo_18_Longbox_Front.jpg" class="image"><img alt="" src="/wiki/images/thumb/7/7a/Apollo_18_Longbox_Front.jpg/58px-Apollo_18_Longbox_Front.jpg" width="58" height="120" srcset="/wiki/images/thumb/7/7a/Apollo_18_Longbox_Front.jpg/88px-Apollo_18_Longbox_Front.jpg 1.5x, /wiki/images/thumb/7/7a/Apollo_18_Longbox_Front.jpg/117px-Apollo_18_Longbox_Front.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Longbox front
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Apollo_18_Longbox_Back.jpg" class="image"><img alt="" src="/wiki/images/thumb/6/6f/Apollo_18_Longbox_Back.jpg/58px-Apollo_18_Longbox_Back.jpg" width="58" height="120" srcset="/wiki/images/thumb/6/6f/Apollo_18_Longbox_Back.jpg/88px-Apollo_18_Longbox_Back.jpg 1.5x, /wiki/images/thumb/6/6f/Apollo_18_Longbox_Back.jpg/117px-Apollo_18_Longbox_Back.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Longbox back
+</p>
+			</div>
+		</div></li>
+</ul></div>
+<h4><span class="mw-headline" id="Cassette">Cassette</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=13" title="Edit section: Cassette">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div align="center"><ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:A18cassette.png" class="image"><img alt="" src="/wiki/images/thumb/2/2c/A18cassette.png/76px-A18cassette.png" width="76" height="120" srcset="/wiki/images/thumb/2/2c/A18cassette.png/115px-A18cassette.png 1.5x, /wiki/images/thumb/2/2c/A18cassette.png/153px-A18cassette.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Cassette cover
+</p>
+			</div>
+		</div></li>
+</ul></div>
+<h4><span class="mw-headline" id="Promotional_material">Promotional material</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=14" title="Edit section: Promotional material">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div align="center"><ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Apollo_18_flat.png" class="image"><img alt="" src="/wiki/images/thumb/4/44/Apollo_18_flat.png/120px-Apollo_18_flat.png" width="120" height="120" srcset="/wiki/images/thumb/4/44/Apollo_18_flat.png/180px-Apollo_18_flat.png 1.5x, /wiki/images/thumb/4/44/Apollo_18_flat.png/240px-Apollo_18_flat.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Back of a promotional flat
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:33px auto;"><a href="/wiki/File:A18_postcard.png" class="image"><img alt="" src="/wiki/images/thumb/9/94/A18_postcard.png/120px-A18_postcard.png" width="120" height="84" srcset="/wiki/images/thumb/9/94/A18_postcard.png/180px-A18_postcard.png 1.5x, /wiki/images/thumb/9/94/A18_postcard.png/240px-A18_postcard.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Promotional postcard
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:A18_World_Tour_sticker.png" class="image"><img alt="" src="/wiki/images/thumb/3/34/A18_World_Tour_sticker.png/113px-A18_World_Tour_sticker.png" width="113" height="120" srcset="/wiki/images/thumb/3/34/A18_World_Tour_sticker.png/170px-A18_World_Tour_sticker.png 1.5x, /wiki/images/thumb/3/34/A18_World_Tour_sticker.png/227px-A18_World_Tour_sticker.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Sticker promoting the <a href="/wiki/Category:Don%27t_Tread_On_The_Cut-Up_Snake_World_Tour_1992_Shows" title="Category:Don't Tread On The Cut-Up Snake World Tour 1992 Shows">Don't Tread On The Cut-Up Snake World Tour</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Apollo_18_ad_2.png" class="image"><img alt="" src="/wiki/images/thumb/7/77/Apollo_18_ad_2.png/56px-Apollo_18_ad_2.png" width="56" height="120" srcset="/wiki/images/thumb/7/77/Apollo_18_ad_2.png/85px-Apollo_18_ad_2.png 1.5x, /wiki/images/thumb/7/77/Apollo_18_ad_2.png/113px-Apollo_18_ad_2.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Magazine ad
+</p>
+			</div>
+		</div></li>
+</ul></div>
+<h4><span class="mw-headline" id="Other">Other</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Apollo_18&amp;action=edit&amp;section=15" title="Edit section: Other">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div align="center"><ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Fate_Magazine_August_1958.jpg" class="image"><img alt="" src="/wiki/images/thumb/9/9c/Fate_Magazine_August_1958.jpg/90px-Fate_Magazine_August_1958.jpg" width="90" height="120" srcset="/wiki/images/thumb/9/9c/Fate_Magazine_August_1958.jpg/135px-Fate_Magazine_August_1958.jpg 1.5x, /wiki/images/thumb/9/9c/Fate_Magazine_August_1958.jpg/180px-Fate_Magazine_August_1958.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p><i>Fate</i> magazine cover from August 1958, the source of Apollo 18's cover illustration.
+</p>
+			</div>
+		</div></li>
+</ul></div>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.697 seconds
+Real time usage: 0.809 seconds
+Preprocessor visited node count: 4153/1000000
+Preprocessor generated node count: 7486/1000000
+Post‐expand include size: 87397/2097152 bytes
+Template argument size: 7198/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 78/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  598.178      1 - -total
+ 54.00%  323.004     38 - Template:Track
+ 23.01%  137.628      1 - Template:Album_Info
+ 14.68%   87.802     21 - Template:TrackTime
+  6.86%   41.022      1 - Template:ITunes_Album
+  6.31%   37.765      2 - Template:Purchase_Button
+  5.87%   35.093      1 - Template:Loading
+  5.80%   34.680      1 - Template:Purchase_Other
+  4.98%   29.808     31 - Template:Album_Info/color
+  2.49%   14.888     19 - Template:Rowcolor
+-->
+
+<!-- Saved in parser cache with key tmbw_wikidb:pcache:idhash:738-0!*!0!!en!5!* and timestamp 20211122161913 and revision id 318559
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://tmbw.net/wiki/index.php?title=Apollo_18&amp;oldid=318559">http://tmbw.net/wiki/index.php?title=Apollo_18&amp;oldid=318559</a>"</div>
+        <div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:TMBG_Albums" title="Category:TMBG Albums">TMBG Albums</a></li><li><a href="/wiki/Category:Albums_Available_For_Download_On_iTunes" title="Category:Albums Available For Download On iTunes">Albums Available For Download On iTunes</a></li></ul></div></div>        <!-- end wiki content -->
+        	<div class="visualClear"></div>
+</div><!-- /bodycontent -->
+      </div><!-- /content--> 
+      <div id="footer">
+      			  <script type="text/javascript">getwaw();</script>
+               <ul id="f-list">
+          <li id="privacy"><a href="/wiki/This_Might_Be_A_Wiki:Privacy_policy" title="This Might Be A Wiki:Privacy policy">Privacy policy</a></li>
+          <li id="about"><a href="/wiki/This_Might_Be_A_Wiki:About" title="This Might Be A Wiki:About">About This Might Be A Wiki</a></li>
+          <li id="disclaimer"><a href="/wiki/This_Might_Be_A_Wiki:General_disclaimer" title="This Might Be A Wiki:General disclaimer">Disclaimers</a></li>
+	<li id="follow" style="display:inline;"><br />Follow TMBW.Net on: </li><li id="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEX////u9/qOx91+v9iez+FPqcwvmsNAoMUfkr6e0OM/tuNgsM/O5/APrOjP6vSe2/MQi7pvvNmv5Pj///9ArNb////P7fgPsO4wvPF+0/Se3PS+5PMvuO3////////O7flQxfPv+f0QiLZfy/T////////P7/t+1fae3/je9Pz///////8AlMwAltAAkckApOMArO4Aod8AnNgAqeoAmdQAib0An9vBJTQnAAAALHRSTlMAD3CBYLHQv+Biyp8w80J+7pR4DMUUVvPbn4FX2xgPWsI/7rYDKGChiVcfB+Kv0VUAAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAhklEQVQY02NgIAIwQkgmZhYGRjCblQVEsuno6rFzcIKYXHrcjAw8+gYGBoa8fCABfgMjAW5BAxAQEgYJiBgYGBuZgAVEwcaJiRtAgQTEFmFJmIgU1F5pGagCWaiAnLwCmK8IdRe3kqkZkK+sqAIRUFFVU1dX19BUVYG7XVhLS0tWmxhfggEAF7UQF19tYhIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDItMjhUMTM6NDE6NDErMDg6MDAIzUNTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTAyLTI4VDEzOjQxOjQxKzA4OjAweZD77wAAAABJRU5ErkJggg==" alt="Twitter" style="vertical-align:text-top;" /> <a href="http://twitter.com/tmbw">Twitter</a></li><li id="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEVVbKpUa6k5T5JVbKo7UZM5T5L///9cfLNGaKRYeLFKbKhPZqVNZKNRZ6Y8U5VJX599lcNHXZ1SaahEW5xLYaFAVpg+VJZnhrlPZ55CWZpCY59ggLU5T5KhudlVbKpheqc/X5xjg7f19/pkfqpOcKtTda4tS4qZrdBzj70LAH3eAAAABnRSTlPv7x8f7+/VY02GAAAAeklEQVR4XlXHRRLDMBQE0bFjj8DIEGS4/wkjyX/hvEVXNXY4b7iN6tNGHaGdbhtTi+Lwp0CmxOdOKpUhN8I9jcnRvwT5de1RPQXpW6GxAQNrG3Q6YKB1h2UvSN8Fw1WQvgPGtyB9R5QPQfqWSObLinSZE8TpcUW6pPEPr3wWR0m1z0gAAAAASUVORK5CYII=" alt="Facebook" style="vertical-align:text-bottom;" /> <a href="https://www.facebook.com/tmbw.net">Facebook</a></li>
+        </ul><!-- /f-list -->
+      </div><!-- /footer -->
+    </div><!-- /container -->
+    </div><!-- /supershadow -->
+    <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
+	<ul>
+        <li id="ca-nstab-main" class="selected"><a href="/wiki/Apollo_18"><span></span>Article</a></li>
+        <li id="ca-talk"><a href="/wiki/Talk:Apollo_18"><span></span>Discussion</a></li>
+        <li id="ca-edit"><a href="/wiki/index.php?title=Apollo_18&amp;action=edit"><span></span>Edit</a></li>
+        <li id="ca-history"><a href="/wiki/index.php?title=Apollo_18&amp;action=history"><span></span>History</a></li>
+      </ul>
+    </div>
+    <div id="lefttabs"><span id="sitenav-title"></span>
+	<div class='portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
+				<li id="n-Site-Map"><a href="/wiki/Site_Map">Site Map</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
+				<li id="n-TMBW.Net-Chat"><a href="/wiki/TMBW.Net_Chat">TMBW.Net Chat</a></li>
+				<li id="n-Contact-us"><a href="/wiki/Contact_Us">Contact us</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-other'>
+		<h5>other</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Albums"><a href="/wiki/Discography/Studio_Albums">Albums</a></li>
+				<li id="n-Discography"><a href="/wiki/Discography">Discography</a></li>
+				<li id="n-Shows"><a href="/wiki/Shows">Shows</a></li>
+				<li id="n-Videos"><a href="/wiki/Videos">Videos</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-songs'>
+		<h5>songs</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Songs"><a href="/wiki/Category:Songs">Songs</a></li>
+				<li id="n-Lyrics"><a href="/wiki/Category:Lyrics">Lyrics</a></li>
+				<li id="n-Guitar-tabs"><a href="/wiki/Category:Guitar_Tabs">Guitar tabs</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="Search" onfocus="if(this.value == 'Search') { this.value = ''; }"/>
+						<input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJGSURBVDjLjdJLSNRBHMDx78yqLZaKS75DPdgDDaFDbdJmde5QlhCJGxgpRJfqEEKnIsJLB7skQYQKZaSmdLaopPCgEvSCShCMzR5a7oq7/3l12RVtjfzBMA/4fWZ+MyOccwBM3g8HEbIdfCEhfAFnLVapOa28Uevpjrqz/WOsERJgsu9Uq5CZQzgqrJfo9BajNd5irEYn4p3OUiFExtCLmw2tawFi4l5zUMjMIau9u7K+qxeoAcoAA0wDb2OPwmfA16LiiaOHLj1edRLpkO3WmIis7+oBDgJbgQ2AH6gC6jY19N62RkcctKeVIJAhp9QgUA3kJXdONZVcq9JxPSgQoXRAyIDRth8oAXQyKdWnoCKrTD9CBv4GMqx1WGNZkeRWJKbG2hiD1Cb9FbTnzWFdY/LCdLKlgNQ84gyNKqHm0gDjqVHnxDHgA/B9RQkpaB6YklkZl62np9KBhOqwjpKFgeY2YAz4BESBWHI8Hhs6PVVSvc3v98ye4fP7T676B845nt040ip98qpWJmI9PWiU6bfWgXGN2YHcKwU7tsuc4kpUPMbU0+f8+vKt+Pitl7PLAMDI9cNBoB0hQwICzjqUp6MZvsy8yvp95BRuQUjJ75mPvH4wYo1NlJ64Mza7DPwrhi8cCOeXl/aUB4P4c/NJxKLMvpngycCrzxVFG2v/CwAMnguF80oLe8p27cQh+fnpPV/fTc95S6piXQDAw7a9YbWkezZXFbAwMx/xPFXb1D3+Y90AQF/L7kAsri9mZ4lrTd0TcYA/Kakr+x2JSPUAAAAASUVORK5CYII=" alt="Search" style="vertical-align:-20%;" />
+			</div></form>
+		</div>
+		<div class="ulfooter">&nbsp;</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Tools</h5>
+		<div class="pBody">
+			<ul><li><a onclick="jQuery('#ul-toolbox').slideToggle();" style="cursor:pointer;">Toolbox</a></li><span id="ul-toolbox" class="collapsed">
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Apollo_18">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Apollo_18">Related changes</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages">Special pages</a></li>
+				<li id="t-print"><a href="/wiki/index.php?title=Apollo_18&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/wiki/index.php?title=Apollo_18&amp;oldid=318559">Permanent link</a></li>			</span></ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+    </div><!-- /lefttabs -->
+    </div><!-- /globalWrapper -->
+<!-- here -->
+<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-948553-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+  <script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":290});
+}</script>  </body></html>

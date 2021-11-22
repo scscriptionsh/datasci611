@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Nanobots - TMBW: The They Might Be Giants Knowledge Base</title>
+<meta name="generator" content="MediaWiki 1.25.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/index.php?title=Nanobots&amp;action=edit" />
+<link rel="edit" title="Edit" href="/wiki/index.php?title=Nanobots&amp;action=edit" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="This Might Be A Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://tmbw.net/wiki/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/wiki/Nanobots" />
+<link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=azure&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:a2f1a9e3354033da4df1a393c1f9ca92 */</style>
+<script>if(window.mw){
+mw.loader.state({"azureSkinJS":"loading"});
+}</script>
+<script src="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=azure&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Nanobots","wgTitle":"Nanobots","wgCurRevisionId":310253,"wgRevisionId":310253,"wgArticleId":30496,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["TMBG Albums","Albums Available For Download On iTunes","Albums Missing Cover Art"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Nanobots","wgRelevantArticleId":30496,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"hidesig":true,"preview":true,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=azureSkinJS\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<script language="javascript" type="text/javascript">getcss();</script>
+		<script language="javascript" type="text/javascript">theyDayBanner();</script>
+	<!-- Logic for making the site mobile responsive --><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+  $('#pagetools-title').on('click',function() {
+    $('body').toggleClass('pagetools-open');
+  });
+  $('#sitenav-title').on('click',function() {
+    $('body').toggleClass('sitenav-open');
+  });
+  $('#personaltoolstitle').on('click',function() {
+    $('body').toggleClass('personaltools-open');
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Nanobots skin-azure action-view vector-animateLayout">
+	  	<div id="personaltools">
+  	  <span id="personaltoolstitle" onclick="jQuery('#ul-personaltools').slideToggle();">Personal tools</span>
+      <ul id="ul-personaltools">
+        <li id="pt-createaccount"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Nanobots&amp;type=signup">Create account</a></li>
+        <li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Nanobots">Log in</a></li>
+	</ul>
+	</div><!-- /personaltools -->
+	<div id="globalWrapper">
+	<div id="supershadow">
+	<div id="container">
+		
+	<a href="/wiki/Main_Page" title="Main Page" id="headerwrapper">
+        <div id="header">This Might Be A Wiki</div>
+        <div id="subtitle">The TMBG Knowledge Base</div>
+      </a>
+      <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
+	<a name="top" id="top"></a>
+	<h1 class="first">Nanobots</h1>
+	<div id="bodyContent" class="mw-body">
+	<div id="siteSub">From This Might Be A Wiki</div>
+	<div id="contentsub"></div>
+        <!-- start content -->
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table cellspacing="5" cellpadding="3" style="background-color:rgb(176,196,222);border-top-color:rgb(156,176,202);border-left-color:rgb(146,166,192);border-right-color:rgb(146,166,192);border-bottom-color:rgb(126,146,172);" class="albuminfotable">
+<tr>
+<td rowspan="3" width="140" height="140"> <center><a href="/wiki/File:Nanobots.png" class="image" title="Nanobots album cover"><img alt="Nanobots album cover" src="/wiki/images/thumb/2/2c/Nanobots.png/140px-Nanobots.png" width="140" height="140" srcset="/wiki/images/thumb/2/2c/Nanobots.png/210px-Nanobots.png 1.5x, /wiki/images/thumb/2/2c/Nanobots.png/280px-Nanobots.png 2x" /></a></center>
+</td>
+<td colspan="6" style="background-color: rgb(206,226,252);">
+<center><b>Nanobots</b><br /> Studio album by <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a></center>
+</td></tr>
+<tr>
+<td class="albuminfotitle">First released
+</td>
+<td> March 5, <a href="/wiki/2013" title="2013">2013</a><br /><font size="-2">Release details / collectors: <a onclick="javascript:jQuery('#div1').load('index.php?title=Nanobots/Release_Details&amp;action=render&amp;release=', function() { jQuery('#div1-table').slideDown(200);} );" href="#">Show</a> | <a onclick="javascript:jQuery('#div1-table').slideUp(200)" href="#">Hide</a></font>
+</td>
+<td class="albuminfotitle">Tracks
+</td>
+<td> 25
+</td>
+<td class="albuminfotitle">Last album
+</td>
+<td> <a href="/wiki/Join_Us" title="Join Us">Join Us</a>
+</td></tr>
+<tr>
+<td class="albuminfotitle">Label
+</td>
+<td> <a href="/wiki/Idlewild_Recordings" title="Idlewild Recordings">Idlewild</a> / <a href="/wiki/Megaforce_Records" title="Megaforce Records">Megaforce</a>
+</td>
+<td class="albuminfotitle">Length
+</td>
+<td> 44:47
+</td>
+<td class="albuminfotitle">Next album
+</td>
+<td> <a href="/wiki/Glean" title="Glean">Glean</a>
+</td></tr></table>
+<div id="div1-table" style="display:none"><table cellspacing="5" cellpadding="3" align="center" style="background-color: rgb(206,226,252);border-top-color:rgb(156,176,202);border-left-color:rgb(146,166,192);border-right-color:rgb(146,166,192);border-bottom-color:rgb(126,146,172);" class="albuminfotable"><tr><td><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://tmbw.net/wiki/index.php?title=Nanobots/Release_Details&amp;action=edit&amp;editintro=Template:Release_Details_Instructions&amp;preload=">edit</a><span class="mw-editsection-bracket">]</span></span><div id="div1"><center style="clear:both"><img alt="Loading..." src="http&#58;//tmbw.net/wiki/images/4/42/Loading.gif" style="vertical-align:bottom" /> <b>Loading...</b>
+<p><br />
+If loading fails, <a target="_blank" href="/wiki/Nanobots/Release Details">click here</a>.
+</p>
+<br /></center></div></td></tr><tr><td><div align="center"><font size="-2"><i>See <a href="/wiki/Discography_Abbreviations" title="Discography Abbreviations">Discography Abbreviations</a> for definition of various terms.</i></font></div></td></tr></table></div>
+<dl><dd><i>This page is for the album. For the song of the same name, see <a href="/wiki/Nanobots_(Song)" title="Nanobots (Song)">Nanobots (Song)</a>.</i></dd></dl>
+<p><i><b>Nanobots</b></i> is the 16th album by <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a>, released on March 5, 2013. It was preceded by <i><a href="/wiki/Nanobots_EP" title="Nanobots EP">Nanobots EP</a></i>, an advance digital EP released January 22. The album was released through <a href="/wiki/Idlewild_Recordings" title="Idlewild Recordings">Idlewild Recordings</a>, and manufactured and distributed by <a href="/wiki/Megaforce_Records" title="Megaforce Records">Megaforce Records</a>. <a href="/wiki/Lojinx" title="Lojinx">Lojinx</a> handled European distribution, and <a href="/wiki/Breakaway_Recordings" title="Breakaway Recordings">Breakaway</a> was responsible for the Australian release.
+</p><p>The artwork was designed by <a href="/wiki/Paul_Sahre" title="Paul Sahre">Paul Sahre</a> and features collages by <a rel="nofollow" class="external text" href="https://sampaints.com">Sam Weber</a>.  His <i>Ingres</i> is the cover image, based on <a href="http://en.wikipedia.org/wiki/Jean-Auguste-Dominique_Ingres" class="extiw" title="wikipedia:Jean-Auguste-Dominique Ingres">Ingres'</a> <a href="http://en.wikipedia.org/wiki/File:Jean_auguste_dominique_ingres_princesse_albert_de_broglie.jpg" class="extiw" title="wikipedia:File:Jean auguste dominique ingres princesse albert de broglie.jpg">painting of Princess Pauline-Eleonore de Broglie</a>. The others used are <i>Hansel</i> (back cover), <i>Step Mother</i> (inner LP sleeve/CD tray), <i>Jester(clown)</i>, and <i>Blue Beard 2</i> (labels).  Sahre stated that "dozens, if not hundreds" of different ideas for the cover's text formatting were considered.<sup><span title="https&#58;//www.instagram.com/p/BcGzj4fH_w9/" class="plainlinks"><a rel="nofollow" class="external text" href="https://www.instagram.com/p/BcGzj4fH_w9/">[1&#93;</a></span></sup> 
+</p>
+<div class="toc-right" style="float: right; clear: right;"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Purchase"><span class="tocnumber">1</span> <span class="toctext">Purchase</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Style"><span class="tocnumber">2.1</span> <span class="toctext">Style</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Recording"><span class="tocnumber">2.2</span> <span class="toctext">Recording</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Promotion"><span class="tocnumber">2.3</span> <span class="toctext">Promotion</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Track_listing"><span class="tocnumber">3</span> <span class="toctext">Track listing</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Australian_bonus_disc"><span class="tocnumber">3.1</span> <span class="toctext">Australian bonus disc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Gallery"><span class="tocnumber">4</span> <span class="toctext">Gallery</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#LP"><span class="tocnumber">4.1</span> <span class="toctext">LP</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#CD"><span class="tocnumber">4.2</span> <span class="toctext">CD</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#iTunes_LP_videos"><span class="tocnumber">4.3</span> <span class="toctext">iTunes LP videos</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+</div>
+<h3><span class="mw-headline" id="Purchase">Purchase</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=1" title="Edit section: Purchase">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="toc-right" style="float: right; clear: right;"></div>
+<table class="ebena downloadtable tmbwSortable" id="unique_id">
+
+<tr class="header">
+<td><font size="1"><b>Seller</b></font>
+</td>
+<td><font size="1"><b>Format</b></font>
+</td>
+<td><font size="1"><b>Price</b></font>
+</td>
+<td><font size="1"><b>Link</b></font>
+<p><br />
+</p>
+</td></tr>
+<tr>
+<td><font size="1"><div class="sprite-Itunes10" style="text-indent:19px;"><a href="/wiki/ITunes" title="ITunes">iTunes</a></div></font>
+</td>
+<td><font size="1">AAC</font>
+</td>
+<td align="right"><font size="1">$9.99</font>
+</td>
+<td><b><span class="plainlinks"><a href="https://go.tmbw.net/2JHBPFX" onclick="_gaq.push(['_trackEvent', 'Purchase Clickthrough', 'Clickthrough', 'Nanobots']);" target="_blank"><img src="http://tmbw.net/wiki/images/f/ff/Purchase.gif" alt="Purchase" /></a></span></b>
+</td></tr></table>
+<h3><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Style">Style</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=3" title="Edit section: Style">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Of the overall style of the album, Flansburgh assesses that "it's mostly combo/small spare arrangements a la <i>Join Us</i>, but we'll figure out how to over-produce it!"<sup><span title="https&#58;//twitter.com/tmbg/status/227936531787169792" class="plainlinks"><a rel="nofollow" class="external text" href="https://twitter.com/tmbg/status/227936531787169792">[2&#93;</a></span></sup> In <a rel="nofollow" class="external text" href="https://www.billboard.com/articles/news/474135/they-might-be-giants-qa-in-the-studio-with-the-nerd-rock-kings">an interview with <i>Billboard</i></a>, Linnell said, "I think we've added to the number of things we do. With the last album there were a number of cases where we were like, 'Oh we've never tried this before,' and it was fruitful. And we're still working in those departments." Curiously, many tracks from the album are under twenty seconds long. This is reminiscent of the "Fingertips" selections from <i><a href="/wiki/Apollo_18" title="Apollo 18">Apollo 18</a></i>. Of these short songs, Flansburgh stated: 
+</p>
+<blockquote>We came of age in the time of albums, so we were raised on the notion that songs—when collected together—serve to amplify and support each other when part of a well-considered collection. That's the power of the album. With <i>Nanobots</i> we weren't making a concept album, but it does have a certain power as a kind of song cycle. These short little tiny songs have a purpose and they make sense when surrounded by the longer songs. There's a certain mania to this record, a certain energy you get when you include all these hard working miniatures.</blockquote>
+<p>Flansburgh has stated the album title was chosen at the "very last minute".<sup><span title="http&#58;//tmbgareok.tumblr.com/post/183296974446/whats-your-process-for-coming-up-with-an-album" class="plainlinks"><a rel="nofollow" class="external text" href="http://tmbgareok.tumblr.com/post/183296974446/whats-your-process-for-coming-up-with-an-album">[3&#93;</a></span></sup>
+</p><p>The <a href="/wiki/Nanobots/Press_Release" title="Nanobots/Press Release">press release</a> for the album from <a href="/wiki/Girlie_Action" title="Girlie Action">Girlie Action</a> also adds:
+</p>
+<dl><dd>Nanobots finds the band in fine form. Title track '<a href="/wiki/Nanobots_(Song)" title="Nanobots (Song)">Nanobots</a>' puts a dark cartoonish spin on the world of technology while the call and response chorus and percussive guitar line of '<a href="/wiki/You%27re_On_Fire" title="You're On Fire">You're On Fire</a>' dares even the grumpiest wallflower not to dance. Blending the band's signature storytelling, some dueling horns and sly humor, '<a href="/wiki/Call_You_Mom" title="Call You Mom">Call You Mom</a>' is a caffeinated pop gem.</dd></dl>
+<h4><span class="mw-headline" id="Recording">Recording</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=4" title="Edit section: Recording">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Nanobots_iTunesCredits.jpg" class="image"><img alt="" src="/wiki/images/thumb/9/9b/Nanobots_iTunesCredits.jpg/300px-Nanobots_iTunesCredits.jpg" width="300" height="169" class="thumbimage" srcset="/wiki/images/thumb/9/9b/Nanobots_iTunesCredits.jpg/450px-Nanobots_iTunesCredits.jpg 1.5x, /wiki/images/thumb/9/9b/Nanobots_iTunesCredits.jpg/600px-Nanobots_iTunesCredits.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Nanobots_iTunesCredits.jpg" class="internal" title="Enlarge"></a></div><a href="/wiki/ITunes" title="ITunes">iTunes</a> LP credits</div></div></div>
+<p>The album was recorded in New York City with the aid of <a href="/wiki/Pat_Dillett" title="Pat Dillett">Pat Dillett</a>.  Recording began in early 2012, following the conclusion of the <i><a href="/wiki/Join_Us" title="Join Us">Join Us</a></i> tour. John Flansburgh teased various tracks and revealed small quantities of information over the summer. In early May, he posted a video to yfrog of the band back in the studio.  He also posted a short video of the band working in-studio on "<a href="/wiki/Circular_Karate_Chop" title="Circular Karate Chop">Circular Karate Chop</a>" on July 24. The next day, he posted another video, this one of <a href="/wiki/Dan_Miller" title="Dan Miller">Dan Miller</a> playing <a href="/wiki/Keyboard" title="Keyboard">keyboard</a> for "<a href="/wiki/Lost_My_Mind" title="Lost My Mind">Lost My Mind</a>". Recording continued between May and December, with the final track, "<a href="/wiki/Great" title="Great">Great</a>", recorded on December 19.<sup><span title="https&#58;//www.facebook.com/theymightbegiants/posts/10151024902607395" class="plainlinks"><a rel="nofollow" class="external text" href="https://www.facebook.com/theymightbegiants/posts/10151024902607395">[4&#93;</a></span></sup> Titles were steadily revealed throughout the year via Twitter and Facebook.
+</p><p>Recording was interrupted during the powerful <a href="http://en.wikipedia.org/wiki/Hurricane_Sandy" class="extiw" title="wikipedia:Hurricane Sandy">Hurricane Sandy</a> in October 2012. According to Flansburgh:
+</p>
+<blockquote>We really lost like a full week of production time, and that kind of curtailed some of the good times. There was no electricity in the studio. Everything was [messed up]. It was kind of a scary time. I'm really glad that it didn't go on any longer. I think even if had gone on a couple of more days, there would have been a lot more looting and a lot of bad [stuff]. There actually was looting. That was the thing, there was kind of a PR campaign to downplay what was happening, but there were definitely some shenanigans going on there.<sup><span title="http&#58;//www.museumofidiots.com/tmbg/articles/20130308corpuschristicallertimes.html" class="plainlinks"><a rel="nofollow" class="external text" href="http://www.museumofidiots.com/tmbg/articles/20130308corpuschristicallertimes.html">[5&#93;</a></span></sup></blockquote>
+<p>The album featured numerous guests joining the band in-studio. <a href="/wiki/Stan_Harrison" title="Stan Harrison">Stan Harrison</a> returned for horn arrangements and various woodwind instruments. The band also recruited <a href="http://en.wikipedia.org/wiki/Jon_Graboff" class="extiw" title="wikipedia:Jon Graboff">Jon Graboff</a> to play mandolin for "<a href="/wiki/Hive_Mind" title="Hive Mind">Hive Mind</a>". Graboff had previously appeared on <a href="/wiki/Laura_Cantrell" title="Laura Cantrell">Laura Cantrell</a>'s <a href="/wiki/Laura_Cantrell_(EP)" title="Laura Cantrell (EP)">Hello EP</a>, which <a href="/wiki/John_Flansburgh" title="John Flansburgh">John Flansburgh</a> produced. <a href="/wiki/Jedediah_Parish" title="Jedediah Parish">Jedediah Parish</a>, of the <a href="/wiki/Loser%27s_Lounge" title="Loser's Lounge">Loser's Lounge</a>, and Chris Thompson also appear as guests. <a href="/wiki/Mike_Doughty" title="Mike Doughty">Mike Doughty</a> collaborated with the band on the track "Dawn Divine", which was recorded but did not appear on the final album. Instrumentation includes <a href="/wiki/Songs_With_Handclaps" title="Songs With Handclaps">handclaps</a>, <a href="/wiki/Category:Songs_Featuring_Clarinet" title="Category:Songs Featuring Clarinet">bass clarinet</a>, <a href="http://en.wikipedia.org/wiki/contrabass_clarinet" class="extiw" title="wikipedia:contrabass clarinet">contra-alto clarinet</a>, mandolin, vibraphone, and the return of <a href="/wiki/Accordion" title="Accordion">accordion</a>. A number of <a href="/wiki/Keyboard" title="Keyboard">keyboards</a> and electronic instruments are also used, including <a href="http://en.wikipedia.org/wiki/Moog_synthesizer" class="extiw" title="wikipedia:Moog synthesizer">Moog</a> and <a href="http://en.wikipedia.org/wiki/Alesis" class="extiw" title="wikipedia:Alesis">Alesis</a> synthesizers, a <a href="http://en.wikipedia.org/wiki/Casio_CZ_synthesizers" class="extiw" title="wikipedia:Casio CZ synthesizers">Casio CZ-101</a>, a Baldwin Fun Machine, a <a href="http://en.wikipedia.org/wiki/Wurlitzer_electric_piano" class="extiw" title="wikipedia:Wurlitzer electric piano">Wurlitzer electric piano</a>, and the <a href="http://en.wikipedia.org/wiki/Omnichord" class="extiw" title="wikipedia:Omnichord">Suzuki Omnichord</a>.
+</p>
+<h4><span class="mw-headline" id="Promotion">Promotion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=5" title="Edit section: Promotion">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>To promote the album, the band embarked on the multi-leg <i>Nanobots</i> tour, which included, for the first time since <a href="/wiki/Shows/2001" title="Shows/2001">2001</a>, a visit to Australia. The Johns also made stops in Europe and Canada. Some tracks from the album were premiered during the band's set of 2012 New Year's Eve shows. Three tracks, "<a href="/wiki/Call_You_Mom" title="Call You Mom">Call You Mom</a>", which had previously been released through <i>Rolling Stone</i>, "<a href="/wiki/Lost_My_Mind" title="Lost My Mind">Lost My Mind</a>", and "<a href="/wiki/Black_Ops" title="Black Ops">Black Ops</a>" were released in advance on <i><a href="/wiki/Nanobots_EP" title="Nanobots EP">Nanobots EP</a></i> in January. On the same day, the cover artwork for the album was also made available. In February, "<a href="/wiki/You%27re_On_Fire" title="You're On Fire">You're On Fire</a>" became available through StereoGum. Fully embracing the Internet's adopted free music model, TMBG released <i>Nanobots</i> in its entirety via SoundCloud one full week before its official release date. In promotion of the album, the band was interviewed by innumerable college radio stations. They also released the free <a href="/wiki/They_Might_Be_Giants_(App)" title="They Might Be Giants (App)">They Might Be Giants app</a> for iOS and Android devices.
+</p><p>"<a href="/wiki/Lost_My_Mind" title="Lost My Mind">Lost My Mind</a>" and "<a href="/wiki/You%27re_On_Fire" title="You're On Fire">You're On Fire</a>" were released as <a href="/wiki/Lost_My_Mind_(Promo)" title="Lost My Mind (Promo)">promotional</a> <a href="/wiki/You%27re_On_Fire_(Promo)" title="You're On Fire (Promo)">singles</a> as well as "<a href="/wiki/Circular_Karate_Chop" title="Circular Karate Chop">Circular Karate Chop</a>" (<a href="/wiki/Circular_Karate_Chop_(Promo)" title="Circular Karate Chop (Promo)">in the UK</a>), with "<a href="/wiki/Call_You_Mom" title="Call You Mom">Call You Mom</a>" serving as the de facto single, widely available as a free download several months before the release of the album.
+</p><p>The album was accompanied by a <a href="/wiki/Vinyl" title="Vinyl">vinyl</a> release, which was available as an extra option to be bundled with 2012 <a href="/wiki/They_Might_Be_Giants_Instant_Fan_Club" title="They Might Be Giants Instant Fan Club">They Might Be Giants Instant Fan Club</a> memberships. Initial LP test pressings were completed by January 17, 2013.<sup><span title="http&#58;//tmbgareok.tumblr.com/post/40769647367/the-nanobots-test-pressings-are-in-white-label" class="plainlinks"><a rel="nofollow" class="external text" href="http://tmbgareok.tumblr.com/post/40769647367/the-nanobots-test-pressings-are-in-white-label">[6&#93;</a></span></sup> Due to a "production delay", the LP release was postponed until two weeks after the CD. The iTunes LP edition comes with 6 videos for "<a href="/wiki/Hive_Mind" title="Hive Mind">Hive Mind</a>", "<a href="/wiki/Insect_Hospital" title="Insect Hospital">Insect Hospital</a>", "<a href="/wiki/Great" title="Great">Great</a>", "<a href="/wiki/Nouns" title="Nouns">Nouns</a>", "<a href="/wiki/Decision_Makers" title="Decision Makers">Decision Makers</a>", and "<a href="/wiki/There" title="There">There</a>".
+</p>
+<h3><span class="mw-headline" id="Track_listing">Track listing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=6" title="Edit section: Track listing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="ebena" align="left" style="min-width:50%;">
+<tr>
+<th style="font-size:85%;text-align:right;">#
+</th>
+<th style="font-size:85%;text-align:center;">Title
+</th>
+<th style="font-size:85%;">Length<span style="display:none;">&#160;</span>
+</th>
+<th style="font-size:85%;">Lyrics
+</th>
+<th style="font-size:85%;">Guitar Tab
+</th></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">1
+</td>
+<td><a href="/wiki/You%27re_On_Fire" title="You're On Fire">You're On Fire</a>
+</td>
+<td align="center">2:42
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:You%27re_On_Fire" title="Lyrics:You're On Fire"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:You%27re_On_Fire" title="Guitar Tab:You're On Fire"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">2
+</td>
+<td><a href="/wiki/Nanobots_(Song)" title="Nanobots (Song)">Nanobots</a>
+</td>
+<td align="center">2:46
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Nanobots_(Song)" title="Lyrics:Nanobots (Song)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Nanobots_(Song)" title="Guitar Tab:Nanobots (Song)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">3
+</td>
+<td><a href="/wiki/Black_Ops" title="Black Ops">Black Ops</a>
+</td>
+<td align="center">3:11
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Black_Ops" title="Lyrics:Black Ops"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Black_Ops" title="Guitar Tab:Black Ops"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">4
+</td>
+<td><a href="/wiki/Lost_My_Mind" title="Lost My Mind">Lost My Mind</a>
+</td>
+<td align="center">2:50
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Lost_My_Mind" title="Lyrics:Lost My Mind"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Lost_My_Mind" title="Guitar Tab:Lost My Mind"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">5
+</td>
+<td><a href="/wiki/Circular_Karate_Chop" title="Circular Karate Chop">Circular Karate Chop</a>
+</td>
+<td align="center">2:56
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Circular_Karate_Chop" title="Lyrics:Circular Karate Chop"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Circular_Karate_Chop" title="Guitar Tab:Circular Karate Chop"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">6
+</td>
+<td><a href="/wiki/Call_You_Mom" title="Call You Mom">Call You Mom</a>
+</td>
+<td align="center">3:07
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Call_You_Mom" title="Lyrics:Call You Mom"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Call_You_Mom" title="Guitar Tab:Call You Mom"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">7
+</td>
+<td><a href="/wiki/Tesla" title="Tesla">Tesla</a>
+</td>
+<td align="center">2:04<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Tesla" title="Lyrics:Tesla"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Tesla" title="Guitar Tab:Tesla"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">8
+</td>
+<td><a href="/wiki/Sleep" title="Sleep">Sleep</a>
+</td>
+<td align="center">0:42<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Sleep" title="Lyrics:Sleep"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Sleep" title="Guitar Tab:Sleep"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">9
+</td>
+<td><a href="/wiki/Stone_Cold_Coup_D%27%C3%89tat" title="Stone Cold Coup D'État">Stone Cold Coup D'État</a>
+</td>
+<td align="center">2:57<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Stone_Cold_Coup_D%27%C3%89tat" title="Lyrics:Stone Cold Coup D'État"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Stone_Cold_Coup_D%27%C3%89tat" title="Guitar Tab:Stone Cold Coup D'État"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">10
+</td>
+<td><a href="/wiki/Sometimes_A_Lonely_Way" title="Sometimes A Lonely Way">Sometimes A Lonely Way</a>
+</td>
+<td align="center">2:40<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Sometimes_A_Lonely_Way" title="Lyrics:Sometimes A Lonely Way"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Sometimes_A_Lonely_Way" title="Guitar Tab:Sometimes A Lonely Way"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">11
+</td>
+<td><a href="/wiki/Destroy_The_Past" title="Destroy The Past">Destroy The Past</a>
+</td>
+<td align="center">0:15<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Destroy_The_Past" title="Lyrics:Destroy The Past"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Destroy_The_Past" title="Guitar Tab:Destroy The Past"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">12
+</td>
+<td><a href="/wiki/9_Secret_Steps" title="9 Secret Steps">9 Secret Steps</a>
+</td>
+<td align="center">1:56<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:9_Secret_Steps" title="Lyrics:9 Secret Steps"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:9_Secret_Steps" title="Guitar Tab:9 Secret Steps"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">13
+</td>
+<td><a href="/wiki/Hive_Mind" title="Hive Mind">Hive Mind</a>
+</td>
+<td align="center">0:06<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Hive_Mind" title="Lyrics:Hive Mind"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Hive_Mind" title="Guitar Tab:Hive Mind"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">14
+</td>
+<td><a href="/wiki/Decision_Makers" title="Decision Makers">Decision Makers</a>
+</td>
+<td align="center">0:15<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Decision_Makers" title="Lyrics:Decision Makers"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Decision_Makers" title="Guitar Tab:Decision Makers"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">15
+</td>
+<td><a href="/wiki/Nouns" title="Nouns">Nouns</a>
+</td>
+<td align="center">0:17<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Nouns" title="Lyrics:Nouns"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Nouns" title="Guitar Tab:Nouns"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">16
+</td>
+<td><a href="/wiki/There" title="There">There</a>
+</td>
+<td align="center">0:09<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:There" title="Lyrics:There"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:There" title="Guitar Tab:There"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">17
+</td>
+<td><a href="/wiki/Insect_Hospital" title="Insect Hospital">Insect Hospital</a>
+</td>
+<td align="center">1:30
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Insect_Hospital" title="Lyrics:Insect Hospital"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Insect_Hospital" title="Guitar Tab:Insect Hospital"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">18
+</td>
+<td><a href="/wiki/Tick" title="Tick">Tick</a>
+</td>
+<td align="center">0:11<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Tick" title="Lyrics:Tick"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Tick" title="Guitar Tab:Tick"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">19
+</td>
+<td><a href="/wiki/Replicant" title="Replicant">Replicant</a>
+</td>
+<td align="center">2:55<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Replicant" title="Lyrics:Replicant"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Replicant" title="Guitar Tab:Replicant"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">20
+</td>
+<td><a href="/wiki/The_Darlings_Of_Lumberland" title="The Darlings Of Lumberland">The Darlings Of Lumberland</a>
+</td>
+<td align="center">3:21<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:The_Darlings_Of_Lumberland" title="Lyrics:The Darlings Of Lumberland"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:The_Darlings_Of_Lumberland" title="Guitar Tab:The Darlings Of Lumberland"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">21
+</td>
+<td><a href="/wiki/Great" title="Great">Great</a>
+</td>
+<td align="center">0:52<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Great" title="Lyrics:Great"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Great" title="Guitar Tab:Great"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">22
+</td>
+<td><a href="/wiki/Stuff_Is_Way" title="Stuff Is Way">Stuff Is Way</a>
+</td>
+<td align="center">1:37<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Stuff_Is_Way" title="Lyrics:Stuff Is Way"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Stuff_Is_Way" title="Guitar Tab:Stuff Is Way"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">23
+</td>
+<td><a href="/wiki/Icky" title="Icky">Icky</a>
+</td>
+<td align="center">2:32<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Icky" title="Lyrics:Icky"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Icky" title="Guitar Tab:Icky"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">24
+</td>
+<td><a href="/wiki/Too_Tall_Girl" title="Too Tall Girl">Too Tall Girl</a>
+</td>
+<td align="center">2:34<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Too_Tall_Girl" title="Lyrics:Too Tall Girl"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Too_Tall_Girl" title="Guitar Tab:Too Tall Girl"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">25
+</td>
+<td><a href="/wiki/Didn%27t_Kill_Me" title="Didn't Kill Me">Didn't Kill Me</a>
+</td>
+<td align="center">0:24<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Didn%27t_Kill_Me" title="Lyrics:Didn't Kill Me"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Didn%27t_Kill_Me&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr></table><br style="clear:both;" />
+<p>Four announced song titles do not appear in the official track listing: "Dawn Divine", "Stalker In Reverse", "<a href="/wiki/Prepare" title="Prepare">Prepare</a>" and "Lucky You". It is not yet known whether these songs were taken out, or whether they appear on the album under different names. "Dawn Divine" was slated to feature <a href="/wiki/Mike_Doughty" title="Mike Doughty">Mike Doughty</a>.
+</p>
+<h4><span class="mw-headline" id="Australian_bonus_disc">Australian bonus disc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=7" title="Edit section: Australian bonus disc">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table cellspacing="5" cellpadding="3" style="background-color:rgb(216,191,216);border-top-color:rgb(196,171,196);border-left-color:rgb(186,161,186);border-right-color:rgb(186,161,186);border-bottom-color:rgb(166,141,166);" class="albuminfotable">
+<tr>
+<td rowspan="3" width="140" height="140" style="background-color: rgb(246,221,246);"> <center><a href="/wiki/File:Noalbumcover.jpg" class="image"><img alt="Noalbumcover.jpg" src="/wiki/images/thumb/3/33/Noalbumcover.jpg/140px-Noalbumcover.jpg" width="140" height="140" srcset="/wiki/images/thumb/3/33/Noalbumcover.jpg/210px-Noalbumcover.jpg 1.5x, /wiki/images/thumb/3/33/Noalbumcover.jpg/280px-Noalbumcover.jpg 2x" /></a></center>
+</td>
+<td colspan="6" style="background-color: rgb(246,221,246);">
+<center><b>Nanobots Limited Edition Bonus Disc</b><br /> Live Album by <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a></center>
+</td></tr>
+<tr>
+<td class="albuminfotitle">First released
+</td>
+<td> <a href="/wiki/2013" title="2013">2013</a><br /><font size="-2">Release details / collectors: <a onclick="javascript:jQuery('#div2').load('index.php?title=Nanobots/Release_Details&amp;action=render&amp;release=OZ', function() { jQuery('#div2-table').slideDown(200);} );" href="#">Show</a> | <a onclick="javascript:jQuery('#div2-table').slideUp(200)" href="#">Hide</a></font>
+</td>
+<td class="albuminfotitle">Tracks
+</td>
+<td> 7
+</td></tr>
+<tr>
+<td class="albuminfotitle">Label
+</td>
+<td> <a href="/wiki/Idlewild_Recordings" title="Idlewild Recordings">Idlewild</a> / <a href="/wiki/Breakaway_Recordings" title="Breakaway Recordings">Breakaway Recordings</a>
+</td>
+<td class="albuminfotitle">Length
+</td>
+<td> 22:37
+</td></tr></table>
+<div id="div2-table" style="display:none"><table cellspacing="5" cellpadding="3" align="center" style="background-color: rgb(246,221,246);border-top-color:rgb(196,171,196);border-left-color:rgb(186,161,186);border-right-color:rgb(186,161,186);border-bottom-color:rgb(166,141,166);" class="albuminfotable"><tr><td><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://tmbw.net/wiki/index.php?title=Nanobots/Release_Details&amp;action=edit&amp;editintro=Template:Release_Details_Instructions&amp;preload=">edit</a><span class="mw-editsection-bracket">]</span></span><div id="div2"><center style="clear:both"><img alt="Loading..." src="http&#58;//tmbw.net/wiki/images/4/42/Loading.gif" style="vertical-align:bottom" /> <b>Loading...</b>
+<p><br />
+If loading fails, <a target="_blank" href="/wiki/Nanobots/Release Details">click here</a>.
+</p>
+<br /></center></div></td></tr><tr><td><div align="center"><font size="-2"><i>See <a href="/wiki/Discography_Abbreviations" title="Discography Abbreviations">Discography Abbreviations</a> for definition of various terms.</i></font></div></td></tr></table></div>
+<p>The Australian release comes with a bonus disc containing selected tracks from <i><a href="/wiki/At_Large" title="At Large">At Large</a></i>. However, due to an apparent packaging issue, many copies for sale lack the disc; those that do have it loosely bundled in a clear plastic sleeve.
+</p>
+<table class="ebena" align="left" style="min-width:50%;">
+<tr>
+<th style="font-size:85%;text-align:right;">#
+</th>
+<th style="font-size:85%;text-align:center;">Title
+</th>
+<th style="font-size:85%;">Length<span style="display:none;">&#160;</span>
+</th>
+<th style="font-size:85%;">Lyrics
+</th>
+<th style="font-size:85%;">Guitar Tab
+</th></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">1
+</td>
+<td><a href="/wiki/Santa%27s_Beard_(Live_At_Large)" title="Santa's Beard (Live At Large)">Santa's Beard</a>
+</td>
+<td align="center">1:54<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Santa%27s_Beard_(Live_At_Large)" title="Lyrics:Santa's Beard (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Santa%27s_Beard_(Live_At_Large)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">2
+</td>
+<td><a href="/wiki/Ana_Ng_(Live_At_Large)" title="Ana Ng (Live At Large)">Ana Ng</a>
+</td>
+<td align="center">4:10<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Ana_Ng_(Live_At_Large)" title="Lyrics:Ana Ng (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Ana_Ng_(Live_At_Large)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">3
+</td>
+<td><a href="/wiki/Careful_What_You_Pack_(Live_At_Large)" title="Careful What You Pack (Live At Large)">Careful What You Pack</a>
+</td>
+<td align="center">2:42<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Careful_What_You_Pack_(Live_At_Large)" title="Lyrics:Careful What You Pack (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Careful_What_You_Pack_(Live_At_Large)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">4
+</td>
+<td><a href="/wiki/Withered_Hope_(Live_At_Large)" title="Withered Hope (Live At Large)">Withered Hope</a>
+</td>
+<td align="center">3:16<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Withered_Hope_(Live_At_Large)" title="Lyrics:Withered Hope (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Withered_Hope_(Live_At_Large)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">5
+</td>
+<td><a href="/wiki/Judy_Is_Your_Viet_Nam_(Live_At_Large)" title="Judy Is Your Viet Nam (Live At Large)">Judy Is Your Viet Nam</a>
+</td>
+<td align="center">1:31<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Judy_Is_Your_Viet_Nam_(Live_At_Large)" title="Lyrics:Judy Is Your Viet Nam (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Judy_Is_Your_Viet_Nam_(Live_At_Large)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">6
+</td>
+<td><a href="/wiki/Istanbul_(Not_Constantinople)_(Live_At_Large)" title="Istanbul (Not Constantinople) (Live At Large)">Istanbul (Not Constantinople)</a><br /><font size="-2">unlisted</font>
+</td>
+<td align="center">6:18<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Istanbul_(Not_Constantinople)_(Live_At_Large)" title="Lyrics:Istanbul (Not Constantinople) (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Istanbul_(Not_Constantinople)_(Live_At_Large)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">7
+</td>
+<td><a href="/wiki/How_Can_I_Sing_Like_A_Girl%3F_(Live_At_Large)" title="How Can I Sing Like A Girl? (Live At Large)">How Can I Sing Like A Girl?</a>
+</td>
+<td align="center">2:56<span style="display:none;">&#160;</span>
+</td>
+<td align="center"><a href="/wiki/Lyrics:How_Can_I_Sing_Like_A_Girl%3F_(Live_At_Large)" title="Lyrics:How Can I Sing Like A Girl? (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:How_Can_I_Sing_Like_A_Girl%3F_(Live_At_Large)" title="Guitar Tab:How Can I Sing Like A Girl? (Live At Large)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr></table><br style="clear:both;" />
+<h2><span class="mw-headline" id="Gallery">Gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=8" title="Edit section: Gallery">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="LP">LP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=9" title="Edit section: LP">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Nanobots_LP_back.png" class="image"><img alt="" src="/wiki/images/thumb/6/6c/Nanobots_LP_back.png/120px-Nanobots_LP_back.png" width="120" height="120" srcset="/wiki/images/thumb/6/6c/Nanobots_LP_back.png/180px-Nanobots_LP_back.png 1.5x, /wiki/images/thumb/6/6c/Nanobots_LP_back.png/240px-Nanobots_LP_back.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Back
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Nanobots_sleeve.png" class="image"><img alt="" src="/wiki/images/thumb/1/1a/Nanobots_sleeve.png/118px-Nanobots_sleeve.png" width="118" height="120" srcset="/wiki/images/thumb/1/1a/Nanobots_sleeve.png/177px-Nanobots_sleeve.png 1.5x, /wiki/images/thumb/1/1a/Nanobots_sleeve.png/236px-Nanobots_sleeve.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Inner sleeve
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Nanobots_side1.png" class="image"><img alt="" src="/wiki/images/thumb/2/21/Nanobots_side1.png/120px-Nanobots_side1.png" width="120" height="120" srcset="/wiki/images/thumb/2/21/Nanobots_side1.png/180px-Nanobots_side1.png 1.5x, /wiki/images/thumb/2/21/Nanobots_side1.png/240px-Nanobots_side1.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Side 1 label
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Nanobots_side2.png" class="image"><img alt="" src="/wiki/images/thumb/b/bd/Nanobots_side2.png/120px-Nanobots_side2.png" width="120" height="120" srcset="/wiki/images/thumb/b/bd/Nanobots_side2.png/180px-Nanobots_side2.png 1.5x, /wiki/images/thumb/b/bd/Nanobots_side2.png/240px-Nanobots_side2.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Side 2 label
+</p>
+			</div>
+		</div></li>
+</ul>
+<h3><span class="mw-headline" id="CD">CD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=10" title="Edit section: CD">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:20px auto;"><a href="/wiki/File:Nanobots_CD.png" class="image"><img alt="" src="/wiki/images/thumb/b/bf/Nanobots_CD.png/120px-Nanobots_CD.png" width="120" height="110" srcset="/wiki/images/thumb/b/bf/Nanobots_CD.png/180px-Nanobots_CD.png 1.5x, /wiki/images/thumb/b/bf/Nanobots_CD.png/240px-Nanobots_CD.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Cover
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Nanobots_disc.png" class="image"><img alt="" src="/wiki/images/thumb/3/37/Nanobots_disc.png/120px-Nanobots_disc.png" width="120" height="120" srcset="/wiki/images/thumb/3/37/Nanobots_disc.png/180px-Nanobots_disc.png 1.5x, /wiki/images/thumb/3/37/Nanobots_disc.png/240px-Nanobots_disc.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Disc
+</p>
+			</div>
+		</div></li>
+</ul>
+<h3><span class="mw-headline" id="iTunes_LP_videos">iTunes LP videos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=11" title="Edit section: iTunes LP videos">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul class="gallery mw-gallery-traditional" style="max-width: 652px;_width: 652px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:NanoLP_HiveMind.png" class="image"><img alt="" src="/wiki/images/thumb/a/ab/NanoLP_HiveMind.png/120px-NanoLP_HiveMind.png" width="120" height="68" srcset="/wiki/images/thumb/a/ab/NanoLP_HiveMind.png/180px-NanoLP_HiveMind.png 1.5x, /wiki/images/thumb/a/ab/NanoLP_HiveMind.png/240px-NanoLP_HiveMind.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>"<a href="/wiki/Hive_Mind" title="Hive Mind">Hive Mind</a>"
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:NanoLP_DecisionMakers.png" class="image"><img alt="" src="/wiki/images/thumb/5/56/NanoLP_DecisionMakers.png/120px-NanoLP_DecisionMakers.png" width="120" height="68" srcset="/wiki/images/thumb/5/56/NanoLP_DecisionMakers.png/180px-NanoLP_DecisionMakers.png 1.5x, /wiki/images/thumb/5/56/NanoLP_DecisionMakers.png/240px-NanoLP_DecisionMakers.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>"<a href="/wiki/Decision_Makers" title="Decision Makers">Decision Makers</a>"
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:NanoLP_Nouns.png" class="image"><img alt="" src="/wiki/images/thumb/4/47/NanoLP_Nouns.png/120px-NanoLP_Nouns.png" width="120" height="68" srcset="/wiki/images/thumb/4/47/NanoLP_Nouns.png/180px-NanoLP_Nouns.png 1.5x, /wiki/images/thumb/4/47/NanoLP_Nouns.png/240px-NanoLP_Nouns.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>"<a href="/wiki/Nouns" title="Nouns">Nouns</a>"
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:NanoLP_There.png" class="image"><img alt="" src="/wiki/images/thumb/4/4c/NanoLP_There.png/120px-NanoLP_There.png" width="120" height="68" srcset="/wiki/images/thumb/4/4c/NanoLP_There.png/180px-NanoLP_There.png 1.5x, /wiki/images/thumb/4/4c/NanoLP_There.png/240px-NanoLP_There.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>"<a href="/wiki/There" title="There">There</a>"
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:NanoLP_InsectHospital.png" class="image"><img alt="" src="/wiki/images/thumb/0/0e/NanoLP_InsectHospital.png/120px-NanoLP_InsectHospital.png" width="120" height="68" srcset="/wiki/images/thumb/0/0e/NanoLP_InsectHospital.png/180px-NanoLP_InsectHospital.png 1.5x, /wiki/images/thumb/0/0e/NanoLP_InsectHospital.png/240px-NanoLP_InsectHospital.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>"<a href="/wiki/Insect_Hospital" title="Insect Hospital">Insect Hospital</a>"
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:NanoLP_Great.png" class="image"><img alt="" src="/wiki/images/thumb/8/87/NanoLP_Great.png/120px-NanoLP_Great.png" width="120" height="68" srcset="/wiki/images/thumb/8/87/NanoLP_Great.png/180px-NanoLP_Great.png 1.5x, /wiki/images/thumb/8/87/NanoLP_Great.png/240px-NanoLP_Great.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>"<a href="/wiki/Great" title="Great">Great</a>"
+</p>
+			</div>
+		</div></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=Nanobots&amp;action=edit&amp;section=12" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Nanobots/Press_Release" title="Nanobots/Press Release">Press release</a></li></ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.629 seconds
+Real time usage: 0.744 seconds
+Preprocessor visited node count: 4255/1000000
+Preprocessor generated node count: 6946/1000000
+Post‐expand include size: 86649/2097152 bytes
+Template argument size: 6794/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 66/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  558.645      1 - -total
+ 43.49%  242.974     32 - Template:Track
+ 31.73%  177.283      2 - Template:Album_Info
+ 13.81%   77.162      1 - Template:ITunes_Album
+ 10.10%   56.422      7 - Template:TrackTime
+  8.70%   48.601     65 - Template:Album_Info/color
+  6.91%   38.580      1 - Template:Purchase_Button
+  6.26%   34.997      2 - Template:Loading
+  2.22%   12.386     17 - Template:Rowcolor
+  1.84%   10.264      3 - Template:Close_Table
+-->
+
+<!-- Saved in parser cache with key tmbw_wikidb:pcache:idhash:30496-0!*!0!!en!5!* and timestamp 20211122183438 and revision id 310253
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://tmbw.net/wiki/index.php?title=Nanobots&amp;oldid=310253">http://tmbw.net/wiki/index.php?title=Nanobots&amp;oldid=310253</a>"</div>
+        <div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:TMBG_Albums" title="Category:TMBG Albums">TMBG Albums</a></li><li><a href="/wiki/Category:Albums_Available_For_Download_On_iTunes" title="Category:Albums Available For Download On iTunes">Albums Available For Download On iTunes</a></li><li><a href="/wiki/Category:Albums_Missing_Cover_Art" title="Category:Albums Missing Cover Art">Albums Missing Cover Art</a></li></ul></div></div>        <!-- end wiki content -->
+        	<div class="visualClear"></div>
+</div><!-- /bodycontent -->
+      </div><!-- /content--> 
+      <div id="footer">
+      			  <script type="text/javascript">getwaw();</script>
+               <ul id="f-list">
+          <li id="privacy"><a href="/wiki/This_Might_Be_A_Wiki:Privacy_policy" title="This Might Be A Wiki:Privacy policy">Privacy policy</a></li>
+          <li id="about"><a href="/wiki/This_Might_Be_A_Wiki:About" title="This Might Be A Wiki:About">About This Might Be A Wiki</a></li>
+          <li id="disclaimer"><a href="/wiki/This_Might_Be_A_Wiki:General_disclaimer" title="This Might Be A Wiki:General disclaimer">Disclaimers</a></li>
+	<li id="follow" style="display:inline;"><br />Follow TMBW.Net on: </li><li id="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEX////u9/qOx91+v9iez+FPqcwvmsNAoMUfkr6e0OM/tuNgsM/O5/APrOjP6vSe2/MQi7pvvNmv5Pj///9ArNb////P7fgPsO4wvPF+0/Se3PS+5PMvuO3////////O7flQxfPv+f0QiLZfy/T////////P7/t+1fae3/je9Pz///////8AlMwAltAAkckApOMArO4Aod8AnNgAqeoAmdQAib0An9vBJTQnAAAALHRSTlMAD3CBYLHQv+Biyp8w80J+7pR4DMUUVvPbn4FX2xgPWsI/7rYDKGChiVcfB+Kv0VUAAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAhklEQVQY02NgIAIwQkgmZhYGRjCblQVEsuno6rFzcIKYXHrcjAw8+gYGBoa8fCABfgMjAW5BAxAQEgYJiBgYGBuZgAVEwcaJiRtAgQTEFmFJmIgU1F5pGagCWaiAnLwCmK8IdRe3kqkZkK+sqAIRUFFVU1dX19BUVYG7XVhLS0tWmxhfggEAF7UQF19tYhIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDItMjhUMTM6NDE6NDErMDg6MDAIzUNTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTAyLTI4VDEzOjQxOjQxKzA4OjAweZD77wAAAABJRU5ErkJggg==" alt="Twitter" style="vertical-align:text-top;" /> <a href="http://twitter.com/tmbw">Twitter</a></li><li id="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEVVbKpUa6k5T5JVbKo7UZM5T5L///9cfLNGaKRYeLFKbKhPZqVNZKNRZ6Y8U5VJX599lcNHXZ1SaahEW5xLYaFAVpg+VJZnhrlPZ55CWZpCY59ggLU5T5KhudlVbKpheqc/X5xjg7f19/pkfqpOcKtTda4tS4qZrdBzj70LAH3eAAAABnRSTlPv7x8f7+/VY02GAAAAeklEQVR4XlXHRRLDMBQE0bFjj8DIEGS4/wkjyX/hvEVXNXY4b7iN6tNGHaGdbhtTi+Lwp0CmxOdOKpUhN8I9jcnRvwT5de1RPQXpW6GxAQNrG3Q6YKB1h2UvSN8Fw1WQvgPGtyB9R5QPQfqWSObLinSZE8TpcUW6pPEPr3wWR0m1z0gAAAAASUVORK5CYII=" alt="Facebook" style="vertical-align:text-bottom;" /> <a href="https://www.facebook.com/tmbw.net">Facebook</a></li>
+        </ul><!-- /f-list -->
+      </div><!-- /footer -->
+    </div><!-- /container -->
+    </div><!-- /supershadow -->
+    <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
+	<ul>
+        <li id="ca-nstab-main" class="selected"><a href="/wiki/Nanobots"><span></span>Article</a></li>
+        <li id="ca-talk"><a href="/wiki/Talk:Nanobots"><span></span>Discussion</a></li>
+        <li id="ca-edit"><a href="/wiki/index.php?title=Nanobots&amp;action=edit"><span></span>Edit</a></li>
+        <li id="ca-history"><a href="/wiki/index.php?title=Nanobots&amp;action=history"><span></span>History</a></li>
+      </ul>
+    </div>
+    <div id="lefttabs"><span id="sitenav-title"></span>
+	<div class='portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
+				<li id="n-Site-Map"><a href="/wiki/Site_Map">Site Map</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
+				<li id="n-TMBW.Net-Chat"><a href="/wiki/TMBW.Net_Chat">TMBW.Net Chat</a></li>
+				<li id="n-Contact-us"><a href="/wiki/Contact_Us">Contact us</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-other'>
+		<h5>other</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Albums"><a href="/wiki/Discography/Studio_Albums">Albums</a></li>
+				<li id="n-Discography"><a href="/wiki/Discography">Discography</a></li>
+				<li id="n-Shows"><a href="/wiki/Shows">Shows</a></li>
+				<li id="n-Videos"><a href="/wiki/Videos">Videos</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-songs'>
+		<h5>songs</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Songs"><a href="/wiki/Category:Songs">Songs</a></li>
+				<li id="n-Lyrics"><a href="/wiki/Category:Lyrics">Lyrics</a></li>
+				<li id="n-Guitar-tabs"><a href="/wiki/Category:Guitar_Tabs">Guitar tabs</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="Search" onfocus="if(this.value == 'Search') { this.value = ''; }"/>
+						<input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJGSURBVDjLjdJLSNRBHMDx78yqLZaKS75DPdgDDaFDbdJmde5QlhCJGxgpRJfqEEKnIsJLB7skQYQKZaSmdLaopPCgEvSCShCMzR5a7oq7/3l12RVtjfzBMA/4fWZ+MyOccwBM3g8HEbIdfCEhfAFnLVapOa28Uevpjrqz/WOsERJgsu9Uq5CZQzgqrJfo9BajNd5irEYn4p3OUiFExtCLmw2tawFi4l5zUMjMIau9u7K+qxeoAcoAA0wDb2OPwmfA16LiiaOHLj1edRLpkO3WmIis7+oBDgJbgQ2AH6gC6jY19N62RkcctKeVIJAhp9QgUA3kJXdONZVcq9JxPSgQoXRAyIDRth8oAXQyKdWnoCKrTD9CBv4GMqx1WGNZkeRWJKbG2hiD1Cb9FbTnzWFdY/LCdLKlgNQ84gyNKqHm0gDjqVHnxDHgA/B9RQkpaB6YklkZl62np9KBhOqwjpKFgeY2YAz4BESBWHI8Hhs6PVVSvc3v98ye4fP7T676B845nt040ip98qpWJmI9PWiU6bfWgXGN2YHcKwU7tsuc4kpUPMbU0+f8+vKt+Pitl7PLAMDI9cNBoB0hQwICzjqUp6MZvsy8yvp95BRuQUjJ75mPvH4wYo1NlJ64Mza7DPwrhi8cCOeXl/aUB4P4c/NJxKLMvpngycCrzxVFG2v/CwAMnguF80oLe8p27cQh+fnpPV/fTc95S6piXQDAw7a9YbWkezZXFbAwMx/xPFXb1D3+Y90AQF/L7kAsri9mZ4lrTd0TcYA/Kakr+x2JSPUAAAAASUVORK5CYII=" alt="Search" style="vertical-align:-20%;" />
+			</div></form>
+		</div>
+		<div class="ulfooter">&nbsp;</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Tools</h5>
+		<div class="pBody">
+			<ul><li><a onclick="jQuery('#ul-toolbox').slideToggle();" style="cursor:pointer;">Toolbox</a></li><span id="ul-toolbox" class="collapsed">
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Nanobots">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Nanobots">Related changes</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages">Special pages</a></li>
+				<li id="t-print"><a href="/wiki/index.php?title=Nanobots&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/wiki/index.php?title=Nanobots&amp;oldid=310253">Permanent link</a></li>			</span></ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+    </div><!-- /lefttabs -->
+    </div><!-- /globalWrapper -->
+<!-- here -->
+<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-948553-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+  <script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":1016});
+}</script>  </body></html>

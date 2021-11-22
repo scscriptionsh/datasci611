@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>The Spine - TMBW: The They Might Be Giants Knowledge Base</title>
+<meta name="generator" content="MediaWiki 1.25.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/index.php?title=The_Spine&amp;action=edit" />
+<link rel="edit" title="Edit" href="/wiki/index.php?title=The_Spine&amp;action=edit" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="This Might Be A Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://tmbw.net/wiki/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/wiki/The_Spine" />
+<link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=azure&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:a2f1a9e3354033da4df1a393c1f9ca92 */</style>
+<script>if(window.mw){
+mw.loader.state({"azureSkinJS":"loading"});
+}</script>
+<script src="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=azure&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"The_Spine","wgTitle":"The Spine","wgCurRevisionId":296878,"wgRevisionId":296878,"wgArticleId":3396,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["TMBG Albums","Albums Available For Download On iTunes"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"The_Spine","wgRelevantArticleId":3396,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"hidesig":true,"preview":true,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=azureSkinJS\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<script language="javascript" type="text/javascript">getcss();</script>
+		<script language="javascript" type="text/javascript">theyDayBanner();</script>
+	<!-- Logic for making the site mobile responsive --><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+  $('#pagetools-title').on('click',function() {
+    $('body').toggleClass('pagetools-open');
+  });
+  $('#sitenav-title').on('click',function() {
+    $('body').toggleClass('sitenav-open');
+  });
+  $('#personaltoolstitle').on('click',function() {
+    $('body').toggleClass('personaltools-open');
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-The_Spine skin-azure action-view vector-animateLayout">
+	  	<div id="personaltools">
+  	  <span id="personaltoolstitle" onclick="jQuery('#ul-personaltools').slideToggle();">Personal tools</span>
+      <ul id="ul-personaltools">
+        <li id="pt-createaccount"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=The+Spine&amp;type=signup">Create account</a></li>
+        <li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=The+Spine">Log in</a></li>
+	</ul>
+	</div><!-- /personaltools -->
+	<div id="globalWrapper">
+	<div id="supershadow">
+	<div id="container">
+		
+	<a href="/wiki/Main_Page" title="Main Page" id="headerwrapper">
+        <div id="header">This Might Be A Wiki</div>
+        <div id="subtitle">The TMBG Knowledge Base</div>
+      </a>
+      <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
+	<a name="top" id="top"></a>
+	<h1 class="first">The Spine</h1>
+	<div id="bodyContent" class="mw-body">
+	<div id="siteSub">From This Might Be A Wiki</div>
+	<div id="contentsub"></div>
+        <!-- start content -->
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table cellspacing="5" cellpadding="3" style="background-color:rgb(176,196,222);border-top-color:rgb(156,176,202);border-left-color:rgb(146,166,192);border-right-color:rgb(146,166,192);border-bottom-color:rgb(126,146,172);" class="albuminfotable">
+<tr>
+<td rowspan="3" width="140" height="140"> <center><a href="/wiki/File:TheSpine.jpg" class="image" title="The Spine album cover"><img alt="The Spine album cover" src="/wiki/images/thumb/9/9c/TheSpine.jpg/140px-TheSpine.jpg" width="140" height="140" srcset="/wiki/images/thumb/9/9c/TheSpine.jpg/210px-TheSpine.jpg 1.5x, /wiki/images/thumb/9/9c/TheSpine.jpg/280px-TheSpine.jpg 2x" /></a></center>
+</td>
+<td colspan="6" style="background-color: rgb(206,226,252);">
+<center><b>The Spine</b><br /> Studio album by <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a></center>
+</td></tr>
+<tr>
+<td class="albuminfotitle">First released
+</td>
+<td> July 13, <a href="/wiki/2004" title="2004">2004</a><br /><font size="-2">Release details / collectors: <a onclick="javascript:jQuery('#div1').load('index.php?title=The_Spine/Release_Details&amp;action=render&amp;release=', function() { jQuery('#div1-table').slideDown(200);} );" href="#">Show</a> | <a onclick="javascript:jQuery('#div1-table').slideUp(200)" href="#">Hide</a></font>
+</td>
+<td class="albuminfotitle">Tracks
+</td>
+<td> 16
+</td>
+<td class="albuminfotitle">Last album
+</td>
+<td> <a href="/wiki/No!" title="No!">No!</a>
+</td></tr>
+<tr>
+<td class="albuminfotitle">Label
+</td>
+<td> <a href="/wiki/Idlewild_Recordings" title="Idlewild Recordings">Idlewild</a> / <a href="/wiki/Zo%C3%AB" title="Zoë">Zoë</a>
+</td>
+<td class="albuminfotitle">Length
+</td>
+<td> 35:54
+</td>
+<td class="albuminfotitle">Next album
+</td>
+<td> <a href="/wiki/Here_Come_The_ABCs" title="Here Come The ABCs">Here Come The ABCs</a>
+</td></tr></table>
+<div id="div1-table" style="display:none"><table cellspacing="5" cellpadding="3" align="center" style="background-color: rgb(206,226,252);border-top-color:rgb(156,176,202);border-left-color:rgb(146,166,192);border-right-color:rgb(146,166,192);border-bottom-color:rgb(126,146,172);" class="albuminfotable"><tr><td><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://tmbw.net/wiki/index.php?title=The_Spine/Release_Details&amp;action=edit&amp;editintro=Template:Release_Details_Instructions&amp;preload=">edit</a><span class="mw-editsection-bracket">]</span></span><div id="div1"><center style="clear:both"><img alt="Loading..." src="http&#58;//tmbw.net/wiki/images/4/42/Loading.gif" style="vertical-align:bottom" /> <b>Loading...</b>
+<p><br />
+If loading fails, <a target="_blank" href="/wiki/The_Spine/Release Details">click here</a>.
+</p>
+<br /></center></div></td></tr><tr><td><div align="center"><font size="-2"><i>See <a href="/wiki/Discography_Abbreviations" title="Discography Abbreviations">Discography Abbreviations</a> for definition of various terms.</i></font></div></td></tr></table></div>
+<p><br />
+<i><b>The Spine</b></i> is <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a>' tenth studio album, released in <a href="/wiki/2004" title="2004">2004</a> on the <a href="/wiki/Idlewild_Recordings" title="Idlewild Recordings">Idlewild</a> and <a href="/wiki/Zo%C3%AB" title="Zoë">Zoë</a> labels.
+</p>
+<h3><span class="mw-headline" id="Purchase">Purchase</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=The_Spine&amp;action=edit&amp;section=1" title="Edit section: Purchase">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="toc-right" style="float: right; clear: right;"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Purchase"><span class="tocnumber">1</span> <span class="toctext">Purchase</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Background"><span class="tocnumber">2.1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Singles_and_Charts"><span class="tocnumber">2.2</span> <span class="toctext">Singles and Charts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Track_listing"><span class="tocnumber">3</span> <span class="toctext">Track listing</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Gallery"><span class="tocnumber">4</span> <span class="toctext">Gallery</span></a></li>
+</ul>
+</div>
+</div>
+<table class="ebena downloadtable tmbwSortable" id="unique_id">
+
+<tr class="header">
+<td><font size="1"><b>Seller</b></font>
+</td>
+<td><font size="1"><b>Format</b></font>
+</td>
+<td><font size="1"><b>Price</b></font>
+</td>
+<td><font size="1"><b>Link</b></font>
+<p><br />
+</p>
+</td></tr>
+<tr>
+<td><font size="1"><div class="sprite-Itunes10" style="text-indent:19px;"><a href="/wiki/ITunes" title="ITunes">iTunes</a></div></font>
+</td>
+<td><font size="1">AAC</font>
+</td>
+<td align="right"><font size="1">$9.99</font>
+</td>
+<td><b><span class="plainlinks"><a href="https://go.tmbw.net/2Ir2JPg" onclick="_gaq.push(['_trackEvent', 'Purchase Clickthrough', 'Clickthrough', 'The_Spine']);" target="_blank"><img src="http://tmbw.net/wiki/images/f/ff/Purchase.gif" alt="Purchase" /></a></span></b>
+</td></tr></table>
+<h3><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=The_Spine&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Background">Background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=The_Spine&amp;action=edit&amp;section=3" title="Edit section: Background">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Spine_Disc.png" class="image"><img alt="" src="/wiki/images/thumb/5/5d/Spine_Disc.png/300px-Spine_Disc.png" width="300" height="300" class="thumbimage" srcset="/wiki/images/thumb/5/5d/Spine_Disc.png/450px-Spine_Disc.png 1.5x, /wiki/images/thumb/5/5d/Spine_Disc.png/600px-Spine_Disc.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Spine_Disc.png" class="internal" title="Enlarge"></a></div>The Spine CD</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:515px;"><iframe src="/wiki/index.php?title=The_Spine/Charts&amp;action=render&amp;chartOnly=CMJ Radio 200~CMJ Core Radio~CMJ A.I.M.S.~" width="515" height="210" frameborder="0" scrolling="no"></iframe><div class="magnify" style="float:right"><a href="/wiki/The_Spine/Charts"><img src="/wiki/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>A chart showing the performance of <i>The Spine</i> on the Billboard and CMJ charts.</div></div>
+<p><i>The Spine</i> was TMBG's first full-length adult-oriented album after their foray into children's music. It was <a href="/wiki/Category:Producers" title="Category:Producers">produced</a> by longtime TMBG producer <a href="/wiki/Pat_Dillett" title="Pat Dillett">Pat Dillett</a>. The cover features art created by <a href="/wiki/Zohar_Lazar" title="Zohar Lazar">Zohar Lazar</a> and packaging designed by <a href="/wiki/Melissa_Jun" title="Melissa Jun">Melissa Jun</a>, using <a href="/wiki/Jonathan_Hoefler" title="Jonathan Hoefler">Jonathan Hoefler</a>'s "Cyclone" font on the cover.
+</p><p>In an unprecedented move for the band, <i>The Spine</i> was released simultaneously alongside a separately-sold EP entitled <i><a href="/wiki/The_Spine_Surfs_Alone_(EP)" title="The Spine Surfs Alone (EP)">The Spine Surfs Alone</a></i>. Both were released on July 13, 2004, but <i>The Spine Surfs Alone</i> was only available on CD via the <a href="/wiki/TMBG_Merchandise_Store" title="TMBG Merchandise Store">TMBG Merchandise Store</a> and MP3 on <a href="/wiki/Theymightbegiants.com" title="Theymightbegiants.com">theymightbegiants.com</a>.
+</p><p>Some tracks from the album had previously been on <a href="/wiki/Dial-A-Song" title="Dial-A-Song">Dial-A-Song</a> or were released online as demos, such as "<a href="/wiki/Au_Contraire" title="Au Contraire">Au Contraire</a>", "<a href="/wiki/Stalk_Of_Wheat" title="Stalk Of Wheat">Stalk Of Wheat</a>", "<a href="/wiki/I_Can%27t_Hide_From_My_Mind" title="I Can't Hide From My Mind">I Can't Hide From My Mind</a>", "<a href="/wiki/Museum_Of_Idiots" title="Museum Of Idiots">Museum Of Idiots</a>", "<a href="/wiki/Wearing_A_Raincoat" title="Wearing A Raincoat">Wearing A Raincoat</a>", and "<a href="/wiki/Damn_Good_Times" title="Damn Good Times">Damn Good Times</a>". Some had been played live several years before, including "<a href="/wiki/Thunderbird" title="Thunderbird">Thunderbird</a>" and "<a href="/wiki/Museum_Of_Idiots" title="Museum Of Idiots">Museum Of Idiots</a>", which had become fan favorites.  "<a href="/wiki/Au_Contraire" title="Au Contraire">Au Contraire</a>" and "<a href="/wiki/Memo_To_Human_Resources" title="Memo To Human Resources">Memo To Human Resources</a>" had previously been included on the preceding <i><a href="/wiki/Indestructible_Object" title="Indestructible Object">Indestructible Object</a></i> EP. However, a few tracks were completely unheard by fans until the album's release.
+</p><p>The <a href="/wiki/ITunes" title="ITunes">iTunes</a> release of the album also contained an exclusive track, "<a href="/wiki/Renew_My_Subscription" title="Renew My Subscription">Renew My Subscription</a>", which had been cut from the final album tracklisting. An unfinished <a href="/wiki/Renew_My_Subscription_(Demo)" title="Renew My Subscription (Demo)">demo</a> of the song had previously been made available on tmbg.com the year before.
+</p>
+<h4><span class="mw-headline" id="Singles_and_Charts">Singles and Charts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=The_Spine&amp;action=edit&amp;section=4" title="Edit section: Singles and Charts">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>"<a href="/wiki/Experimental_Film_(Promo)" title="Experimental Film (Promo)">Experimental Film</a>", "<a href="/wiki/Au_Contraire_(Promo)" title="Au Contraire (Promo)">Au Contraire</a>", and "<a href="/wiki/Prevenge_(Promo)" title="Prevenge (Promo)">Prevenge</a>" were released as promotional singles from the album. "Experimental Film" instantly received attention, due to the accompanying animated video featuring characters from <a href="/wiki/The_Brothers_Chaps" title="The Brothers Chaps">The Brothers Chaps</a>' <a href="/wiki/Homestar_Runner" title="Homestar Runner" class="mw-redirect">Homestar Runner</a> universe.  
+</p><p>Even though there were no true singles released, the album spent twelve weeks on the CMJ Radio 200 chart, peaking at #12.  It also spent three weeks on the CMJ Triple A (Adult Album Alternative) chart, where it peaked at #9.  Despite the success on the CMJ charts, the album only spent one short week on the Billboard Comprehensive Album and Billboard 200 charts, where it reached #134 and #130, respectively.
+</p>
+<h3><span class="mw-headline" id="Track_listing">Track listing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=The_Spine&amp;action=edit&amp;section=5" title="Edit section: Track listing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="ebena" align="left" style="min-width:50%;">
+<tr>
+<th style="font-size:85%;text-align:right;">#
+</th>
+<th style="font-size:85%;text-align:center;">Title
+</th>
+<th style="font-size:85%;">Length<span style="display:none;">&#160;</span>
+</th>
+<th style="font-size:85%;">Lyrics
+</th>
+<th style="font-size:85%;">Guitar Tab
+</th></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">1
+</td>
+<td><a href="/wiki/Experimental_Film" title="Experimental Film">Experimental Film</a>
+</td>
+<td align="center">2:56
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Experimental_Film" title="Lyrics:Experimental Film"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Experimental_Film" title="Guitar Tab:Experimental Film"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">2
+</td>
+<td><a href="/wiki/Spine" title="Spine">Spine</a>
+</td>
+<td align="center">0:33
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Spine" title="Lyrics:Spine"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Spine" title="Guitar Tab:Spine"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">3
+</td>
+<td><a href="/wiki/Memo_To_Human_Resources" title="Memo To Human Resources">Memo To Human Resources</a>
+</td>
+<td align="center">2:02
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Memo_To_Human_Resources" title="Lyrics:Memo To Human Resources"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Memo_To_Human_Resources" title="Guitar Tab:Memo To Human Resources"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">4
+</td>
+<td><a href="/wiki/Wearing_A_Raincoat" title="Wearing A Raincoat">Wearing A Raincoat</a>
+</td>
+<td align="center">3:10
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Wearing_A_Raincoat" title="Lyrics:Wearing A Raincoat"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Wearing_A_Raincoat" title="Guitar Tab:Wearing A Raincoat"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">5
+</td>
+<td><a href="/wiki/Prevenge" title="Prevenge">Prevenge</a>
+</td>
+<td align="center">2:44
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Prevenge" title="Lyrics:Prevenge"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Prevenge" title="Guitar Tab:Prevenge"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">6
+</td>
+<td><a href="/wiki/Thunderbird" title="Thunderbird">Thunderbird</a>
+</td>
+<td align="center">2:38
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Thunderbird" title="Lyrics:Thunderbird"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Thunderbird" title="Guitar Tab:Thunderbird"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">7
+</td>
+<td><a href="/wiki/Bastard_Wants_To_Hit_Me" title="Bastard Wants To Hit Me">Bastard Wants To Hit Me</a>
+</td>
+<td align="center">2:14
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Bastard_Wants_To_Hit_Me" title="Lyrics:Bastard Wants To Hit Me"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Bastard_Wants_To_Hit_Me" title="Guitar Tab:Bastard Wants To Hit Me"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">8
+</td>
+<td><a href="/wiki/The_World_Before_Later_On" title="The World Before Later On">The World Before Later On</a>
+</td>
+<td align="center">1:52
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:The_World_Before_Later_On" title="Lyrics:The World Before Later On"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:The_World_Before_Later_On" title="Guitar Tab:The World Before Later On"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">9
+</td>
+<td><a href="/wiki/Museum_Of_Idiots" title="Museum Of Idiots">Museum Of Idiots</a>
+</td>
+<td align="center">3:02
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Museum_Of_Idiots" title="Lyrics:Museum Of Idiots"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Museum_Of_Idiots" title="Guitar Tab:Museum Of Idiots"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">10
+</td>
+<td><a href="/wiki/It%27s_Kickin%27_In" title="It's Kickin' In">It's Kickin' In</a>
+</td>
+<td align="center">2:01
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:It%27s_Kickin%27_In" title="Lyrics:It's Kickin' In"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:It%27s_Kickin%27_In" title="Guitar Tab:It's Kickin' In"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">11
+</td>
+<td><a href="/wiki/Spines" title="Spines">Spines</a>
+</td>
+<td align="center">0:30
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Spines" title="Lyrics:Spines"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Spines" title="Guitar Tab:Spines"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">12
+</td>
+<td><a href="/wiki/Au_Contraire" title="Au Contraire">Au Contraire</a>
+</td>
+<td align="center">2:26
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Au_Contraire" title="Lyrics:Au Contraire"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Au_Contraire" title="Guitar Tab:Au Contraire"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">13
+</td>
+<td><a href="/wiki/Damn_Good_Times" title="Damn Good Times">Damn Good Times</a>
+</td>
+<td align="center">2:38
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Damn_Good_Times" title="Lyrics:Damn Good Times"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Damn_Good_Times" title="Guitar Tab:Damn Good Times"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">14
+</td>
+<td><a href="/wiki/Broke_In_Two" title="Broke In Two">Broke In Two</a>
+</td>
+<td align="center">2:59
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Broke_In_Two" title="Lyrics:Broke In Two"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Broke_In_Two" title="Guitar Tab:Broke In Two"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">15
+</td>
+<td><a href="/wiki/Stalk_Of_Wheat" title="Stalk Of Wheat">Stalk Of Wheat</a>
+</td>
+<td align="center">1:27
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Stalk_Of_Wheat" title="Lyrics:Stalk Of Wheat"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Stalk_Of_Wheat" title="Guitar Tab:Stalk Of Wheat"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr>
+<td align="right">16
+</td>
+<td><a href="/wiki/I_Can%27t_Hide_From_My_Mind" title="I Can't Hide From My Mind">I Can't Hide From My Mind</a>
+</td>
+<td align="center">2:43
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Can%27t_Hide_From_My_Mind" title="Lyrics:I Can't Hide From My Mind"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:I_Can%27t_Hide_From_My_Mind" title="Guitar Tab:I Can't Hide From My Mind"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">17
+</td>
+<td><a href="/wiki/Renew_My_Subscription" title="Renew My Subscription">Renew My Subscription</a><br /><font size="-2"><a href="/wiki/ITunes" title="ITunes">iTunes</a> exclusive track</font>
+</td>
+<td align="center">2:17
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Renew_My_Subscription" title="Lyrics:Renew My Subscription"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:Renew_My_Subscription" title="Guitar Tab:Renew My Subscription"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr></table><br style="clear:both;" />
+<h3><span class="mw-headline" id="Gallery">Gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=The_Spine&amp;action=edit&amp;section=6" title="Edit section: Gallery">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul class="gallery mw-gallery-traditional" align="center" style="max-width: 489px;_width: 489px;">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:The_Spine_Art.jpg" class="image"><img alt="" src="/wiki/images/thumb/d/df/The_Spine_Art.jpg/120px-The_Spine_Art.jpg" width="120" height="120" srcset="/wiki/images/thumb/d/df/The_Spine_Art.jpg/180px-The_Spine_Art.jpg 1.5x, /wiki/images/thumb/d/df/The_Spine_Art.jpg/240px-The_Spine_Art.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Original artwork by <a href="/wiki/Zohar_Lazar" title="Zohar Lazar">Zohar Lazar</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:TheSpine_promo_poster.png" class="image"><img alt="" src="/wiki/images/thumb/6/60/TheSpine_promo_poster.png/93px-TheSpine_promo_poster.png" width="93" height="120" srcset="/wiki/images/thumb/6/60/TheSpine_promo_poster.png/139px-TheSpine_promo_poster.png 1.5x, /wiki/images/thumb/6/60/TheSpine_promo_poster.png/185px-TheSpine_promo_poster.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Promotional poster
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:Spine_sticker.png" class="image"><img alt="" src="/wiki/images/thumb/c/c5/Spine_sticker.png/120px-Spine_sticker.png" width="120" height="80" srcset="/wiki/images/thumb/c/c5/Spine_sticker.png/180px-Spine_sticker.png 1.5x, /wiki/images/thumb/c/c5/Spine_sticker.png/240px-Spine_sticker.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>US shrinkwrap sticker
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:23.5px auto;"><a href="/wiki/File:TheSpineAusBack.png" class="image"><img alt="" src="/wiki/images/thumb/6/65/TheSpineAusBack.png/120px-TheSpineAusBack.png" width="120" height="103" srcset="/wiki/images/thumb/6/65/TheSpineAusBack.png/180px-TheSpineAusBack.png 1.5x, /wiki/images/thumb/6/65/TheSpineAusBack.png/240px-TheSpineAusBack.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Australian release back cover
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15.5px auto;"><a href="/wiki/File:The_Spine_AU_CD.jpg" class="image"><img alt="" src="/wiki/images/thumb/f/fe/The_Spine_AU_CD.jpg/120px-The_Spine_AU_CD.jpg" width="120" height="119" srcset="/wiki/images/thumb/f/fe/The_Spine_AU_CD.jpg/180px-The_Spine_AU_CD.jpg 1.5x, /wiki/images/thumb/f/fe/The_Spine_AU_CD.jpg/240px-The_Spine_AU_CD.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Australian CD
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:22.5px auto;"><a href="/wiki/File:Spine_UK_CDR.png" class="image"><img alt="" src="/wiki/images/thumb/7/78/Spine_UK_CDR.png/120px-Spine_UK_CDR.png" width="120" height="105" srcset="/wiki/images/thumb/7/78/Spine_UK_CDR.png/180px-Spine_UK_CDR.png 1.5x, /wiki/images/thumb/7/78/Spine_UK_CDR.png/240px-Spine_UK_CDR.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>UK CD-R promo cover
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Thespinepromocd.jpg" class="image"><img alt="" src="/wiki/images/thumb/7/71/Thespinepromocd.jpg/118px-Thespinepromocd.jpg" width="118" height="120" srcset="/wiki/images/thumb/7/71/Thespinepromocd.jpg/177px-Thespinepromocd.jpg 1.5x, /wiki/images/thumb/7/71/Thespinepromocd.jpg/236px-Thespinepromocd.jpg 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>UK promo CD
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:The_Spine_WC_Promo_Disc.png" class="image"><img alt="" src="/wiki/images/thumb/9/9c/The_Spine_WC_Promo_Disc.png/120px-The_Spine_WC_Promo_Disc.png" width="120" height="120" srcset="/wiki/images/thumb/9/9c/The_Spine_WC_Promo_Disc.png/180px-The_Spine_WC_Promo_Disc.png 1.5x, /wiki/images/thumb/9/9c/The_Spine_WC_Promo_Disc.png/240px-The_Spine_WC_Promo_Disc.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>US promotional CD released by Warner/Chappell
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:The_Spine_Promo_Disc.png" class="image"><img alt="" src="/wiki/images/thumb/3/3a/The_Spine_Promo_Disc.png/120px-The_Spine_Promo_Disc.png" width="120" height="120" srcset="/wiki/images/thumb/3/3a/The_Spine_Promo_Disc.png/180px-The_Spine_Promo_Disc.png 1.5x, /wiki/images/thumb/3/3a/The_Spine_Promo_Disc.png/240px-The_Spine_Promo_Disc.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Advance copy CD
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Spine_Promo_CD.png" class="image"><img alt="" src="/wiki/images/thumb/6/6f/Spine_Promo_CD.png/120px-Spine_Promo_CD.png" width="120" height="120" srcset="/wiki/images/thumb/6/6f/Spine_Promo_CD.png/180px-Spine_Promo_CD.png 1.5x, /wiki/images/thumb/6/6f/Spine_Promo_CD.png/240px-Spine_Promo_CD.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>US promotional CD released by Idlewild/Zoë
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:24px auto;"><a href="/wiki/File:Spine_Promo_Back.png" class="image"><img alt="" src="/wiki/images/thumb/2/25/Spine_Promo_Back.png/120px-Spine_Promo_Back.png" width="120" height="102" srcset="/wiki/images/thumb/2/25/Spine_Promo_Back.png/180px-Spine_Promo_Back.png 1.5x, /wiki/images/thumb/2/25/Spine_Promo_Back.png/240px-Spine_Promo_Back.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Insert for the US promotional CD
+</p>
+			</div>
+		</div></li>
+</ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.386 seconds
+Real time usage: 0.468 seconds
+Preprocessor visited node count: 2423/1000000
+Preprocessor generated node count: 5909/1000000
+Post‐expand include size: 84070/2097152 bytes
+Template argument size: 3012/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 36/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  348.908      1 - -total
+ 52.58%  183.442     17 - Template:Track
+ 24.60%   85.842      1 - Template:Album_Info
+ 24.50%   85.466     17 - Template:TrackTime
+ 15.00%   52.327      1 - Template:ITunes_Album
+  7.52%   26.227      1 - Template:Purchase_Button
+  6.34%   22.138      1 - Template:Loading
+  5.35%   18.661     31 - Template:Album_Info/color
+  2.05%    7.149      9 - Template:Rowcolor
+  2.00%    6.969      2 - Template:Close_Table
+-->
+
+<!-- Saved in parser cache with key tmbw_wikidb:pcache:idhash:3396-0!*!0!!en!5!* and timestamp 20211122175129 and revision id 296878
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://tmbw.net/wiki/index.php?title=The_Spine&amp;oldid=296878">http://tmbw.net/wiki/index.php?title=The_Spine&amp;oldid=296878</a>"</div>
+        <div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:TMBG_Albums" title="Category:TMBG Albums">TMBG Albums</a></li><li><a href="/wiki/Category:Albums_Available_For_Download_On_iTunes" title="Category:Albums Available For Download On iTunes">Albums Available For Download On iTunes</a></li></ul></div></div>        <!-- end wiki content -->
+        	<div class="visualClear"></div>
+</div><!-- /bodycontent -->
+      </div><!-- /content--> 
+      <div id="footer">
+      			  <script type="text/javascript">getwaw();</script>
+               <ul id="f-list">
+          <li id="privacy"><a href="/wiki/This_Might_Be_A_Wiki:Privacy_policy" title="This Might Be A Wiki:Privacy policy">Privacy policy</a></li>
+          <li id="about"><a href="/wiki/This_Might_Be_A_Wiki:About" title="This Might Be A Wiki:About">About This Might Be A Wiki</a></li>
+          <li id="disclaimer"><a href="/wiki/This_Might_Be_A_Wiki:General_disclaimer" title="This Might Be A Wiki:General disclaimer">Disclaimers</a></li>
+	<li id="follow" style="display:inline;"><br />Follow TMBW.Net on: </li><li id="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEX////u9/qOx91+v9iez+FPqcwvmsNAoMUfkr6e0OM/tuNgsM/O5/APrOjP6vSe2/MQi7pvvNmv5Pj///9ArNb////P7fgPsO4wvPF+0/Se3PS+5PMvuO3////////O7flQxfPv+f0QiLZfy/T////////P7/t+1fae3/je9Pz///////8AlMwAltAAkckApOMArO4Aod8AnNgAqeoAmdQAib0An9vBJTQnAAAALHRSTlMAD3CBYLHQv+Biyp8w80J+7pR4DMUUVvPbn4FX2xgPWsI/7rYDKGChiVcfB+Kv0VUAAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAhklEQVQY02NgIAIwQkgmZhYGRjCblQVEsuno6rFzcIKYXHrcjAw8+gYGBoa8fCABfgMjAW5BAxAQEgYJiBgYGBuZgAVEwcaJiRtAgQTEFmFJmIgU1F5pGagCWaiAnLwCmK8IdRe3kqkZkK+sqAIRUFFVU1dX19BUVYG7XVhLS0tWmxhfggEAF7UQF19tYhIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDItMjhUMTM6NDE6NDErMDg6MDAIzUNTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTAyLTI4VDEzOjQxOjQxKzA4OjAweZD77wAAAABJRU5ErkJggg==" alt="Twitter" style="vertical-align:text-top;" /> <a href="http://twitter.com/tmbw">Twitter</a></li><li id="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEVVbKpUa6k5T5JVbKo7UZM5T5L///9cfLNGaKRYeLFKbKhPZqVNZKNRZ6Y8U5VJX599lcNHXZ1SaahEW5xLYaFAVpg+VJZnhrlPZ55CWZpCY59ggLU5T5KhudlVbKpheqc/X5xjg7f19/pkfqpOcKtTda4tS4qZrdBzj70LAH3eAAAABnRSTlPv7x8f7+/VY02GAAAAeklEQVR4XlXHRRLDMBQE0bFjj8DIEGS4/wkjyX/hvEVXNXY4b7iN6tNGHaGdbhtTi+Lwp0CmxOdOKpUhN8I9jcnRvwT5de1RPQXpW6GxAQNrG3Q6YKB1h2UvSN8Fw1WQvgPGtyB9R5QPQfqWSObLinSZE8TpcUW6pPEPr3wWR0m1z0gAAAAASUVORK5CYII=" alt="Facebook" style="vertical-align:text-bottom;" /> <a href="https://www.facebook.com/tmbw.net">Facebook</a></li>
+        </ul><!-- /f-list -->
+      </div><!-- /footer -->
+    </div><!-- /container -->
+    </div><!-- /supershadow -->
+    <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
+	<ul>
+        <li id="ca-nstab-main" class="selected"><a href="/wiki/The_Spine"><span></span>Article</a></li>
+        <li id="ca-talk"><a href="/wiki/Talk:The_Spine"><span></span>Discussion</a></li>
+        <li id="ca-edit"><a href="/wiki/index.php?title=The_Spine&amp;action=edit"><span></span>Edit</a></li>
+        <li id="ca-history"><a href="/wiki/index.php?title=The_Spine&amp;action=history"><span></span>History</a></li>
+      </ul>
+    </div>
+    <div id="lefttabs"><span id="sitenav-title"></span>
+	<div class='portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
+				<li id="n-Site-Map"><a href="/wiki/Site_Map">Site Map</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
+				<li id="n-TMBW.Net-Chat"><a href="/wiki/TMBW.Net_Chat">TMBW.Net Chat</a></li>
+				<li id="n-Contact-us"><a href="/wiki/Contact_Us">Contact us</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-other'>
+		<h5>other</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Albums"><a href="/wiki/Discography/Studio_Albums">Albums</a></li>
+				<li id="n-Discography"><a href="/wiki/Discography">Discography</a></li>
+				<li id="n-Shows"><a href="/wiki/Shows">Shows</a></li>
+				<li id="n-Videos"><a href="/wiki/Videos">Videos</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-songs'>
+		<h5>songs</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Songs"><a href="/wiki/Category:Songs">Songs</a></li>
+				<li id="n-Lyrics"><a href="/wiki/Category:Lyrics">Lyrics</a></li>
+				<li id="n-Guitar-tabs"><a href="/wiki/Category:Guitar_Tabs">Guitar tabs</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="Search" onfocus="if(this.value == 'Search') { this.value = ''; }"/>
+						<input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJGSURBVDjLjdJLSNRBHMDx78yqLZaKS75DPdgDDaFDbdJmde5QlhCJGxgpRJfqEEKnIsJLB7skQYQKZaSmdLaopPCgEvSCShCMzR5a7oq7/3l12RVtjfzBMA/4fWZ+MyOccwBM3g8HEbIdfCEhfAFnLVapOa28Uevpjrqz/WOsERJgsu9Uq5CZQzgqrJfo9BajNd5irEYn4p3OUiFExtCLmw2tawFi4l5zUMjMIau9u7K+qxeoAcoAA0wDb2OPwmfA16LiiaOHLj1edRLpkO3WmIis7+oBDgJbgQ2AH6gC6jY19N62RkcctKeVIJAhp9QgUA3kJXdONZVcq9JxPSgQoXRAyIDRth8oAXQyKdWnoCKrTD9CBv4GMqx1WGNZkeRWJKbG2hiD1Cb9FbTnzWFdY/LCdLKlgNQ84gyNKqHm0gDjqVHnxDHgA/B9RQkpaB6YklkZl62np9KBhOqwjpKFgeY2YAz4BESBWHI8Hhs6PVVSvc3v98ye4fP7T676B845nt040ip98qpWJmI9PWiU6bfWgXGN2YHcKwU7tsuc4kpUPMbU0+f8+vKt+Pitl7PLAMDI9cNBoB0hQwICzjqUp6MZvsy8yvp95BRuQUjJ75mPvH4wYo1NlJ64Mza7DPwrhi8cCOeXl/aUB4P4c/NJxKLMvpngycCrzxVFG2v/CwAMnguF80oLe8p27cQh+fnpPV/fTc95S6piXQDAw7a9YbWkezZXFbAwMx/xPFXb1D3+Y90AQF/L7kAsri9mZ4lrTd0TcYA/Kakr+x2JSPUAAAAASUVORK5CYII=" alt="Search" style="vertical-align:-20%;" />
+			</div></form>
+		</div>
+		<div class="ulfooter">&nbsp;</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Tools</h5>
+		<div class="pBody">
+			<ul><li><a onclick="jQuery('#ul-toolbox').slideToggle();" style="cursor:pointer;">Toolbox</a></li><span id="ul-toolbox" class="collapsed">
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/The_Spine">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/The_Spine">Related changes</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages">Special pages</a></li>
+				<li id="t-print"><a href="/wiki/index.php?title=The_Spine&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/wiki/index.php?title=The_Spine&amp;oldid=296878">Permanent link</a></li>			</span></ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+    </div><!-- /lefttabs -->
+    </div><!-- /globalWrapper -->
+<!-- here -->
+<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-948553-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+  <script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":289});
+}</script>  </body></html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>John Henry Demos - TMBW: The They Might Be Giants Knowledge Base</title>
+<meta name="generator" content="MediaWiki 1.25.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit" />
+<link rel="edit" title="Edit" href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="This Might Be A Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://tmbw.net/wiki/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/wiki/John_Henry_Demos" />
+<link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=azure&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:a2f1a9e3354033da4df1a393c1f9ca92 */</style>
+<script>if(window.mw){
+mw.loader.state({"azureSkinJS":"loading"});
+}</script>
+<script src="http://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=azure&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"John_Henry_Demos","wgTitle":"John Henry Demos","wgCurRevisionId":302548,"wgRevisionId":302548,"wgArticleId":10476,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["TMBG Collections","Demos","Bootlegs","Leaked Recordings"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"John_Henry_Demos","wgRelevantArticleId":10476,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"hidesig":true,"preview":true,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=azureSkinJS\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<script language="javascript" type="text/javascript">getcss();</script>
+		<script language="javascript" type="text/javascript">theyDayBanner();</script>
+	<!-- Logic for making the site mobile responsive --><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+  $('#pagetools-title').on('click',function() {
+    $('body').toggleClass('pagetools-open');
+  });
+  $('#sitenav-title').on('click',function() {
+    $('body').toggleClass('sitenav-open');
+  });
+  $('#personaltoolstitle').on('click',function() {
+    $('body').toggleClass('personaltools-open');
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-John_Henry_Demos skin-azure action-view vector-animateLayout">
+	  	<div id="personaltools">
+  	  <span id="personaltoolstitle" onclick="jQuery('#ul-personaltools').slideToggle();">Personal tools</span>
+      <ul id="ul-personaltools">
+        <li id="pt-createaccount"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=John+Henry+Demos&amp;type=signup">Create account</a></li>
+        <li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=John+Henry+Demos">Log in</a></li>
+	</ul>
+	</div><!-- /personaltools -->
+	<div id="globalWrapper">
+	<div id="supershadow">
+	<div id="container">
+		
+	<a href="/wiki/Main_Page" title="Main Page" id="headerwrapper">
+        <div id="header">This Might Be A Wiki</div>
+        <div id="subtitle">The TMBG Knowledge Base</div>
+      </a>
+      <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
+	<a name="top" id="top"></a>
+	<h1 class="first">John Henry Demos</h1>
+	<div id="bodyContent" class="mw-body">
+	<div id="siteSub">From This Might Be A Wiki</div>
+	<div id="contentsub"></div>
+        <!-- start content -->
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table cellspacing="5" cellpadding="3" style="background-color:rgb(244,164,96);border-top-color:rgb(224,144,76);border-left-color:rgb(214,134,66);border-right-color:rgb(214,134,66);border-bottom-color:rgb(194,114,46);" class="albuminfotable">
+<tr>
+<td rowspan="3" width="140" height="140"> <center><a href="/wiki/File:John_Henry_Demos.png" class="image" title="John Henry Demos tmbg compilation cover"><img alt="John Henry Demos tmbg compilation cover" src="/wiki/images/thumb/d/da/John_Henry_Demos.png/140px-John_Henry_Demos.png" width="140" height="140" srcset="/wiki/images/thumb/d/da/John_Henry_Demos.png/210px-John_Henry_Demos.png 1.5x, /wiki/images/thumb/d/da/John_Henry_Demos.png/280px-John_Henry_Demos.png 2x" /></a></center>
+</td>
+<td colspan="6" style="background-color: rgb(274,194,126);">
+<center><b>John Henry Demos</b><br /> Collection by <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a></center>
+</td></tr>
+<tr>
+<td class="albuminfotitle">First released
+</td>
+<td> December 10, <a href="/wiki/2018" title="2018">2018</a><br /><font size="-2">Release details / collectors: <a onclick="javascript:jQuery('#div1').load('index.php?title=John_Henry_Demos/Release_Details&amp;action=render&amp;release=', function() { jQuery('#div1-table').slideDown(200);} );" href="#">Show</a> | <a onclick="javascript:jQuery('#div1-table').slideUp(200)" href="#">Hide</a></font>
+</td>
+<td class="albuminfotitle">Tracks
+</td>
+<td> 19
+</td></tr>
+<tr>
+<td class="albuminfotitle">Label
+</td>
+<td> <a href="/wiki/Idlewild_Recordings" title="Idlewild Recordings">Idlewild Recordings</a>
+</td>
+<td class="albuminfotitle">Length
+</td>
+<td> 50:54
+</td></tr></table>
+<div id="div1-table" style="display:none"><table cellspacing="5" cellpadding="3" align="center" style="background-color: rgb(274,194,126);border-top-color:rgb(224,144,76);border-left-color:rgb(214,134,66);border-right-color:rgb(214,134,66);border-bottom-color:rgb(194,114,46);" class="albuminfotable"><tr><td><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://tmbw.net/wiki/index.php?title=John_Henry_Demos/Release_Details&amp;action=edit&amp;editintro=Template:Release_Details_Instructions&amp;preload=">edit</a><span class="mw-editsection-bracket">]</span></span><div id="div1"><center style="clear:both"><img alt="Loading..." src="http&#58;//tmbw.net/wiki/images/4/42/Loading.gif" style="vertical-align:bottom" /> <b>Loading...</b>
+<p><br />
+If loading fails, <a target="_blank" href="/wiki/John_Henry_Demos/Release Details">click here</a>.
+</p>
+<br /></center></div></td></tr><tr><td><div align="center"><font size="-2"><i>See <a href="/wiki/Discography_Abbreviations" title="Discography Abbreviations">Discography Abbreviations</a> for definition of various terms.</i></font></div></td></tr></table></div>
+<p><i><b>John Henry Demos</b></i> is a limited release collection of demos from <a href="/wiki/They_Might_Be_Giants" title="They Might Be Giants">They Might Be Giants</a>' fifth album, <i><a href="/wiki/John_Henry" title="John Henry">John Henry</a></i>. It was originally released as an <a href="/wiki/Instant_Fan_Club" title="Instant Fan Club" class="mw-redirect">Instant Fan Club</a> exclusive download in <a href="/wiki/2012" title="2012">2012</a>, before being publicly rereleased on CD and vinyl (as an LP with a 7") in <a href="/wiki/2018" title="2018">2018</a>. 
+</p><p>The collection consists of full-band studio demos of every song from <i>John Henry</i> presented in album order, with the exception of <i><a href="/wiki/Stomp_Box" title="Stomp Box">Stomp Box</a></i> (which did not have a demo recorded). 
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Track_listing"><span class="tocnumber">1</span> <span class="toctext">Track listing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Leaked_demo_tape"><span class="tocnumber">2</span> <span class="toctext">Leaked demo tape</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Track_listing_2"><span class="tocnumber">2.1</span> <span class="toctext">Track listing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Other_demos_from_the_John_Henry_sessions"><span class="tocnumber">3</span> <span class="toctext">Other demos from the John Henry sessions</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Trivia"><span class="tocnumber">4</span> <span class="toctext">Trivia</span></a></li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="Track_listing">Track listing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit&amp;section=1" title="Edit section: Track listing">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="ebena" align="left" style="min-width:50%;">
+<tr>
+<th style="font-size:85%;text-align:right;">#
+</th>
+<th style="font-size:85%;text-align:center;">Title
+</th>
+<th style="font-size:85%;">Length<span style="display:none;">&#160;</span>
+</th>
+<th style="font-size:85%;">Lyrics
+</th>
+<th style="font-size:85%;">Guitar Tab
+</th></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">1
+</td>
+<td><a href="/wiki/Subliminal_(Demo)" title="Subliminal (Demo)">Subliminal (Demo)</a>
+</td>
+<td align="center">2:38
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Subliminal_(Demo)" title="Lyrics:Subliminal (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Subliminal_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">2
+</td>
+<td><a href="/wiki/Snail_Shell_(Demo)" title="Snail Shell (Demo)">Snail Shell (Demo)</a>
+</td>
+<td align="center">3:20
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Snail_Shell_(Demo)" title="Lyrics:Snail Shell (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Snail_Shell_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">3
+</td>
+<td><a href="/wiki/Sleeping_In_The_Flowers_(Demo)" title="Sleeping In The Flowers (Demo)">Sleeping In The Flowers (Demo)</a>
+</td>
+<td align="center">4:26
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Sleeping_In_The_Flowers_(Demo)" title="Lyrics:Sleeping In The Flowers (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Sleeping_In_The_Flowers_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">4
+</td>
+<td><a href="/wiki/Unrelated_Thing_(Demo)" title="Unrelated Thing (Demo)">Unrelated Thing (Demo)</a>
+</td>
+<td align="center">2:28
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Unrelated_Thing_(Demo)" title="Lyrics:Unrelated Thing (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Unrelated_Thing_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">5
+</td>
+<td><a href="/wiki/AKA_Driver_(Demo)" title="AKA Driver (Demo)">AKA Driver (Demo)</a>
+</td>
+<td align="center">3:09
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:AKA_Driver_(Demo)" title="Lyrics:AKA Driver (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:AKA_Driver_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">6
+</td>
+<td><a href="/wiki/I_Should_Be_Allowed_To_Think_(Demo)" title="I Should Be Allowed To Think (Demo)">I Should Be Allowed To Think (Demo)</a>
+</td>
+<td align="center">2:27
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:I_Should_Be_Allowed_To_Think_(Demo)" title="Lyrics:I Should Be Allowed To Think (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:I_Should_Be_Allowed_To_Think_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">7
+</td>
+<td><a href="/wiki/Extra_Savoir-Faire_(Demo)" title="Extra Savoir-Faire (Demo)">Extra Savoir-Faire (Demo)</a>
+</td>
+<td align="center">2:51
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Extra_Savoir-Faire_(Demo)" title="Lyrics:Extra Savoir-Faire (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Extra_Savoir-Faire_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">8
+</td>
+<td><a href="/wiki/Why_Must_I_Be_Sad%3F_(Demo)" title="Why Must I Be Sad? (Demo)">Why Must I Be Sad? (Demo)</a>
+</td>
+<td align="center">3:57
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Why_Must_I_Be_Sad%3F_(Demo)" title="Lyrics:Why Must I Be Sad? (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Why_Must_I_Be_Sad%3F_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">9
+</td>
+<td><a href="/wiki/Spy_(Original_Version)" title="Spy (Original Version)">Spy (Original Version)</a>
+</td>
+<td align="center">2:30
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Spy_(Original_Version)" title="Lyrics:Spy (Original Version)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Spy_(Original_Version)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">10
+</td>
+<td><a href="/wiki/O,_Do_Not_Forsake_Me_(Richard_Reagan_Demo)" title="O, Do Not Forsake Me (Richard Reagan Demo)">O, Do Not Forsake Me (Richard Reagan Demo)</a>
+</td>
+<td align="center">2:37
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:O,_Do_Not_Forsake_Me_(Richard_Reagan_Demo)" title="Lyrics:O, Do Not Forsake Me (Richard Reagan Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><a href="/wiki/Guitar_Tab:O,_Do_Not_Forsake_Me_(Richard_Reagan_Demo)" title="Guitar Tab:O, Do Not Forsake Me (Richard Reagan Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/music.png" /></a>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">11
+</td>
+<td><a href="/wiki/No_One_Knows_My_Plan_(Demo)" title="No One Knows My Plan (Demo)">No One Knows My Plan (Demo)</a>
+</td>
+<td align="center">2:19
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:No_One_Knows_My_Plan_(Demo)" title="Lyrics:No One Knows My Plan (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:No_One_Knows_My_Plan_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">12
+</td>
+<td><a href="/wiki/Dirt_Bike_(Demo)" title="Dirt Bike (Demo)">Dirt Bike (Demo)</a>
+</td>
+<td align="center">1:55
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Dirt_Bike_(Demo)" title="Lyrics:Dirt Bike (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Dirt_Bike_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">13
+</td>
+<td><a href="/wiki/Destination_Moon_(Demo)" title="Destination Moon (Demo)">Destination Moon (Demo)</a>
+</td>
+<td align="center">2:24
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Destination_Moon_(Demo)" title="Lyrics:Destination Moon (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Destination_Moon_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">14
+</td>
+<td><a href="/wiki/A_Self_Called_Nowhere_(Demo)" title="A Self Called Nowhere (Demo)">A Self Called Nowhere (Demo)</a>
+</td>
+<td align="center">3:13
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:A_Self_Called_Nowhere_(Demo)" title="Lyrics:A Self Called Nowhere (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:A_Self_Called_Nowhere_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">15
+</td>
+<td><a href="/wiki/Meet_James_Ensor_(Demo)" title="Meet James Ensor (Demo)">Meet James Ensor (Demo)</a>
+</td>
+<td align="center">1:39
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Meet_James_Ensor_(Demo)" title="Lyrics:Meet James Ensor (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Meet_James_Ensor_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">16
+</td>
+<td><a href="/wiki/Thermostat_(Demo)" title="Thermostat (Demo)">Thermostat (Demo)</a>
+</td>
+<td align="center">2:05
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Thermostat_(Demo)" title="Lyrics:Thermostat (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Thermostat_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">17
+</td>
+<td><a href="/wiki/Window_(Demo)" title="Window (Demo)">Window (Demo)</a>
+</td>
+<td align="center">0:59
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Window_(Demo)" title="Lyrics:Window (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Window_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">18
+</td>
+<td><a href="/wiki/Out_Of_Jail_(Demo)" title="Out Of Jail (Demo)">Out Of Jail (Demo)</a>
+</td>
+<td align="center">2:18
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Out_Of_Jail_(Demo)" title="Lyrics:Out Of Jail (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Out_Of_Jail_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">19
+</td>
+<td><a href="/wiki/The_End_Of_The_Tour_(Demo)" title="The End Of The Tour (Demo)">The End Of The Tour (Demo)</a>
+</td>
+<td align="center">3:05
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:The_End_Of_The_Tour_(Demo)" title="Lyrics:The End Of The Tour (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:The_End_Of_The_Tour_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr></table><br style="clear:both;" />
+<h3><span class="mw-headline" id="Leaked_demo_tape">Leaked demo tape</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit&amp;section=2" title="Edit section: Leaked demo tape">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the 1990s, a leaked cassette tape circulated with demo versions of eight <i><a href="/wiki/John_Henry" title="John Henry">John Henry</a></i>-era songs, recorded in <a href="/wiki/1993" title="1993">1993</a>. With the exception of "<a href="/wiki/Ondine_(Demo)" title="Ondine (Demo)">Ondine</a>" (a b-side from the era), these recordings were all eventually included in the official <i>John Henry Demos</i> release in 2012 (and many were officially available earlier in <a href="/wiki/Podcast_27A" title="Podcast 27A">Podcast 27A</a> in <a href="/wiki/2007" title="2007">2007</a>). 
+</p>
+<h4><span class="mw-headline" id="Track_listing_2">Track listing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit&amp;section=3" title="Edit section: Track listing">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table class="ebena" align="left" style="min-width:50%;">
+<tr>
+<th style="font-size:85%;text-align:right;">#
+</th>
+<th style="font-size:85%;text-align:center;">Title
+</th>
+<th style="font-size:85%;">Length<span style="display:none;">&#160;</span>
+</th>
+<th style="font-size:85%;">Lyrics
+</th>
+<th style="font-size:85%;">Guitar Tab
+</th></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">1
+</td>
+<td><a href="/wiki/No_One_Knows_My_Plan_(Demo)" title="No One Knows My Plan (Demo)">No One Knows My Plan (Demo)</a>
+</td>
+<td align="center">2:19
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:No_One_Knows_My_Plan_(Demo)" title="Lyrics:No One Knows My Plan (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:No_One_Knows_My_Plan_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">2
+</td>
+<td><a href="/wiki/Sleeping_In_The_Flowers_(Demo)" title="Sleeping In The Flowers (Demo)">Sleeping In The Flowers (Demo)</a>
+</td>
+<td align="center">4:26
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Sleeping_In_The_Flowers_(Demo)" title="Lyrics:Sleeping In The Flowers (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Sleeping_In_The_Flowers_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">3
+</td>
+<td><a href="/wiki/A_Self_Called_Nowhere_(Demo)" title="A Self Called Nowhere (Demo)">A Self Called Nowhere (Demo)</a>
+</td>
+<td align="center">3:13
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:A_Self_Called_Nowhere_(Demo)" title="Lyrics:A Self Called Nowhere (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:A_Self_Called_Nowhere_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">4
+</td>
+<td><a href="/wiki/Meet_James_Ensor_(Demo)" title="Meet James Ensor (Demo)">Meet James Ensor (Demo)</a>
+</td>
+<td align="center">1:39
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Meet_James_Ensor_(Demo)" title="Lyrics:Meet James Ensor (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Meet_James_Ensor_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">5
+</td>
+<td><a href="/wiki/Thermostat_(Demo)" title="Thermostat (Demo)">Thermostat (Demo)</a>
+</td>
+<td align="center">2:05
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Thermostat_(Demo)" title="Lyrics:Thermostat (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Thermostat_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">6
+</td>
+<td><a href="/wiki/Ondine_(Demo)" title="Ondine (Demo)">Ondine (Demo)</a>
+</td>
+<td align="center">2:24
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Ondine_(Demo)" title="Lyrics:Ondine (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Ondine_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr bgcolor="#bfdfff">
+<td align="right">7
+</td>
+<td><a href="/wiki/Why_Must_I_Be_Sad%3F_(Demo)" title="Why Must I Be Sad? (Demo)">Why Must I Be Sad? (Demo)</a>
+</td>
+<td align="center">3:57
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Why_Must_I_Be_Sad%3F_(Demo)" title="Lyrics:Why Must I Be Sad? (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Why_Must_I_Be_Sad%3F_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr>
+<tr>
+<td align="right">8
+</td>
+<td><a href="/wiki/Dirt_Bike_(Demo)" title="Dirt Bike (Demo)">Dirt Bike (Demo)</a>
+</td>
+<td align="center">1:55
+<p>&#10;<span style="display:none;">&#160;</span>
+</p>
+</td>
+<td align="center"><a href="/wiki/Lyrics:Dirt_Bike_(Demo)" title="Lyrics:Dirt Bike (Demo)"><img src="http&#58;//tmbw.net/wiki/skins/azure/_img/silk/page_white_text.png" /></a>
+</td>
+<td align="center"><span class="plainlinks lighttext"><a rel="nofollow" class="external text" href="http://tmbw.net/wiki/index.php?title=Guitar_Tab:Dirt_Bike_(Demo)&amp;action=edit&amp;preload=Template:Tab_Preload&amp;editintro=Template:Tab_Instructions">N/A</a></span>
+</td></tr></table><br style="clear:both;" />
+<h3><span class="mw-headline" id="Other_demos_from_the_John_Henry_sessions">Other demos from the John Henry sessions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit&amp;section=4" title="Edit section: Other demos from the John Henry sessions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/Lullabye_To_Nightmares_(Extended)" title="Lullabye To Nightmares (Extended)">Lullabye To Nightmares (Extended)</a> - a contender for <i>John Henry</i>, this recording later made it to <i><a href="/wiki/Long_Tall_Weekend" title="Long Tall Weekend">Long Tall Weekend</a></i> without its coda (included on <a href="/wiki/Podcast_27A" title="Podcast 27A">Podcast 27A</a>)</li></ul>
+<h3><span class="mw-headline" id="Trivia">Trivia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit&amp;section=5" title="Edit section: Trivia">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Regarding the vast demo collection for <i>John Henry</i>, Flansburgh has stated, "[W]e never embarked on demoing any other album as completely as <i>John Henry</i>, and it is really a singular event. Because we were pulling together a new band and wanted to track the album as a rehearsed unit that['s why] the demos were made. Previously the many <a href="/wiki/Dial-A-Song" title="Dial-A-Song">Dial-A-Song</a> posts from the 80s and 90s, or even sketchier home recordings, were the working demos for our studio recordings. From around <i><a href="/wiki/Factory_Showroom" title="Factory Showroom">Factory Showroom</a></i> on, our ability to make more finished tracks at our project studios improved and demos often flow into final versions more directly."<sup><span title="http&#58;//tmbgareok.tumblr.com/post/181838187646/any-chance-some-demos-for-your-other-albums-will" class="plainlinks"><a rel="nofollow" class="external text" href="http://tmbgareok.tumblr.com/post/181838187646/any-chance-some-demos-for-your-other-albums-will">[1&#93;</a></span></sup></li></ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.654 seconds
+Real time usage: 0.711 seconds
+Preprocessor visited node count: 3643/1000000
+Preprocessor generated node count: 5469/1000000
+Post‐expand include size: 100319/2097152 bytes
+Template argument size: 6118/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 42/500
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  560.629      1 - -total
+ 62.67%  351.329     27 - Template:Track
+ 31.21%  174.975      1 - Template:Album_Info
+ 25.02%  140.278     27 - Template:TrackTime
+ 10.22%   57.311     31 - Template:Album_Info/color
+  6.47%   36.299      1 - Template:Loading
+  2.39%   13.380     14 - Template:Rowcolor
+  1.52%    8.532      2 - Template:Close_Table
+  1.38%    7.748      2 - Template:Track_List_Header
+  1.33%    7.436      1 - Template:Ref
+-->
+
+<!-- Saved in parser cache with key tmbw_wikidb:pcache:idhash:10476-0!*!0!!en!5!* and timestamp 20211122134424 and revision id 302548
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://tmbw.net/wiki/index.php?title=John_Henry_Demos&amp;oldid=302548">http://tmbw.net/wiki/index.php?title=John_Henry_Demos&amp;oldid=302548</a>"</div>
+        <div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:TMBG_Collections" title="Category:TMBG Collections">TMBG Collections</a></li><li><a href="/wiki/Category:Demos" title="Category:Demos">Demos</a></li><li><a href="/wiki/Category:Bootlegs" title="Category:Bootlegs">Bootlegs</a></li><li><a href="/wiki/Category:Leaked_Recordings" title="Category:Leaked Recordings">Leaked Recordings</a></li></ul></div></div>        <!-- end wiki content -->
+        	<div class="visualClear"></div>
+</div><!-- /bodycontent -->
+      </div><!-- /content--> 
+      <div id="footer">
+      			  <script type="text/javascript">getwaw();</script>
+               <ul id="f-list">
+          <li id="privacy"><a href="/wiki/This_Might_Be_A_Wiki:Privacy_policy" title="This Might Be A Wiki:Privacy policy">Privacy policy</a></li>
+          <li id="about"><a href="/wiki/This_Might_Be_A_Wiki:About" title="This Might Be A Wiki:About">About This Might Be A Wiki</a></li>
+          <li id="disclaimer"><a href="/wiki/This_Might_Be_A_Wiki:General_disclaimer" title="This Might Be A Wiki:General disclaimer">Disclaimers</a></li>
+	<li id="follow" style="display:inline;"><br />Follow TMBW.Net on: </li><li id="twitter"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEX////u9/qOx91+v9iez+FPqcwvmsNAoMUfkr6e0OM/tuNgsM/O5/APrOjP6vSe2/MQi7pvvNmv5Pj///9ArNb////P7fgPsO4wvPF+0/Se3PS+5PMvuO3////////O7flQxfPv+f0QiLZfy/T////////P7/t+1fae3/je9Pz///////8AlMwAltAAkckApOMArO4Aod8AnNgAqeoAmdQAib0An9vBJTQnAAAALHRSTlMAD3CBYLHQv+Biyp8w80J+7pR4DMUUVvPbn4FX2xgPWsI/7rYDKGChiVcfB+Kv0VUAAAABYktHRACIBR1IAAAACXBIWXMAAABIAAAASABGyWs+AAAAhklEQVQY02NgIAIwQkgmZhYGRjCblQVEsuno6rFzcIKYXHrcjAw8+gYGBoa8fCABfgMjAW5BAxAQEgYJiBgYGBuZgAVEwcaJiRtAgQTEFmFJmIgU1F5pGagCWaiAnLwCmK8IdRe3kqkZkK+sqAIRUFFVU1dX19BUVYG7XVhLS0tWmxhfggEAF7UQF19tYhIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDItMjhUMTM6NDE6NDErMDg6MDAIzUNTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTAyLTI4VDEzOjQxOjQxKzA4OjAweZD77wAAAABJRU5ErkJggg==" alt="Twitter" style="vertical-align:text-top;" /> <a href="http://twitter.com/tmbw">Twitter</a></li><li id="facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEVVbKpUa6k5T5JVbKo7UZM5T5L///9cfLNGaKRYeLFKbKhPZqVNZKNRZ6Y8U5VJX599lcNHXZ1SaahEW5xLYaFAVpg+VJZnhrlPZ55CWZpCY59ggLU5T5KhudlVbKpheqc/X5xjg7f19/pkfqpOcKtTda4tS4qZrdBzj70LAH3eAAAABnRSTlPv7x8f7+/VY02GAAAAeklEQVR4XlXHRRLDMBQE0bFjj8DIEGS4/wkjyX/hvEVXNXY4b7iN6tNGHaGdbhtTi+Lwp0CmxOdOKpUhN8I9jcnRvwT5de1RPQXpW6GxAQNrG3Q6YKB1h2UvSN8Fw1WQvgPGtyB9R5QPQfqWSObLinSZE8TpcUW6pPEPr3wWR0m1z0gAAAAASUVORK5CYII=" alt="Facebook" style="vertical-align:text-bottom;" /> <a href="https://www.facebook.com/tmbw.net">Facebook</a></li>
+        </ul><!-- /f-list -->
+      </div><!-- /footer -->
+    </div><!-- /container -->
+    </div><!-- /supershadow -->
+    <div id="p-cactions" class="portlet"><span id="pagetools-title"></span>
+	<ul>
+        <li id="ca-nstab-main" class="selected"><a href="/wiki/John_Henry_Demos"><span></span>Article</a></li>
+        <li id="ca-talk"><a href="/wiki/Talk:John_Henry_Demos"><span></span>Discussion</a></li>
+        <li id="ca-edit"><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=edit"><span></span>Edit</a></li>
+        <li id="ca-history"><a href="/wiki/index.php?title=John_Henry_Demos&amp;action=history"><span></span>History</a></li>
+      </ul>
+    </div>
+    <div id="lefttabs"><span id="sitenav-title"></span>
+	<div class='portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
+				<li id="n-Site-Map"><a href="/wiki/Site_Map">Site Map</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
+				<li id="n-TMBW.Net-Chat"><a href="/wiki/TMBW.Net_Chat">TMBW.Net Chat</a></li>
+				<li id="n-Contact-us"><a href="/wiki/Contact_Us">Contact us</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-other'>
+		<h5>other</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Albums"><a href="/wiki/Discography/Studio_Albums">Albums</a></li>
+				<li id="n-Discography"><a href="/wiki/Discography">Discography</a></li>
+				<li id="n-Shows"><a href="/wiki/Shows">Shows</a></li>
+				<li id="n-Videos"><a href="/wiki/Videos">Videos</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div class='portlet' id='p-songs'>
+		<h5>songs</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Songs"><a href="/wiki/Category:Songs">Songs</a></li>
+				<li id="n-Lyrics"><a href="/wiki/Category:Lyrics">Lyrics</a></li>
+				<li id="n-Guitar-tabs"><a href="/wiki/Category:Guitar_Tabs">Guitar tabs</a></li>
+			</ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="Search" onfocus="if(this.value == 'Search') { this.value = ''; }"/>
+						<input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJGSURBVDjLjdJLSNRBHMDx78yqLZaKS75DPdgDDaFDbdJmde5QlhCJGxgpRJfqEEKnIsJLB7skQYQKZaSmdLaopPCgEvSCShCMzR5a7oq7/3l12RVtjfzBMA/4fWZ+MyOccwBM3g8HEbIdfCEhfAFnLVapOa28Uevpjrqz/WOsERJgsu9Uq5CZQzgqrJfo9BajNd5irEYn4p3OUiFExtCLmw2tawFi4l5zUMjMIau9u7K+qxeoAcoAA0wDb2OPwmfA16LiiaOHLj1edRLpkO3WmIis7+oBDgJbgQ2AH6gC6jY19N62RkcctKeVIJAhp9QgUA3kJXdONZVcq9JxPSgQoXRAyIDRth8oAXQyKdWnoCKrTD9CBv4GMqx1WGNZkeRWJKbG2hiD1Cb9FbTnzWFdY/LCdLKlgNQ84gyNKqHm0gDjqVHnxDHgA/B9RQkpaB6YklkZl62np9KBhOqwjpKFgeY2YAz4BESBWHI8Hhs6PVVSvc3v98ye4fP7T676B845nt040ip98qpWJmI9PWiU6bfWgXGN2YHcKwU7tsuc4kpUPMbU0+f8+vKt+Pitl7PLAMDI9cNBoB0hQwICzjqUp6MZvsy8yvp95BRuQUjJ75mPvH4wYo1NlJ64Mza7DPwrhi8cCOeXl/aUB4P4c/NJxKLMvpngycCrzxVFG2v/CwAMnguF80oLe8p27cQh+fnpPV/fTc95S6piXQDAw7a9YbWkezZXFbAwMx/xPFXb1D3+Y90AQF/L7kAsri9mZ4lrTd0TcYA/Kakr+x2JSPUAAAAASUVORK5CYII=" alt="Search" style="vertical-align:-20%;" />
+			</div></form>
+		</div>
+		<div class="ulfooter">&nbsp;</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Tools</h5>
+		<div class="pBody">
+			<ul><li><a onclick="jQuery('#ul-toolbox').slideToggle();" style="cursor:pointer;">Toolbox</a></li><span id="ul-toolbox" class="collapsed">
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/John_Henry_Demos">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/John_Henry_Demos">Related changes</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages">Special pages</a></li>
+				<li id="t-print"><a href="/wiki/index.php?title=John_Henry_Demos&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/wiki/index.php?title=John_Henry_Demos&amp;oldid=302548">Permanent link</a></li>			</span></ul>
+			<div class="ulfooter">&nbsp;</div>
+		</div>
+	</div>
+    </div><!-- /lefttabs -->
+    </div><!-- /globalWrapper -->
+<!-- here -->
+<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-948553-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+  <script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":281});
+}</script>  </body></html>

@@ -27,6 +27,7 @@ export R_PASS=$(strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -
 docker run --rm \
  -p 8787:8787 \
  -p 8722:22 \
+ -p 8080:8080\
  -e PASSWORD=$R_PASS\
  -v $(pwd):/home/rstudio/bios611\
  -d\
@@ -55,3 +56,23 @@ if [ "$MODE" == "emacs" ];
 then
 x11docker --clipboard --share ~/.ssh --share $(pwd) --share ~/.emacs.d --share ~/.emacs-trash 611 /bin/emacs ~/work/courses/bios611/
 fi
+
+if [ "$MODE" == "jupyterlab" ];
+then
+    export R_PASS=$(strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo)
+    docker run \
+           -p 8765:8765 \
+           -p 8766:8766 \
+           -v `pwd`:/home/rstudio/project \
+           -e PASSWORD=$R_PASS \
+           -it 611 sudo -H -u rstudio /bin/bash -c "cd ~/; jupyter lab --ip 0.0.0.0 --port 8765 --no-browser"
+fi
+
+if [ "$MODE" == "shell" ];
+then
+    docker run \
+           -v `pwd`:/home/rstudio/project \
+           -it 611 sudo -H -u rstudio /bin/bash 
+fi
+
+
