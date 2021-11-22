@@ -58,10 +58,10 @@ Lab is held in: McGavran-Greenberg PH-Rm 2308
 | Mon 11/01/2021  | SKLearn Introduction               |                                                          |                                  |
 | Wed 11/03/2021  | Training Neural Networks           |                                                          |                                  |
 | Mon 11/08/2021  | Bokeh                              |                                                          |                                  |
-| Wed 11/10/2021  | Browser Based Visualization w/ d3  |                                                          |                                  |
-| Mon 11/15/2021  | Data Science Ethics                |                                                          |                                  |
+| Wed 11/10/2021  | Browser Based Visualization w/ d3  | [1][m65][2][m66]                                         |                                  |
+| Mon 11/15/2021  | Data Science Ethics                | [1][m67][2][m68]                                         |                                  |
 | Wed 11/17/2021  | Panel Discussion                   |                                                          |                                  |
-| Mon 11/22/2021  | Thanksgiving 🦃                    |                                                          |                                  |
+| Mon 11/22/2021  | Web Scraping                       | [1][m69]                                                         |                                  |
 | Wed 11/24/2021  | Feedback Day                       |                                                          |                                  |
 | Mon 11/29/2021  | Class Presentations I              |                                                          |                                  |
 | Wed 12/01/2021  | Class Presentations II             |                                                          | ---                              |
@@ -151,6 +151,11 @@ This will start an RStudio Instance.
 [m62]:https://sqlite.org/index.html
 [m63]:https://www.sqlite.org/windowfunctions.html
 [m64]:https://predictivehacks.com/dplyr-like-pipes-for-data-manipulation-in-python-using-pandas/ 
+[m65]:https://github.com/d3/d3/blob/main/API.md
+[m66]:https://bl.ocks.org/
+[m67]:https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html
+[m68]:https://theconvivialsociety.substack.com/p/the-questions-concerning-technology
+[m69]:https://en.wikipedia.org/wiki/Web_scraping
 
 [hw1]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/01-course-intro-data-scientist/homework.md
 [hw2]:https://github.com/Vincent-Toups/datasci611/blob/main/lectures/X-02-vcl/homework.md
