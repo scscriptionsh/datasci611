@@ -1,0 +1,93 @@
+Homework
+========
+
+Consider the data file available at:
+
+https://raw.githubusercontent.com/Vincent-Toups/datasci611/main/lectures/10-dimensionality-reduction/homework_data.csv
+
+1. Perform a principal component analysis in R. How many components do
+   you need to account for more than 90 percent of the variance in the
+   data set?
+   
+   ```{r}
+   library(tidyverse);
+   data <- read_csv("./homework_data.csv");
+
+   results <- prcomp(data);
+   summary(results);
+   ```
+   
+   We need two or more components to get more than 90% of the
+   variance.
+   
+2. Plot the first two components of the data. What can you say about
+   the data from this picture?
+   
+   ```{r}
+   ggplot(results$x %>% as_tibble(), aes(PC1, PC2)) + geom_point();
+
+   ```
+   
+   There appear to be two clusters here. Its interesting to know that
+   the clusters have a maximum axis of variation which isn't aligned
+   with the principal axis of variation.
+   
+3. For a data set this small we might do some due diligence. Plot each
+   pair of coordinates in the original dataset against one
+   another. Assuming we're looking for clusters in the data set, is
+   there anything we might do to the data to make it easier to extract
+   these clusters?
+   
+   ```{r}
+   plot(data);   
+   ```
+   
+   The easiest thing to do here would be to just throw away the z-axis
+   entirely. It is interesting that a PCA rotation doesn't necessarily
+   improve cluster seperation.
+   
+4. Modify you docker container to include sklearn and reticulate (you
+   make copy the appropriate lines from the 611 Dockerfile). Perform a
+   TSNE. Contrast the results with your insights from problems 1-3.
+   
+   We need lines like:
+   
+   ```{Dockerfile}
+   RUN apt update && apt-get install -y emacs openssh-server python3-pip
+   RUN pip3 install beautifulsoup4 theano tensorflow keras sklearn pandas numpy pandasql
+   RUN R -e "install.packages(\"reticulate\")";
+   ```
+   
+   ```{r}
+   library(reticulate);
+   use_python("/usr/bin/python3");
+   mfd <- import("sklearn.manifold");
+
+   tsne <- function(data, dims=2){
+       instance <- mfd$TSNE(n_components=as.integer(dims));
+       instance$fit_transform(data %>% as.matrix()) %>% as_tibble();
+   }
+
+   tsne_1 <- tsne(data);
+
+   ggplot(tsne_1, aes(V1, V2)) + geom_point();
+   
+   ```
+   
+   In this "projection" there appear to be 3 clusters. This is
+   probably because there is some separation in the data in the
+   z-direction which is difficult to see in a pure rotation like PCA.
+   
+5. Repeat the TSNE a few times. Do you get different results?
+
+```{r}
+library(gridArrange)
+
+tsne_1 <- tsne(data);
+ggplot(tsne_1, aes(V1, V2)) + geom_point();
+
+```
+
+While we do get different point distributions from multiple runs, the
+pattern of points is pretty stable between runs. This at least
+suggests that these results are stable.

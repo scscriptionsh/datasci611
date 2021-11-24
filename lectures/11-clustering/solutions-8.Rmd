@@ -1,0 +1,181 @@
+Consider the following data set:
+
+
+```{r}
+data <- rbind(tibble(x=rnorm(100, 3, 1),
+                     y=rnorm(100, 3, 1)),
+              tibble(x=rnorm(100, -3, 1),
+                     y=rnorm(100, 3, 1)),
+              tibble(x=rnorm(100, 0, 1),
+                     y=rnorm(100, -3, 1)));
+
+ggplot(data, aes(x,y)) + geom_point() + coord_equal()
+
+```
+
+1. Perform a k-means clustering with 3 clusters and plot the results
+   with the clusters color coded.
+   
+   ```{r}
+   results <- kmeans(data, centers=3)
+   ggplot(data, aes(x,y)) + geom_point(aes(color=factor(results$cluster)))
+   
+   ```
+   
+2. Now consider clustering with n = 2, 3, 4, 5, 6 clusters. Repeat the
+   clustering 5 times for each number of clusters and calculate the
+   normalized mutual information between all the clusterings for each
+   different number of clusters. Plot the average value of these
+   mutual informations for n = 2, 3, 4, 5, 6.
+   
+   What is your interpretation of these results?
+   
+   ```{r}
+
+   shannon <- function(tokens){
+       tbl <- table(tokens);
+       p <- (tbl %>% as.numeric())/sum(tbl %>% as.numeric());
+       sum(-p*log(p));
+   }
+   
+   mutinf <- function(a,b){
+       sa <- shannon(a);
+       sb <- shannon(b);
+       sab <- shannon(sprintf("%d:%d", a, b));
+       sa + sb - sab;
+   }
+
+   normalized_mutinf <- function(a,b){
+       2*mutinf(a,b)/(shannon(a)+shannon(b));
+   }
+
+   one_run <- function(data, n_clusters, n_runs=5){
+       clusterings <- Map(function(i){
+           results <- kmeans(data, n_clusters);
+           results$cluster
+       }, seq(n_runs));
+       out <- c();
+       for(i in 1:length(clusterings)){
+           for(j in 1:length(clusterings)){
+               if(j>i){
+                   out <- c(out, normalized_mutinf(clusterings[[i]],
+                                                   clusterings[[j]]));
+               }
+           }
+       }
+       tibble(n=n_clusters, m=mean(out), s=sd(out));
+   }
+
+   do_runs <- function(data, n_clusters){
+       do.call(rbind, Map(function(nc){
+           one_run(data, nc, n_runs=10);
+       }, n_clusters))
+   }
+
+   r <- do_runs(data, n_clusters=c(2,3,4,5,6));
+
+   ggplot(r, aes(n, m)) + geom_line() + geom_errorbar(aes(x=n, ymin=m-s, ymax=m+s));
+                
+   ```
+   
+
+It looks like the average value of the normalized mutual information is 
+a good diagnostic for number of clusters. This makes sense because
+there are more ways of distributing points to cluster centers when there isn't
+a one-to-one relationship between true cluster centers and guessed cluster
+centers.
+
+You can see this by trying to put two cluster centers in one 2d gaussian. 
+The optimal placement of these two centers is one that equally partitions the
+data but the axis of symmetry is free, two random partitions of the data will
+tend to have low mutual information.
+
+The limitations of this method are also clear in this picture. If the single 
+cluster is oblate, then there is a stable clustering for two clusters, even 
+though there is a single cluster involved.
+   
+3. Now consider this data set:
+
+```{r}
+library(tidyverse)
+data2 <- rbind(tibble(r=rnorm(100, 3, 0.8),
+                      th=rnorm(100, 3, 0.1)),
+               tibble(r=rnorm(100, 0, 1.2),
+                      th=rnorm(100, 3*pi/2, 0.1)),
+               tibble(r=rnorm(400, 6, 0.5),
+                      th=runif(400, 0, 2*pi))) %>%
+    transmute(x=r*cos(th),y=r*sin(th)); 
+ggplot(data2, aes(x,y)) + geom_point()
+
+```
+
+Do you expect k-means to work on this data set? What about
+fuzzy-c-means? Why or why not?
+
+Answer: this data set has two clusters which are concentric, therefor
+neither k-means or fuzzy-c-means will work.
+
+4. Find all the pairwise euclidean distances between the points and
+   construct a similarity matrix for this data set.
+   
+   Hint: the package "rdist" provides a function "rdist" which
+   calculates a matrix of pairwise distances.
+   
+   Once you have this matrix, choose a threshold (by looking at the
+   plot) and then invoke spectral clustering via reticulate following
+   the example in the class with this matrix.
+   
+   You will need to specific the "precomputed" "affinity" option.
+   
+   Cluster with 3 clusters and make a color coded plot of your
+   results.
+   
+```{r}
+library(rdist);
+
+distances <- pdist(data2);
+
+```
+
+It is handy to look at the distribution of distances we got back.
+
+```{r}
+ggplot(distances[upper.tri(distances)] %>% as_tibble(), aes(value)) +
+       geom_density();
+```
+
+From this we can choose a threshold distance of 0.5 or less. You can
+also just see this by inspection - what is the typical distance
+between points in the disk?
+
+```{r}
+
+similarity <- 1*(distances < 0.75);
+similarity[1:10,1:10];
+
+```
+
+Now we just feed this to our spectral clustering:
+
+```{r}
+library(reticulate);
+use_python("/usr/bin/python3");
+
+cluster <- import("sklearn.cluster");
+sc <- cluster$SpectralClustering(n_clusters=as.integer(3),
+                                 affinity="precomputed");
+clusters <- sc$fit_predict(similarity);
+
+ggplot(data2, aes(x,y)) + geom_point(aes(color=factor(clusters)));
+
+```
+
+It is very challenging to choose a threshold to cluster this data that
+results in the "obvious" 3 clusters.
+
+The students should point out that this is because the cluster between
+the central cluster and the annulus has several members very near the
+annulus. Because spectral clustering is based on such local closeness,
+its difficult to choose a threshold which separates these points from
+the annulus.
+
