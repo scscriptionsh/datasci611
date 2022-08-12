@@ -47,3 +47,5 @@ flycheck_*.el
 # network security
 /network-security.data
 
+/X-01-web-scraping/lecture_scrape_cache/
+**/.ipynb_checkpoints/
