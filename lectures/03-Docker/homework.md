@@ -1,27 +1,26 @@
 Docker Homework
 ===============
 
-We invoke docker like this:
+To use RStudio, We invoke docker like this:
 
-```
+
      docker run\
      -e PASSWORD=yourpassword\
      --rm\
      -v $(pwd):/home/rstudio/work
      -p 8787:8787\
      -t my_image
-```
 
 Sometimes its handy to launch it like this:
 
-```
+
      docker run\
      -e PASSWORD=yourpassword\
      --rm\
      -v $(pwd):/home/rstudio/work
      -p 8787:8787\
      -it my_image /bin/bash
-```
+
 
 Using the Docker documentation (either its man page or its web based
 documentation) figure out what the difference between these two

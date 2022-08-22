@@ -60,7 +60,7 @@
 		    .attr("character", d => d.character)
 		    .on('click', function(){
 			const character = d3.select(this).attr("character");
-			d3.select(this).attr("fill","#0000ff");
+			d3.select(this).attr("fill","#8833ff");
 			if(last_selection) d3.select(last_selection).attr("fill","#000000");
 			last_selection = this;
 			d3.select("#character").text(character);

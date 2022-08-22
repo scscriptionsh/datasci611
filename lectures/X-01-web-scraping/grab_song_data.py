@@ -9,7 +9,7 @@ def get_extended_song_data(song_info):
         data['album'] = song_info['album'];
         return data;
     except Exception as e:
-        print("Error with {} ({})".format(url, e));
+        print("Error with {} ({})".format(song_info['url'], e));
         return None;
 
 out = [];
@@ -19,8 +19,3 @@ for info in song_infos:
         out.append(o);
 
 tmbg.write_file("derived_data/song-data.json",json.dumps(out));
-
-
-
-
-        

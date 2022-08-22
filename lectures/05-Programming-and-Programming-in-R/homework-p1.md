@@ -6,16 +6,16 @@ Homework Part 1
    Rule 6 to account for this behavior. Did we need to?
 3. Given the following code:
 
-```
-test_value <- 10;
-for(x in 1:100){
-    test_value <- x;
-}
-test_value
-```
 
-What can you conclude about the _environment_ where the body of the
-for loop is interpreted by R?
+        test_value <- 10;
+        for(x in 1:100){
+            test_value <- x;
+        }
+        test_value
+
+
+    What can you conclude about the _environment_ where the body of the
+    for loop is interpreted by R?
 
 4. Write a snippet to test whether `while` loops follow the same rule.
 5. The Fibbonoci Sequence:
@@ -29,9 +29,11 @@ for loop is interpreted by R?
    gives successive fibonocci numbers upon repeated invocation.
    
 6. The sequence (1,1) constitutes the initial condition for the
-   Fibbonoci sequence. Write a second function that produces a
-   function which counts up a sequence generated with an arbitrary
-   initial condition.
+   Fibbonoci sequence. That is to say that we can't apply the rule
+   "the next fibbonoci number is the sum of the previous two" without
+   specifying at least two numbers to begin with. Write a second
+   function that produces a function which counts up a sequence
+   generated with an arbitrary initial condition.
    
    Something like this:
    
@@ -42,3 +44,5 @@ for loop is interpreted by R?
        }
        }
    ```
+
+7. Explain how the code in 6 works.

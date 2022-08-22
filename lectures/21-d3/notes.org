@@ -107,6 +107,7 @@ races. As usual, we can do this from our Docker container like so:
 docker run -v $(pwd):/home/rstudio/project -p 8000:8000\
  --user rstudio\
  --workdir /home/rstudio/project/lectures/21-d3\
+ -t 611
  python3 -m http.server 8000
 #+end_src
 

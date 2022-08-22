@@ -1,0 +1,26 @@
+* Grading
+
+
+The students should submit a screenshot of an Rstudio server
+running. In the terminal they should have a string like:
+
+```
+<onyen> e1b058728f00f6009214ab70fbf9c20d -
+```
+
+The precise set of numbers is determined by their Onyen. You can check
+it by calculating the md5sum of the following string:
+
+```
+<onyen>@longleaf.unc.edu:/nas/longleaf/home/<onyen> /home/<onyen>/storage 
+```
+
+eg:
+
+```
+echo <onyen>@longleaf.unc.edu:/nas/longleaf/home/<onyen> /home/<onyen>/storage | md5sum
+```
+
+Should give you the result they post.
+
+toups@longleaf.unc.edu:/nas/longleaf/home/toups /home/toups/storage

@@ -11,6 +11,6 @@ for album in albums:
     for sub_url in urls:
         song_urls.append({"album":album["title"], "url":sub_url});
 
-write_file("derived_data/song-urls.json", json.dumps(song_urls));
+tmbg.write_file("derived_data/song-urls.json", json.dumps(song_urls));
 
     

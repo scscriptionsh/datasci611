@@ -49,3 +49,15 @@ flycheck_*.el
 
 /X-01-web-scraping/lecture_scrape_cache/
 **/.ipynb_checkpoints/
+**/solutions.md
+**/solutions.org
+**/solutions.Rmd
+**/derived_data/
+**/.Rhistory
+**/__pycache__
+**/.jupyter
+**/.keras
+**/.local
+**/.npm
+**/.ipython
+**/.python_history

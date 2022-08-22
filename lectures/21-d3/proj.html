@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is Hello World page</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    function main(){
+	Promise.all([
+            d3.csv("derived_data/tsne_proj.csv", function(row){
+	        row.X1 = +row.X1;
+	        row.X2 = +row.X2;
+	        return row;
+	    }),
+            d3.csv("derived_data/isomap_proj.csv", function(row){
+	        row.X1 = +row.X1;
+	        row.X2 = +row.X2;
+	        return row;
+	    })]).then(function(data){
+                const tsne = data[0];
+                const isomap = data[1];
+                var curset = "tsne";
+	        d3.select("#content")
+		    .selectAll("circle")
+		    .data(tsne)
+		    .enter().append("circle")
+		    .attr("cx", function(d) {return d.X1})
+		    .attr("cy", d => d.X2)
+                    .attr("fill", d => d3.rgb(d.X1*255, d.X2*255, 0, 0.5))
+		    .attr("r", 0.01);
+                d3.select("#content")
+                    .on("click", function(){
+                        console.log("click");
+                        curset = curset == "tsne" ? "isomap" : "tsne";
+                        const d = curset == "tsne" ? tsne : isomap;
+                        d3.select("#title").text("Powers: " + curset.toUpperCase());
+                        d3.select("#content")
+		            .selectAll("circle")
+		            .data(d)
+                            .transition(d3.transition().duration(2000))
+		            .attr("cx", function(d) {return d.X1})
+		            .attr("cy", d => d.X2);
+                    });
+	    });
+    };
+    document.addEventListener("DOMContentLoaded", main);
+    console.log("Hello There");
+    
+  </script>
+</head>
+<body>
+  <h1 id="title">Powers: TSNE</h1>
+  <svg id="content" width="500" height="500" viewBox="0 0 1 1"></svg>
+</body>
+</html>

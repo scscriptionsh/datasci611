@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-15 Mon 14:40 -->
+<!-- 2021-11-15 Mon 16:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -194,50 +194,26 @@
   /*]]>*/-->
 </style>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -246,29 +222,30 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc0e4064">1. D3/Browser Based Visualization</a>
+<li><a href="#orgfb29def">1. D3/Browser Based Visualization</a>
 <ul>
-<li><a href="#org3fd43a8">1.1. Why</a></li>
-<li><a href="#org7037f9a">1.2. Downsides</a></li>
-<li><a href="#orgfd0834e">1.3. Preliminaries</a></li>
-<li><a href="#orgde7b2ce">1.4. Loading external data</a></li>
-<li><a href="#org20f6aef">1.5. More Data</a></li>
-<li><a href="#org8f6cb48">1.6. A Second Panel</a></li>
+<li><a href="#orgf0821a4">1.1. Why</a></li>
+<li><a href="#orge22065e">1.2. Downsides</a></li>
+<li><a href="#org6bd31a3">1.3. Javascript</a></li>
+<li><a href="#org5dbc6dc">1.4. Preliminaries</a></li>
+<li><a href="#orgbd33f7e">1.5. Loading external data</a></li>
+<li><a href="#orga503cf6">1.6. More Data</a></li>
+<li><a href="#orga83798b">1.7. A Second Panel</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc0e4064" class="outline-2">
-<h2 id="orgc0e4064"><span class="section-number-2">1</span> D3/Browser Based Visualization</h2>
+<div id="outline-container-orgfb29def" class="outline-2">
+<h2 id="orgfb29def"><span class="section-number-2">1</span> D3/Browser Based Visualization</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 What the heck - let's do it. 
 </p>
 </div>
 
-<div id="outline-container-org3fd43a8" class="outline-3">
-<h3 id="org3fd43a8"><span class="section-number-3">1.1</span> Why</h3>
+<div id="outline-container-orgf0821a4" class="outline-3">
+<h3 id="orgf0821a4"><span class="section-number-3">1.1</span> Why</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Data scientists make a lot of visualizations and the browser is the
@@ -288,8 +265,8 @@ browser but these tools just get in the way, in my opinion.
 </div>
 </div>
 
-<div id="outline-container-org7037f9a" class="outline-3">
-<h3 id="org7037f9a"><span class="section-number-3">1.2</span> Downsides</h3>
+<div id="outline-container-orge22065e" class="outline-3">
+<h3 id="orge22065e"><span class="section-number-3">1.2</span> Downsides</h3>
 <div class="outline-text-3" id="text-1-2">
 <ol class="org-ol">
 <li>You have to learn Javascript/HTML/ etc.</li>
@@ -303,38 +280,81 @@ stuff you have to do with data science.
 </div>
 </div>
 
-<div id="outline-container-orgfd0834e" class="outline-3">
-<h3 id="orgfd0834e"><span class="section-number-3">1.3</span> Preliminaries</h3>
+<div id="outline-container-org6bd31a3" class="outline-3">
+<h3 id="org6bd31a3"><span class="section-number-3">1.3</span> Javascript</h3>
 <div class="outline-text-3" id="text-1-3">
+<p>
+Real fast:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #20b2aa; font-weight: bold;">function</span> <span style="color: #00ff7f;">plus</span>(<span style="color: #9acd32;">a</span>,<span style="color: #9acd32;">b</span>){
+  <span style="color: #20b2aa; font-weight: bold;">return</span> a + b;
+}
+
+<span style="color: #20b2aa; font-weight: bold;">if</span>(a &lt; b){
+   console.log(a);
+} <span style="color: #20b2aa; font-weight: bold;">else</span> {
+   console.log(b);
+}
+
+<span style="color: #20b2aa; font-weight: bold;">for</span>(<span style="color: #20b2aa; font-weight: bold;">var</span> <span style="color: #9acd32;">i</span> = 0; i &lt; 10; i = i + 1){
+   console.log(i);
+}
+
+<span style="color: #20b2aa; font-weight: bold;">var</span> <span style="color: #9acd32;">i</span> = 0;
+<span style="color: #20b2aa; font-weight: bold;">while</span>(i &lt; 10){
+  i++;
+  console.log(i);
+}
+
+[1,2,3,4,5].foreach((n, i) =&gt; console.log(n+i));
+
+<span style="color: #20b2aa; font-weight: bold;">const</span> <span style="color: #9acd32;">dict</span> = {x:10, y:11, f:<span style="color: #20b2aa; font-weight: bold;">function</span>(){console.log(<span style="color: #1e90ff;">this</span>.x)}};
+console.log(dict[<span style="color: #ffa07a;">"x"</span>]);
+console.log(dict.y);
+
+</pre>
+</div>
+
+<p>
+Thats pretty much it!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5dbc6dc" class="outline-3">
+<h3 id="org5dbc6dc"><span class="section-number-3">1.4</span> Preliminaries</h3>
+<div class="outline-text-3" id="text-1-4">
 <p>
 You can get pretty far just opening up files on your computer with
 your browser:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;This is Hello World page&lt;/title&gt;
-  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
-  &lt;script&gt;
+<pre class="src src-html">&lt;<span style="color: #20b2aa; font-weight: bold;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #00ff7f;">html</span>&gt;
+&lt;<span style="color: #00ff7f;">head</span>&gt;
+  &lt;<span style="color: #00ff7f;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">This is Hello World page</span>&lt;/<span style="color: #00ff7f;">title</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span> <span style="color: #9acd32;">src</span>=<span style="color: #ffa07a;">"https://d3js.org/d3.v7.min.js"</span>&gt;&lt;/<span style="color: #00ff7f;">script</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span>&gt;
     function main(){
-	d3.select("#content")
-	    .selectAll("p")
-	    .data([4, 8, 15, 16, 23, 42])
-	    .enter().append("p")
-	    .text(function(d) { return "I’m number " + d + "!"; });	
+        d3.select("#content")
+            .selectAll("p")
+            .data([4, 8, 15, 16, 23, 42])
+            .enter().append("p")
+            .text(function(d) { return "I&#8217;m number " + d + "!"; });     
     };
     document.addEventListener("DOMContentLoaded", main);
     console.log("Hello There");
 
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello World&lt;/h1&gt;
-  &lt;div id="content"&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  &lt;/<span style="color: #00ff7f;">script</span>&gt;
+&lt;/<span style="color: #00ff7f;">head</span>&gt;
+&lt;<span style="color: #00ff7f;">body</span>&gt;
+  &lt;<span style="color: #00ff7f;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Hello World</span>&lt;/<span style="color: #00ff7f;">h1</span>&gt;
+  &lt;<span style="color: #00ff7f;">div</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"content"</span>&gt;&lt;/<span style="color: #00ff7f;">div</span>&gt;
+&lt;/<span style="color: #00ff7f;">body</span>&gt;
+&lt;/<span style="color: #00ff7f;">html</span>&gt;
 </pre>
 </div>
 
@@ -376,9 +396,9 @@ What about loading external data?
 </div>
 </div>
 
-<div id="outline-container-orgde7b2ce" class="outline-3">
-<h3 id="orgde7b2ce"><span class="section-number-3">1.4</span> Loading external data</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-orgbd33f7e" class="outline-3">
+<h3 id="orgbd33f7e"><span class="section-number-3">1.5</span> Loading external data</h3>
+<div class="outline-text-3" id="text-1-5">
 <p>
 #+INCLUDE" ex2.html src html
 </p>
@@ -400,9 +420,9 @@ races. As usual, we can do this from our Docker container like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">docker run -v $(pwd):/home/rstudio/project -p 8000:8000\
- --user rstudio\
- --workdir /home/rstudio/project/lectures/21-d3\
+<pre class="src src-sh">docker run -v $(<span style="color: #fa8072;">pwd</span>):/home/rstudio/project -p 8000:8000<span style="color: #ffa07a;">\</span>
+ --user rstudio<span style="color: #ffa07a;">\</span>
+ --workdir /home/rstudio/project/lectures/21-d3<span style="color: #ffa07a;">\</span>
  python3 -m http.server 8000
 </pre>
 </div>
@@ -412,35 +432,35 @@ Let's do something with the data:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;This is Hello World page&lt;/title&gt;
-  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
-  &lt;script&gt;
+<pre class="src src-html">&lt;<span style="color: #20b2aa; font-weight: bold;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #00ff7f;">html</span>&gt;
+&lt;<span style="color: #00ff7f;">head</span>&gt;
+  &lt;<span style="color: #00ff7f;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">This is Hello World page</span>&lt;/<span style="color: #00ff7f;">title</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span> <span style="color: #9acd32;">src</span>=<span style="color: #ffa07a;">"https://d3js.org/d3.v7.min.js"</span>&gt;&lt;/<span style="color: #00ff7f;">script</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span>&gt;
     function main(){
-	d3.csv("source_data/powers_tsne.csv", function(row){
-	    row.X1 = +row.X1;
-	    row.X2 = +row.X2;
-	    return row;
-	}).then(function(data){
-	    d3.select("#content")
-		.selectAll("p")
-		.data(data)
-		.enter().append("p")
-		.text(function(d) { return "I'm character " + d.character + "!"; });
-	});
+        d3.csv("source_data/powers_tsne.csv", function(row){
+            row.X1 = +row.X1;
+            row.X2 = +row.X2;
+            return row;
+        }).then(function(data){
+            d3.select("#content")
+                .selectAll("p")
+                .data(data)
+                .enter().append("p")
+                .text(function(d) { return "I'm character " + d.character + "!"; });
+        });
     };
     document.addEventListener("DOMContentLoaded", main);
     console.log("Hello There");
 
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello World&lt;/h1&gt;
-  &lt;div id="content"&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  &lt;/<span style="color: #00ff7f;">script</span>&gt;
+&lt;/<span style="color: #00ff7f;">head</span>&gt;
+&lt;<span style="color: #00ff7f;">body</span>&gt;
+  &lt;<span style="color: #00ff7f;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Hello World</span>&lt;/<span style="color: #00ff7f;">h1</span>&gt;
+  &lt;<span style="color: #00ff7f;">div</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"content"</span>&gt;&lt;/<span style="color: #00ff7f;">div</span>&gt;
+&lt;/<span style="color: #00ff7f;">body</span>&gt;
+&lt;/<span style="color: #00ff7f;">html</span>&gt;
 </pre>
 </div>
 
@@ -463,37 +483,37 @@ Javascript works but let's cut to the chase.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;This is Hello World page&lt;/title&gt;
-  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
-  &lt;script&gt;
+<pre class="src src-html">&lt;<span style="color: #20b2aa; font-weight: bold;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #00ff7f;">html</span>&gt;
+&lt;<span style="color: #00ff7f;">head</span>&gt;
+  &lt;<span style="color: #00ff7f;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">This is Hello World page</span>&lt;/<span style="color: #00ff7f;">title</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span> <span style="color: #9acd32;">src</span>=<span style="color: #ffa07a;">"https://d3js.org/d3.v7.min.js"</span>&gt;&lt;/<span style="color: #00ff7f;">script</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span>&gt;
     function main(){
-	d3.csv("source_data/powers_tsne.csv", function(row){
-	    row.X1 = +row.X1;
-	    row.X2 = +row.X2;
-	    return row;
-	}).then(function(data){
-	    d3.select("#content")
-		.selectAll("circle")
-		.data(data)
-		.enter().append("circle")
-		.attr("cx", function(d) {return d.X1})
-		.attr("cy", d =&gt; d.X2)
-		.attr("r", 1)
-	});
+        d3.csv("source_data/powers_tsne.csv", function(row){
+            row.X1 = +row.X1;
+            row.X2 = +row.X2;
+            return row;
+        }).then(function(data){
+            d3.select("#content")
+                .selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                .attr("cx", function(d) {return d.X1})
+                .attr("cy", d =&gt; d.X2)
+                .attr("r", 1)
+        });
     };
     document.addEventListener("DOMContentLoaded", main);
     console.log("Hello There");
 
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Powers&lt;/h1&gt;
-  &lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  &lt;/<span style="color: #00ff7f;">script</span>&gt;
+&lt;/<span style="color: #00ff7f;">head</span>&gt;
+&lt;<span style="color: #00ff7f;">body</span>&gt;
+  &lt;<span style="color: #00ff7f;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Powers</span>&lt;/<span style="color: #00ff7f;">h1</span>&gt;
+  &lt;<span style="color: #00ff7f;">svg</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"content"</span> <span style="color: #9acd32;">width</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">height</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">viewBox</span>=<span style="color: #ffa07a;">"-75 -75 150 150"</span>&gt;&lt;/<span style="color: #00ff7f;">svg</span>&gt;
+&lt;/<span style="color: #00ff7f;">body</span>&gt;
+&lt;/<span style="color: #00ff7f;">html</span>&gt;
 </pre>
 </div>
 
@@ -508,64 +528,64 @@ the attribute of some HTML element).
 </div>
 </div>
 
-<div id="outline-container-org20f6aef" class="outline-3">
-<h3 id="org20f6aef"><span class="section-number-3">1.5</span> More Data</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-orga503cf6" class="outline-3">
+<h3 id="orga503cf6"><span class="section-number-3">1.6</span> More Data</h3>
+<div class="outline-text-3" id="text-1-6">
 <p>
 Consider:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;This is Hello World page&lt;/title&gt;
-  &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
-  &lt;script&gt;
+<pre class="src src-html">&lt;<span style="color: #20b2aa; font-weight: bold;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #00ff7f;">html</span>&gt;
+&lt;<span style="color: #00ff7f;">head</span>&gt;
+  &lt;<span style="color: #00ff7f;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">This is Hello World page</span>&lt;/<span style="color: #00ff7f;">title</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span> <span style="color: #9acd32;">src</span>=<span style="color: #ffa07a;">"https://d3js.org/d3.v7.min.js"</span>&gt;&lt;/<span style="color: #00ff7f;">script</span>&gt;
+  &lt;<span style="color: #00ff7f;">script</span>&gt;
     const power_names = "accelerated_healing,adhesion,aerokinesis,alien_physiology,amphibian,android_body,animal_control,animal_empathy,animal_mimicry,astral_projection,atlantean_physiology,balance_manipulation,bio_fission,bio_fusion,bizarro_physiology,body_art_animation,cheating_death,chemical_catalysis,chi_manipulation,chlorokinesis,chronokinesis,clairvoyance,claws,cosmic_awareness,cryokinesis,crystal_generation,cybernetic_enhancement,darkness_manipulation,decelerated_aging,deflection,density_control,dimensional_travel,discern_motivation,disintegration,divine_empowerment,divine_grace,echolocation,ectokinesis,eidetic_kinesthesia,elasticity,electrokinesis,electromagnetism,elemental_control,empathy,energy_absorption,energy_construct_creation,energy_negation,energy_projection,energy_resistance,energy_transference,enhanced_hearing,enhanced_intellect,enhanced_sense_of_smell,enhanced_senses,enhanced_vision,exorcism,fatal_touch,fear_projection,flight,force_field,geokinesis,gravity_manipulation,healing,hydrokinesis,hypnosis,illusion_casting,immortality,infection,intangibility,interstellar_travel,invisibility,invulnerability,lycanthropy,magic,magnetic_manipulation,matter_absorption,mechanokinesis,metamorphosis,mind_control,molecular_acceleration,molecular_reconstruction,necromancy,necrotic_empowerment,omnipotence,omnipresence,omniscience,phasing,pheromone_control,photokinesis,possession,power_absorption,power_distribution,power_replication,precognition,prehensile_hair,probability_manipulation,psychic_link,psychokinesis,pyrokinesis,radiation_production,reality_alteration,regeneration,removable_limbs,resurrection,retrocognition,robot_body,self_sustenance,size_alteration,sound_manipulation,summoning,super_breath,super_leaping,superhuman_agility,superhuman_durability,superhuman_reflexes,superhuman_speed,superhuman_stamina,superhuman_strength,symbiosis,talons,telekinesis,telepathy,teleportation,therianthropy,thermal_blast,thermokinesis,toxic_immunity,toxikinesis,transformation,unique_physiology,vampirism,water_sense,weather_manipulation,zombie_physiology".split(",");
     function main(){
-	const powers_index = {};
-	Promise.all([
-	    d3.csv("source_data/powers_tsne.csv", function(row){
-		row.X1 = +row.X1;
-		row.X2 = +row.X2;
-		return row;
-	    }),
-	    d3.csv("source_data/powers_for_tsne.csv", function(row, index){
-		power_names.forEach(name =&gt; row[name] = +row[name]);
-		powers_index[row.character] = index;
-		return row;
-	    })
-	])
-	    .then(function(data){
-		const proj = data[0];
-		const vecs = data[1];
-		d3.select("#content")
-		    .selectAll("circle")
-		    .data(proj)
-		    .enter().append("circle")
-		    .attr("cx", function(d) {return d.X1})
-		    .attr("cy", d =&gt; d.X2)
-		    .attr("r", 1)
-		    .attr("character", d =&gt; d.character)
-		    .on('mouseover', function(){
-			d3.select("#character").text(d3.select(this).attr("character"));
-		    })
+        const powers_index = {};
+        Promise.all([
+            d3.csv("source_data/powers_tsne.csv", function(row){
+                row.X1 = +row.X1;
+                row.X2 = +row.X2;
+                return row;
+            }),
+            d3.csv("source_data/powers_for_tsne.csv", function(row, index){
+                power_names.forEach(name =&gt; row[name] = +row[name]);
+                powers_index[row.character] = index;
+                return row;
+            })
+        ])
+            .then(function(data){
+                const proj = data[0];
+                const vecs = data[1];
+                d3.select("#content")
+                    .selectAll("circle")
+                    .data(proj)
+                    .enter().append("circle")
+                    .attr("cx", function(d) {return d.X1})
+                    .attr("cy", d =&gt; d.X2)
+                    .attr("r", 1)
+                    .attr("character", d =&gt; d.character)
+                    .on('mouseover', function(){
+                        d3.select("#character").text(d3.select(this).attr("character"));
+                    })
 
-	});
+        });
     };
     document.addEventListener("DOMContentLoaded", main);
     console.log("Hello There");
 
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Powers&lt;/h1&gt;
-  &lt;h2 id="character"&gt;superman&lt;/h2&gt;
-  &lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;&lt;/br&gt;
-  &lt;svg id="powers" width="500" height="50" viewBox="0 0 500 50"&gt;&lt;/svg&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  &lt;/<span style="color: #00ff7f;">script</span>&gt;
+&lt;/<span style="color: #00ff7f;">head</span>&gt;
+&lt;<span style="color: #00ff7f;">body</span>&gt;
+  &lt;<span style="color: #00ff7f;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Powers</span>&lt;/<span style="color: #00ff7f;">h1</span>&gt;
+  &lt;<span style="color: #00ff7f;">h2</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"character"</span>&gt;<span style="font-weight: bold; font-style: italic; text-decoration: underline;">superman</span>&lt;/<span style="color: #00ff7f;">h2</span>&gt;
+  &lt;<span style="color: #00ff7f;">svg</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"content"</span> <span style="color: #9acd32;">width</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">height</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">viewBox</span>=<span style="color: #ffa07a;">"-75 -75 150 150"</span>&gt;&lt;/<span style="color: #00ff7f;">svg</span>&gt;&lt;/<span style="color: #00ff7f;">br</span>&gt;
+  &lt;<span style="color: #00ff7f;">svg</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"powers"</span> <span style="color: #9acd32;">width</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">height</span>=<span style="color: #ffa07a;">"50"</span> <span style="color: #9acd32;">viewBox</span>=<span style="color: #ffa07a;">"0 0 500 50"</span>&gt;&lt;/<span style="color: #00ff7f;">svg</span>&gt;
+&lt;/<span style="color: #00ff7f;">body</span>&gt;
+&lt;/<span style="color: #00ff7f;">html</span>&gt;
 </pre>
 </div>
 
@@ -574,9 +594,9 @@ Notes:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;body&gt;
-  &lt;h1&gt;Powers&lt;/h1&gt;
-  &lt;h2 id="character"&gt;superman&lt;/h2&gt;
+<pre class="src src-html">&lt;<span style="color: #00ff7f;">body</span>&gt;
+  &lt;<span style="color: #00ff7f;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Powers</span>&lt;/<span style="color: #00ff7f;">h1</span>&gt;
+  &lt;<span style="color: #00ff7f;">h2</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"character"</span>&gt;<span style="font-weight: bold; font-style: italic; text-decoration: underline;">superman</span>&lt;/<span style="color: #00ff7f;">h2</span>&gt;
 </pre>
 </div>
 
@@ -589,9 +609,9 @@ And:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;h1&gt;Powers&lt;/h1&gt;
-&lt;h2 id="character"&gt;superman&lt;/h2&gt;
-&lt;svg id="content" width="500" height="500" viewBox="-75 -75 150 150"&gt;&lt;/svg&gt;&lt;/br&gt;
+<pre class="src src-html">&lt;<span style="color: #00ff7f;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Powers</span>&lt;/<span style="color: #00ff7f;">h1</span>&gt;
+&lt;<span style="color: #00ff7f;">h2</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"character"</span>&gt;<span style="font-weight: bold; font-style: italic; text-decoration: underline;">superman</span>&lt;/<span style="color: #00ff7f;">h2</span>&gt;
+&lt;<span style="color: #00ff7f;">svg</span> <span style="color: #9acd32;">id</span>=<span style="color: #ffa07a;">"content"</span> <span style="color: #9acd32;">width</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">height</span>=<span style="color: #ffa07a;">"500"</span> <span style="color: #9acd32;">viewBox</span>=<span style="color: #ffa07a;">"-75 -75 150 150"</span>&gt;&lt;/<span style="color: #00ff7f;">svg</span>&gt;&lt;/<span style="color: #00ff7f;">br</span>&gt;
 </pre>
 </div>
 
@@ -602,14 +622,14 @@ We're now loading two data sets:
 <div class="org-src-container">
 <pre class="src src-html">Promise.all([
     d3.csv("source_data/powers_tsne.csv", function(row){
-	row.X1 = +row.X1;
-	row.X2 = +row.X2;
-	return row;
+        row.X1 = +row.X1;
+        row.X2 = +row.X2;
+        return row;
     }),
     d3.csv("source_data/powers_for_tsne.csv", function(row, index){
-	power_names.forEach(name =&gt; row[name] = +row[name]);
-	powers_index[row.character] = index;
-	return row;
+        power_names.forEach(name =&gt; row[name] = +row[name]);
+        powers_index[row.character] = index;
+        return row;
     })
 ])
 </pre>
@@ -633,9 +653,9 @@ And finally, we've added a mouseover event handler:
 </div>
 </div>
 
-<div id="outline-container-org8f6cb48" class="outline-3">
-<h3 id="org8f6cb48"><span class="section-number-3">1.6</span> A Second Panel</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-orga83798b" class="outline-3">
+<h3 id="orga83798b"><span class="section-number-3">1.7</span> A Second Panel</h3>
+<div class="outline-text-3" id="text-1-7">
 <p>
 Let's do something with that extra SVG. Natural thing to do is add the
 powers for the given character. That was the purpose of building the
@@ -651,66 +671,66 @@ index in the previous step.
   &lt;script&gt;
     const power_names = "accelerated_healing,adhesion,aerokinesis,alien_physiology,amphibian,android_body,animal_control,animal_empathy,animal_mimicry,astral_projection,atlantean_physiology,balance_manipulation,bio_fission,bio_fusion,bizarro_physiology,body_art_animation,cheating_death,chemical_catalysis,chi_manipulation,chlorokinesis,chronokinesis,clairvoyance,claws,cosmic_awareness,cryokinesis,crystal_generation,cybernetic_enhancement,darkness_manipulation,decelerated_aging,deflection,density_control,dimensional_travel,discern_motivation,disintegration,divine_empowerment,divine_grace,echolocation,ectokinesis,eidetic_kinesthesia,elasticity,electrokinesis,electromagnetism,elemental_control,empathy,energy_absorption,energy_construct_creation,energy_negation,energy_projection,energy_resistance,energy_transference,enhanced_hearing,enhanced_intellect,enhanced_sense_of_smell,enhanced_senses,enhanced_vision,exorcism,fatal_touch,fear_projection,flight,force_field,geokinesis,gravity_manipulation,healing,hydrokinesis,hypnosis,illusion_casting,immortality,infection,intangibility,interstellar_travel,invisibility,invulnerability,lycanthropy,magic,magnetic_manipulation,matter_absorption,mechanokinesis,metamorphosis,mind_control,molecular_acceleration,molecular_reconstruction,necromancy,necrotic_empowerment,omnipotence,omnipresence,omniscience,phasing,pheromone_control,photokinesis,possession,power_absorption,power_distribution,power_replication,precognition,prehensile_hair,probability_manipulation,psychic_link,psychokinesis,pyrokinesis,radiation_production,reality_alteration,regeneration,removable_limbs,resurrection,retrocognition,robot_body,self_sustenance,size_alteration,sound_manipulation,summoning,super_breath,super_leaping,superhuman_agility,superhuman_durability,superhuman_reflexes,superhuman_speed,superhuman_stamina,superhuman_strength,symbiosis,talons,telekinesis,telepathy,teleportation,therianthropy,thermal_blast,thermokinesis,toxic_immunity,toxikinesis,transformation,unique_physiology,vampirism,water_sense,weather_manipulation,zombie_physiology".split(",");
     function main(){
-	const powers_index = {};
-	const rect_width = 500/power_names.length
-	const rect_max_height = 50;
+        const powers_index = {};
+        const rect_width = 500/power_names.length
+        const rect_max_height = 50;
 
-	Promise.all([
-	    d3.csv("source_data/powers_tsne.csv", function(row){
-		row.X1 = +row.X1;
-		row.X2 = +row.X2;
-		return row;
-	    }),
-	    d3.csv("source_data/powers_for_tsne.csv", function(row, index){
-		power_names.forEach(name =&gt; row[name] = +row[name]);
-		powers_index[row.character] = index;
-		return row;
-	    })
-	])
-	    .then(function(data){
-		const proj = data[0];
-		const vecs = data[1];
+        Promise.all([
+            d3.csv("source_data/powers_tsne.csv", function(row){
+                row.X1 = +row.X1;
+                row.X2 = +row.X2;
+                return row;
+            }),
+            d3.csv("source_data/powers_for_tsne.csv", function(row, index){
+                power_names.forEach(name =&gt; row[name] = +row[name]);
+                powers_index[row.character] = index;
+                return row;
+            })
+        ])
+            .then(function(data){
+                const proj = data[0];
+                const vecs = data[1];
 
-		function character_to_power_data(character){
-		    const row = vecs[powers_index[character]];
-		    return power_names.map((name,i) =&gt; { return {power:name, has:row[name], x:i}});
-		}
+                function character_to_power_data(character){
+                    const row = vecs[powers_index[character]];
+                    return power_names.map((name,i) =&gt; { return {power:name, has:row[name], x:i}});
+                }
 
 
-		d3.select("#content")
-		    .selectAll("circle")
-		    .data(proj)
-		    .enter().append("circle")
-		    .attr("cx", function(d) {return d.X1})
-		    .attr("cy", d =&gt; d.X2)
-		    .attr("r", 1)
-		    .attr("character", d =&gt; d.character)
-		    .on('mouseover', function(){
-			const character = d3.select(this).attr("character");
-			d3.select("#character").text(character);
-			d3.select("#powers")
-			    .selectAll("rect")
-			    .data(character_to_power_data(character))
-			    .transition()
-			    .attr("height", r =&gt; r.has*rect_max_height);
-		    });
-		d3.select("#powers")
-		    .selectAll("rect")
-		    .data(character_to_power_data("bart_allen"))
-		    .enter()
-		    .append("rect")
-		    .attr("power", r =&gt; r.power)
-		    .attr("x", r =&gt; r.x*rect_width)
-		    .attr("y", 0)
-		    .attr("width", rect_width)
-		    .attr("height", r =&gt; r.has*rect_max_height)
-		    .attr("fill", "#0000ff")
-		    .on('mouseover', function(){
-			const power = d3.select(this)
-			      .attr("power");
-			d3.select("#power_name").text(power);
-		    });
-	    });
+                d3.select("#content")
+                    .selectAll("circle")
+                    .data(proj)
+                    .enter().append("circle")
+                    .attr("cx", function(d) {return d.X1})
+                    .attr("cy", d =&gt; d.X2)
+                    .attr("r", 1)
+                    .attr("character", d =&gt; d.character)
+                    .on('mouseover', function(){
+                        const character = d3.select(this).attr("character");
+                        d3.select("#character").text(character);
+                        d3.select("#powers")
+                            .selectAll("rect")
+                            .data(character_to_power_data(character))
+                            .transition()
+                            .attr("height", r =&gt; r.has*rect_max_height);
+                    });
+                d3.select("#powers")
+                    .selectAll("rect")
+                    .data(character_to_power_data("bart_allen"))
+                    .enter()
+                    .append("rect")
+                    .attr("power", r =&gt; r.power)
+                    .attr("x", r =&gt; r.x*rect_width)
+                    .attr("y", 0)
+                    .attr("width", rect_width)
+                    .attr("height", r =&gt; r.has*rect_max_height)
+                    .attr("fill", "#0000ff")
+                    .on('mouseover', function(){
+                        const power = d3.select(this)
+                              .attr("power");
+                        d3.select("#power_name").text(power);
+                    });
+            });
     };
     document.addEventListener("DOMContentLoaded", main);
     console.log("Hello There");
@@ -727,14 +747,32 @@ index in the previous step.
 &lt;/html&gt;
 </pre>
 </div>
+
+<p>
+Things to note:
+</p>
+
+<ol class="org-ol">
+<li>We've added a second H2 to show the power names.</li>
+<li>An adapter function uses the index we created during the data load
+to convert a character name (available in the mouseover handler) to
+a list of powers which we use to fill in the second SVG.</li>
+<li>We use a "transition" to make the changes smooth. This makes it
+much easier to see whether powers are shared between adjacent
+points.</li>
+</ol>
+
+<p>
+Let's try and tidy things up a little bit.
+</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Vincent Toups</p>
-<p class="date">Created: 2021-11-15 Mon 14:40</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2021-11-15 Mon 16:06</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
