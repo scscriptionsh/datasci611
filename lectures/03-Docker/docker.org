@@ -46,28 +46,28 @@
    #+RESULTS: ex_docker1
    #+begin_src org
 
-     Hello from Docker!
-     This message shows that your installation appears to be working correctly.
+   Hello from Docker!
+   This message shows that your installation appears to be working correctly.
 
-     To generate this message, Docker took the following steps:
-     1. The Docker client contacted the Docker daemon.
-     2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-        (amd64)
-     3. The Docker daemon created a new container from that image which runs the
-        executable that produces the output you are currently reading.
-     4. The Docker daemon streamed that output to the Docker client, which sent it
-        to your terminal.
+   To generate this message, Docker took the following steps:
+    1. The Docker client contacted the Docker daemon.
+    2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+       (amd64)
+    3. The Docker daemon created a new container from that image which runs the
+       executable that produces the output you are currently reading.
+    4. The Docker daemon streamed that output to the Docker client, which sent it
+       to your terminal.
 
-     To try something more ambitious, you can run an Ubuntu container with:
-     $ docker run -it ubuntu bash
+   To try something more ambitious, you can run an Ubuntu container with:
+    $ docker run -it ubuntu bash
 
-     Share images, automate workflows, and more with a free Docker ID:
-     https://hub.docker.com/
+   Share images, automate workflows, and more with a free Docker ID:
+    https://hub.docker.com/
 
-     For more examples and ideas, visit:
-     https://docs.docker.com/get-started/
+   For more examples and ideas, visit:
+    https://docs.docker.com/get-started/
 
-#+end_src
+   #+end_src
 
 This will "pull" a specified Docker image and run its default command,
 which just prints out a message.
@@ -80,6 +80,8 @@ Almost all the Docker containers used in this book will be based on
 #+begin_src bash
 docker run -it rocker/verse /bin/bash
 #+end_src
+
+#+RESULTS: ex_rocker1
 
 We should then expect to see a prompt like this one:
 
@@ -115,12 +117,12 @@ rocker/verse.
    arguments:
 
    #+begin_src bash
-     run
-     -e
-     PASSWORD=yourpassword
-     --rm
-     -p
-     8787:8787
+     run\
+     -e\
+     PASSWORD=yourpassword\
+     --rm\
+     -p\
+     8787:8787\
      rocker/verse
    #+end_src
 
@@ -372,8 +374,8 @@ Content type 'binary/octet-stream' length 171431 bytes (167 KB)
 ==================================================
 downloaded 167 KB
 
-* installing *binary* package ‘matlab’ ...
-* DONE (matlab)
+ * installing *binary* package ‘matlab’ ...
+ * DONE (matlab)
 
 The downloaded source packages are in
 	‘/tmp/RtmprAB7aJ/downloaded_packages’

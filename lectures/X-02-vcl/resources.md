@@ -16,7 +16,7 @@ resources you need to complete this course but it won't really do so
 comfortably.
 
 I highly recommend that you set up Docker on your local machine. For Windows
-users the easiest way to do this is to set up Docker for Windows but another
+users the easiest way to do this is to set up Docker for Windows but the best
 way is installing Docker with Windows Subsystem for Linux (2).
 https://docs.docker.com/docker-for-windows/wsl/
 
@@ -24,10 +24,10 @@ Pre-requisites
 ========================================================
 
 1. UNC Onyen
-2. Windows: Powershell (or Putty or Cygwin or Windows Subsystem for Linux)
+2. Windows: Either Putty or Cygwin
 3. Linux or Mac: All Set Already
 
-What is The UNC VCL 
+What is The UNC VCL
 ========================================================
 
 The UNC VCL is a way for you to spin up a Unix (Linux) shell. 
@@ -50,13 +50,10 @@ The VCL
 
 ![](./vcl-reservation.png)
 
-Powershell on Windows
-=====================
+Putty
+=====
 
-```
-ssh <onyen>@<ip>
-# you can use your onyen password to log in
-```
+![](./putty-with-vcl.png)
 
 Terminal
 ========
@@ -111,8 +108,7 @@ Copying Data to Longleaf Storage
 You'll probably want to copy data to (or from) your computer from (or
 to) the Longleaf storage/VCL.
 
-On a unix (Linux/OSX/Windows Subsystem for Linux/Powershell) this is
-as easy as:
+On a unix (Linux/OSX/Windows Subsystem for Linux) this is as easy as:
 
 ```
 # from computer to vcl
@@ -234,5 +230,7 @@ Unix.
 Homework
 ========
 
-Run through all of this once. One random student will have to connect
-in front of everyone next week.
+See canvas.
+
+
+

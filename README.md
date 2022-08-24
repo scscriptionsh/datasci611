@@ -36,9 +36,9 @@ Lab is held in: McGavran-Greenberg PH-Rm 2306
 | Monday 2022-08-15    | 3:35-4:50pm | Introduction                          | [1][m1],[2][m2]         | [hw1][hw1] due: Wed 08/17/2022 |
 | Tuesday 2022-08-16   | 2:00-3:00pm | Lab                                   |                         |                                |
 | Wednesday 2022-08-17 | 3:35-4:50pm | Compute Resources                     | [1][m3],[2][m4],[3][m5] | [hw2][hw2] due: Mon 08/30/2021 |
-| Monday 2022-08-22    | 3:35-4:50pm | Unix                                  |                         |                                |
+| Monday 2022-08-22    | 3:35-4:50pm | Unix                                  | [1][m5],[2][m6],[3][m7],[4][m8]                        |                                |
 | Tuesday 2022-08-23   | 2:00-3:00pm | Lab                                   |                         |                                |
-| Wednesday 2022-08-24 | 3:35-4:50pm | Docker                                |                         |                                |
+| Wednesday 2022-08-24 | 3:35-4:50pm | Docker                                | [1][m9][2][m10][3]                        |                                |
 | Monday 2022-08-29    | 3:35-4:50pm | git basics & github basics            |                         |                                |
 | Tuesday 2022-08-30   | 2:00-3:00pm | Lab                                   |                         |                                |
 | Wednesday 2022-08-31 | 3:35-4:50pm | How to Think about Programming & R    |                         |                                |

@@ -437,7 +437,7 @@ hello world
 
 In order to understand this result we need to add another rule:
 
-#+NAME: Set environment variablers
+#+NAME: Set environment variables
 #+begin_quote
 If we see a name followed immediate by an equal sign and then a value,
 modify or create a new environment variable of that name with the

@@ -7,7 +7,7 @@ WORKDIR /
 RUN wget https://deb.nodesource.com/setup_16.x 
 RUN bash setup_16.x
 RUN apt update && apt-get install -y nodejs
-RUN apt update && apt-get install -y emacs openssh-server python3-pip
+RUN apt update && apt-get install -y openssh-server python3-pip
 RUN pip3 install --pre --user hy
 RUN pip3 install beautifulsoup4 theano tensorflow keras sklearn pandas numpy pandasql 
 RUN ssh-keygen -A
@@ -21,7 +21,7 @@ WORKDIR /git
 RUN make configure &&\
  ./configure --prefix=/usr &&\
  make all doc info &&\
- make install install-doc install-html install-info
+ make install 
 WORKDIR /
 RUN R -e "install.packages(c(\"shiny\",\"deSolve\",\"signal\"))"
 RUN R -e "install.packages(\"Rcpp\")";
@@ -35,10 +35,8 @@ RUN pip3 install jupyter jupyterlab
 RUN R -e "devtools::install_github(\"r-lib/ellipsis\");"
 RUN R -e "install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))"
 RUN R -e "devtools::install_github(\"IRkernel/IRkernel\"); IRkernel::installspec(user=FALSE);"
-RUN pip3 install sos sos-r sos-notebook sos-papermill jupyterlab-sos sos-python
-RUN jupyter labextension install transient-display-data 
-RUN jupyter labextension install jupyterlab-sos
-RUN python3 -m sos_notebook.install
 RUN R -e "install.packages('RSQLite')";
 RUN pip3 install matplotlib plotly bokeh plotnine dplython
-
+RUN apt update && apt install -y software-properties-common
+RUN add-apt-repository ppa:kelleyk/emacs
+RUN DEBIAN_FRONTEND=noninteractive apt update && DEBIAN_FRONTEND=noninteractive apt install -y emacs28
