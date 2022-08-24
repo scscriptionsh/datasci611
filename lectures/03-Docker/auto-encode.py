@@ -40,6 +40,9 @@ metrics = auto_encoder.fit(numerical_data, numerical_data,
                  epochs=2000,
                  batch_size=50,
                  shuffle=True);
+                 
+keras.models.save_model(auto_encoder, "model_auto_encoder");
+keras.models.save_model(encoder, "model_encoder");
 
 encoded = encoder.predict(numerical_data);
 encoded = pd.DataFrame(encoded, columns=['D1','D2']);

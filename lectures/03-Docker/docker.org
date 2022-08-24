@@ -438,7 +438,7 @@ to our toy script:
       `*`(1.0);
   imagesc(vectors);
 
-  write_csv(wider_data, "powers_wider.csv", row.names=F);
+  write_csv(wider_data, "powers_wider.csv");
   
 #+end_src
 
