@@ -91,7 +91,7 @@ between storage and memory or about the details of how programs work.
 * How to Understand Computer Languages
 
 A programming language is a program which takes text (represented as a
-"string" of characters) and _interprets_ it to produce some sort of
+"string" of characters) and /interprets/ it to produce some sort of
 value or side effect.
 
 In order to understand a computer programming language you need to
@@ -122,7 +122,7 @@ various system resources and settings. We do these things by executing
 commands.
 
 Before we dive into the details you might ask yourself: why would we
-_want_ to have such low level access? It is true, these text-mode
+/want/ to have such low level access? It is true, these text-mode
 shells impose a substantial cognitive burden on the user, particularly
 at first. What do we purchase with that additional cognitive energy?
 
@@ -183,7 +183,7 @@ easily orchestrating work your computer does.
 
 ** Many Shells
 
-Unix supports _many_ different shells which behave
+Unix supports /many/ different shells which behave
 similarly. Throughout this course I will be assuming [[https://en.wikipedia.org/wiki/Bash_(Unix_shell)][bash]] because it
 is the most common. I'll be trying to write bash code which will run
 in most other shells (most notably zsh, which is recently the default
@@ -239,9 +239,9 @@ characters. Evaluation is where things get tricky:
 
 ** Evaluation
 
-A theme of this course is that _all programming languages_ do more or
+A theme of this course is that /all programming languages/ do more or
 less the same thing: they translate text into actions. If you develop
-a good mental model of that process then you _understand_ the
+a good mental model of that process then you /understand/ the
 language.
 
 Given the ubiquity of Bash, its evaluation model is surprisingly
@@ -328,10 +328,10 @@ A good piece of jargon to have in your head here is that ~which~
 
 If you haven't seen unix style file locations, note:
 
-1. on a unix system _every file_ lives beneath the so-called "root" of
+1. on a unix system /every file/ lives beneath the so-called "root" of
    the file system, called ~/~.
-2. anything between two ~/~ (called _path separators_) is a
-   _directory.
+2. anything between two ~/~ (called /path separators/) is a
+   /directory.
 3. the last term may be a directory or a file. In this case, it is the
    executable file which implements the ~which~ commands.
 
@@ -489,9 +489,9 @@ VARNAME=somevalue
 echo $VARNAME
 #+end_src
 
-Note that when we declare a variable we do _not_ precede the name with
+Note that when we declare a variable we do /not/ precede the name with
 a ~$~. The dollar sign is what tells Bash to look the variable value
-up when we want to _use_ it somewhere. 
+up when we want to /use/ it somewhere. 
 
 With variable definition and usage rules in our head, we can now
 extend our mental model of bash evaluation.
@@ -513,7 +513,7 @@ Consider again the following line from the above example:
 PATH="$(readlink -f my-commands):$PATH"
 #+end_src
 
-Ordinarily no _evaluation_ occurs on the right hand side of an
+Ordinarily no /evaluation/ occurs on the right hand side of an
 assignment. The material there is just treated as a string (or a
 number, if it happens to be a number). But by using a ~$(...)~
 construct we can perform a substitution: the interior of the ~$(...)~
@@ -583,7 +583,7 @@ The syntax ~<COMMAND> > file~ sends the standard output to ~file~.
 But often creating a temporary file is a hassle if we just want to
 apply many commands in sequence. Thus we can also "pipe" one command's
 output to another's input. In that case the second command reads from
-the output of the previous _instead_ of from the stdin file.
+the output of the previous /instead/ of from the stdin file.
 
 #+CAPTION: Piping output into input.
 #+NAME: ex_pipes
@@ -792,7 +792,7 @@ very much worth it.
 
 *** grep
 
-~grep~ lets you search for things _in_ files:
+~grep~ lets you search for things /in/ files:
 
 #+CAPTION: Using grep.
 #+NAME: ex_grqep1q
@@ -942,7 +942,7 @@ the job of a package manager.
 Complicating this discussion is the fact there are a variety of
 package managers for a variety of linux variations.
 
-Here, we will almost always be using `apt` to install packages (unless
+Here, we will almost always be using ~apt~ to install packages (unless
 we use a programming language specific package manager, of which more
 later). But be aware that at some point in the future you might have
 to look up how to use another system's package manager.

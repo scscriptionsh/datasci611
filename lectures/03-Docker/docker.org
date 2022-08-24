@@ -244,7 +244,7 @@ library(tidyverse)
 
 d <- read_csv("./data/powers.csv") %>% 
   filter(universe=="New Earth") %>% select(-universe, -url); 
-alignment <- read_csv("./data/X-01-web-scraping/character-data.csv") %>%
+alignment <- read_csv("./data/character-data.csv") %>%
   filter(universe=="New Earth" & property_name == "Alignment") %>%
   select(-universe, -property_name) %>%
   rename(alignment=value);
