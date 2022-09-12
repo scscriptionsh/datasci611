@@ -45,7 +45,7 @@ Lab is held in: McGavran-Greenberg PH-Rm 2306
 | Monday 2022-09-05    | No Class    | 🍞 🌹 Labor Day                       |                                                                                   |
 | Tuesday 2022-09-06   | No Class    | 🥰 🥰 Well-being Day                  |                                                                                   |
 | Wednesday 2022-09-07 | 3:35-4:50pm | More R                                |                                                                                   |
-| Monday 2022-09-12    | 3:35-4:50pm | Tidyverse for Tidying & GGPlot        |                                                                                   |
+| Monday 2022-09-12    | 3:35-4:50pm | Tidyverse for Tidying & GGPlot        | [1][m11][2][m21][3][m22][4][m23][5][m24][6][m25][7][m26][8][m27][9][m28]                                                                                  |
 | Tuesday 2022-09-13   | 2:00-3:00pm | Lab                                   |                                                                                   |
 | Wednesday 2022-09-14 | 3:35-4:50pm | Make and Makefiles                    |                                                                                   |
 | Monday 2022-09-19    | 3:35-4:50pm | git concepts and practices            |                                                                                   |
