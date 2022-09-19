@@ -65,8 +65,8 @@ diff -u filev1.txt filev2.txt | cat
 
 #+RESULTS:
 #+begin_src sh
---- filev1.txt	2021-09-28 14:01:48.440378490 -0400
-+++ filev2.txt	2021-09-28 14:01:48.440378490 -0400
+--- filev1.txt	2022-09-19 18:33:04.663265016 +0000
++++ filev2.txt	2022-09-19 18:33:04.663265016 +0000
 @@ -1,6 +1,7 @@
 -This is a file I'm using as
 +This is a file we are using as
@@ -94,7 +94,7 @@ cat filev2-from-patch.txt
 #+end_src
 
 #+RESULTS:
-#+begin_export html
+#+begin_src sh
 patching file filev2-from-patch.txt (read from filev1.txt)
 This is a file we are using as
 an example for a presentation.
@@ -103,7 +103,7 @@ control system, it may not be the
 most powerful.
 
 That distinction goes to Pijul.
-#+end_export
+#+end_src
 
 Naturally the difference between `filev2-from-patch` and `filev2` is
 the empty diff.
@@ -113,8 +113,8 @@ diff -u filev2-from-patch filev2 | cat
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-#+end_export
+#+begin_src sh
+#+end_src
 
 * The Big Idea
 
@@ -130,14 +130,14 @@ Your project is a chain of patches:
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 rm -rf *
-git init
+git init --initial-branch main
 git status
 #+end_src
 
 #+RESULTS:
 #+begin_src sh
-Reinitialized existing Git repository in /tmp/example/.git/
-On branch master
+Initialized empty Git repository in /tmp/example/.git/
+On branch main
 
 No commits yet
 
@@ -162,7 +162,7 @@ git status
 
 #+RESULTS:
 #+begin_src sh
-On branch master
+On branch main
 
 No commits yet
 
@@ -177,8 +177,18 @@ This is a little bit of a weird of a situation because we don't have
 any commits at all (this only happens when you have a new repo).
 
 #+begin_src sh :results code :exports both :dir /tmp/example
+git config --global user.email "vincent.toups@gmail.com"
+git config --global user.name "Vincent Toups"
+
 git add README.md
 git commit -m "Initial commit."
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
+[main (root-commit) cbafab2] Initial commit.
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
 #+end_src
 
 #+begin_src sh :results code :exports both :dir /tmp/example
@@ -188,7 +198,7 @@ git status
 
 #+RESULTS:
 #+begin_src sh
-On branch master
+On branch main
 nothing to commit, working tree clean
 #+end_src
 
@@ -246,10 +256,10 @@ git diff --stat
 #+end_src
 
 #+RESULTS:
-#+begin_export html
+#+begin_src sh
  README.md | 5 +++++
  1 file changed, 5 insertions(+)
-#+end_export
+#+end_src
 
 And 
 
@@ -259,16 +269,15 @@ git status
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-On branch master
+#+begin_src sh
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
+  (use "git restore <file>..." to discard changes in working directory)
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-#+end_export
+#+end_src
 
 A readable description.
 
@@ -284,7 +293,7 @@ git branch -l
 
 #+RESULTS:
 #+begin_src sh
-,* master
+,* main
 #+end_src
 
 Branches are *local* by default.
@@ -302,16 +311,15 @@ git status
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-On branch master
+#+begin_src sh
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
+  (use "git restore <file>..." to discard changes in working directory)
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-#+end_export
+#+end_src
 
 Note that the above creates a new branch but DOESN'T SWITCH TO IT!!
 
@@ -321,48 +329,45 @@ git status
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-M	README.md
+#+begin_src sh
 On branch experiment2
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
+  (use "git restore <file>..." to discard changes in working directory)
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-#+end_export
+#+end_src
 
 Note we've switched to the experiment2 branch. 
 
 checkout (without -b) lets us check out other branches.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master
+git checkout main
 git status
 #+end_src
 
 #+RESULTS:
-#+begin_export html
+#+begin_src sh
 M	README.md
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
+  (use "git restore <file>..." to discard changes in working directory)
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-#+end_export
+#+end_src
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git checkout experiment2
 #+end_src
 
 #+RESULTS:
-#+begin_export html
+#+begin_src sh
 M	README.md
-#+end_export
+#+end_src
 
 Note that we can switch branches even if the working copy has changes.
 
@@ -376,43 +381,43 @@ git commit -m "Extended README."
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-[experiment2 94ea475] Extended README.
+#+begin_src sh
+[experiment2 8734b22] Extended README.
  1 file changed, 5 insertions(+)
-#+end_export
+#+end_src
 
 A simple merge:
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master
+git checkout main
 git merge experiment2
 git log -2 | cat
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-Updating 4ac2b32..94ea475
+#+begin_src sh
+Updating cbafab2..8734b22
 Fast-forward
  README.md | 5 +++++
  1 file changed, 5 insertions(+)
-commit 94ea475ffb949f8e7703c019722f0de10a57372a
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:05 2020 -0400
+commit 8734b22e9982657e0246e3f1259bfacd4d0c5ec1
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
 
     Extended README.
 
-commit 4ac2b32b0b5d70d362decf6fcde5c06c270408b8
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:58:38 2020 -0400
+commit cbafab22482298e5457439f9bcdeb3d13611e3b5
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
 
     Initial commit.
-#+end_export
+#+end_src
 
 [[./images/basic-merge.png]]
 
 This is a "fast forward" merge - we just add each commit from
-experiment2 to master. Because experiment2 is based precisely on the
-same commit that the master branch is still on, this is a trivial
+experiment2 to main. Because experiment2 is based precisely on the
+same commit that the main branch is still on, this is a trivial
 operation.
 
 * Conflicts and Rebase
@@ -432,10 +437,10 @@ experiment3:
 We want to get the code represented by the orange commits. We could do
 it by merge or by rebase.
 
-The rebase is tidier and also more polite. It presumes that master is
+The rebase is tidier and also more polite. It presumes that main is
 the authoritative version of the code and thus it should be that your
 experiment should look like it was made on the most recent version of
-master possible.
+main possible.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git checkout -b experiment3
@@ -443,10 +448,10 @@ git status
 #+end_src
 
 #+RESULTS:
-#+begin_export html
+#+begin_src sh
 On branch experiment3
 nothing to commit, working tree clean
-#+end_export
+#+end_src
 
 A simple case where there are no textual conflicts.
 
@@ -459,17 +464,17 @@ git commit -m "Added hello.md"
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-[experiment3 bf1f3e8] Added hello.md
+#+begin_src sh
+[experiment3 6bfdce0] Added hello.md
  1 file changed, 1 insertion(+)
  create mode 100644 hello.md
-#+end_export
+#+end_src
 
-Now let's make a commit on master without merging first. This
-simulates master "moving on".
+Now let's make a commit on main without merging first. This
+simulates main "moving on".
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master
+git checkout main
 cat << EOF > goodbye.md
 So long, everyone.
 EOF
@@ -478,53 +483,53 @@ git commit -m "Added goodbye."
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-[master 9c53a82] Added goodbye.
+#+begin_src sh
+[main bf1f67f] Added goodbye.
  1 file changed, 1 insertion(+)
  create mode 100644 goodbye.md
-#+end_export
+#+end_src
 
 Now we check out experiment3 and do some experiments.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git checkout experiment3
 git checkout -b experiment3-merge
-git merge master
+git merge main
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-Merge made by the 'recursive' strategy.
+#+begin_src sh
+Merge made by the 'ort' strategy.
  goodbye.md | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 goodbye.md
-#+end_export
+#+end_src
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git log -3
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-commit 4d6c37a3bf38fce703fb9b457ca7b59fa2170fe3
-Merge: bf1f3e8 9c53a82
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:18 2020 -0400
+#+begin_src sh
+commit 8dd0416ee1b2fbc230c7c01407a18dfae68cecd5
+Merge: 6bfdce0 bf1f67f
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
-    Merge branch 'master' into experiment3-merge
+    Merge branch 'main' into experiment3-merge
 
-commit 9c53a827ecc6e824b2841dc257a6f2e047ea873a
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:15 2020 -0400
-
-    Added goodbye.
-
-commit bf1f3e88d58eb282a4217a6cac49ad799cc47b6b
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:13 2020 -0400
+commit 6bfdce07eeb875633e1c5cd7b2283782f3291e0c
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added hello.md
-#+end_export
+
+commit bf1f67fa63334da7191828fd0452a3e51ceb4f3c
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
+
+    Added goodbye.
+#+end_src
 
 Note that we branched before the merge. We can get back to where we
 were before by checkout out experiment3.
@@ -532,73 +537,71 @@ were before by checkout out experiment3.
 #+begin_src sh :results code :exports both :dir /tmp/example
 git checkout experiment3
 git checkout -b experiment-rebase
-git rebase master
+git rebase main
 git log -3
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-First, rewinding head to replay your work on top of it...
-Applying: Added hello.md
-commit 404739e43a11624493cbcc4274815ef8fb171955
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:13 2020 -0400
+#+begin_src sh
+commit b2ba8b461cb5383d0be4ecaf9d453c51d055ec0d
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added hello.md
 
-commit 9c53a827ecc6e824b2841dc257a6f2e047ea873a
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:15 2020 -0400
+commit bf1f67fa63334da7191828fd0452a3e51ceb4f3c
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added goodbye.
 
-commit 94ea475ffb949f8e7703c019722f0de10a57372a
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:05 2020 -0400
+commit 8734b22e9982657e0246e3f1259bfacd4d0c5ec1
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
 
     Extended README.
-#+end_export
+#+end_src
 
 Note the absence of the merge. 
 
-Most of the time code flows back into master - this is the "canonical"
+Most of the time code flows back into main - this is the "canonical"
 version of the repository meant for things which are "really done."
 
 The nice thing about rebase is that it allows us to do a trivial merge
-of the feature branch into master - the feature branch now looks like
+of the feature branch into main - the feature branch now looks like
 it was based on the most recent version.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master
+git checkout main
 git merge experiment-rebase
 git log -3
 #+end_src
 
 #+RESULTS:
-#+begin_export html
-Updating 9c53a82..404739e
+#+begin_src sh
+Updating bf1f67f..b2ba8b4
 Fast-forward
  hello.md | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 hello.md
-commit 404739e43a11624493cbcc4274815ef8fb171955
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:13 2020 -0400
+commit b2ba8b461cb5383d0be4ecaf9d453c51d055ec0d
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added hello.md
 
-commit 9c53a827ecc6e824b2841dc257a6f2e047ea873a
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:15 2020 -0400
+commit bf1f67fa63334da7191828fd0452a3e51ceb4f3c
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added goodbye.
 
-commit 94ea475ffb949f8e7703c019722f0de10a57372a
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 12:59:05 2020 -0400
+commit 8734b22e9982657e0246e3f1259bfacd4d0c5ec1
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
 
     Extended README.
-#+end_export
+#+end_src
 
 A "fast forward" merge doesn't create a merge commit.
 
@@ -613,6 +616,33 @@ _Moral of the Story: Rebase when working on features. Save "merge" for
 git log
 #+end_src
 
+#+RESULTS:
+#+begin_src sh
+commit b2ba8b461cb5383d0be4ecaf9d453c51d055ec0d
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
+
+    Added hello.md
+
+commit bf1f67fa63334da7191828fd0452a3e51ceb4f3c
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
+
+    Added goodbye.
+
+commit 8734b22e9982657e0246e3f1259bfacd4d0c5ec1
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
+
+    Extended README.
+
+commit cbafab22482298e5457439f9bcdeb3d13611e3b5
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
+
+    Initial commit.
+#+end_src
+
 Each commit has an id.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
@@ -621,10 +651,10 @@ git log | grep commit | cut -d' ' -f2
 
 #+RESULTS:
 #+begin_src sh
-7773464516c13897b58298198642eb1bb8ded296
-b8256cefd795925e751e6e6c0c337e5196468db7
-81910e580bcf5aae8916d1e1d649b102bd817fca
-78cf118ecc0e025847e991f2be54939a4ef73fba
+b2ba8b461cb5383d0be4ecaf9d453c51d055ec0d
+bf1f67fa63334da7191828fd0452a3e51ceb4f3c
+8734b22e9982657e0246e3f1259bfacd4d0c5ec1
+cbafab22482298e5457439f9bcdeb3d13611e3b5
 
 #+end_src
 
@@ -638,7 +668,7 @@ git status
 
 #+RESULTS:
 #+begin_src sh
-HEAD detached at 81910e5
+HEAD detached at 8734b22
 nothing to commit, working tree clean
 #+end_src
 
@@ -655,15 +685,15 @@ git log
 #+begin_src sh
 On branch new-head
 nothing to commit, working tree clean
-commit 81910e580bcf5aae8916d1e1d649b102bd817fca
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 13:04:00 2020 -0400
+commit 8734b22e9982657e0246e3f1259bfacd4d0c5ec1
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
 
     Extended README.
 
-commit 78cf118ecc0e025847e991f2be54939a4ef73fba
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 13:04:00 2020 -0400
+commit cbafab22482298e5457439f9bcdeb3d13611e3b5
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:04 2022 +0000
 
     Initial commit.
 #+end_src
@@ -675,7 +705,7 @@ tell you about them but it can't fix them for you. Let's simulate a
 conflict.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master
+git checkout main
 git checkout -b conflicts
 cat << EOF > conflicts-here.md
 This is a file
@@ -691,15 +721,15 @@ git commit -m "Added a new file."
 
 #+RESULTS:
 #+begin_src sh
-[conflicts b4f5110] Added a new file.
+[conflicts 7fad9f0] Added a new file.
  1 file changed, 5 insertions(+)
  create mode 100644 conflicts-here.md
 #+end_src
 
-Now on master, let's create a conflict.
+Now on main, let's create a conflict.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master
+git checkout main
 cat << EOF > conflicts-here.md
 This is a file
 it has many lines
@@ -714,41 +744,29 @@ git commit -m "Added a conflict file."
 
 #+RESULTS:
 #+begin_src sh
-[master e60feb9] Added a conflict file.
+[main 6e4471a] Added a conflict file.
  1 file changed, 5 insertions(+)
  create mode 100644 conflicts-here.md
 #+end_src
 
 We are good citizens, so we go to the conflicts branch and try to
-rebase on master, which has moved ahead.
+rebase on main, which has moved ahead.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git checkout conflicts
 # we'd usually run this
-# git rebase master
+# git rebase main
 # but since we are capturing the output in this document 
 # we need to be a litte tricky
-git rebase master > rebase-report
+git rebase main > rebase-report
 cat rebase-report
 rm rebase-report
 #+end_src
 
 #+RESULTS:
 #+begin_src sh
-First, rewinding head to replay your work on top of it...
-Applying: Added a new file.
-Using index info to reconstruct a base tree...
-Falling back to patching base and 3-way merge...
 Auto-merging conflicts-here.md
 CONFLICT (add/add): Merge conflict in conflicts-here.md
-Patch failed at 0001 Added a new file.
-Use 'git am --show-current-patch' to see the failed patch
-
-Resolve all conflicts manually, mark them as resolved with
-"git add/rm <conflicted_files>", then run "git rebase --continue".
-You can instead skip this commit: run "git rebase --skip".
-To abort and get back to the state before "git rebase", run "git rebase --abort".
-
 #+end_src
 
 To resolve this we need to look at the file:
@@ -770,7 +788,7 @@ it has some lines
 I hope nothing goes wrong!
 Perhaps it will, though.
 Best have a plan.
->>>>>>> Added a new file.
+>>>>>>> 7fad9f0 (Added a new file.)
 #+end_src
 
 Note that git has fused these files together and it expects us to edit
@@ -792,7 +810,6 @@ git rebase --continue
 
 #+RESULTS:
 #+begin_src sh
-Applying: Added a new file.
 #+end_src
 
 And that should finish the merge:
@@ -803,20 +820,23 @@ git log -3
 
 #+RESULTS:
 #+begin_src sh
-
-    Added a new file.
-
-commit e60feb99420bd5564d7aa02823933754f71f5153
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 13:32:28 2020 -0400
+commit 6e4471a596324ddb28ebf1db116225c31dbb4091
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added a conflict file.
 
-commit 7773464516c13897b58298198642eb1bb8ded296
-Author: Vincent <Vincent Toups>
-Date:   Wed Sep 2 13:04:00 2020 -0400
+commit b2ba8b461cb5383d0be4ecaf9d453c51d055ec0d
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
 
     Added hello.md
+
+commit bf1f67fa63334da7191828fd0452a3e51ceb4f3c
+Author: Vincent Toups <vincent.toups@gmail.com>
+Date:   Mon Sep 19 18:33:05 2022 +0000
+
+    Added goodbye.
 #+end_src
 
 * git commit ammend
@@ -825,7 +845,7 @@ Sometimes we want to modify the last commit. This is ok as long as we
 haven't pushed yet. 
 
 In this case the commit message is now a little weird - its better to
-say we modified the file introduced by master.
+say we modified the file introduced by main.
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git commit --amend -m "Modified the conflicting file."
@@ -833,16 +853,21 @@ git commit --amend -m "Modified the conflicting file."
 
 #+RESULTS:
 #+begin_src sh
-[conflicts f6479d8] Modified the conflicting file.
- Date: Wed Sep 2 13:30:45 2020 -0400
- 1 file changed, 2 insertions(+), 3 deletions(-)
+[detached HEAD 95f2216] Modified the conflicting file.
+ Date: Mon Sep 19 18:33:05 2022 +0000
+ 1 file changed, 4 insertions(+)
+ create mode 100644 conflicts-here.md
 #+end_src
 
-Now we just need to merge our conflicts branch onto master:
+Now we just need to merge our conflicts branch onto main:
 
 #+begin_src sh :results code :exports both :dir /tmp/example
-git checkout master 
+git checkout main 
 git merge conflicts
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
 #+end_src
 
 * Remotes
@@ -871,6 +896,10 @@ first and then associated them with a remote on github by saying something like
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 # git remote add origin <some-url-at-github>
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
 #+end_src
 
 But its much more ordinary to have a remote configured for you via a
@@ -931,13 +960,21 @@ In any other situation you want to do the following:
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 git fetch # grab the remote commits but don't change local branches
-git rebase origin/master # rebase master on origin master
+git rebase origin/main # rebase main on origin main
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
 #+end_src
 
 * Interactive Staging And Small Commits
 
 #+begin_src sh :results code :exports both :dir /tmp/example
 # git add -i # I have to demo this
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
 #+end_src
 
 The idea is to add _pieces_ of files to the staging area. This allows
@@ -958,7 +995,7 @@ This clones the repo to your account. You can then clone it onto your
 computer and work on it. If you do work you think you might want to
 contribute back you should then do a pull request via github.
 
-But before you do that you would need to rebase your master branch on
+But before you do that you would need to rebase your main branch on
 the original repository (this is the polite thing to do in most
 cases).
 
@@ -987,12 +1024,20 @@ I can add a second remote for the "upstream" version of the project
 git remote add upstream git@github.com:VincentToups/puff.git 
 #+end_src
 
+#+RESULTS:
+#+begin_src sh
+#+end_src
+
 And then to rebase I'd say:
 
-#+begin_src sh :results code :exports both :dir /tmp/example
+#+begin_src sh :results code :exports both
 git fetch upstream
-git rebase upstream/master 
+git rebase upstream/main 
 git push # up to my CSCC account.
+#+end_src
+
+#+RESULTS:
+#+begin_src sh
 #+end_src
 
 And then I'd make a pull request.
