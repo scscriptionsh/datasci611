@@ -54,7 +54,8 @@ fuzzy-c-means? Why or why not?
    You will need to specific the "precomputed" "affinity" option.
    
    Cluster with 3 clusters and make a color coded plot of your
-   results.
+   results. What do you think of the results?
+   
    
    
 
