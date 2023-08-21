@@ -30,66 +30,63 @@ pm to 3:00 pm on Tuesdays.
 Class is held in: McGavran-Greenberg PH-Rm 2308
 Lab is held in: McGavran-Greenberg PH-Rm 2306
 
-|----------------------|-------------|---------------------------------------|-----------------------------------------------------------------------------------|
-| Date                 | Time        | Subject                               | Reading                                                                           |
-|----------------------|-------------|---------------------------------------|-----------------------------------------------------------------------------------|
-| Monday 2022-08-15    | 3:35-4:50pm | Introduction                          | [1][m1],[2][m2]                                                                   |
-| Tuesday 2022-08-16   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-08-17 | 3:35-4:50pm | Compute Resources                     | [1][m3],[2][m4],[3][m5]                                                           |
-| Monday 2022-08-22    | 3:35-4:50pm | Unix                                  | [1][m5],[2][m6],[3][m7],[4][m8]                                                   |
-| Tuesday 2022-08-23   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-08-24 | 3:35-4:50pm | Docker                                | [1][m9][2][m10]                                                                   |
-| Monday 2022-08-29    | 3:35-4:50pm | git basics & github basics            | [1][m13][2][m15][3][m17][4][m14]                                                  |
-| Tuesday 2022-08-30   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-08-31 | 3:35-4:50pm | How to Think about Programming & R    | [1][m18][2][m19][3][m20][4][m21][5][m22][6][m23][7][m24][8][m25][9][m26][10][m27] |
-| Monday 2022-09-05    | No Class    | 🍞 🌹 Labor Day                       |                                                                                   |
-| Tuesday 2022-09-06   | No Class    | 🥰 🥰 Well-being Day                  |                                                                                   |
-| Wednesday 2022-09-07 | 3:35-4:50pm | More R                                |                                                                                   |
-| Monday 2022-09-12    | 3:35-4:50pm | Tidyverse for Tidying & GGPlot        | [1][m11][2][m21][3][m22][4][m23][5][m24][6][m25][7][m26][8][m27][9][m28]                                                                                  |
-| Tuesday 2022-09-13   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-09-14 | 3:35-4:50pm | Make and Makefiles                    |                                                                                   |
-| Monday 2022-09-19    | 3:35-4:50pm | git concepts and practices            |                                                                                   |
-| Tuesday 2022-09-20   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-09-21 | 3:35-4:50pm | Markdown, RMarkdown, Notebooks, Latex |                                                                                   |
-| Monday 2022-09-26    | No Class    | 🥰 🥰 Well-being Day                  |                                                                                   |
-| Tuesday 2022-09-27   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-09-28 | 3:35-4:50pm | Project Organization                  |                                                                                   |
-| Monday 2022-10-03    | 3:35-4:50pm | Dimensionality Reduction              |                                                                                   |
-| Tuesday 2022-10-04   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-10-05 | 3:35-4:50pm | Clustering                            |                                                                                   |
-| Monday 2022-10-10    | 3:35-4:50pm | Classification                        |                                                                                   |
-| Tuesday 2022-10-11   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-10-12 | No Class    | 🤔 🎓 University Day                  |                                                                                   |
-| Monday 2022-10-17    | 3:35-4:50pm | Model Validation and Selection        |                                                                                   |
-| Tuesday 2022-10-18   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-10-19 | 3:35-4:50pm | Shiny                                 |                                                                                   |
-| Monday 2022-10-24    | 3:35-4:50pm | Introduction to Scientific Python     |                                                                                   |
-| Tuesday 2022-10-25   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-10-26 | 3:35-4:50pm | SQL (and pandas, dplyr)               |                                                                                   |
-| Monday 2022-10-31    | 3:35-4:50pm | Pandas & SQL                          |                                                                                   |
-| Tuesday 2022-11-01   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-11-02 | 3:35-4:50pm | SKLearn Introduction                  |                                                                                   |
-| Monday 2022-11-07    | 3:35-4:50pm | Training Neural Networks              |                                                                                   |
-| Tuesday 2022-11-08   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-11-09 | 3:35-4:50pm | Bokeh                                 |                                                                                   |
-| Monday 2022-11-14    | 3:35-4:50pm | Browser Based Visualization w/ d3     |                                                                                   |
-| Tuesday 2022-11-15   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-11-16 | 3:35-4:50pm | Data Science Ethics                   |                                                                                   |
-| Monday 2022-11-21    | 3:35-4:50pm | Panel Discussion                      |                                                                                   |
-| Tuesday 2022-11-22   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-11-23 | No Class    | 🦃 🦃 Thanksgiving                    |                                                                                   |
-| Monday 2022-11-28    | 3:35-4:50pm | Web Scraping                          |                                                                                   |
-| Tuesday 2022-11-29   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-11-30 | 3:35-4:50pm | Feedback Day                          |                                                                                   |
-| Monday 2022-12-05    | 3:35-4:50pm | Class Presentations I                 |                                                                                   |
-| Tuesday 2022-12-06   | 2:00-3:00pm | Lab                                   |                                                                                   |
-| Wednesday 2022-12-07 | 3:35-4:50pm | Class Presentations II                |                                                                                   |
-
+| Date       | Topic                                   | Time         | Reading Materials                        |
+|------------|-----------------------------------------|--------------|------------------------------------------|
+| 2023-08-21 | Introduction                            | 3:35-4:50 pm | [m1], [m2]                               |
+| 2023-08-22 | Lab                                     | 2-3 pm       |                                          |
+| 2023-08-23 | Compute Resources                       | 3:35-4:50 pm | [m3]                                     |
+| 2023-08-28 | Unix                                    | 3:35-4:50 pm | [m6], [m7], [m8]                         |
+| 2023-08-29 | Lab                                     | 2-3 pm       |                                          |
+| 2023-08-30 | Docker                                  | 3:35-4:50 pm | [m4], [m5], [m9], [m10]                  |
+| 2023-09-04 | Labor Day                               | None         |                                          |
+| 2023-09-05 | Well Being Day                          | None         |                                          |
+| 2023-09-06 | git basics & github basics              | 3:35-4:50 pm | [m13], [m14], [m15], [m17]               |
+| 2023-09-11 | How to Think about Programming & More R | 3:35-4:50 pm | [m18], [m19], [m20]                      |
+| 2023-09-12 | Lab                                     | 2-3 pm       |                                          |
+| 2023-09-13 | Tidyverse for Tidying & GGPlot          | 3:35-4:50 pm | [m21], [m23], [m24], [m25], [m26], [m27] |
+| 2023-09-18 | Make and Makefiles                      | 3:35-4:50 pm | [m29], [m30]                             |
+| 2023-09-19 | Lab                                     | 2-3 pm       |                                          |
+| 2023-09-20 | git concepts and practices              | 3:35-4:50 pm | [m33]                                    |
+| 2023-09-25 | Well Being Day                          | None         |                                          |
+| 2023-09-26 | Lab                                     | 2-3 pm       |                                          |
+| 2023-09-27 | Markdown, RMarkdown, Notebooks, L       | 3:35-4:50 pm | [m35], [m36]                             |
+| 2023-10-02 | Project Organization                    | 3:35-4:50 pm |                                          |
+| 2023-10-03 | Lab                                     | 2-3 pm       |                                          |
+| 2023-10-04 | Dimensionality Reduction                | 3:35-4:50 pm | [m37], [m38], [m39], [m40]               |
+| 2023-10-09 | Clustering                              | 3:35-4:50 pm | [m41], [m43], [m44]                      |
+| 2023-10-10 | Lab                                     | 2-3 pm       |                                          |
+| 2023-10-11 | Classification                          | 3:35-4:50 pm | [m45], [m46]                             |
+| 2023-10-16 | Model Validation and Selection          | 3:35-4:50 pm | [m48], [m49], [m50], [m51], [m52]        |
+| 2023-10-17 | Lab                                     | 2-3 pm       |                                          |
+| 2023-10-18 | Shiny                                   | 3:35-4:50 pm | [m58]                                    |
+| 2023-10-23 | Introduction to Scientific Python       | 3:35-4:50 pm | [m60], [m61]                             |
+| 2023-10-24 | Lab                                     | 2-3 pm       |                                          |
+| 2023-10-25 | SQL (and pandas, dplyr)                 | 3:35-4:50 pm | [m62], [m63], [m64]                      |
+| 2023-10-30 | Pandas & SQL                            | 3:35-4:50 pm | [m64]                                    |
+| 2023-10-31 | Lab                                     | 2-3 pm       |                                          |
+| 2023-11-01 | SKLearn Introduction                    | 3:35-4:50 pm |                                          |
+| 2023-11-06 | Training Neural Networks                | 3:35-4:50 pm |                                          |
+| 2023-11-07 | Lab                                     | 2-3 pm       |                                          |
+| 2023-11-08 | Bokeh                                   | 3:35-4:50 pm |                                          |
+| 2023-11-13 | Browser Based Visualization w/ d3       | 3:35-4:50 pm | [m65], [m66]                             |
+| 2023-11-14 | Lab                                     | 2-3 pm       |                                          |
+| 2023-11-15 | Data Science Ethics                     | 3:35-4:50 pm | [m67], [m68]                             |
+| 2023-11-20 | Panel Discussion                        | 3:35-4:50 pm |                                          |
+| 2023-11-21 | Lab                                     | 2-3 pm       |                                          |
+| 2023-11-22 | Thanksgiving                            | None         |                                          |
+| 2023-11-27 | Web Scraping                            | 3:35-4:50 pm | [m69]                                    |
+| 2023-11-28 | Lab                                     | 2-3 pm       |                                          |
+| 2023-11-29 | Feedback Day                            | 3:35-4:50 pm |                                          |
+| 2023-12-04 | Class Presentations I                   | 3:35-4:50 pm |                                          |
+| 2023-12-05 | Lab                                     | 2-3 pm       |                                          |
+| 2023-12-06 | Class Presentations II                  | 3:35-4:50 pm |                                          |
 
 
 Lab will be generally unstructured time where you will be able to work
 on projects and ask me questions. Sometimes we will use this time to
 cover material.
+
+
 
 Working With This Stuff
 =======================

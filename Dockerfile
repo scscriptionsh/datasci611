@@ -40,3 +40,4 @@ RUN pip3 install matplotlib plotly bokeh plotnine dplython
 RUN apt update && apt install -y software-properties-common
 RUN add-apt-repository ppa:kelleyk/emacs
 RUN DEBIAN_FRONTEND=noninteractive apt update && DEBIAN_FRONTEND=noninteractive apt install -y emacs28
+RUN R -e "install.packages('glmnet')";
